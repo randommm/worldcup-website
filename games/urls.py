@@ -7,5 +7,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^scoreboard$', views.scoreboard, name='scoreboard'),
     url(r'^games$', views.games, name='games'),
-    url(r'^predictions$', views.predictions, name='predictions'),
+    url(r'^forecasts$', views.forecasts, name='forecasts'),
 ]

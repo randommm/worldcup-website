@@ -37,7 +37,7 @@ class Bet(models.Model):
     def __str__(self):
         return str(self.game) + " by user " + self.user.name
 
-class Predict(models.Model):
+class Forecast(models.Model):
     game = models.OneToOneField(Game, on_delete=models.CASCADE)
     prob1 = models.IntegerField()
     prob2 = models.IntegerField()

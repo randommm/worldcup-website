@@ -2,17 +2,17 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.core.exceptions import ObjectDoesNotExist
-from .models import User, Team, Game, Bet, Predict, Result
+from .models import User, Team, Game, Bet, Forecast, Result
 
 
 def index(request):
     return render(request, 'index.html')
 
-def predictions(request):
-    return HttpResponse("predictions")
+def forecasts(request):
+    return HttpResponse("forecasts")
 
 def games(request):
-    games = Game.objects.select_related("predict").all()#.order_by('-date')[:5]
+    games = Game.objects.select_related("forecast").all()#.order_by('-date')[:5]
 
     for game in games:
         try:
@@ -22,15 +22,15 @@ def games(request):
             game.bet = None
 
         try:
-            game.predict
-            game.predict.prob_tie = 100 - game.predict.prob1 - game.predict.prob2
+            game.forecast
+            game.forecast.prob_tie = 100 - game.forecast.prob1 - game.forecast.prob2
         except ObjectDoesNotExist:
             pass
 
     filter_by = list(games.values_list("id", flat=True))
-    predictions = Predict.objects.filter(game_id__in=filter_by)
+    forecast = Forecast.objects.filter(game_id__in=filter_by)
 
-    context = {'games': games, 'predictions': predictions}
+    context = {'games': games}
     return render(request, 'games.html', context)
 
 def scoreboard(request):

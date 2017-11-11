@@ -1,0 +1,13 @@
+{% if games %}
+    <ul>
+    {% for game in games %}
+        <li>{{ game.team1 }} vs {{ game.team2 }}.
+            Our prediction: {{ predictions }}</li>
+    {% endfor %}
+    {% for game in predictions %}
+        <li>{{ game }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No game available.</p>
+{% endif %}

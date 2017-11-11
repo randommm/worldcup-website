@@ -35,7 +35,7 @@ class Bet(models.Model):
         unique_together = ("game", "user")
 
     def __str__(self):
-        return self.game.name + " by user " + self.user.name
+        return str(self.game) + " by user " + self.user.name
 
 class Predict(models.Model):
     game = models.OneToOneField(Game, on_delete=models.CASCADE)

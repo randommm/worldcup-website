@@ -1,13 +1,32 @@
+{% load mathfilters %}
+
 {% if games %}
-    <ul>
     {% for game in games %}
-        <li>{{ game.team1 }} vs {{ game.team2 }}.
-            Our prediction: {{ predictions }}</li>
-    {% endfor %}
-    {% for game in predictions %}
-        <li>{{ game }}</li>
-    {% endfor %}
+    <ul>
+        <li>Game: {{ game.team1 }} vs {{ game.team2 }}.</li>
+
+        <li>Our prediction:
+            {% if game.predict %}
+            {{ game.predict.prob1 }}
+            {{ game.predict.prob2 }}
+            {{ game.predict.prob_tie }}
+            {% else %}
+            not available
+            {% endif %}
+        </li>
+
+        <li>Our prediction:
+            {% if game.bet %}
+            {{ game.bet.prob1 }}
+            {{ game.bet.prob2 }}
+            {{ game.bet.prob_tie }}
+            {% else %}
+            not available
+            {% endif %}
+        </li>
+
     </ul>
+    {% endfor %}
 {% else %}
     <p>No game available.</p>
 {% endif %}

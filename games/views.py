@@ -1,16 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
+from django.core.exceptions import ObjectDoesNotExist
 from .models import User, Team, Game, Bet, Predict, Result
 
-from django import template
-
-register = template.Library()
-
-@register.filter(name='times')
-def get_dict(dict_, key):
-    if key in dict_:
-        return dict_[key]
 
 def index(request):
     return render(request, 'index.html')
@@ -19,19 +12,23 @@ def predictions(request):
     return HttpResponse("predictions")
 
 def games(request):
-    games = Game.objects#.order_by('-date')[:5]
+    games = Game.objects.select_related("predict").all()#.order_by('-date')[:5]
+
+    for game in games:
+        try:
+            game.bet = game.bet_set.get(id=1)
+            game.bet.prob_tie = 100 - game.bet.prob1 - game.bet.prob2
+        except ObjectDoesNotExist:
+            game.bet = None
+
+        try:
+            game.predict
+            game.predict.prob_tie = 100 - game.predict.prob1 - game.predict.prob2
+        except ObjectDoesNotExist:
+            pass
+
     filter_by = list(games.values_list("id", flat=True))
     predictions = Predict.objects.filter(game_id__in=filter_by)
-
-    games =
-
-    games = [
-             "team1":
-             "team2":
-             "predict":
-             "prob1":
-             "prob2":
-            ]
 
     context = {'games': games, 'predictions': predictions}
     return render(request, 'games.html', context)

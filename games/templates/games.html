@@ -1,5 +1,3 @@
-{% load mathfilters %}
-
 {% if games %}
     {% for game in games %}
     <ul>
@@ -7,22 +5,22 @@
 
         <li>Our forecast:
             {% if game.forecast %}
-            {{ game.forecast.prob1 }}
-            {{ game.forecast.prob2 }}
-            {{ game.forecast.prob_tie }}
+            {{ game.forecast.prob1 }}% win A ||
+            {{ game.forecast.prob2 }}% win B ||
+            {{ game.forecast.prob_tie }}% tie
             {% else %}
             not available
-            {% endif %}
+            {% endif %}.
         </li>
 
-        <li>Our forecast:
+        <li>Your forecast:
             {% if game.bet %}
-            {{ game.bet.prob1 }}
-            {{ game.bet.prob2 }}
-            {{ game.bet.prob_tie }}
+            {{ game.bet.prob1 }}% win A ||
+            {{ game.bet.prob2 }}% win B ||
+            {{ game.bet.prob_tie }}% tie
             {% else %}
             not available
-            {% endif %}
+            {% endif %}.
         </li>
 
     </ul>

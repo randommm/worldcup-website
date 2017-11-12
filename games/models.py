@@ -28,8 +28,8 @@ class Game(models.Model):
 class Bet(models.Model):
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    prob1 = models.IntegerField()
-    prob2 = models.IntegerField()
+    prob1 = models.PositiveSmallIntegerField()
+    prob2 = models.PositiveSmallIntegerField()
 
     class Meta:
         unique_together = ("game", "user")
@@ -39,15 +39,15 @@ class Bet(models.Model):
 
 class Forecast(models.Model):
     game = models.OneToOneField(Game, on_delete=models.CASCADE)
-    prob1 = models.IntegerField()
-    prob2 = models.IntegerField()
+    prob1 = models.PositiveSmallIntegerField()
+    prob2 = models.PositiveSmallIntegerField()
 
     def __str__(self):
         return str(self.game)
 
 class Result(models.Model):
     game = models.OneToOneField(Game, on_delete=models.CASCADE)
-    result = models.IntegerField()
+    result = models.PositiveSmallIntegerField()
 
     def __str__(self):
         return str(self.game)

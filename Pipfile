@@ -12,6 +12,7 @@ gunicorn = "*"
 psycopg2 = "*"
 dj-database-url = "*"
 whitenoise = "*"
+social-auth-app-django = "*"
 
 [dev-packages]
 

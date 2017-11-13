@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^games/', include('games.urls')),
     #url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^login/', include('social_django.urls', namespace='social'))
 ]
 
 urlpatterns += staticfiles_urlpatterns()

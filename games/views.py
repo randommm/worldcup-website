@@ -4,7 +4,7 @@ from django.urls import reverse
 from .models import User, Team, Game, Bet, Forecast, Result
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'games/index.html')
 
 def forecasts(request):
     return HttpResponse("forecasts")
@@ -28,11 +28,11 @@ def games(request):
             pass
 
     context = {'games': games}
-    return render(request, 'games.html', context)
+    return render(request, 'games/games.html', context)
 
 def scoreboard(request):
     return HttpResponse("scoreboard")
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'detail.html', {'question': question})
+    return render(request, 'games/detail.html', {'question': question})

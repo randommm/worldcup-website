@@ -1,0 +1,17 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="keywords" content="{% block meta-keywords %}{% endblock %}">
+    {% block extra-meta %}{% endblock %}
+</head>
+<body>
+    Website
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    {% block extra-js %}{% endblock %}
+</body>
+</html>

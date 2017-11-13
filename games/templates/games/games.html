@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if games %}
+        {% for game in games %}
+        <ul>
+            <li>Game: {{ game.team1 }} vs {{ game.team2 }}.</li>
+
+            <li>Our forecast:
+                {% if game.forecast %}
+                {{ game.forecast.prob1 }}% win A ||
+                {{ game.forecast.prob2 }}% win B ||
+                {{ game.forecast.prob_tie }}% tie
+                {% else %}
+                not available
+                {% endif %}.
+            </li>
+
+            <li>Your forecast:
+                {% if game.bet %}
+                {{ game.bet.prob1 }}% win A ||
+                {{ game.bet.prob2 }}% win B ||
+                {{ game.bet.prob_tie }}% tie
+                {% else %}
+                not available
+                {% endif %}.
+            </li>
+
+        </ul>
+        {% endfor %}
+    {% else %}
+        <p>No game available.</p>
+    {% endif %}
+{% endblock %}

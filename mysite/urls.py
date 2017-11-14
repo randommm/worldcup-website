@@ -19,9 +19,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^games/', include('games.urls')),
-    #url(r'^polls/', include('polls.urls')),
+    url(r'^accounts/', include('accounts.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^social-login/', include('social_django.urls', namespace='social'))
+    url(r'^social-login/', include('social_django.urls', namespace='social')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -3,7 +3,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from .models import User, Team, Game, Bet, Forecast, Result
 from django.contrib.auth.decorators import login_required
-from django.template import RequestContext
 
 def index(request):
     return render(request, 'games/index.html')

@@ -2,13 +2,17 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from .models import User, Team, Game, Bet, Forecast, Result
+from django.contrib.auth.decorators import login_required
+from django.template import RequestContext
 
 def index(request):
     return render(request, 'games/index.html')
 
 def forecasts(request):
     return HttpResponse("forecasts")
+    #return HttpResponse(str(request.__dict__))
 
+@login_required
 def games(request):
     games = (Game.objects.select_related("forecast")
                  .prefetch_related('bet_set')
@@ -22,7 +26,7 @@ def games(request):
             pass
 
         try:
-            game.bet = game.bet_set.get(user_id=1)
+            game.bet = game.bet_set.get(user_id=request.user.id)
             game.bet.prob_tie = 100 - game.bet.prob1 - game.bet.prob2
         except (KeyError, Bet.DoesNotExist):
             pass

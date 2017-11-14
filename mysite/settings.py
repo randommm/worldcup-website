@@ -70,6 +70,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -123,10 +125,7 @@ USE_L10N = True
 USE_TZ = True
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.open_id.OpenIdAuth',
-    'social_core.backends.google.GoogleOpenId',
     'social_core.backends.google.GoogleOAuth2',
-    'social_core.backends.google.GoogleOAuth',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -147,3 +146,8 @@ DATABASES['default']['TEST'] = {'NAME': DATABASES['default']['NAME']}
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware')
+
+LOGIN_URL="/accounts/login/"
+LOGIN_REDIRECT_URL="/accounts/manage/"
+SOCIAL_AUTH_KEY = 'secrethere'
+SOCIAL_AUTH_SECRET = 'secrethere'

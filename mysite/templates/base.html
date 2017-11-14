@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
-    <meta name="keywords" content="{% block meta-keywords %}{% endblock %}">
+    <link rel="stylesheet" href="/static/style.css" />
     {% block extra-meta %}{% endblock %}
 </head>
 <body>
-    Website
+    <div style="text-align: center; font-weight: bold; font-size: 45px; margin-bottom: 10px">Site Copa 2018</div>
     <div class="content">
         {% block content %}{% endblock %}
     </div>

@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 Your profile:
 
 <ul>
@@ -8,3 +11,4 @@ Your profile:
 </ul>
 
 <a href="{% url 'accounts:logout' %}">Logout</a>
+{% endblock %}

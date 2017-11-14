@@ -124,6 +124,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+APPEND_SLASH = True
+
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',

@@ -1,34 +1,63 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% if games %}
-        {% for game in games %}
-        <ul>
-            <li>Game: {{ game.team1 }} vs {{ game.team2 }}.</li>
+{% if games %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    {% for game in games %}
+    <ul>
+        <li>Game: {{ game.team1 }} vs {{ game.team2 }}.</li>
 
-            <li>Our forecast:
-                {% if game.forecast %}
-                {{ game.forecast.prob1 }}% win A ||
-                {{ game.forecast.prob2 }}% win B ||
-                {{ game.forecast.prob_tie }}% tie
-                {% else %}
-                not available
-                {% endif %}.
-            </li>
+        <li>Our forecast:
+            {% if game.forecast %}
+            {{ game.forecast.prob1 }}% win A ||
+            {{ game.forecast.prob2 }}% win B ||
+            {{ game.forecast.prob_tie }}% tie
+            {% else %}
+            not available
+            {% endif %}.
+        </li>
 
-            <li>Your forecast:
-                {% if game.bet %}
-                {{ game.bet.prob1 }}% win A ||
-                {{ game.bet.prob2 }}% win B ||
-                {{ game.bet.prob_tie }}% tie
-                {% else %}
-                not available
-                {% endif %}.
-            </li>
+        <li>Your forecast:
+            {% if game.bet %}
+            {{ game.bet.prob1 }}% win A ||
+            {{ game.bet.prob2 }}% win B ||
+            {{ game.bet.prob_tie }}% tie
+            {% else %}
+            Not made yet. <a href="#" onclick="$('#sliderform{{ forloop.counter }}').css('display', 'inline'); return false;">Click here to change!</a>.
+            {% endif %}.
+        </li>
 
-        </ul>
-        {% endfor %}
-    {% else %}
-        <p>No game available.</p>
-    {% endif %}
+    </ul>
+
+  <script>
+  $( function() {
+    $( "#slider-range{{ forloop.counter }}" ).slider({
+      range: true,
+      min: 0,
+      max: 100,
+      values: [ 25, 75 ],
+      slide: function( event, ui ) {
+        $( "#winprob{{ forloop.counter }}" ).val( "Win {{ game.team1 }} %: " + ui.values[0] + " || Win {{ game.team2 }} %: " + (100-ui.values[1]) + " || Tie %: " + (ui.values[1]-ui.values[0]) );
+      }
+    });
+  } );
+  </script>
+
+<form id="sliderform{{ forloop.counter }}" style="display: none">
+<p style="margin-left: 20px; margin-right: 20px">
+  <label for="winprob{{ forloop.counter }}">Probability range:</label>
+  <input type="text" id="winprob{{ forloop.counter }}" readonly style="border:0; color:#f6931f; font-weight:bold; width: 1000px">
+</p>
+
+<div id="slider-range{{ forloop.counter }}" style="margin: 20px"></div>
+</form>
+<hr style="margin: 20px">
+    {% endfor %}
+
+{% else %}
+    <p>No game available.</p>
+{% endif %}
 {% endblock %}

@@ -1,5 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <ul>
     <li><a href="{% url 'games:scoreboard' %}">Scoreboard</a></li>
-    <li><a href="{% url 'games:games' %}">Games</a></li>
+    <li><a href="{% url 'games:games' %}">Make your bets</a></li>
     <li><a href="{% url 'games:forecasts' %}">Our forecasts</a></li>
 </ul>
+{% endblock %}

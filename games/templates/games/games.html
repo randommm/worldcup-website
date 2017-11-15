@@ -13,12 +13,16 @@
             var pwin0 = val0;
             var pwin1 = 100-val1;
             var ptie = val1-val0
-            $( "#winprob_" + objid ).val(
+            $( "#probs_humanread_" + objid ).html(
               "Win " + team0 + " %: " + pwin0 +
               " || Tie %: " + ptie +
               " || Win " + team1  +" %: " + pwin1);
             $( "#prob0_" + objid ).val(pwin0);
             $( "#prob1_" + objid ).val(pwin1);
+
+            $( "#gain_team0_" + objid ).html((10000 - (100 - pwin0)**2)/1000);
+            $( "#gain_team1_" + objid ).html((10000 - (100 - pwin1)**2)/1000);
+            $( "#gain_tie_" + objid ).html((10000 - (100 - ptie)**2)/1000);
         }
         $( "#slider-range_" + objid ).slider({
           range: true,
@@ -52,8 +56,8 @@
             {{ game.forecast.prob_tie }}% tie ||
             {{ game.forecast.prob1 }}% win {{ game.team1 }}.
             {% else %}
-            not available
-            {% endif %}.
+            not available.
+            {% endif %}
         </li>
 
         <li>Your forecast:<span id="yforecast_{{ forloop.counter }}">
@@ -63,27 +67,47 @@
             {{ game.bet.prob1 }}% win {{ game.team1 }}.
             {% else %}
             Not made yet.
-            {% endif %} <a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;">Click here to change!</a>.</span>
+            {% endif %} <a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;">Click here to change!</a></span>
+
+
+
+          <form id="sliderform_{{ forloop.counter }}" style="display: none" onsubmit="updatebet('{{ forloop.counter }}'); return false;">
+          {% csrf_token %}
+          <input type="hidden" id="prob0_{{ forloop.counter }}" name="prob0">
+          <input type="hidden" id="prob1_{{ forloop.counter }}" name="prob1">
+          <input type="hidden" name="gameid" value="{{ game.id }}">
+
+          <p>
+            <strong>Probabilities:</strong>
+            <span id="probs_humanread_{{ forloop.counter }}" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+          <div id="slider-range_{{ forloop.counter }}" style="margin-top: 20px"></div>
+
+          <ul style="margin-top: 10px">
+            <li>
+              If {{ game.team0 }} wins, you will get:
+              <span id="gain_team0_{{ forloop.counter }}"></span> KP.
+            </li>
+
+            <li>
+              If {{ game.team1 }} wins, you will get:
+              <span id="gain_team1_{{ forloop.counter }}"></span> KP.
+            </li>
+
+            <li>
+              If tie, you will get:
+              <span id="gain_tie_{{ forloop.counter }}"></span> KP.
+            </li>
+          </ul>
+
+          <input type="submit" value="Submit Changes" style="margin-top: 20px">
+          <div id="sucess_area_{{ forloop.counter }}" style="margin-top: 20px"></div>
+          </form>
+
         </li>
 
     </ul>
-
-
-
-    <form id="sliderform_{{ forloop.counter }}" style="display: none" onsubmit="updatebet('{{ forloop.counter }}'); return false;">
-    {% csrf_token %}
-    <p style="margin-left: 20px; margin-right: 20px">
-      <label for="winprob_{{ forloop.counter }}">Probabilities:</label>
-      <input type="text" id="winprob_{{ forloop.counter }}" readonly style="border:0; color:#f6931f; font-weight:bold; width: 1000px">
-      <input type="hidden" id="prob0_{{ forloop.counter }}" name="prob0">
-      <input type="hidden" id="prob1_{{ forloop.counter }}" name="prob1">
-      <input type="hidden" name="gameid" value="{{ game.id }}">
-    </p>
-
-    <div id="slider-range_{{ forloop.counter }}" style="margin-top: 20px"></div>
-    <input type="submit" value="Submit Changes" style="margin-top: 20px">
-    <div id="sucess_area_{{ forloop.counter }}" style="margin-top: 20px"></div>
-    </form>
     <hr style="margin-top: 20px">
     <script>
     activate_slider({{ forloop.counter }},

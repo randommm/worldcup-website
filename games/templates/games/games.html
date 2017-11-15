@@ -10,12 +10,15 @@
       def_val1 = 100 - def_val1
       $( function() {
         var updater = function( val0, val1 ) {
+            var pwin0 = val0;
+            var pwin1 = 100-val1;
+            var ptie = val1-val0
             $( "#winprob_" + objid ).val(
-              "Win " + team1 + " %: " + val0 +
-              " || Tie %: " + (val1-val0) +
-              " || Win " + team2  +" %: " + (100-val1));
-            $( "#prob1_" + objid ).val(val0);
-            $( "#prob2_" + objid ).val(100-val1);
+              "Win " + team1 + " %: " + pwin0 +
+              " || Tie %: " + ptie +
+              " || Win " + team2  +" %: " + pwin1);
+            $( "#prob1_" + objid ).val(pwin0);
+            $( "#prob2_" + objid ).val(pwin1);
         }
         $( "#slider-range_" + objid ).slider({
           range: true,
@@ -38,8 +41,6 @@
         dataType: "html"
       });
     }
-
-
     </script>
     {% for game in games %}
     <ul>
@@ -47,9 +48,9 @@
 
         <li>Our forecast:
             {% if game.forecast %}
-            {{ game.forecast.prob1 }}% win A ||
-            {{ game.forecast.prob2 }}% win B ||
-            {{ game.forecast.prob_tie }}% tie
+            {{ game.forecast.prob1 }}% win {{ game.team1 }} ||
+            {{ game.forecast.prob_tie }}% tie ||
+            {{ game.forecast.prob2 }}% win {{ game.team2 }}.
             {% else %}
             not available
             {% endif %}.
@@ -57,9 +58,9 @@
 
         <li>Your forecast:<span id="yforecast_{{ forloop.counter }}">
             {% if game.bet %}
-            {{ game.bet.prob1 }}% win A ||
-            {{ game.bet.prob2 }}% win B ||
-            {{ game.bet.prob_tie }}% tie.
+            {{ game.bet.prob1 }}% win {{ game.team1 }} ||
+            {{ game.bet.prob_tie }}% tie ||
+            {{ game.bet.prob2 }}% win {{ game.team2 }}.
             {% else %}
             Not made yet.
             {% endif %} <a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;">Click here to change!</a>.</span>
@@ -87,7 +88,8 @@
     <script>
     activate_slider({{ forloop.counter }},
                     "{{ game.team1 }}", "{{ game.team2 }}",
-                    {{ game.bet.prob1|default:33 }}, {{ game.bet.prob2|default:33 }})
+                    {{ game.bet.prob1|default:33 }},
+                    {{ game.bet.prob2|default:33 }})
     </script>
     {% endfor %}
 

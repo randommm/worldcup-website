@@ -34,9 +34,13 @@ def games(request):
     return render(request, 'games/games.html', context)
 
 def update_bet(request):
-    prob1 = request.POST.get("prob1")
-    prob2 = request.POST.get("prob2")
+    prob1 = int(request.POST.get("prob1"))
+    prob2 = int(request.POST.get("prob2"))
     gameid = request.POST.get("gameid")
+
+    assert(prob1 >= 0)
+    assert(prob2 >= 0)
+    assert(prob1 + prob2 <= 100)
 
     bet = Bet.objects.update_or_create(
       user_id=request.user.id, game_id=gameid,

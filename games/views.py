@@ -8,7 +8,7 @@ def index(request):
     return render(request, 'games/index.html')
 
 def forecasts(request):
-    return HttpResponse("forecasts")
+    return HttpResponse("Our forecasts will be here")
     #return HttpResponse(str(request.__dict__))
 
 @login_required
@@ -33,8 +33,21 @@ def games(request):
     context = {'games': games}
     return render(request, 'games/games.html', context)
 
+def update_bet(request):
+    prob1 = request.POST.get("prob1")
+    prob2 = request.POST.get("prob2")
+    gameid = request.POST.get("gameid")
+
+    bet = Bet.objects.update_or_create(
+      user_id=request.user.id, game_id=gameid,
+      defaults={'prob1': prob1, 'prob2': prob2}
+    )
+    #bet.save()
+
+    return HttpResponse("sucess")
+
 def scoreboard(request):
-    return HttpResponse("scoreboard")
+    return HttpResponse("The scoreboard will be here")
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

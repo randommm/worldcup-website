@@ -3,9 +3,44 @@
 {% block content %}
 {% if games %}
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    activate_slider = function(objid, team1, team2, def_val0, def_val1) {
+      def_val1 = 100 - def_val1
+      $( function() {
+        var updater = function( val0, val1 ) {
+            $( "#winprob_" + objid ).val(
+              "Win " + team1 + " %: " + val0 +
+              " || Tie %: " + (val1-val0) +
+              " || Win " + team2  +" %: " + (100-val1));
+            $( "#prob1_" + objid ).val(val0);
+            $( "#prob2_" + objid ).val(100-val1);
+        }
+        $( "#slider-range_" + objid ).slider({
+          range: true,
+          min: 0,
+          max: 100,
+          values: [ def_val0, def_val1 ],
+          slide: function( event, ui ) {
+            updater(ui.values[0], ui.values[1]);
+          }
+        });
+        updater(def_val0, def_val1);
+      });
+    }
+    updatebet = function(formid) {
+      $.ajax({
+        type: "POST",
+        url: "{% url 'games:update_bet' %}",
+        data: $('#sliderform_'+formid).serialize(),
+        success: function(res){$("#sucess_area_" + formid).html("Updated!")},
+        dataType: "html"
+      });
+    }
+
+
+    </script>
     {% for game in games %}
     <ul>
         <li>Game: {{ game.team1 }} vs {{ game.team2 }}.</li>
@@ -20,41 +55,40 @@
             {% endif %}.
         </li>
 
-        <li>Your forecast:
+        <li>Your forecast:<span id="yforecast_{{ forloop.counter }}">
             {% if game.bet %}
             {{ game.bet.prob1 }}% win A ||
             {{ game.bet.prob2 }}% win B ||
-            {{ game.bet.prob_tie }}% tie
+            {{ game.bet.prob_tie }}% tie.
             {% else %}
-            Not made yet. <a href="#" onclick="$('#sliderform{{ forloop.counter }}').css('display', 'inline'); return false;">Click here to change!</a>.
-            {% endif %}.
+            Not made yet.
+            {% endif %} <a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;">Click here to change!</a>.</span>
         </li>
 
     </ul>
 
-  <script>
-  $( function() {
-    $( "#slider-range{{ forloop.counter }}" ).slider({
-      range: true,
-      min: 0,
-      max: 100,
-      values: [ 25, 75 ],
-      slide: function( event, ui ) {
-        $( "#winprob{{ forloop.counter }}" ).val( "Win {{ game.team1 }} %: " + ui.values[0] + " || Win {{ game.team2 }} %: " + (100-ui.values[1]) + " || Tie %: " + (ui.values[1]-ui.values[0]) );
-      }
-    });
-  } );
-  </script>
 
-<form id="sliderform{{ forloop.counter }}" style="display: none">
-<p style="margin-left: 20px; margin-right: 20px">
-  <label for="winprob{{ forloop.counter }}">Probability range:</label>
-  <input type="text" id="winprob{{ forloop.counter }}" readonly style="border:0; color:#f6931f; font-weight:bold; width: 1000px">
-</p>
 
-<div id="slider-range{{ forloop.counter }}" style="margin: 20px"></div>
-</form>
-<hr style="margin: 20px">
+    <form id="sliderform_{{ forloop.counter }}" style="display: none" onsubmit="updatebet('{{ forloop.counter }}'); return false;">
+    {% csrf_token %}
+    <p style="margin-left: 20px; margin-right: 20px">
+      <label for="winprob_{{ forloop.counter }}">Probabilities:</label>
+      <input type="text" id="winprob_{{ forloop.counter }}" readonly style="border:0; color:#f6931f; font-weight:bold; width: 1000px">
+      <input type="hidden" id="prob1_{{ forloop.counter }}" name="prob1">
+      <input type="hidden" id="prob2_{{ forloop.counter }}" name="prob2">
+      <input type="hidden" name="gameid" value="{{ game.id }}">
+    </p>
+
+    <div id="slider-range_{{ forloop.counter }}" style="margin-top: 20px"></div>
+    <input type="submit" value="Submit Changes" style="margin-top: 20px">
+    <div id="sucess_area_{{ forloop.counter }}" style="margin-top: 20px"></div>
+    </form>
+    <hr style="margin-top: 20px">
+    <script>
+    activate_slider({{ forloop.counter }},
+                    "{{ game.team1 }}", "{{ game.team2 }}",
+                    {{ game.bet.prob1|default:33 }}, {{ game.bet.prob2|default:33 }})
+    </script>
     {% endfor %}
 
 {% else %}

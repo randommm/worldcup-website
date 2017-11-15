@@ -8,8 +8,19 @@
     {% block extra-meta %}{% endblock %}
 </head>
 <body>
-    <div style="text-align: center; font-weight: bold; font-size: 45px; margin-bottom: 10px">Site Copa 2018</div>
+    <div style="text-align: center; font-weight: bold; font-size: 45px; margin-bottom: 10px">World Cup 2018</div>
+
     <div class="content">
+    <div style="text-align: right">
+      <div id="login_area" style="margin-bottom: 2px">
+      {% if request.user.email %}
+          <a href="{% url 'accounts:profile' %}">Logged as {{ request.user.email }}</a>
+      {% else %}
+          <a href="{% url 'accounts:login' %}">Login or create account.</a>
+      {% endif %}
+      </div>
+      <a href="{% url 'games:index' %}">Games forecast and bets</a>
+    </div>
         {% block content %}{% endblock %}
     </div>
     {% block extra-js %}{% endblock %}

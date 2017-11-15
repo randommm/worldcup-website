@@ -20,13 +20,13 @@ def games(request):
     for game in games:
         try:
             game.forecast
-            game.forecast.prob_tie = 100 - game.forecast.prob1 - game.forecast.prob2
+            game.forecast.prob_tie = 100 - game.forecast.prob0 - game.forecast.prob1
         except (KeyError, Forecast.DoesNotExist):
             pass
 
         try:
             game.bet = game.bet_set.get(user_id=request.user.id)
-            game.bet.prob_tie = 100 - game.bet.prob1 - game.bet.prob2
+            game.bet.prob_tie = 100 - game.bet.prob0 - game.bet.prob1
         except (KeyError, Bet.DoesNotExist):
             pass
 
@@ -34,17 +34,17 @@ def games(request):
     return render(request, 'games/games.html', context)
 
 def update_bet(request):
+    prob0 = int(request.POST.get("prob0"))
     prob1 = int(request.POST.get("prob1"))
-    prob2 = int(request.POST.get("prob2"))
     gameid = request.POST.get("gameid")
 
+    assert(prob0 >= 0)
     assert(prob1 >= 0)
-    assert(prob2 >= 0)
-    assert(prob1 + prob2 <= 100)
+    assert(prob0 + prob1 <= 100)
 
     bet = Bet.objects.update_or_create(
       user_id=request.user.id, game_id=gameid,
-      defaults={'prob1': prob1, 'prob2': prob2}
+      defaults={'prob0': prob0, 'prob1': prob1}
     )
     #bet.save()
 

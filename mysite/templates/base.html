@@ -8,21 +8,25 @@
   {% block extra-meta %}{% endblock %}
 </head>
 <body>
-  <div class="siteheader">
-    <span class="sitetitle"><a href="{% url 'index' %}">World Cup 2018</a></span>
-    <span class="sitenavbar">
-      <a href="{% url 'games:forecasts' %}">Our forecasts</a> | <a href="{% url 'games:games' %}">Make your bets</a> |
-
-
+  <div id="siteheader">
+    <div id="sitetitle"><a href="{% url 'index' %}">World Cup 2018</a></div>
+    <div id="siteuserbar">
       {% if request.user.email %}
-        <a href="{% url 'accounts:profile' %}">User {{ request.user.first_name }}</a>
-        <a href="{% url 'accounts:logout' %}">(logout)</a>
+        User {{ request.user.first_name }} |
+        <a href="{% url 'accounts:profile' %}">View my profile</a> |
+        <a href="{% url 'accounts:logout' %}">Log Out</a>
       {% else %}
         <a href="{% url 'accounts:login' %}">Join or sign-in</a>
       {% endif %}
-
-    </span>
+    </div>
   </div>
+
+  <div id="sitenavbar">
+    <a href="{% url 'games:forecasts' %}">Our forecasts</a> |
+    <a href="{% url 'games:games' %}">Make your bets</a> |
+    <a href="{% url 'games:scoreboard' %}">Scoreboard</a>
+  </div>
+
 
   <div class="content">
     {% block content %}{% endblock %}

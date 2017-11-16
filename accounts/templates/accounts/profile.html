@@ -4,11 +4,10 @@
 Your profile:
 
 <ul>
-    <li>Username: {{ request.user.username }}</li>
     <li>First name: {{ request.user.first_name }}</li>
     <li>Last name: {{ request.user.last_name }}</li>
     <li>Email: {{ request.user.email }}</li>
+    <li>Password: ****</li>
 </ul>
 
-<a href="{% url 'accounts:logout' %}">Logout</a>
 {% endblock %}

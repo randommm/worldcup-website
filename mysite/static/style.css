@@ -1,4 +1,37 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+#siteheader {
+  background: #339933;
+  background: -webkit-linear-gradient(30deg, #006600, #339933);
+  background: -o-linear-gradient(30deg, #006600, #339933);
+  background: -moz-linear-gradient(30deg, #006600, #339933);
+  background: linear-gradient(20deg, #006600, #137953);
+  color: white;
+  height: 28px;
+  padding: 2px 23px 13px 15px;
+}
+#sitetitle {
+  font-size: 33px;
+  float: left;
+}
+#siteuserbar {
+  float: right;
+  font-size: 15px;
+  margin-top: 11px;
+}
+#sitenavbar {
+  padding-right: 10px;
+  background: #53a953;
+  text-align: left;
+  padding: 3px 0 5px 15px;
+  font-size: 15px;
+}
+#siteheader a, #sitenavbar a, #sitetitle,
+#siteheader, #sitenavbar, #sitetitle, #pagetitle {
+  color: #fcfce9;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
 li {
   padding:2px;
 }
@@ -6,30 +39,7 @@ li {
   margin-left: 20px;
   margin-right: 20px;
 }
-.siteheader {
-  padding-left: 10px;
-  background: #339933;
-  background: -webkit-linear-gradient(30deg, #006600, #339933);
-  background: -o-linear-gradient(30deg, #006600, #339933);
-  background: -moz-linear-gradient(30deg, #006600, #339933);
-  background: linear-gradient(20deg, #006600, #137953);
-  color: white;
-}
-.siteheader a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.sitetitle {
-  font-weight: bold;
-  font-size: 45px;
-  color: #ddd;
-  font-family: 'Open Sans', sans-serif;
-}
-.sitenavbar {
-  position: relative;
-  left: 100px;
-  font-size: 20px
-}
+
 body {
   margin: 0px;
   background-color: #d0d0d0;

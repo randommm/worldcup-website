@@ -45,9 +45,12 @@
         dataType: "html"
       });
     }
+    $( function() {
+      $( ".button" ).button();
+    });
     </script>
     {% for game in games %}
-    <ul>
+    <ul> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Change bet for this game</a></div>
         <li>Game: {{ game.team0 }} vs {{ game.team1 }}.</li>
 
         <li>Our forecast:
@@ -67,7 +70,7 @@
             {{ game.bet.prob1 }}% win {{ game.team1 }}.
             {% else %}
             Not made yet.
-            {% endif %} <a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;">Click here to change!</a></span>
+            {% endif %}</span>
 
 
 
@@ -101,8 +104,8 @@
             </li>
           </ul>
 
-          <input type="submit" value="Submit Changes" style="margin-top: 20px">
-          <div id="sucess_area_{{ forloop.counter }}" style="margin-top: 20px"></div>
+          <input type="submit" value="Submit Changes" class="button" style="margin-top: 20px">
+          <div id="sucess_area_{{ forloop.counter }}" style="margin-top: 20px; color: green; font-weight: bold"></div>
           </form>
 
         </li>

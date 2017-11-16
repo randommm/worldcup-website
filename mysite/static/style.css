@@ -1,7 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 li {
   padding:2px;
 }
 .content {
   margin-left: 20px;
   margin-right: 20px;
+}
+.siteheader {
+  padding-left: 10px;
+  background: #339933;
+  background: -webkit-linear-gradient(30deg, #006600, #339933);
+  background: -o-linear-gradient(30deg, #006600, #339933);
+  background: -moz-linear-gradient(30deg, #006600, #339933);
+  background: linear-gradient(20deg, #006600, #137953);
+  color: white;
+}
+.siteheader a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.sitetitle {
+  font-weight: bold;
+  font-size: 45px;
+  color: #ddd;
+  font-family: 'Open Sans', sans-serif;
+}
+.sitenavbar {
+  position: relative;
+  left: 100px;
+  font-size: 20px
+}
+body {
+  margin: 0px;
+  background-color: #d0d0d0;
+}
+.content {
+  background-color: #fcfcfc;
+  margin: 15px;
+  border: 9px double #777;
+  border-radius: 45px;
+  padding: 5px 30px 10px 30px;
+  box-shadow: 10px 10px 5px #7777;
 }

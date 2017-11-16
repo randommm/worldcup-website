@@ -2,27 +2,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/static/style.css" />
-    {% block extra-meta %}{% endblock %}
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  {% block extra-meta %}{% endblock %}
 </head>
 <body>
-    <div style="text-align: center; font-weight: bold; font-size: 45px; margin-bottom: 10px">World Cup 2018</div>
+  <div class="siteheader">
+    <span class="sitetitle"><a href="{% url 'index' %}">World Cup 2018</a></span>
+    <span class="sitenavbar">
+      <a href="{% url 'games:forecasts' %}">Our forecasts</a> | <a href="{% url 'games:games' %}">Make your bets</a> |
 
-    <div class="content">
-    <div style="text-align: right">
-      <div id="login_area" style="margin-bottom: 2px">
+
       {% if request.user.email %}
-          <a href="{% url 'accounts:profile' %}">Logged as {{ request.user.email }}</a>
+        <a href="{% url 'accounts:profile' %}">User {{ request.user.first_name }}</a>
+        <a href="{% url 'accounts:logout' %}">(logout)</a>
       {% else %}
-          <a href="{% url 'accounts:login' %}">Login or create account.</a>
+        <a href="{% url 'accounts:login' %}">Join or sign-in</a>
       {% endif %}
-      </div>
-      <a href="{% url 'games:index' %}">Games forecast and bets</a>
-    </div>
-        {% block content %}{% endblock %}
-    </div>
-    {% block extra-js %}{% endblock %}
+
+    </span>
+  </div>
+
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+  {% block extra-js %}{% endblock %}
 </body>
 </html>

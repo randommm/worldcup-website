@@ -8,7 +8,8 @@ def index(request):
     return render(request, 'games/index.html')
 
 def forecasts(request):
-    return HttpResponse("Our forecasts will be here")
+    return render(request, 'games/forecasts.html')
+    #return HttpResponse("Our forecasts will be here")
     #return HttpResponse(str(request.__dict__))
 
 @login_required
@@ -51,7 +52,7 @@ def update_bet(request):
     return HttpResponse("sucess")
 
 def scoreboard(request):
-    return HttpResponse("The scoreboard will be here")
+    return render(request, 'games/scoreboard.html')
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

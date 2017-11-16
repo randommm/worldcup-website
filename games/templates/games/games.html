@@ -50,7 +50,7 @@
     });
     </script>
     {% for game in games %}
-    <ul> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Change bet for this game</a></div>
+    <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Change bet for this game</a></div>
         <li>Game: {{ game.team0 }} vs {{ game.team1 }}.</li>
 
         <li>Our forecast:
@@ -111,7 +111,9 @@
         </li>
 
     </ul>
-    <hr style="margin-top: 20px">
+    {% if not forloop.last %}
+    <hr style="margin: 20px 0 20px 0">
+    {% endif %}
     <script>
     activate_slider({{ forloop.counter }},
                     "{{ game.team0 }}", "{{ game.team1 }}",

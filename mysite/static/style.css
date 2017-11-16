@@ -31,24 +31,33 @@
   font-family: sans-serif;
   font-weight: bold;
 }
-
 li {
   padding:2px;
 }
-.content {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 body {
   margin: 0px;
   background-color: #d0d0d0;
 }
-.content {
+html, body {
+  height: 90%;
+}
+#backgrounder{
+  background-image: url("/static/grass-pattern.jpg");
+  background-repeat: repeat;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+#content {
   background-color: #fcfcfc;
-  margin: 15px;
-  border: 9px double #777;
+  margin: 10px 45px 15px 45px;
+  border: 15px double #245524;
   border-radius: 45px;
-  padding: 5px 30px 10px 30px;
-  box-shadow: 10px 10px 5px #7777;
+  padding: 20px 30px 10px 30px;
+  box-shadow: 6px 6px 3px #7777;
+  min-height: 100%;
 }

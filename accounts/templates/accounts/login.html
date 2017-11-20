@@ -6,5 +6,5 @@
 <style>
   #login_area {display:none}
 </style>
-<a href="{% url 'social:begin' 'google-oauth2' %}">Login or create an account using Google</a>
+<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ nextpage }}">Login or create an account using Google</a>
 {% endblock %}

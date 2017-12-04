@@ -7,6 +7,18 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'games/index.html')
 
+def rules(request):
+    return render(request, 'games/rules.html')
+
+def  history(request):
+    return render(request, 'games/history.html')
+
+def  objectives(request):
+    return render(request, 'games/objectives.html')
+
+def  contact(request):
+    return render(request, 'games/contact.html')
+
 def forecasts(request):
     return render(request, 'games/forecasts.html')
     #return HttpResponse("Our forecasts will be here")

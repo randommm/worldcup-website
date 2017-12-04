@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        a { text-decoration : none; color : blue; }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type = "text/css">
+  </head>
+  <body>
+  	<h1>History</h1>
+  	<h2>Some words about football/soccer contest pools</h2>
+
+  	<p>Gambling and betting are probably as old as mankind. Once sports events became popular, betting on its results also brought a lot of attention to them. In Europe, specially in Great Britain, betting on sports events was already pretty popular in the late XIX century (ref), but it was only in the 1920's that the first football pool<sup><a href="#fn1" id="ref1">1</a></sup> was created.</p>
+  	<p>These &ldquo;pools&rdquo; are private companies that sell the right to participate in the contest, in this case, related to results of upcpming football matches. In those days, everything was done in printed forms<sup><a href="#fn2" id="ref2">2</a></sup>.</p>
+  	<p> Each week, when a collector called to pick-up the completed pools coupon along with the appropriate amount of money necessary to play, a fresh set of coupons for the following week’s series of games would be left.}. One could go to a betting post to fill these forms. They had a list of some of the week's matches. The filled form was then posted to the pools firm, with a postal order or cheque for the sum staked (or &ldquo;invested&rdquo;, as the firms used to say). At the end of the weekend the results of the matches were announced on radio, television and published in the news­papers so that the bettors could take out the copy of his coupon and check his forecasts.</p>
+  	<p>The first football pools company was Littlewoods, created by John Moores, Colin Askham and Bill Hughes in 1923. The concept of the classic pools was an instant hit with the public and it flourished until the start of the war in 1939. In 1946 normal service was resumed as the football league started up again. Fortunately for people wanting to try their luck (or skill), football pools were not outlawed or put out of business and they went from strength to strength. It did not take long before competing companies were formed. Vernons Pools came on the scene in 1925, and eight years later in 1933, Zetters Pools became the third company to offer their services to players. In 1945, George Britten started his family football pool firm, Brittens Pools.</p>
+  	<p>Starting in 1935, the &ldquo;penny points&rdquo; bet was the most popular contest. For each match, the bettor would mark a 1, a 2 or an x to show that he thought the result of the match would be a home win, an away win or a draw, respectively. Home wins guessed correctly received 1 point, away wins received 2 points and draws received 3. The bet with highest scores won money prizes. After the war, the Treble chance became more popular. In this system, the bettor had to choose, from a list of more than 50 matches listed in the form, eight that he believed would end tied.</p>
+  	<p>Although football pools were immediately popular with the public, they did not sit well with the establishment. Ramsay MacDonald, the British prime minister in the 1930's, once said that the pools were a disease which spread downwards to the industrious poor from the idle rich!</p>
+  	<p>In Italy, the Totocalcio was born after the war. Its creator, the sports journalist Massimo Della Pergola, thought about the contest while in a concentration camp in Switzerland. His idea was similar to the british penny points system (he also used 1, 2 or x as symbols to denote the believed result), with the difference that each match guessed correctly would count for one point, being a draw, a home or away win.</p>
+  	<p>In September of 1945 he created, with Fabio Jegher and Geo Molo, also sports journalists, the Sisal (Sport Italia società a responsabilità limitata). A few months later, in May 5th, 1946, 34000 italians participated on the first Sisal contest, with 14 matches to forecast. The great popularity of the contest led the government to take its control, renaming it to Totocalcio. In the 1950's and 1960's the popularity of the contest only increased. A nice documentary (in Italian) about it can be seen here. In the 1980's and 1990's scandals showed the relation of players, referees and others to fix results. The most known case was the one involving the Italian international Paolo Rossi.</p>
+  	<p>Contests similar to Totocalcio were created in other countries. In Spain, La Quiniela also started after the War<sup><a href="#fn3" id="ref3">3</a></sup>, but its first system was different. The bettor should forecast the winner and the number of goals scored by each team. A scoring rule determined the winner of different prizes. In 1948 the 1, 2, or  x system was adopted, also with 14 matches per contest.</p>
+  	<p>In Brazil, the Loteria Esportiva or Loteca, started in 1970. Also run by the state, the system is the same of Totocalcio and Quiniela, but with 13 matches per contest.<sup><a href="#fn4" id="ref4">4</a></sup>. The popularity of the contest only increased in the 1970's, until a scandal was revealed showing how several people manipulated results. The contest never recovered its credibility, but exists to this day. The creation of other federal lotteries and contests related to football clubs, and the beggining of online betting in Brazil also contributed to diminish its popularity.</p>
+
+  	<h2>Bruno de Finetti</h2>
+
+  	<p>The popularity of Totocalcio and the relationship of forecasting and subjective probabilities led Bruno de Finetti to idealize a contest where constestants should submit their probabilities of each result, i.e. victory, draw or defeat of the home team. This is exactly the contest we are promoting for the World Cup.</p>
+  	<p>In unpublished notes<sup><a href="#fn5" id="ref5">5</a></sup>, he reminds an anecdote happened around 1950. He noticed, on the display window of a bar in Rome, a table where triples of numbers of sum 100 were shown for each match of the upcoming Sunday, under the title &ldquo;Quote del picchetto&rdquo;.</p>
+  	<p>De Finetti immediataly understood that those triples were the probabilities of a group of experts named &ldquo;picchetto&rdquo;<sup><a href="#fn6" id="ref6">6</a></sup>. Not being familiar with the expression &ldquo;quote del picchetto&rdquo;, asked the meaning of it to the owner of the bar, who answered surprised &ldquo;but, ... they are the probabilities&rdquo;!</p>
+  	<p>In the early 1960's, de Finetti implemented such a contest experimentally with students and university staff as contestants (himself included). He believed that such contest would teach the most important aspects of probability theory and in a much better way than the textbooks examples used in most of undergraduate courses on the subject.</p>
+  	<p>His idea was to implement a national contest, with participation of experts (like sports journalists) and eventually announcements of the results on TV. His last writings about the subject are dated 1983, two years before his passing. </p>
+  	<p>Last year (2017), <a href = "https://projects.fivethirtyeight.com/nfl-predictions-game/">Nate Silver's FiveThirtyEight</a> promoted this contest for american football.</p>
+
+	</body>
+
+  <hr>
+
+<sup id="fn1">1. [The word &ldquo;pool&rdquo; is connected with the picture of streams of money pouring into a com­mon fund, or &ldquo;pool&rdquo; from which the winners are paid after the firm has taken its expenses and profit.]<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+
+<br>
+
+<br>
+
+<sup id="fn2">2. [Playing the football pools before the Internet involved completing by hand special coupons provided by each of the companies. Initially coupons were readily available from newsagents and tobacconists, places most frequented by the working man. The main football pool companies also provided a service where coupons were hand-delivered directly to players by various networks of collectors across the UK. These collectors acted as middlemen between the punters and the pools companies.]<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
+
+<br>
+
+<br>
+
+<sup id="fn3">3. [Even though there are controversies about its start, it is accepted that the <a href = "https://es.wikipedia.org/wiki/La_Quiniela_(España)">first contest</a> happened in September, 22nd, 1946, with a ticket for 7 matches.]<a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup>
+
+<br>
+
+<br>
+
+<sup id="fn4">4. [The number of matches per contest varied since then and nowadays is <a href = "http://loterias.caixa.gov.br/wps/portal/loterias/landing/loteca">14</a>.]<a href="#ref4" title="Jump back to footnote 4 in the text.">↩</a></sup>
+
+<br>
+
+<br>
+
+<sup id="fn5">5. [<a href = "http://digital2.library.pitt.edu/islandora/object/pitt%3A31735033466560/viewer">Notes on Probability, Prevision, and Prediction, 1982-1983, Box 5, Folder 36, Bruno de Finetti Papers, 1924-2000, ASP.1992.01, Archives of Scientific Philosophy, Special Collections Department, University of Pittsburgh</a>].<a href="#ref5" title="Jump back to footnote 5 in the text.">↩</a></sup>
+
+<br>
+
+<br>
+
+<sup id="fn6">6. [A free translation for &ldquo;picchetto&rdquo; is stake or jackpot.]<a href="#ref6" title="Jump back to footnote 6 in the text.">↩</a></sup>
+
+  </hr>
+
+<br>  
+{% endblock %}
+

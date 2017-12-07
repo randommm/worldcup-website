@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.urls import reverse
 from .models import User, Team, Game, Bet, Result, Point
 from django.contrib.auth.decorators import login_required
@@ -42,6 +42,18 @@ def committer():
         points_of_the_user = Point.objects.get_or_create(user_id=id_)[0]
         points_of_the_user.points += points
         points_of_the_user.save()
+
+@transaction.atomic
+def recreate(request):
+    if (not request.user.is_authenticated or
+        request.user.email not in ["m@marcoinacio.com",
+                                   "marcoigarapava@gmail.com"]):
+        raise Http404("")
+    with transaction.atomic():
+        Point.objects.all().delete()
+        Result.objects.all().update(committed=False)
+    committer()
+    return HttpResponse("recreated")
 
 def index(request):
     return render(request, 'games/index.html')

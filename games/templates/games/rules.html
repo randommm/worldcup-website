@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
-{% block content %}
-  <head>
+{% block extra-head %}
+  <link rel="stylesheet" href="/static/style1.css" />
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>My test page</title>
@@ -12,8 +13,10 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type = "text/css">
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-  </head>
-  <body>
+{% endblock %}
+
+{% block content %}
+
   <h1>Rules: how to play our forecast contest</h1>
 
   <p>During the WC, teams play (almost) every day for roughly one month. Therefore, during this month you can input your own forecasts using our interactive website. After each game finishes, you’ll either gain or lose points based on your forcast, meaning that your forecast will be scored. This score will tell how ``good'' your forecast was, basically showing how close your forecast was from the observed result of the game (victory of team A, victory of team B or draw).</p>
@@ -64,5 +67,4 @@
 
   <p>However, no matter what you do, enjoy the game and have fun.</p>
 
-  </body>
 {% endblock %}

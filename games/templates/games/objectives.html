@@ -1,23 +1,15 @@
 {% extends 'base.html' %}
 
-{% block content %}
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>My test page</title>
-    <link href="style1.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        a { text-decoration : none; color : blue; }
-    </style>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type = "text/css">
-  </head>
-  <body>
+{% block extra-head %}
+  <link rel="stylesheet" href="/static/style1.css" />
+{% endblock %}
 
+{% block content %}
 <h1>Objectives</h1>
 
 <p>Before we state our goals, it is important to mention that the team working in this project is not sponsored or related, by any means, to betting websites or organizations.</p>
 
-<p>Our objectives implementing a football/soccer prevision contest are strictly pedagogical and academic, being:</p> 
+<p>Our objectives implementing a football/soccer prevision contest are strictly pedagogical and academic, being:</p>
 
 <ol>
 
@@ -72,7 +64,7 @@
 
 
 
-<p>The importance of questions of this kind is not restricted to psychology and philosophy of probability and human behaviour but greatly concerns several practical fields. 
+<p>The importance of questions of this kind is not restricted to psychology and philosophy of probability and human behaviour but greatly concerns several practical fields.
 Often, important economic and medical decisions depend on the answer of an expert, and the opinion he/she is asked to reveal is, explicitly or implicitly, his evaluation of certain probabilities.</p>
 
 </body>

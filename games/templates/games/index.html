@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block extra-head %}
 
-  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>My test page</title>
@@ -65,13 +64,13 @@ div.tab button.active {
 }
 </style>
 
-  </head>
+{% endblock %}
 
-  <body>
+{% block content %}
 
   	<h1>Forecasting the FIFA WC</h1>
   	<h2>Here you are the forecaster</h2>
-    
+
     <p>Are you a football/soccer expert? Can you forecast the results of the 2018 World Cup matches better than a mathematical model? Here's your chance to prove it!</p>
     <p>Use the sliders below to select YOUR probabilities of each possible result (victory of each team or draw). You'll be competing against three models---<a href = "https://projects.fivethirtyeight.com/soccer-predictions/?ex_cid=irpromo">Nate Silver's FiveThirtyEight</a>, <a href = "http://chancedegol.uol.com.br">Chance de Gol</a> and <a href = "http://www.previsaoesportiva.com.br">Previsão Esportiva</a>---but also against all the other competitors. After each matchday the forecasts will be scored according to the rules---described <a href = "{% url 'games:rules' %}">here</a>---and the best forecaster will be the one with higher score after the 64 matches of this WC. Just beware that we're asking probabilistic forecasts for each match and that the scoring rules punishes overconfidence.</p>
     <p>Don't forget to sign in using Google or Facebook to save your selections. After each matchday you'll be able to check how well you did against the models and everybody else playing the game.</p>
@@ -83,17 +82,17 @@ div.tab button.active {
 </div>
 
 <div id="Picks" class="tabcontent">
-  
+
         <li>Game: Brazil vs Spain.</li>
 
         <li>Our forecast:
-            
+
             not available.
-            
+
         </li>
 
         <li>Your forecast:<span id="yforecast_1">
-            
+
             38% win Brazil ||
             29% tie ||
             33% win Spain.
@@ -128,14 +127,14 @@ div.tab button.active {
         </li>
 
     </ul>
-    
+
     <hr style="margin: 20px 0 20px 0">
-    
+
 </div>
 
 <div id="Results" class="tabcontent">
   <h3></h3>
-  <p>Here we'll display the results of every match and your scores of each one of them.</p> 
+  <p>Here we'll display the results of every match and your scores of each one of them.</p>
 </div>
 
 <div id="Scoreboard" class="tabcontent">
@@ -162,10 +161,5 @@ document.getElementById("defaultOpen").click();
 
 
 </script>
-
-</body>
-
-
-
 
 {% endblock %}

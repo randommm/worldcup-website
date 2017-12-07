@@ -46,7 +46,7 @@ h1 {
   font-size: 60px;
   text-align: center;
   margin: 0;
-  padding: 20px 0;    
+  padding: 20px 0;
   color: blue;
   /*text-shadow: 3px 3px 1px black;*/
 }
@@ -55,13 +55,13 @@ h2 {
   font-size: 25px;
   text-align: center;
   margin: 0;
-  padding: 20px 0;  
+  padding: 20px 0;
   color: blue;
   /*text-shadow: 3px 3px 1px black;*/
 }
 
 p {
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 2;
   letter-spacing: 0px;
   width: 100%;
@@ -71,7 +71,7 @@ p {
 
 li {
   margin: 0;
-  font-size: 18px;    
+  font-size: 18px;
   line-height: 2;
   letter-spacing: 0px;
   text-align: justify;
@@ -91,10 +91,10 @@ img {
     background-color: white;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    height: 5%; 
+    height: 5%;
     left: 0px;
     width: 100%; /* Full width */
-    padding-top: 20px; 
+    padding-top: 20px;
     padding-bottom: 2px;
     border-bottom: 5px solid black;
     min-width: 1000px;
@@ -117,8 +117,9 @@ img {
 }
 .alignright {
   float: right;
-  margin-top: -5px;  
+  margin-top: -5px;
 }
 .aligncenter{
   text-align: center;
 }
+a { text-decoration : none; color : blue; }

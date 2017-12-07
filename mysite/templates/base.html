@@ -4,18 +4,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>{% block title %}{% endblock %}</title>
+
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type = "text/css">
+  <link rel="stylesheet" href="/static/style1.css" />
+
+  <link rel="stylesheet" href="/static/jquery-ui-1.12.1/jquery-ui.css">
+  <script src="/static/jquery-1.12.4.js"></script>
+  <script src="/static/jquery-ui-1.12.1/jquery-ui.js"></script>
+
   {% block extra-head %}{% endblock %}
   <title>My test page</title>
 </head>
 <body>
 
 <div style="clear: both;" id="navbar">
-  <a  href="{% url 'index' %}">Fifa Experts</a>
-  <a  style="margin-top:0;padding-right:10px;" href="http://www.previsaoesportiva.com.br">Português</a>
-  <a class="alignright" href="http://twitter.com/intent/tweet?text=[TWEET_CONTENT_GOES_HERE]" onclick="window.open(this.href, 'twitterwindow','left=20,top=20,width=600,height=300,toolbar=0,resizable=1'); return false;"><img src="/static/tweetlogo.png"/></a>
-  <a class="alignright" href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=[TITLE_GOES_HERE]&amp;p[summary]=[SUMMARY_GOES_HERE]&amp;p[url]=http://127.0.0.1:8000/games/&amp;p[images[0]=[IMAGE_GOES_HERE]" onclick="window.open(this.href, 'facebookwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;"><img src="/static/facebooklogo.png"/></a>
+  <a href="{% url 'index' %}">Fifa Experts</a>
+  <a style="margin-top:0;padding-right:10px;" href="http://www.previsaoesportiva.com.br">Português</a>
+  <a class="alignright" href="http://twitter.com/intent/tweet?text=[TWEET_CONTENT_GOES_HERE]" onclick="window.open(this.href, 'twitterwindow','left=20,top=20,width=600,height=300,toolbar=0,resizable=1'); return false;"><img src="/static/images/tweetlogo.png"/></a>
+  <a class="alignright" href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=[TITLE_GOES_HERE]&amp;p[summary]=[SUMMARY_GOES_HERE]&amp;p[url]=http://127.0.0.1:8000/games/&amp;p[images[0]=[IMAGE_GOES_HERE]" onclick="window.open(this.href, 'facebookwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;"><img src="/static/images/facebooklogo.png"/></a>
   <a class="alignright" style="margin-top:0;" href="{% url 'accounts:login' %}">Join or sign-in</a>
 
 </div>

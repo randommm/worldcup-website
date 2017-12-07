@@ -1,18 +1,10 @@
 {% extends 'base.html' %}
 
-{% block extra-head %}
-  <link rel="stylesheet" href="/static/style1.css" />
+{% block title %}Rules{% endblock %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>My test page</title>
-    <style type="text/css">
-        a { text-decoration : none; color : blue; }
-    </style>
-    <link href="style1.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type = "text/css">
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+{% block extra-head %}
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
 {% endblock %}
 
 {% block content %}

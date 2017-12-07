@@ -1,27 +1,46 @@
-body {
-  width: 800px;
-  margin: 0 auto ;
-  /*background-color: #FF9500;*/
-  /*padding: 0 20px 20px 20px;*/
-  border: none;
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 18px; /* px means 'pixels': the base font size is now 10 pixels high  */
+    width: : 800px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20%;
+}
+html, body {
+    height: 80%;
+}
+#wrapper {
+    min-height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    /* same height as footer */
+    margin-bottom: -120px;
+}
+#wrapper:after {
+    content:"";
+    display: block;
+}
+#header {
+    height: 200px;
+    background: #FF0;
+}
+#footer, #wrapper:after {
+    /* same height as wrapper negative margin */
+    height: 60px;
+    padding-top: 2%;
+}
+#footer {
+    background: #ccc;
+    text-indent: 16.5%;
+}
+#footer a {
+    text-decoration: none;
+    padding: 25px !important;
+    vertical-align: middle;
 }
 
-.c-1-color { background: red; }
-.c-2-color { background: white; }
-.c-3-color { background: blue; }
-
-#slider-color {
-        width:75%;
-        margin: 0 100px;
-        }
-
-html {
-  font-size: 18px; /* px means 'pixels': the base font size is now 10 pixels high  */
-  width: : 800px;
-  font-family: 'Playfair Display', serif;
-  /*font-family: 'Crimson Text', serif;*/
-  /*background-color: #3F63BF;*/
-}
 
 h1 {
   font-size: 60px;
@@ -42,10 +61,10 @@ h2 {
 }
 
 p {
-  font-size: 18px;    
+  font-size: 18px; 
   line-height: 2;
   letter-spacing: 0px;
-  width: 800px;
+  width: 100%;
   text-align: justify;
   /*text-indent: 5%;*/
 }
@@ -64,26 +83,11 @@ img {
   margin: 0 auto;
 }
 
-#footer {
-    text-indent: 16%;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 45px;
-    width: 100%;
-    background-color: white;
-    color: black;
-    padding-top: 20px;
-    border-top: 5px solid black;
-} 
-
-
 .clear { clear: both; height: 60px; }
 
 @media screen and (min-width: 1000px){
 #navbar {
-    text-indent: 16.5%;
+    text-indent: 3%;
     background-color: white;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
@@ -93,7 +97,7 @@ img {
     padding-top: 20px; 
     padding-bottom: 2px;
     border-bottom: 5px solid black;
-    min-width: 1200px;
+    min-width: 1000px;
 }}
 
 /* Links inside the navbar */
@@ -113,7 +117,6 @@ img {
 }
 .alignright {
   float: right;
-  margin-right: 6%;
   margin-top: -5px;  
 }
 .aligncenter{

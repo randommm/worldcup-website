@@ -42,7 +42,7 @@ html, body {
   height: 90%;
 }
 #backgrounder{
-  background-image: url("/static/grass-pattern.jpg");
+  background-image: url("/static/images/grass-pattern.jpg");
   background-repeat: repeat;
   opacity: 0.8;
   top: 0;

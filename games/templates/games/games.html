@@ -25,8 +25,9 @@
           values: [ def_val0, def_val1 ],
           slide: function( event, ui ) {
             updater(ui.values[0], ui.values[1]);
+            $('#slider_extra_div_' + objid ).css('width', 100 - ui.values[1] + "%");
           }
-        });
+        }).append('<div id="slider_extra_div_'+objid+'" style="width: 50%"></div>');
         updater(def_val0, def_val1);
       });
     }

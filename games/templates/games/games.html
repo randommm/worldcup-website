@@ -6,7 +6,7 @@
         var updater = function( val0, val1 ) {
             var pwin0 = val0;
             var pwin1 = 100-val1;
-            var ptie = val1-val0
+            var ptie = val1-val0;
             $( "#probs_humanread_" + objid ).html(
               "Win " + team0 + " %: " + pwin0 +
               " || Tie %: " + ptie +
@@ -14,9 +14,9 @@
             $( "#prob0_" + objid ).val(pwin0);
             $( "#prob1_" + objid ).val(pwin1);
 
-            $( "#gain_team0_" + objid ).html((10000 - (100 - pwin0)**2)/1000);
-            $( "#gain_team1_" + objid ).html((10000 - (100 - pwin1)**2)/1000);
-            $( "#gain_tie_" + objid ).html((10000 - (100 - ptie)**2)/1000);
+            $( "#gain_team0_" + objid ).html((10000 - (100 - pwin0)^2)/1000);
+            $( "#gain_team1_" + objid ).html((10000 - (100 - pwin1)^2)/1000);
+            $( "#gain_tie_" + objid ).html((10000 - (100 - ptie)^2)/1000);
         }
         $( "#slider-range_" + objid ).slider({
           range: true,
@@ -47,11 +47,13 @@
     <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Change bet for this game</a></div>
         <li>Game: {{ game.team0 }} vs {{ game.team1 }}.</li>
 
+        <li>Time: {{ game.date }}.</li>
+
         <li>Our forecast:
-            {% if game.forecast %}
-            {{ game.forecast.prob0 }}% win {{ game.team0 }} ||
-            {{ game.forecast.prob_tie }}% tie ||
-            {{ game.forecast.prob1 }}% win {{ game.team1 }}.
+            {% if game.site_forecast %}
+            {{ game.site_forecast.prob0 }}% win {{ game.team0 }} ||
+            {{ game.site_forecast.prob_tie }}% tie ||
+            {{ game.site_forecast.prob1 }}% win {{ game.team1 }}.
             {% else %}
             not available.
             {% endif %}

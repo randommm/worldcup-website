@@ -1,8 +1,47 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
-from .models import User, Team, Game, Bet, Forecast, Result
+from .models import User, Team, Game, Bet, Result, Point
 from django.contrib.auth.decorators import login_required
+from django.db import transaction, DatabaseError
+import datetime
+
+@transaction.atomic
+def committer():
+    results = Result.objects.exclude(committed=True)
+    if results.count() == 0:
+        return
+
+    try:
+        results = (Result.objects
+                   .select_for_update(nowait=True)
+                   .exclude(committed=True))
+    except DatabaseError:
+        return
+
+    points_by_user = {}
+    for result in results:
+        bets = Bet.objects.filter(game_id = result.game_id)
+        for bet in bets:
+            if result.result == 0:
+                bet.points = (10000 - (100 - bet.prob0)**2)
+            elif result.result == 1:
+                bet.points = (10000 - (100 - bet.prob1)**2)
+            else:
+                bet.points = (10000 - (bet.prob0 + bet.prob1)**2)
+            bet.save()
+            id_ = bet.user_id
+            if id_ not in points_by_user:
+                points_by_user[id_] = 0
+            points_by_user[id_] += bet.points
+
+        result.committed = True
+        result.save()
+
+    for id_, points in points_by_user.items():
+        points_of_the_user = Point.objects.get_or_create(user_id=id_)[0]
+        points_of_the_user.points += points
+        points_of_the_user.save()
 
 def index(request):
     return render(request, 'games/index.html')
@@ -25,15 +64,22 @@ def forecasts(request):
     #return HttpResponse(str(request.__dict__))
 
 def games(request):
-    games = (Game.objects.select_related("forecast")
+    cutdate = datetime.datetime.now().timestamp()
+    cutdate += 60*30
+    cutdate = datetime.datetime.fromtimestamp(cutdate)
+    games = (Game.objects#.select_related("forecast")
                  .prefetch_related('bet_set')
-                 .order_by('-date'))
+                 .filter(date__gte=cutdate)
+                 .order_by('date'))
 
     for game in games:
         try:
-            game.forecast
-            game.forecast.prob_tie = 100 - game.forecast.prob0 - game.forecast.prob1
-        except (KeyError, Forecast.DoesNotExist):
+            bet = game.bet_set.get(user_id=1)
+            game.site_forecast = type('site_forecast', (object,), {})()
+            game.site_forecast.prob0 = bet.prob0
+            game.site_forecast.prob1 = bet.prob1
+            game.site_forecast.prob_tie = 100 - bet.prob0 - bet.prob1
+        except (KeyError, Bet.DoesNotExist):
             pass
 
         if request.user.is_authenticated:
@@ -55,19 +101,46 @@ def update_bet(request):
     assert(prob1 >= 0)
     assert(prob0 + prob1 <= 100)
 
-    bet = Bet.objects.update_or_create(
-      user_id=request.user.id, game_id=gameid,
-      defaults={'prob0': prob0, 'prob1': prob1}
-    )
+    if (Game.objects.get(id=gameid).date.timestamp() -
+        datetime.datetime.now().timestamp() -
+        60*30 >= 0):
+        bet = Bet.objects.update_or_create(
+          user_id=request.user.id, game_id=gameid,
+          defaults={'prob0': prob0, 'prob1': prob1}
+        )
     #bet.save()
 
     return HttpResponse("sucess")
 
 def scoreboard(request):
-    return render(request, 'games/scoreboard.html')
+    committer()
+    points = Point.objects.all().order_by('-points')
+
+    for point in points:
+       pointunf = point.points
+       if pointunf <= 1000:
+           point.pointf = str(pointunf) + " P"
+       elif pointunf <= 1000000:
+           point.pointf = str(pointunf / 1000) + " KP"
+       else:
+           point.pointf = str(pointunf / 1000000) + " MP"
+
+    context = {'points': points}
+    return render(request, 'games/scoreboard.html', context)
 
 def results(request):
-    return render(request, 'games/results.html')
+    committer()
+    bets = (Bet.objects.select_related("user")
+            .filter(user=request.user.id))
+    for bet in bets:
+       if bet.points == -1:
+          bet.pontuated = False
+       else:
+          bet.pontuated = True
+       bet.ptie = 100 - bet.prob1 - bet.prob0;
+
+    context = {'bets': bets}
+    return render(request, 'games/results.html', context)
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

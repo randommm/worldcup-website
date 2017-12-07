@@ -25,6 +25,7 @@ class Bet(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     prob0 = models.PositiveSmallIntegerField()
     prob1 = models.PositiveSmallIntegerField()
+    points = models.IntegerField(default=-1)
 
     class Meta:
         unique_together = ("game", "user")
@@ -32,17 +33,17 @@ class Bet(models.Model):
     def __str__(self):
         return str(self.game) + " by " + self.user.email
 
-class Forecast(models.Model):
-    game = models.OneToOneField(Game, on_delete=models.CASCADE)
-    prob0 = models.PositiveSmallIntegerField()
-    prob1 = models.PositiveSmallIntegerField()
+class Point(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    points = models.PositiveSmallIntegerField(default=0)
 
     def __str__(self):
-        return str(self.game)
+        return str(self.user)
 
 class Result(models.Model):
     game = models.OneToOneField(Game, on_delete=models.CASCADE)
     result = models.PositiveSmallIntegerField()
+    committed = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.game)

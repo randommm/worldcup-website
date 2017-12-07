@@ -5,55 +5,22 @@
 {% block extra-head %}
 
 <link rel="stylesheet" href="/static/style2.css">
-<style>
-/* Style the tab */
-div.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-div.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-div.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-div.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s;
-}
-
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-</style>
+<script>
+$( function() {
+  $( "#tabs" ).tabs({
+    beforeLoad: function( event, ui ) {
+      ui.panel.html('<img src="/static/images/ajax-loader.gif"' +
+                    'alt="Loading..." />');
+    },
+    select: function(event, ui) {
+        $(ui.panel).animate({opacity:0.1}, 1000);
+    },
+    show: function(event, ui) {
+        $(ui.panel).animate({opacity:1.0}, 2000);
+    }
+  });
+});
+</script>
 
 {% endblock %}
 
@@ -66,91 +33,13 @@ div.tab button.active {
     <p>Use the sliders below to select YOUR probabilities of each possible result (victory of each team or draw). You'll be competing against three models---<a href = "https://projects.fivethirtyeight.com/soccer-predictions/?ex_cid=irpromo">Nate Silver's FiveThirtyEight</a>, <a href = "http://chancedegol.uol.com.br">Chance de Gol</a> and <a href = "http://www.previsaoesportiva.com.br">Previsão Esportiva</a>---but also against all the other competitors. After each matchday the forecasts will be scored according to the rules---described <a href = "{% url 'games:rules' %}">here</a>---and the best forecaster will be the one with higher score after the 64 matches of this WC. Just beware that we're asking probabilistic forecasts for each match and that the scoring rules punishes overconfidence.</p>
     <p>Don't forget to sign in using Google or Facebook to save your selections. After each matchday you'll be able to check how well you did against the models and everybody else playing the game.</p>
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Picks')" id="defaultOpen">Your forecasts</button>
-  <button class="tablinks" onclick="openCity(event, 'Results')">Results</button>
-  <button class="tablinks" onclick="openCity(event, 'Scoreboard')">Scoreboard</button>
+
+<div id="tabs">
+  <ul>
+    <li><a href="/games/games">Your forecasts</a></li>
+    <li><a href="/games/results">Results</a></li>
+    <li><a href="/games/scoreboard">Scoreboard</a></li>
+  </ul>
 </div>
-
-<div id="Picks" class="tabcontent">
-
-        <li>Game: Brazil vs Spain.</li>
-
-        <li>Our forecast:
-
-            not available.
-
-        </li>
-
-        <li>Your forecast:<span id="yforecast_1">
-
-            38% win Brazil ||
-            29% tie ||
-            33% win Spain.
-            </span>
-
-
-          <p>
-            <strong>Probabilities:</strong>
-            <span id="probs_humanread_1" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
-          </p>
-
-          <div id="slider-range_1" style="margin-top: 20px"></div>
-
-          <ul style="margin-top: 10px">
-            <li>
-              If Brazil wins, you will get:
-              <span id="gain_team0_1"></span> points.
-            </li>
-
-            <li>
-              If Spain wins, you will get:
-              <span id="gain_team1_1"></span> points.
-            </li>
-
-            <li>
-              If tie, you will get:
-              <span id="gain_tie_1"></span> points.
-            </li>
-          </ul>
-
-
-        </li>
-
-    </ul>
-
-    <hr style="margin: 20px 0 20px 0">
-
-</div>
-
-<div id="Results" class="tabcontent">
-  <h3></h3>
-  <p>Here we'll display the results of every match and your scores of each one of them.</p>
-</div>
-
-<div id="Scoreboard" class="tabcontent">
-  <h3></h3>
-  <p>Coming soon!</p>
-</div>
-
-<script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-document.getElementById("defaultOpen").click();
-
-
-</script>
 
 {% endblock %}

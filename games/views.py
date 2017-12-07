@@ -10,13 +10,13 @@ def index(request):
 def rules(request):
     return render(request, 'games/rules.html')
 
-def  history(request):
+def history(request):
     return render(request, 'games/history.html')
 
-def  objectives(request):
+def objectives(request):
     return render(request, 'games/objectives.html')
 
-def  contact(request):
+def contact(request):
     return render(request, 'games/contact.html')
 
 def forecasts(request):
@@ -65,6 +65,9 @@ def update_bet(request):
 
 def scoreboard(request):
     return render(request, 'games/scoreboard.html')
+
+def results(request):
+    return render(request, 'games/results.html')
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

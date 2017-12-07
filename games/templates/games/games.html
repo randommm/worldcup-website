@@ -48,7 +48,7 @@
     <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Change bet for this game</a></div>
         <li>Game: {{ game.team0 }} vs {{ game.team1 }}.</li>
 
-        <li>Time: {{ game.date }}.</li>
+        <li>Time: {{ game.date }}</li>
 
         <li>Our forecast:
             {% if game.site_forecast %}
@@ -77,12 +77,16 @@
           <input type="hidden" id="prob1_{{ forloop.counter }}" name="prob1">
           <input type="hidden" name="gameid" value="{{ game.id }}">
 
-          <p>
-            <strong>Probabilities:</strong>
-            <span id="probs_humanread_{{ forloop.counter }}" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
-          </p>
+          <strong style="display: block; text-align: center; margin: -10px">Probabilities</strong>
+            <div id="probs_humanread_{{ forloop.counter }}" style="border:0; color:#f6931f; font-weight:bold; text-align: center"></div>
 
-          <div id="slider-range_{{ forloop.counter }}" style="margin-top: 20px"></div>
+            <img src="static/images/flags/{{ game.team0.flag }}.gif" class="country_flags_0" />
+            <img src="static/images/flags/{{ game.team1.flag }}.gif" class="country_flags_1" />
+            <div class="slider_container">
+              <div id="slider-range_{{ forloop.counter }}" style="margin-top: 20px">
+              </div>
+            </div>
+          <div style="clear: both"></div>
 
           <ul style="margin-top: 10px">
             <li>

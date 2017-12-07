@@ -19,3 +19,23 @@ div[id^="slider_extra_div_"] {
   background: #a5a5c0; /*#d7daed; /*#d39d1f*/
   border-radius: 0px 4px 4px 0px;
 }
+
+
+.country_flags_0, .country_flags_1 {
+  width: 80px;
+  height: 50px;
+  border: 1px dotted #e0e0e0;
+  border-radius: 25px;
+}
+
+.country_flags_0 {
+  float: left;
+}
+
+.country_flags_1 {
+  float: right;
+}
+
+.slider_container {
+  padding: 0 100px 0 100px;
+}

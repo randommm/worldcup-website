@@ -79,7 +79,9 @@ def games(request):
     cutdate = datetime.datetime.now().timestamp()
     cutdate += 60*30
     cutdate = datetime.datetime.fromtimestamp(cutdate)
-    games = (Game.objects#.select_related("forecast")
+    games = (Game.objects
+                 .select_related("team0")
+                 .select_related("team1")
                  .prefetch_related('bet_set')
                  .filter(date__gte=cutdate)
                  .order_by('date'))

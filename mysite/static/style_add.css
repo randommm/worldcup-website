@@ -1,0 +1,41 @@
+#siteheader {
+  background: #339933;
+  background: -webkit-linear-gradient(30deg, #006600, #339933);
+  background: -o-linear-gradient(30deg, #006600, #339933);
+  background: -moz-linear-gradient(30deg, #006600, #339933);
+  background: linear-gradient(20deg, #006600, #137953);
+  color: white;
+  height: 32px;
+  padding: 2px 23px 13px 15px;
+}
+#sitetitle {
+  font-size: 33px;
+  margin-top: -2px;
+  float: left;
+}
+#siteuserbar {
+  float: right;
+  font-size: 15px;
+  margin-top: 11px;
+}
+#sitenavbar {
+  background: #53a953;
+  text-align: right;
+  padding: 3px 23px 5px 15px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+#siteheader a, #sitenavbar a, #sitetitle,
+#siteheader, #sitenavbar, #sitetitle, #pagetitle {
+  color: #fcfce9;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+li {
+  padding:2px;
+}
+html, body {
+  height: 90%;
+}
+

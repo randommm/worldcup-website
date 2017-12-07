@@ -83,7 +83,7 @@ img {
   margin: 0 auto;
 }
 
-.clear { clear: both; height: 60px; }
+.clear { clear: both; }
 
 @media screen and (min-width: 1000px){
 #navbar {

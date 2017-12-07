@@ -24,7 +24,6 @@ def forecasts(request):
     #return HttpResponse("Our forecasts will be here")
     #return HttpResponse(str(request.__dict__))
 
-@login_required
 def games(request):
     games = (Game.objects.select_related("forecast")
                  .prefetch_related('bet_set')
@@ -37,11 +36,12 @@ def games(request):
         except (KeyError, Forecast.DoesNotExist):
             pass
 
-        try:
-            game.bet = game.bet_set.get(user_id=request.user.id)
-            game.bet.prob_tie = 100 - game.bet.prob0 - game.bet.prob1
-        except (KeyError, Bet.DoesNotExist):
-            pass
+        if request.user.is_authenticated:
+            try:
+                game.bet = game.bet_set.get(user_id=request.user.id)
+                game.bet.prob_tie = 100 - game.bet.prob0 - game.bet.prob1
+            except (KeyError, Bet.DoesNotExist):
+                pass
 
     context = {'games': games}
     return render(request, 'games/games.html', context)

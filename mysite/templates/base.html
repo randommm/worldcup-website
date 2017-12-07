@@ -24,7 +24,12 @@
   <a style="margin-top:0;padding-right:10px;" href="http://www.previsaoesportiva.com.br">Português</a>
   <a class="alignright" href="http://twitter.com/intent/tweet?text=[TWEET_CONTENT_GOES_HERE]" onclick="window.open(this.href, 'twitterwindow','left=20,top=20,width=600,height=300,toolbar=0,resizable=1'); return false;"><img src="/static/images/tweetlogo.png"/></a>
   <a class="alignright" href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=[TITLE_GOES_HERE]&amp;p[summary]=[SUMMARY_GOES_HERE]&amp;p[url]=http://127.0.0.1:8000/games/&amp;p[images[0]=[IMAGE_GOES_HERE]" onclick="window.open(this.href, 'facebookwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;"><img src="/static/images/facebooklogo.png"/></a>
-  <a class="alignright" style="margin-top:0;" href="{% url 'accounts:login' %}">Join or sign-in</a>
+  {% if request.user.email %}
+    <a class="alignright" href="{% url 'accounts:logout' %}">Log Out</a>
+    <a class="alignright" href="{% url 'accounts:profile' %}">User {{ request.user.first_name }}</a>
+  {% else %}
+    <a class="alignright" style="margin-top:0;" href="{% url 'accounts:login' %}">Join or sign-in</a>
+  {% endif %}
 
 </div>
 

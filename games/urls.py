@@ -4,7 +4,6 @@ from . import views
 
 app_name = "games"
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
     url(r'^scoreboard$', views.scoreboard, name='scoreboard'),
     url(r'^games$', views.games, name='games'),
     url(r'^forecasts$', views.forecasts, name='forecasts'),
@@ -13,5 +12,4 @@ urlpatterns = [
     url(r'^history$', views.history, name='history'),
     url(r'^objectives$', views.objectives, name='objectives'),
     url(r'^contact$', views.contact, name='contact'),
-
 ]

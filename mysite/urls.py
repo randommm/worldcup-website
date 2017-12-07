@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.views.generic.base import RedirectView
+from games.views import index
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(pattern_name='games:index', permanent=False), name='index'),
+    url(r'^$', index, name='index'),
     url(r'^games/', include('games.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^admin/', admin.site.urls),

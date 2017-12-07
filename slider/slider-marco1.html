@@ -1,0 +1,2910 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style type="text/css">
+        a { text-decoration : none; color : blue; }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type = "text/css">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+  </head>
+
+  <body>
+
+   <div id="wrapper">
+    <div id="content">
+
+  	<h1>Forecasting the FIFA WC</h1>
+  	<h2>Here you are the forecaster</h2>
+    
+    <p>Are you a football/soccer expert? Can you forecast the results of the 2018 World Cup matches better than a mathematical model? Here's your chance to prove it!</p>
+    <p>Use the sliders below to selec YOUR probabilities of each possible result (victory of each team or draw). You'll be competing against three models---<a href = "https://projects.fivethirtyeight.com/soccer-predictions/?ex_cid=irpromo">Nate Silver's FiveThirtyEight</a>, <a href = "http://chancedegol.uol.com.br">Chance de Gol</a> and <a href = "http://www.previsaoesportiva.com.br">Previsão Esportiva</a>---but also against all the other competitors. After each matchday the forecasts will be scored according to the rules---described <a href = "{% url 'games:rules' %}">here</a>---and the best forecaster will be the one with higher score after the 64 matches of this WC. Just beware that we're asking probabilistic forecasts for each match and that the scoring rules punishes overconfidence.</p>
+    <p>Don't forget to sign in using Google or Facebook to save your selections. After each matchday you'll be able to check how well you did against the models and everybody else playing the game.</p>
+
+
+    <hr style="margin: 20px 0 20px 0">
+
+        <h2>Thursday, June 14, 2018</h2>
+
+        <hr style="margin: 20px 0 20px 0">
+
+
+        <p>Russia vs Saudi Arabia (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_1" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ru.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">RUS</span>
+          </div>
+          <div id="slider-range_1" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="sa.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SAU</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Russia wins, you will get:
+              <span id="gain_team0_1"></span> points.
+            </li>
+
+            <li>
+              If Saudi Arabia wins, you will get:
+              <span id="gain_team1_1"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_1"></span> points.
+            </li>
+          </ul>
+
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 20px 0 20px 0">
+
+          <h2>Friday, June 15, 2018</h2>
+
+        <hr style="margin: 20px 0 20px 0">
+
+
+        <p>Egypt vs Uruguay (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_2" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="eg.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">EGY</span>
+          </div>
+          <div id="slider-range_2" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="uy.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">URU</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Egypt wins, you will get:
+              <span id="gain_team0_2"></span> points.
+            </li>
+
+            <li>
+              If Uruguay wins, you will get:
+              <span id="gain_team1_2"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_2"></span> points.
+            </li>
+          </ul>
+
+        <hr style="margin: 10px 0 10px 0">
+
+
+        <p>Morrocco vs Iran (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_3" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ma.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">MOR</span>
+          </div>
+          <div id="slider-range_3" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="ir.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">IRA</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Morrocco wins, you will get:
+              <span id="gain_team0_3"></span> points.
+            </li>
+
+            <li>
+              If Iran wins, you will get:
+              <span id="gain_team1_3"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_3"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+    <p>Portugal vs Spain (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_4" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="pt.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">POR</span>
+          </div>
+          <div id="slider-range_4" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="es.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SPA</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Portugal wins, you will get:
+              <span id="gain_team0_4"></span> points.
+            </li>
+
+            <li>
+              If Spain wins, you will get:
+              <span id="gain_team1_4"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_4"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>France vs Australia (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_5" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="fr.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">FRA</span>
+          </div>
+          <div id="slider-range_5" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="au.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">AUS</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If France wins, you will get:
+              <span id="gain_team0_5"></span> points.
+            </li>
+
+            <li>
+              If Australia wins, you will get:
+              <span id="gain_team1_5"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_5"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Argentina vs Iceland (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_6" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ar.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">ARG</span>
+          </div>
+          <div id="slider-range_6" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="is.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">ICE</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Argentina wins, you will get:
+              <span id="gain_team0_6"></span> points.
+            </li>
+
+            <li>
+              If Iceland wins, you will get:
+              <span id="gain_team1_6"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_6"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Peru vs Denmark (7 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_7" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="pe.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">PER</span>
+          </div>
+          <div id="slider-range_7" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="dk.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">DEN</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Peru wins, you will get:
+              <span id="gain_team0_7"></span> points.
+            </li>
+
+            <li>
+              If Denmark wins, you will get:
+              <span id="gain_team1_7"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_7"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Croatia vs Nigeria (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_8" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="hr.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">CRO</span>
+          </div>
+          <div id="slider-range_8" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="ng.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">NIG</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Croatia wins, you will get:
+              <span id="gain_team0_8"></span> points.
+            </li>
+
+            <li>
+              If Nigeria wins, you will get:
+              <span id="gain_team1_8"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_8"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Costa Rica vs Serbia (4 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_9" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="cr.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">COS</span>
+          </div>
+          <div id="slider-range_9" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="rs.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SER</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Costa Rica wins, you will get:
+              <span id="gain_team0_9"></span> points.
+            </li>
+
+            <li>
+              If Serbia wins, you will get:
+              <span id="gain_team1_9"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_9"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Germany vs Mexico (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_10" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="de.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">GER</span>
+          </div>
+          <div id="slider-range_10" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="mx.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">MEX</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Germany wins, you will get:
+              <span id="gain_team0_10"></span> points.
+            </li>
+
+            <li>
+              If Mexico wins, you will get:
+              <span id="gain_team1_10"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_10"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Brazil vs Switzerland (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_11" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="br.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">BRA</span>
+          </div>
+          <div id="slider-range_11" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="ch.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SWI</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Brazil wins, you will get:
+              <span id="gain_team0_11"></span> points.
+            </li>
+
+            <li>
+              If Switzerland wins, you will get:
+              <span id="gain_team1_11"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_11"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Sweden vs South Korea (3 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_12" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="se.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">SWE</span>
+          </div>
+          <div id="slider-range_12" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="kr.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">KOR</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Sweden wins, you will get:
+              <span id="gain_team0_12"></span> points.
+            </li>
+
+            <li>
+              If South Korea wins, you will get:
+              <span id="gain_team1_12"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_12"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Belgium vs Panama (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_13" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="be.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">BEL</span>
+          </div>
+          <div id="slider-range_13" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="pa.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">PAN</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Belgium wins, you will get:
+              <span id="gain_team0_13"></span> points.
+            </li>
+
+            <li>
+              If Panama wins, you will get:
+              <span id="gain_team1_13"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_13"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Tunisia vs England (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_14" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="tn.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">TUN</span>
+          </div>
+          <div id="slider-range_14" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="eng.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">ENG</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Tunisia wins, you will get:
+              <span id="gain_team0_14"></span> points.
+            </li>
+
+            <li>
+              If England wins, you will get:
+              <span id="gain_team1_14"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_14"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+        <p>Colombia vs Japan (3 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_15" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="co.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">COL</span>
+          </div>
+          <div id="slider-range_15" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="jp.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">JAP</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Colombia wins, you will get:
+              <span id="gain_team0_15"></span> points.
+            </li>
+
+            <li>
+              If Japan wins, you will get:
+              <span id="gain_team1_15"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_15"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Poland vs Senegal (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_16" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="pl.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">POL</span>
+          </div>
+          <div id="slider-range_16" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="sn.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SEN</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Poland wins, you will get:
+              <span id="gain_team0_16"></span> points.
+            </li>
+
+            <li>
+              If Senegal wins, you will get:
+              <span id="gain_team1_16"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_16"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Russia vs Egypt (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_17" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ru.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">RUS</span>
+          </div>
+          <div id="slider-range_17" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="eg.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">EGY</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Russia wins, you will get:
+              <span id="gain_team0_17"></span> points.
+            </li>
+
+            <li>
+              If Egypt wins, you will get:
+              <span id="gain_team1_17"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_17"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Portugal vs Morrocco (3 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_18" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="pt.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">POR</span>
+          </div>
+          <div id="slider-range_18" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="ma.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">MOR</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Portugal wins, you will get:
+              <span id="gain_team0_18"></span> points.
+            </li>
+
+            <li>
+              If Morrocco wins, you will get:
+              <span id="gain_team1_18"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_18"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Uruguay vs Saudi Arabia (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_19" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="uy.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">URU</span>
+          </div>
+          <div id="slider-range_19" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="sa.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SAU</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Uruguay wins, you will get:
+              <span id="gain_team0_19"></span> points.
+            </li>
+
+            <li>
+              If Saudi Arabia wins, you will get:
+              <span id="gain_team1_19"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_19"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+        <p>Iran vs Spain (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_20" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ir.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">IRA</span>
+          </div>
+          <div id="slider-range_20" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="es.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SPA</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Iran wins, you will get:
+              <span id="gain_team0_20"></span> points.
+            </li>
+
+            <li>
+              If Spain wins, you will get:
+              <span id="gain_team1_20"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_20"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+        <p>Denmark vs Australia (4 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_21" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="dk.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">DEN</span>
+          </div>
+          <div id="slider-range_21" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="au.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">AUS</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Denmark wins, you will get:
+              <span id="gain_team0_21"></span> points.
+            </li>
+
+            <li>
+              If Australia wins, you will get:
+              <span id="gain_team1_21"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_21"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+        <p>France vs Peru (8 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_22" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="fr.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">FRA</span>
+          </div>
+          <div id="slider-range_22" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="pe.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">PER</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If France wins, you will get:
+              <span id="gain_team0_22"></span> points.
+            </li>
+
+            <li>
+              If Peru wins, you will get:
+              <span id="gain_team1_22"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_22"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Argentina vs Croatia (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_23" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ar.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">ARG</span>
+          </div>
+          <div id="slider-range_23" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="hr.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">CRO</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Argentina wins, you will get:
+              <span id="gain_team0_23"></span> points.
+            </li>
+
+            <li>
+              If Croatia wins, you will get:
+              <span id="gain_team1_23"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_23"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Brazil vs Costa Rica (3 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_24" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="br.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">BRA</span>
+          </div>
+          <div id="slider-range_24" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="cr.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">COS</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Brazil wins, you will get:
+              <span id="gain_team0_24"></span> points.
+            </li>
+
+            <li>
+              If Costa Rica wins, you will get:
+              <span id="gain_team1_24"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_24"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Nigeria vs Iceland (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_25" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ng.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">NIG</span>
+          </div>
+          <div id="slider-range_25" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="is.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">ICE</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Nigeria wins, you will get:
+              <span id="gain_team0_25"></span> points.
+            </li>
+
+            <li>
+              If Iceland wins, you will get:
+              <span id="gain_team1_25"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_25"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Serbia vs Switzerland (8 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_26" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="rs.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">SER</span>
+          </div>
+          <div id="slider-range_26" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="ch.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SWI</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Serbia wins, you will get:
+              <span id="gain_team0_26"></span> points.
+            </li>
+
+            <li>
+              If Switzerland wins, you will get:
+              <span id="gain_team1_26"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_26"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Belgium vs Tunisia (3 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_27" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="be.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">BEL</span>
+          </div>
+          <div id="slider-range_27" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="tn.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">TUN</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Belgium wins, you will get:
+              <span id="gain_team0_27"></span> points.
+            </li>
+
+            <li>
+              If Tunisia wins, you will get:
+              <span id="gain_team1_27"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_27"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>South Korea vs Mexico (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_28" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="kr.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">KOR</span>
+          </div>
+          <div id="slider-range_28" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="mx.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">MEX</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If South Korea wins, you will get:
+              <span id="gain_team0_28"></span> points.
+            </li>
+
+            <li>
+              If Mexico wins, you will get:
+              <span id="gain_team1_28"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_28"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Germany vs Sweden (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_29" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="de.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">GER</span>
+          </div>
+          <div id="slider-range_29" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="se.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SWE</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Germany wins, you will get:
+              <span id="gain_team0_29"></span> points.
+            </li>
+
+            <li>
+              If Sweden wins, you will get:
+              <span id="gain_team1_29"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_29"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>England vs Panama (3 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_30" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="eng.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">ENG</span>
+          </div>
+          <div id="slider-range_30" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="pa.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">PAN</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If England wins, you will get:
+              <span id="gain_team0_30"></span> points.
+            </li>
+
+            <li>
+              If Panama wins, you will get:
+              <span id="gain_team1_30"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_30"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+
+        <p>Japan vs Senegal (8 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_31" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="jp.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">JAP</span>
+          </div>
+          <div id="slider-range_31" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="sn.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SEN</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Japan wins, you will get:
+              <span id="gain_team0_31"></span> points.
+            </li>
+
+            <li>
+              If Senegal wins, you will get:
+              <span id="gain_team1_31"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_31"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Poland vs Colombia (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_32" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="pl.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">POL</span>
+          </div>
+          <div id="slider-range_32" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="co.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">COL</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Poland wins, you will get:
+              <span id="gain_team0_32"></span> points.
+            </li>
+
+            <li>
+              If Colombia wins, you will get:
+              <span id="gain_team1_32"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_32"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Uruguay vs Russia (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_33" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="uy.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">URU</span>
+          </div>
+          <div id="slider-range_33" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="ru.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">RUS</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Uruguay wins, you will get:
+              <span id="gain_team0_33"></span> points.
+            </li>
+
+            <li>
+              If Russia wins, you will get:
+              <span id="gain_team1_33"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_33"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Saudi Arabia vs Egypt (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_34" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="sa.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">SAU</span>
+          </div>
+          <div id="slider-range_34" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="eg.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">EGY</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Saudi Arabia wins, you will get:
+              <span id="gain_team0_34"></span> points.
+            </li>
+
+            <li>
+              If Egypt wins, you will get:
+              <span id="gain_team1_34"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_34"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Iran vs Portugal (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_35" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ir.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">IRA</span>
+          </div>
+          <div id="slider-range_35" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="pt.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">POR</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Iran wins, you will get:
+              <span id="gain_team0_35"></span> points.
+            </li>
+
+            <li>
+              If Portugal wins, you will get:
+              <span id="gain_team1_35"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_35"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+
+        <p>Spain vs Morrocco (8 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_36" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="es.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">SPA</span>
+          </div>
+          <div id="slider-range_36" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="ma.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">MOR</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Spain wins, you will get:
+              <span id="gain_team0_36"></span> points.
+            </li>
+
+            <li>
+              If Morrocco wins, you will get:
+              <span id="gain_team1_36"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_36"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Denmark vs France (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_37" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="dk.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">DEN</span>
+          </div>
+          <div id="slider-range_37" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="fr.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">FRA</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Denmark wins, you will get:
+              <span id="gain_team0_37"></span> points.
+            </li>
+
+            <li>
+              If Spain wins, you will get:
+              <span id="gain_team1_37"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_37"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Australia vs Peru (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_38" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="au.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">AUS</span>
+          </div>
+          <div id="slider-range_38" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="pe.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">PER</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Australia wins, you will get:
+              <span id="gain_team0_38"></span> points.
+            </li>
+
+            <li>
+              If Peru wins, you will get:
+              <span id="gain_team1_38"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_38"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Nigeria vs Argentina (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_39" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ng.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">NIG</span>
+          </div>
+          <div id="slider-range_39" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="ar.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">ARG</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Nigeria wins, you will get:
+              <span id="gain_team0_39"></span> points.
+            </li>
+
+            <li>
+              If Argentina wins, you will get:
+              <span id="gain_team1_39"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_39"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Iceland vs Croatia (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_40" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="is.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">ICE</span>
+          </div>
+          <div id="slider-range_40" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="hr.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">CRO</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Iceland wins, you will get:
+              <span id="gain_team0_40"></span> points.
+            </li>
+
+            <li>
+              If Croatia wins, you will get:
+              <span id="gain_team1_40"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_40"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Mexico vs Sweden (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_41" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="mx.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">MEX</span>
+          </div>
+          <div id="slider-range_41" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="se.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">SWE</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Mexico wins, you will get:
+              <span id="gain_team0_41"></span> points.
+            </li>
+
+            <li>
+              If Sweden wins, you will get:
+              <span id="gain_team1_41"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_41"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>South Korea vs Germany (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_42" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="kr.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">KOR</span>
+          </div>
+          <div id="slider-range_42" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="de.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">GER</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If South Korea wins, you will get:
+              <span id="gain_team0_42"></span> points.
+            </li>
+
+            <li>
+              If Germany wins, you will get:
+              <span id="gain_team1_42"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_42"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Serbia vs Brazil (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_43" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="rs.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">SER</span>
+          </div>
+          <div id="slider-range_43" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="br.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">BRA</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Serbia wins, you will get:
+              <span id="gain_team0_43"></span> points.
+            </li>
+
+            <li>
+              If Brazil wins, you will get:
+              <span id="gain_team1_43"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_43"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Switzerland vs Costa Rica (9 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_44" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="ch.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">SWI</span>
+          </div>
+          <div id="slider-range_44" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="cr.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">COS</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Switzerland wins, you will get:
+              <span id="gain_team0_44"></span> points.
+            </li>
+
+            <li>
+              If Costa Rica wins, you will get:
+              <span id="gain_team1_44"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_44"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Japan vs Poland (5 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_45" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="jp.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">JAP</span>
+          </div>
+          <div id="slider-range_45" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="pl.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">POL</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Japan wins, you will get:
+              <span id="gain_team0_45"></span> points.
+            </li>
+
+            <li>
+              If Poland wins, you will get:
+              <span id="gain_team1_45"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_45"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>Senegal vs Colombia (6 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_46" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="sn.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">SEN</span>
+          </div>
+          <div id="slider-range_46" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="co.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">COL</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Senegal wins, you will get:
+              <span id="gain_team0_46"></span> points.
+            </li>
+
+            <li>
+              If Colombia wins, you will get:
+              <span id="gain_team1_46"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_46"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+
+        <p>Panama vs Tunisia (8 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_47" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="pa.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">PAN</span>
+          </div>
+          <div id="slider-range_47" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="tn.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">TUN</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If Panama wins, you will get:
+              <span id="gain_team0_47"></span> points.
+            </li>
+
+            <li>
+              If Tunisia wins, you will get:
+              <span id="gain_team1_47"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_47"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+        <p>England vs Belgium (8 p.m. local time)</p>
+
+          <p>
+            <strong>Your Probabilities:</strong>
+            <span id="probs_humanread_48" style="border:0; color:#f6931f; font-weight:bold; width: 1000px"></span>
+          </p>
+
+        <div class="container">
+          <div class="item1">
+          <img src="eng.gif" style="float:left;margin-left:19.5%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-left:10%">ENG</span>
+          </div>
+          <div id="slider-range_48" style="margin-top:20px;position:absolute;left:0;right:0;"></div>
+          <div class="item2">
+          <img src="be.gif" style="float:right;margin-right:30%;width:84px;height:58px;border-color:#a5a5c0;" border = "1" border-color ="grey">
+          <span class="caption" style="margin-right:27.5%">BEL</span>
+          </div>
+        </div>
+
+          <br>
+
+          <br> 
+
+          <br>
+
+          <br>
+
+
+          <ul style="margin-top: 10px">
+            <li>
+              If England wins, you will get:
+              <span id="gain_team0_48"></span> points.
+            </li>
+
+            <li>
+              If Belgium wins, you will get:
+              <span id="gain_team1_48"></span> points.
+            </li>
+
+            <li>
+              If they tie, you will get:
+              <span id="gain_tie_48"></span> points.
+            </li>
+          </ul>
+
+
+        </li>
+
+    </ul>
+    
+    <hr style="margin: 10px 0 10px 0">
+
+    
+<script>
+    activate_slider = function(objid, team0, team1, def_val0, def_val1) {
+      def_val1 = 100 - def_val1
+      $( function() {
+        var updater = function( val0, val1 ) {
+            var pwin0 = val0;
+            var pwin1 = 100-val1;
+            var ptie = val1-val0
+            $( "#probs_humanread_" + objid ).html(
+              team0 + " wins: " + pwin0 + "%" +
+              " || Draw: " + ptie + "%" +
+              " || " + team1 + " wins: " + pwin1 +"%");
+            $( "#prob0_" + objid ).val(pwin0);
+            $( "#prob1_" + objid ).val(pwin1);
+
+            $( "#gain_team0_" + objid ).html(Math.round((25 - 0.75/100*(pwin1*pwin1 + ptie*ptie + pwin1*ptie))));
+            $( "#gain_team1_" + objid ).html(Math.round((25 - 0.75/100*(pwin0*pwin0 + ptie*ptie + pwin0*ptie))));
+            $( "#gain_tie_" + objid ).html(Math.round((25 - 0.75/100*(pwin1*pwin1 + pwin0*pwin0 + pwin1*pwin0))));
+        }
+        $( "#slider-range_" + objid ).slider({
+          range: true,
+          min: 0,
+          max: 100,
+          values: [ def_val0, def_val1 ],
+          slide: function( event, ui ) {
+            updater(ui.values[0], ui.values[1]);
+            console.log(100 - ui.values[1] + '%');
+          $('#YourDiv_' + objid ).css('width', 100 - ui.values[1] + "%");
+          }
+        }).append('<div id="YourDiv_'+objid+'" style="width: 50%"></div>');
+        updater(def_val0, def_val1);
+      });
+    }
+    </script>
+
+    <script>
+    activate_slider(1,
+                    "Russia", "Saudi Arabia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(2,
+                    "Egypt", "Uruguay",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(3,
+                    "Morrocco", "Iran",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(4,
+                    "Portugal", "Spain",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(5,
+                    "France", "Australia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(6,
+                    "Argentina", "Iceland",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(7,
+                    "Peru", "Denmark",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(8,
+                    "Croatia", "Nigeria",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(9,
+                    "Costa Rica", "Serbia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(10,
+                    "Germany", "Mexico",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(11,
+                    "Brazil", "Switzerland",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(12,
+                    "Sweden", "South Korea",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(13,
+                    "Belgium", "Panama",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(14,
+                    "Tunisia", "England",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(15,
+                    "Colombia", "Japan",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(16,
+                    "Poland", "Senegal",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(17,
+                    "Russia", "Egypt",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(18,
+                    "Portugal", "Morrocco",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(19,
+                    "Uruguay", "Saudi Arabia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(20,
+                    "Iran", "Spain",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(21,
+                    "Denmark", "Australia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(22,
+                    "France", "Peru",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(23,
+                    "Argentina", "Croatia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(24,
+                    "Brazil", "Costa Rica",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(25,
+                    "Nigeria", "Iceland",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(26,
+                    "Serbia", "Switzerland",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(27,
+                    "Belgium", "Tunisia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(28,
+                    "South Korea", "Mexico",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(29,
+                    "Germany", "Sweden",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(30,
+                    "England", "Panama",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(31,
+                    "Japan", "Senegal",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(32,
+                    "Poland", "Colombia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(33,
+                    "Uruguay", "Russia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(34,
+                    "Saudi Arabia", "Egypt",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(35,
+                    "Iran", "Portugal",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(36,
+                    "Spain", "Morrocco",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(37,
+                    "Denmark", "France",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(38,
+                    "Australia", "Peru",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(39,
+                    "Nigeria", "Argentina",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(40,
+                    "Iceland", "Croatia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(41,
+                    "Mexico", "Sweden",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(42,
+                    "South Korea", "Germany",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(43,
+                    "Serbia", "Brazil",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(44,
+                    "Switzerland", "Costa Rica",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(45,
+                    "Japan", "Poland",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(46,
+                    "Senegal", "Colombia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(47,
+                    "Panama", "Tunisia",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    <script>
+    activate_slider(48,
+                    "England", "Belgium",
+                    Math.round(100/3),
+                    Math.round(100/3))
+    </script>
+
+    </div>
+    </div>
+  </body>
+
+</html>

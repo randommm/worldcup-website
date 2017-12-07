@@ -1,0 +1,190 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 18px; /* px means 'pixels': the base font size is now 10 pixels high  */
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20%;
+}
+html, body {
+    height: 80%;
+}
+#wrapper {
+    min-height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    /* same height as footer */
+    margin-bottom: -120px;
+}
+#wrapper:after {
+    content:"";
+    display: block;
+}
+#header {
+    height: 200px;
+    background: #FF0;
+}
+#footer, #wrapper:after {
+    /* same height as wrapper negative margin */
+    height: 60px;
+    padding-top: 2%;
+}
+#footer {
+    background: #ccc;
+    text-indent: 16.5%;
+}
+#footer a {
+    text-decoration: none;
+    padding: 25px !important;
+    vertical-align: middle;
+}
+
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;    
+  color: blue;
+  /*text-shadow: 3px 3px 1px black;*/
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;  
+  color: blue;
+  /*text-shadow: 3px 3px 1px black;*/
+}
+
+p {
+  font-size: 18px; 
+  line-height: 2;
+  letter-spacing: 0px;
+  width: 100%;
+  text-align: justify;
+  /*text-indent: 5%;*/
+}
+
+li {
+  margin: 0;
+  font-size: 18px;    
+  line-height: 2;
+  letter-spacing: 0px;
+  text-align: justify;
+  /*text-indent: 5%;*/
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.clear { clear: both; height: 60px; }
+
+@media screen and (min-width: 1000px){
+#navbar {
+    text-indent: 3%;
+    background-color: white;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    height: 5%; 
+    left: 0px;
+    width: 100%; /* Full width */
+    padding-top: 20px; 
+    padding-bottom: 2px;
+    border-bottom: 5px solid black;
+    min-width: 1000px;
+}}
+
+/* Links inside the navbar */
+#navbar a {
+    /*color: #f2f2f2;*/
+    text-decoration: none;
+    padding-right: 25px !important;
+}
+
+/* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+  margin-top: -5px;  
+}
+.aligncenter{
+  text-align: center;
+}
+
+div[id^=slider-range_] {
+    width: 35%;
+    margin-left: 32%;
+    margin-right: 30%;
+    z-index: auto;
+}
+
+div[id^=slider-range_].ui-slider {
+  background: #4184ad; /*#264C72*/
+  border-radius: 4px 5px 5px 4px;
+  /*border-color :black;*/
+}
+
+div[id^=slider-range_].ui-slider .ui-slider-range {
+  background: white;
+  border-radius: 0px 0px 0px 0px;
+}
+
+div[id^=slider-range_].ui-slider .ui-slider-handle {
+  height:1.7em;
+  width: 0.5em;
+  top: -0.5em;
+  background: #f6931f; /*#ced0e0*/
+  border-radius: 4px 4px 4px 4px;
+  border-color : #fff !important;
+}
+
+div[id^="YourDiv_"] {
+  float: right;
+  height: 100%;
+  background: #a5a5c0; /*#d7daed; /*#d39d1f*/
+  border-radius: 0px 4px 4px 0px;
+}
+
+div.item1 {
+    float: left; 
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+    width: 120px;
+}
+
+div.item2 {
+    float: right;
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+    width: 120px;
+}
+
+.caption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+    text-align: center;
+}
+
+.container div {
+  display: inline-block;
+}

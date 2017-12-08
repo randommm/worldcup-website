@@ -62,16 +62,30 @@ class League(models.Model):
 class LeagueUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,
                                 primary_key=True)
-    league = models.ForeignKey(League, related_name="leagueuser_league_set",
-                               on_delete=models.CASCADE, null=True)
-    invited_by_league = models.ForeignKey(League,
-                               related_name="leagueuser_invited_by_league_set",
-                               on_delete=models.CASCADE, null=True)
-    asked_to_join_league = models.ForeignKey(League,
-                               related_name="leagueuser_asked_to_join_league_set",
-                               on_delete=models.CASCADE, null=True)
+    league = models.ForeignKey(League, on_delete=models.CASCADE)
     admin = models.BooleanField(default=False)
     moderator = models.BooleanField(default=False)
 
+    class Meta:
+        unique_together = ("user", "league")
+
     def __str__(self):
         return str(self.user)
+
+class LeagueInvited(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE,
+                                primary_key=True)
+    league = models.ForeignKey(League, on_delete=models.CASCADE)
+    rejected = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.user) + str(self.league)
+
+class LeagueAsked(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE,
+                                primary_key=True)
+    league = models.ForeignKey(League, on_delete=models.CASCADE)
+    rejected = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.user) + str(self.league)

@@ -28,7 +28,7 @@
 
      {% if not user.admin and not user.moderator and league_user.moderator or league_user.admin %}
        {% if user.user_id != league_user.user_id %}
-         Remove from league
+         <a href="#" onclick="return post_fa(this)" data_page="remove_user" data_post="{{user.user_id}}">Remove from league</a>
          <br />
        {% endif %}
      {% endif %}
@@ -39,20 +39,21 @@
 
    <hr />
    <ul>
-   {% if league_user.moderator or league_user.admin %}
-      <li>Invite user to league</li>
-   {% endif %}
-
    {% if league_user.moderator and not league_user.admin %}
       <li><a href="#" onclick="return post_fa(this)" data_page="remove_moderator" data_post="{{league_user.user_id}}">Abdicate moderating powers</a></li>
    {% endif %}
 
    {% if league_user.admin %}
-      <li>Change league admin</li>
+      <li>Transfer league admin</li>
    {% endif %}
 
-   <li>Leave league</li>
+   <li><a href="#" onclick="return post_fa(this)" data_page="leave" data_post="pass">Leave league</a></li>
+   </ul>
 
+   <ul>
+   {% if league_user.moderator or league_user.admin %}
+      <li>Invite user to league</li>
+   {% endif %}
    </ul>
 
 <link rel="stylesheet" href="/static/jquery-ui-1.12.1/jquery-ui.css">

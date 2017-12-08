@@ -59,7 +59,51 @@ def league_create(request):
 
 @login_required
 @transaction.atomic
-def league_add_rem_moderator(request, add):
+def league_leave(request):
+    if request.POST.get("data") != "pass":
+        return HttpResponseForbidden("must_use_post")
+
+    league_user = (LeagueUser.objects.get(user_id=request.user.id))
+
+    if league_user.admin:
+        league = league_user.league
+        if league.leagueuser_set.count() > 1:
+            return HttpResponseForbidden("must_empty_or_transfer_group")
+        else:
+            league_user.delete()
+            league.delete()
+    else:
+        league_user.delete()
+
+    return HttpResponse("sucess")
+
+@login_required
+@transaction.atomic
+def league_remove_user(request):
+    user_id = int(request.POST.get("data"))
+
+    league_user = LeagueUser.objects.get(user_id=request.user.id)
+
+    if not league_user.admin and not league_user.moderator:
+        return HttpResponseForbidden("not_admin_nor_mod")
+
+    if user_id == request.user.id:
+        return HttpResponseForbidden("cannot_autoremove")
+
+    league_user_to_delete = LeagueUser.objects.get(user_id=user_id)
+
+    #Check if moderator is trying to remove another moderator or admin
+    if (not league_user.admin and
+        (league_user_to_delete.admin or
+         league_user_to_delete.moderator)):
+        return HttpResponseForbidden("cannot_remove_adm_nor_mod")
+
+    league_user_to_delete.delete()
+    return HttpResponse("sucess")
+
+@login_required
+@transaction.atomic
+def league_add_or_remove_moderator(request, add):
     moderator_id = int(request.POST.get("data"))
 
     league_user = (LeagueUser.objects
@@ -70,7 +114,7 @@ def league_add_rem_moderator(request, add):
         if moderator_id != request.user.id or add: #allow auto-remove
              return HttpResponseForbidden("not_admin")
 
-    mod = league_user.league.leagueuser_league_set.get(user_id=moderator_id)
+    mod = league_user.league.league_set.get(user_id=moderator_id)
     mod.moderator = add
     mod.save()
     return HttpResponse("sucess")
@@ -78,9 +122,53 @@ def league_add_rem_moderator(request, add):
 @login_required
 @transaction.atomic
 def league_add_moderator(request):
-    return league_add_rem_moderator(request, 1)
+    return league_add_or_remove_moderator(request, 1)
 
 @login_required
 @transaction.atomic
 def league_remove_moderator(request):
-    return league_add_rem_moderator(request, 0)
+    return league_add_or_remove_moderator(request, 0)
+
+@transaction.atomic
+def league_add(request, user_id, league_id):
+    LeagueUser.objects.create(user_id=user_id, league_id=league_id)
+
+    (LeagueInvited.objects
+                  .filter(user_id=user_id, league_id=league_id)
+                  .delete())
+
+    (LeagueAsked.objects
+                .filter(user_id=user_id, league_id=league_id)
+                .delete())
+
+    return HttpResponse("sucess")
+
+@transaction.atomic
+def league_invite_join(request):
+    invited_user_email = int(request.POST.get("data"))
+
+    league_user = (LeagueUser.objects
+                   .select_related("league")
+                   .get(user_id=request.user.id))
+
+    if not league_user.admin and not league_user.moderator:
+        return HttpResponseForbidden("not_admin_nor_mod")
+
+
+
+    return HttpResponse("sucess")
+
+@transaction.atomic
+def league_ask_join(request):
+    league_id = int(request.POST.get("data"))
+
+    league_user = (LeagueUser.objects
+                   .select_related("league")
+                   .get(user_id=request.user.id))
+
+    if not league_user.admin and not league_user.moderator:
+        return HttpResponseForbidden("not_admin_nor_mod")
+
+
+
+    return HttpResponse("sucess")

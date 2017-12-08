@@ -47,10 +47,12 @@ def committer():
 def recreate(request):
     if (not request.user.is_authenticated or
         request.user.email not in ["m@marcoinacio.com",
-                                   "marcoigarapava@gmail.com"]):
+                                   "marcoigarapava@gmail.com",
+                                   "marcio.alves.diniz@gmail.com"]):
         raise Http404("")
     with transaction.atomic():
         Point.objects.all().delete()
+        Bet.objects.all().update(points=-1)
         Result.objects.all().update(committed=False)
     committer()
     return HttpResponse("recreated")

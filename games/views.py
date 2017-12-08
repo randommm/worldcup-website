@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.urls import reverse
-from .models import User, Team, Game, Bet, Result, Point
+from .models import User, Team, Game, Bet, Result, Point, League
+from .models import LeagueUser
 from django.contrib.auth.decorators import login_required
 from django.db import transaction, DatabaseError
 import datetime
+from .leagues import *
 
 @transaction.atomic
 def committer():
@@ -20,6 +22,7 @@ def committer():
         return
 
     points_by_user = {}
+    points_by_league = {}
     for result in results:
         bets = Bet.objects.filter(game_id = result.game_id)
         for bet in bets:
@@ -30,18 +33,34 @@ def committer():
             else:
                 bet.points = (10000 - (bet.prob0 + bet.prob1)**2)
             bet.save()
-            id_ = bet.user_id
-            if id_ not in points_by_user:
-                points_by_user[id_] = 0
-            points_by_user[id_] += bet.points
+            user_id = bet.user_id
+            if user_id not in points_by_user:
+                points_by_user[user_id] = 0
+            points_by_user[user_id] += bet.points
 
         result.committed = True
         result.save()
 
-    for id_, points in points_by_user.items():
-        points_of_the_user = Point.objects.get_or_create(user_id=id_)[0]
+    for user_id, points in points_by_user.items():
+        points_of_the_user = Point.objects.get_or_create(user_id=user_id)[0]
         points_of_the_user.points += points
         points_of_the_user.save()
+
+        #Check if user has a league, if positive, adds his points to
+        #points_by_league
+        try:
+            league_user = LeagueUser.objects.get(user_id=user_id)
+            league_id = league_user.league_id
+            if league_id not in points_by_league:
+                points_by_league[league_id] = 0
+            points_by_league[league_id] += points
+        except (KeyError, LeagueUser.DoesNotExist):
+            context = dict(must_have_league=True)
+
+    for league_id, points in points_by_league.items():
+        points_of_the_league = League.objects.get_or_create(id=league_id)[0]
+        points_of_the_league.points += points
+        points_of_the_league.save()
 
 @transaction.atomic
 def recreate(request):
@@ -53,6 +72,7 @@ def recreate(request):
     with transaction.atomic():
         Point.objects.all().delete()
         Bet.objects.all().update(points=-1)
+        League.objects.all().update(points=0)
         Result.objects.all().update(committed=False)
     committer()
     return HttpResponse("recreated")
@@ -74,8 +94,6 @@ def contact(request):
 
 def forecasts(request):
     return render(request, 'games/forecasts.html')
-    #return HttpResponse("Our forecasts will be here")
-    #return HttpResponse(str(request.__dict__))
 
 def games(request):
     cutdate = datetime.datetime.now().timestamp()
@@ -157,7 +175,3 @@ def results(request):
 
     context = {'bets': bets}
     return render(request, 'games/results.html', context)
-
-def detail(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'games/detail.html', {'question': question})

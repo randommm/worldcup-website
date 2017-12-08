@@ -11,8 +11,8 @@ class Team(models.Model):
         return self.name
 
 class Game(models.Model):
-    team0 = models.ForeignKey(Team, related_name="team0", on_delete=models.CASCADE)
-    team1 = models.ForeignKey(Team, related_name="team1", on_delete=models.CASCADE)
+    team0 = models.ForeignKey(Team, related_name="game_team0_set", on_delete=models.CASCADE)
+    team1 = models.ForeignKey(Team, related_name="game_team1_set", on_delete=models.CASCADE)
     date = models.DateTimeField('Game date')
 
     class Meta:
@@ -35,16 +35,43 @@ class Bet(models.Model):
         return str(self.game) + " by " + self.user.email
 
 class Point(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    points = models.PositiveSmallIntegerField(default=0)
+    user = models.OneToOneField(User, on_delete=models.CASCADE,
+                                primary_key=True)
+    points = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return str(self.user)
 
 class Result(models.Model):
-    game = models.OneToOneField(Game, on_delete=models.CASCADE)
+    game = models.OneToOneField(Game, on_delete=models.CASCADE,
+                                primary_key=True)
     result = models.PositiveSmallIntegerField()
     committed = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.game)
+
+class League(models.Model):
+    name = models.CharField(max_length=100, default="xx", unique=True)
+    kind = models.PositiveSmallIntegerField()
+    points = models.PositiveIntegerField()
+
+    def __str__(self):
+        return str(self.name)
+
+class LeagueUser(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE,
+                                primary_key=True)
+    league = models.ForeignKey(League, related_name="leagueuser_league_set",
+                               on_delete=models.CASCADE, null=True)
+    invited_by_league = models.ForeignKey(League,
+                               related_name="leagueuser_invited_by_league_set",
+                               on_delete=models.CASCADE, null=True)
+    asked_to_join_league = models.ForeignKey(League,
+                               related_name="leagueuser_asked_to_join_league_set",
+                               on_delete=models.CASCADE, null=True)
+    admin = models.BooleanField(default=False)
+    moderator = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.user)

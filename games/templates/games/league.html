@@ -1,0 +1,94 @@
+{% if must_signin %}
+   Please sign-in first
+{% elif must_have_league %}
+   Please join a league or create one first.
+{% else %}
+   Details of your league:
+
+   <ul>
+   {% for user in users %}
+     <li>
+     Name: {{ user.first_name }} {{ user.last_name }}
+     <br />
+     Points: {{user.points}}
+     <br />
+     {% if user.admin %}
+       Is admin
+       <br />
+     {% elif user.moderator %}
+       Is moderator
+       {% if league_user.admin %}
+         | <a href="#" onclick="return post_fa(this)" data_page="remove_moderator" data_post="{{user.user_id}}">Remove moderator tools</a>
+       {% endif %}
+       <br />
+     {% elif league_user.admin %}
+       <a href="#" onclick="return post_fa(this)" data_page="add_moderator" data_post="{{user.user_id}}">Set as moderator</a>
+       <br />
+     {% endif %}
+
+     {% if not user.admin and not user.moderator and league_user.moderator or league_user.admin %}
+       {% if user.user_id != league_user.user_id %}
+         Remove from league
+         <br />
+       {% endif %}
+     {% endif %}
+     <br />
+     </li>
+   {% endfor %}
+   </ul>
+
+   <hr />
+   <ul>
+   {% if league_user.moderator or league_user.admin %}
+      <li>Invite user to league</li>
+   {% endif %}
+
+   {% if league_user.moderator and not league_user.admin %}
+      <li><a href="#" onclick="return post_fa(this)" data_page="remove_moderator" data_post="{{league_user.user_id}}">Abdicate moderating powers</a></li>
+   {% endif %}
+
+   {% if league_user.admin %}
+      <li>Change league admin</li>
+   {% endif %}
+
+   <li>Leave league</li>
+
+   </ul>
+
+<link rel="stylesheet" href="/static/jquery-ui-1.12.1/jquery-ui.css">
+<script src="/static/jquery-1.12.4.js"></script>
+<script src="/static/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+<span id="crfs_token" style="display: none">
+  {% csrf_token %}
+</span>
+<script>
+function post_fa(elem) {
+  var elem = $(elem)
+  var page = elem.attr('data_page');
+  var post = elem.attr('data_post');
+
+  elem = elem.wrap("<strong></strong>").parent();
+  elem.html("Processing")
+
+  $.ajax({
+    type: "POST",
+    url: "{% url 'games:league' %}" + page,
+    data: "data=" + encodeURIComponent(post) +
+          "&csrfmiddlewaretoken=" +
+          $("[name=csrfmiddlewaretoken]").val(),
+    success: function(res){},
+    dataType: "html"
+  })
+  .done(function(res) {
+    elem.html("<span style='color: green'>Sucess</span>");
+  })
+  .fail(function(res) {
+    elem.html("<span style='color: red'>Failure</span>");
+  })
+  return false;
+}
+</script>
+
+
+{% endif %}

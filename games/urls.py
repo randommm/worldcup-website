@@ -11,19 +11,23 @@ urlpatterns = [
     url(r'^update_bet/$', views.update_bet, name='update_bet'),
 
 
-    url(r'^league/$', views.league, name='league'),
-    url(r'^league/create$', views.league_create, name='league_create'),
-    url(r'^league/leave$', views.league_leave, name='league_leave'),
-    url(r'^league/remove_user$', views.league_remove_user,
+    url(r'^leagues/$', views.league, name='league'),
+    url(r'^leagues/create$', views.league_create, name='league_create'),
+    url(r'^leagues/leave$', views.league_leave, name='league_leave'),
+    url(r'^leagues/remove_user$', views.league_remove_user,
         name='league_remove_user'),
 
-    url(r'^league/add_moderator$', views.league_add_moderator,
+    url(r'^leagues/add_moderator$', views.league_add_moderator,
         name='league_add_moderator'),
-    url(r'^league/remove_moderator$', views.league_remove_moderator,
+    url(r'^leagues/remove_moderator$', views.league_remove_moderator,
         name='league_remove_moderator'),
+    url(r'^leagues/transfer_admin$', views.league_transfer_admin,
+        name='league_transfer_admin'),
 
-    url(r'^league/invite_join$', views.league_invite_join,
-        name='league_invite_join'),
+    url(r'^leagues/ask_join$', views.league_ask_join,
+        name='league_ask_join'),
+    url(r'^leagues/add_user$', views.league_add_user,
+        name='league_add_user'),
 
 
     url(r'^forecasts/$', views.forecasts, name='forecasts'),

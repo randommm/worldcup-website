@@ -53,8 +53,9 @@ class Result(models.Model):
 
 class League(models.Model):
     name = models.CharField(max_length=100, default="xx", unique=True)
-    kind = models.PositiveSmallIntegerField()
-    points = models.PositiveIntegerField()
+    kind = models.PositiveSmallIntegerField(default=0)
+    points = models.PositiveIntegerField(default=0)
+    user_count = models.PositiveSmallIntegerField(default=1)
 
     def __str__(self):
         return str(self.name)
@@ -71,15 +72,6 @@ class LeagueUser(models.Model):
 
     def __str__(self):
         return str(self.user)
-
-class LeagueInvited(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE,
-                                primary_key=True)
-    league = models.ForeignKey(League, on_delete=models.CASCADE)
-    rejected = models.BooleanField(default=False)
-
-    def __str__(self):
-        return str(self.user) + str(self.league)
 
 class LeagueAsked(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,

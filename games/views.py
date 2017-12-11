@@ -144,7 +144,7 @@ def update_bet(request):
         )
     #bet.save()
 
-    return HttpResponse("sucess")
+    return HttpResponse("success")
 
 def scoreboard(request):
     committer()

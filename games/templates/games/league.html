@@ -1,9 +1,18 @@
+<style>
+#leaguecontent a {
+ color: blue
+}
+</style>
+<div id=leaguecontent>
 {% if must_signin %}
    Please sign-in first
 {% elif must_have_league %}
    Please join a league or create one first.
 {% else %}
    Details of your league:
+
+
+
 
    <ul>
    {% for user in users %}
@@ -37,7 +46,9 @@
    {% endfor %}
    </ul>
 
+
    <hr />
+   <br />
    <ul>
    {% if league_user.moderator and not league_user.admin %}
       <li><a href="#" onclick="return post_fa(this)" data_page="remove_moderator" data_post="{{league_user.user_id}}">Abdicate moderating powers</a></li>
@@ -50,11 +61,30 @@
    <li><a href="#" onclick="return post_fa(this)" data_page="leave" data_post="pass">Leave league</a></li>
    </ul>
 
-   <ul>
+
    {% if league_user.moderator or league_user.admin %}
-      <li>Invite user to league</li>
-   {% endif %}
+   <br />
+   <hr />
+   <br />
+   Users invited to league:
+   <ul>
+     {% if users_invited %}
+       {% for user in users_invited %}
+          <li>User {{ user }}</li>
+       {% endfor %}
+     {% else %}
+     <li>No invited user pending acceptance.</li>
+     {% endif %}
+     <li>Invite new user from email address:
+
+     <form href="#" onsubmit="return post_ff(this)" data_page="invite_join">
+       <input type="text" class="data_holder" name="email"/><input type="submit" value="add" /><strong class="result_holder"></strong>
+     </form>
+
+     </li>
    </ul>
+   {% endif %}
+
 
 <link rel="stylesheet" href="/static/jquery-ui-1.12.1/jquery-ui.css">
 <script src="/static/jquery-1.12.4.js"></script>
@@ -64,14 +94,27 @@
   {% csrf_token %}
 </span>
 <script>
-function post_fa(elem) {
-  var elem = $(elem)
-  var page = elem.attr('data_page');
-  var post = elem.attr('data_post');
+function post_ff(elem_main) {
+  var elem_main = $(elem_main);
+  var elem_data = elem_main.children(".data_holder");
+  var elem_result = elem_main.children(".result_holder");
 
-  elem = elem.wrap("<strong></strong>").parent();
-  elem.html("Processing")
+  var page = elem_main.attr('data_page');
+  var post = elem_data.val();
 
+  return post_ready(elem_result, page, post);
+}
+function post_fa(elem_main) {
+  var elem_main = $(elem_main);
+  var page = elem_main.attr('data_page');
+  var post = elem_main.attr('data_post');
+
+  var elem_result = elem_main.wrap("<strong></strong>").parent();
+
+  return post_ready(elem_result, page, post);
+}
+function post_ready(elem, page, post) {
+  elem.html("Processing");
   $.ajax({
     type: "POST",
     url: "{% url 'games:league' %}" + page,
@@ -79,13 +122,51 @@ function post_fa(elem) {
           "&csrfmiddlewaretoken=" +
           $("[name=csrfmiddlewaretoken]").val(),
     success: function(res){},
-    dataType: "html"
+    dataType: "html",
   })
   .done(function(res) {
     elem.html("<span style='color: green'>Sucess</span>");
   })
   .fail(function(res) {
-    elem.html("<span style='color: red'>Failure</span>");
+    rt = res.responseText
+    switch (rt) {
+    case "league_full":
+        text = "league is full";
+        break;
+    case "user_already_has_league":
+        text = "the user already has a league";
+        break;
+    case "multiple_users_with_same_email":
+        text = "multiple users subscribed with this email";
+        break;
+    case "invalid_email":
+        text = "invalid email address";
+        break;
+    case "not_admin_nor_mod":
+        text = "you are not the admin nor a moderator";
+        break;
+    case "not_admin":
+        text = "you are not the admin";
+        break;
+    case "must_use_post":
+        text = "you must use http POST";
+        break;
+    case "must_empty_or_transfer_group":
+        text = "you must remove everyone or transfer admin of group before leaving";
+        break;
+    case "cannot_autoremove":
+        text = "you cannot remove yourself, use leave instead";
+        break;
+    case "name_taken":
+        text = "this name has already been taken";
+        break;
+    default:
+        text = "unknown error";
+        if (rt.length <= 50) {
+          text = " " + rt;
+        }
+    }
+    elem.html("<span style='color: red'>Failure: " + text + "</span>");
   })
   return false;
 }
@@ -93,3 +174,4 @@ function post_fa(elem) {
 
 
 {% endif %}
+</div>

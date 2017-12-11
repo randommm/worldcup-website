@@ -14,9 +14,9 @@
             $( "#prob0_" + objid ).val(pwin0);
             $( "#prob1_" + objid ).val(pwin1);
 
-            $( "#gain_team0_" + objid ).html((10000 - (100 - pwin0)^2)/1000);
-            $( "#gain_team1_" + objid ).html((10000 - (100 - pwin1)^2)/1000);
-            $( "#gain_tie_" + objid ).html((10000 - (100 - ptie)^2)/1000);
+            $( "#gain_team0_" + objid ).html((10000 - Math.pow(100 - pwin0, 2)));
+            $( "#gain_team1_" + objid ).html((10000 - Math.pow(100 - pwin1, 2)));
+            $( "#gain_tie_" + objid ).html((10000 - Math.pow(100 - ptie, 2)));
         }
         $( "#slider-range_" + objid ).slider({
           range: true,
@@ -36,7 +36,7 @@
         type: "POST",
         url: "{% url 'games:update_bet' %}",
         data: $('#sliderform_'+formid).serialize(),
-        success: function(res){$("#sucess_area_" + formid).html("Updated!")},
+        success: function(res){$("#success_area_" + formid).html("Updated!")},
         dataType: "html"
       });
     }
@@ -91,17 +91,17 @@
           <ul style="margin-top: 10px">
             <li>
               If {{ game.team0 }} wins, you will get:
-              <span id="gain_team0_{{ forloop.counter }}"></span> KP.
+              <span id="gain_team0_{{ forloop.counter }}"></span> points.
             </li>
 
             <li>
               If {{ game.team1 }} wins, you will get:
-              <span id="gain_team1_{{ forloop.counter }}"></span> KP.
+              <span id="gain_team1_{{ forloop.counter }}"></span> points.
             </li>
 
             <li>
               If tie, you will get:
-              <span id="gain_tie_{{ forloop.counter }}"></span> KP.
+              <span id="gain_tie_{{ forloop.counter }}"></span> points.
             </li>
           </ul>
 
@@ -113,7 +113,7 @@
           <br />
           <a style="color: blue" href="{% url 'accounts:login' %}">Login or sign-up</a> to have your forecasts stored.</p>
           {% endif %}
-          <div id="sucess_area_{{ forloop.counter }}" style="margin-top: 20px; color: green; font-weight: bold"></div>
+          <div id="success_area_{{ forloop.counter }}" style="margin-top: 20px; color: green; font-weight: bold"></div>
           </form>
 
         </li>

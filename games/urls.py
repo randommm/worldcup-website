@@ -10,15 +10,21 @@ urlpatterns = [
 
     url(r'^update_bet/$', views.update_bet, name='update_bet'),
 
+
     url(r'^league/$', views.league, name='league'),
     url(r'^league/create$', views.league_create, name='league_create'),
     url(r'^league/leave$', views.league_leave, name='league_leave'),
     url(r'^league/remove_user$', views.league_remove_user,
         name='league_remove_user'),
+
     url(r'^league/add_moderator$', views.league_add_moderator,
         name='league_add_moderator'),
     url(r'^league/remove_moderator$', views.league_remove_moderator,
         name='league_remove_moderator'),
+
+    url(r'^league/invite_join$', views.league_invite_join,
+        name='league_invite_join'),
+
 
     url(r'^forecasts/$', views.forecasts, name='forecasts'),
     url(r'^rules/$', views.rules, name='rules'),

@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseForbidden
 from django.urls import reverse
 from .models import User, Team, Game, Bet, Result, Point, League
-from .models import LeagueUser
+from .models import LeagueUser, LeagueInvited, LeagueAsked
 from django.contrib.auth.decorators import login_required
 from django.db import transaction, DatabaseError
 
@@ -39,22 +39,24 @@ def league(request):
 
     return render(request, 'games/league.html', context)
 
+
 @login_required
 @transaction.atomic
 def league_create(request):
     league_user = LeagueUser.objects.filter(user_id=request.user.id)
     if league_user.count() > 0:
-        return HttpResponseForbidden("already_have_league")
+        return HttpResponseForbidden("user_have_league")
 
     league_name = request.POST.get("league_name")
     league_check = League.objects.filter(name=league_name)
     if league_check.count() > 0:
         return HttpResponseForbidden("name_taken")
 
-    league = League.create(name=league_name)
-    LeagueUser.create(league_id=league.id, user_id=request.user.id,
-                      admin=1, moderator=1)
-    return HttpResponse("sucess")
+    league = League.objects.create(name=league_name)
+    LeagueUser.objects.create(league_id=league.id,
+                              user_id=request.user.id,
+                              admin=1, moderator=1)
+    return HttpResponse("success")
 
 
 @login_required
@@ -75,49 +77,52 @@ def league_leave(request):
     else:
         league_user.delete()
 
-    return HttpResponse("sucess")
+    return HttpResponse("success")
 
 @login_required
 @transaction.atomic
 def league_remove_user(request):
-    user_id = int(request.POST.get("data"))
+    p_user_id = int(request.POST.get("data"))
 
-    league_user = LeagueUser.objects.get(user_id=request.user.id)
+    a_league_user = LeagueUser.objects.get(user_id=request.user.id)
 
-    if not league_user.admin and not league_user.moderator:
+    if not a_league_user.admin and not a_league_user.moderator:
         return HttpResponseForbidden("not_admin_nor_mod")
 
-    if user_id == request.user.id:
+    if p_user_id == request.user.id:
         return HttpResponseForbidden("cannot_autoremove")
 
-    league_user_to_delete = LeagueUser.objects.get(user_id=user_id)
+    p_league_user = LeagueUser.objects.get(user_id=p_user_id)
 
     #Check if moderator is trying to remove another moderator or admin
-    if (not league_user.admin and
-        (league_user_to_delete.admin or
-         league_user_to_delete.moderator)):
+    if (not a_league_user.admin and
+        (p_league_user.admin or
+         p_league_user.moderator)):
         return HttpResponseForbidden("cannot_remove_adm_nor_mod")
 
-    league_user_to_delete.delete()
-    return HttpResponse("sucess")
+    p_league_user.delete()
+    return HttpResponse("success")
+
+
 
 @login_required
 @transaction.atomic
 def league_add_or_remove_moderator(request, add):
-    moderator_id = int(request.POST.get("data"))
+    p_user_id = int(request.POST.get("data"))
 
-    league_user = (LeagueUser.objects
-                   .select_related("league")
-                   .get(user_id=request.user.id))
+    a_league_user = (LeagueUser.objects
+                     .select_related("league")
+                     .get(user_id=request.user.id))
 
-    if not league_user.admin:
-        if moderator_id != request.user.id or add: #allow auto-remove
+    if not a_league_user.admin:
+        if p_user_id != request.user.id or add: #allow auto-remove
              return HttpResponseForbidden("not_admin")
 
-    mod = league_user.league.league_set.get(user_id=moderator_id)
+    mod = LeagueUser.objects.get(league=a_league_user.league,
+                                 user_id=p_user_id)
     mod.moderator = add
     mod.save()
-    return HttpResponse("sucess")
+    return HttpResponse("success")
 
 @login_required
 @transaction.atomic
@@ -129,10 +134,12 @@ def league_add_moderator(request):
 def league_remove_moderator(request):
     return league_add_or_remove_moderator(request, 0)
 
+
+
+
+@login_required
 @transaction.atomic
 def league_add(request, user_id, league_id):
-    LeagueUser.objects.create(user_id=user_id, league_id=league_id)
-
     (LeagueInvited.objects
                   .filter(user_id=user_id, league_id=league_id)
                   .delete())
@@ -141,34 +148,75 @@ def league_add(request, user_id, league_id):
                 .filter(user_id=user_id, league_id=league_id)
                 .delete())
 
-    return HttpResponse("sucess")
+    LeagueUser.objects.create(user_id=user_id, league_id=league_id)
 
-@transaction.atomic
-def league_invite_join(request):
-    invited_user_email = int(request.POST.get("data"))
+    return HttpResponse("success")
 
-    league_user = (LeagueUser.objects
-                   .select_related("league")
-                   .get(user_id=request.user.id))
-
-    if not league_user.admin and not league_user.moderator:
-        return HttpResponseForbidden("not_admin_nor_mod")
-
-
-
-    return HttpResponse("sucess")
-
+@login_required
 @transaction.atomic
 def league_ask_join(request):
     league_id = int(request.POST.get("data"))
+    user_id=request.user.id
 
-    league_user = (LeagueUser.objects
+    check_member = LeagueUser.objects.filter(user_id=user_id)
+    if check_member.count() > 0:
+        return HttpResponseForbidden("user_already_has_league")
+
+    check_league = League.objects.filter(league_id=league_id)
+    if check_league.count() > 11:
+        return HttpResponseForbidden("league_full")
+
+
+    LeagueAsked.objects.create(user_id=p_user_id, league_id=league_id)
+
+    if LeagueInvited.objects.filter(user_id=p_user_id,
+                                    league_id=league_id).count():
+        return league_add(user_id, league_id)
+
+    return HttpResponse("success")
+
+
+
+
+
+
+
+
+
+
+@login_required
+@transaction.atomic
+def league_invite_join(request):
+    p_user_email = request.POST.get("data")
+
+    a_league_user = (LeagueUser.objects
                    .select_related("league")
                    .get(user_id=request.user.id))
 
-    if not league_user.admin and not league_user.moderator:
+    league_id = a_league_user.league.id
+
+    if not a_league_user.admin and not a_league_user.moderator:
         return HttpResponseForbidden("not_admin_nor_mod")
 
+    p_user_id_all = User.objects.filter(email=p_user_email)
+    if p_user_id_all.count() == 0:
+        return HttpResponseForbidden("invalid_email")
+    elif p_user_id_all.count() > 1:
+        return HttpResponseForbidden("multiple_users_with_same_email")
+    p_user_id = p_user_id_all[0].id
 
+    check_member = LeagueUser.objects.filter(user_id=p_user_id)
+    if check_member.count() > 0:
+        return HttpResponseForbidden("user_already_has_league")
 
-    return HttpResponse("sucess")
+    check_league = League.objects.filter(league_id=league_id)
+    if check_league.count() > 11:
+        return HttpResponseForbidden("league_full")
+
+    LeagueInvited.objects.create(user_id=p_user_id, league_id=league_id)
+
+    if LeagueAsked.objects.filter(user_id=p_user_id,
+                                  league_id=league_id).count():
+        return league_add(user_id, league_id)
+
+    return HttpResponse("success")

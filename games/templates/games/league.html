@@ -45,7 +45,26 @@
      League <strong>{{league.name}}</strong>
    </div>
 
-   Members:
+
+   {% if league_user.moderator or league_user.admin %}
+   Users who asked to join the league:
+   <ul>
+     {% if users_invited %}
+       {% for user in users_invited %}
+          <li>User {{ user.user.first_name }} {{ user.user.last_name }} <a href="#" onclick="return post_fa(this)" data_page="add_user" data_post="{{ user.user.id }}">add user</a></li>
+       {% endfor %}
+     {% else %}
+     <li>No user pending acceptance.</li>
+     {% endif %}
+     <!-- <li>Share the league URL to invite new users:
+     </li> -->
+   </ul>
+   <hr />
+   <br />
+   {% endif %}
+
+
+   Leaderboard:
 
    <ul>
    {% for user in users %}
@@ -98,11 +117,12 @@
         }
       </style>
       <script>
-        var transfer_admin = function() {
+        transfer_admin = function() {
             $(".admin_transfer").css('display', 'inline');
             $("#admin_transf").css("font-weight", "bold");
             $("#admin_transf").css("color", "red");
             $("#admin_transf").html("Attention: you will no longer be the admin of this group. This action is not reversible");
+        return false;
         }
       </script>
 
@@ -112,39 +132,15 @@
    <li><a href="#" onclick="return post_fa(this)" data_page="leave" data_post="pass">Leave league</a></li>
    </ul>
 
-
-   {% if league_user.moderator or league_user.admin %}
-   <br />
-   <hr />
-   <br />
-   Users who asked to join the league:
-   <ul>
-     {% if users_invited %}
-       {% for user in users_invited %}
-          <li>User {{ user.user.first_name }} {{ user.user.last_name }} <a href="#" onclick="return post_fa(this)" data_page="add_user" data_post="{{ user.user.id }}">add user</a></li>
-       {% endfor %}
-     {% else %}
-     <li>No user pending acceptance.</li>
-     {% endif %}
-     <!-- <li>Share the league URL to invite new users:
-     </li> -->
-   </ul>
-   {% endif %}
-
-
 {% endif %}
-<link rel="stylesheet" href="/static/jquery-ui-1.12.1/jquery-ui.css">
-<script src="/static/jquery-1.12.4.js"></script>
-<script src="/static/jquery-ui-1.12.1/jquery-ui.js"></script>
-
 <span id="crfs_token" style="display: none">
   {% csrf_token %}
 </span>
 <script>
 function post_ff(elem_main) {
   var elem_main = $(elem_main);
-  var elem_data = elem_main.children(".data_holder");
-  var elem_result = elem_main.children(".result_holder");
+  var elem_data = elem_main.find(".data_holder");
+  var elem_result = elem_main.find(".result_holder");
 
   var page = elem_main.attr('data_page');
   var post = elem_data.val();
@@ -189,6 +185,8 @@ function post_ready(elem, page, post) {
   })
   .done(function(res) {
     elem.html("<span style='color: green'>Sucess</span>");
+    setTimeout(function(){
+      $('#tabs').tabs('load', '#your_league'); }, 1000);
   })
   .fail(function(res) {
     rt = res.responseText
@@ -198,6 +196,9 @@ function post_ready(elem, page, post) {
         break;
     case "invalid_league_name":
         text = "invalid name. Must only cointain letters, numbers and spaces";
+        break;
+    case "invalid_league_name_length":
+        text = "league name must have between 5 and 50 characters.";
         break;
     case "league_full":
         text = "league is full";

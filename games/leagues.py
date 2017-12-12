@@ -5,6 +5,7 @@ from .models import User, Team, Game, Bet, Result, Point, League
 from .models import LeagueUser, LeagueAsked
 from django.contrib.auth.decorators import login_required
 from django.db import transaction, DatabaseError
+import re
 
 def league(request):
     from .views import committer
@@ -80,7 +81,19 @@ def league_create(request):
     league_name = request.POST.get("data")
     user_id = request.user.id
 
-    if not league_name:
+    #Replace sequential multiple space to a single one
+    league_name = re.sub('\ +', ' ', league_name)
+
+    #Strip initial white space (if any)
+    league_name = re.sub('^\ ', '', league_name)
+
+    if len(league_name) > 50 or len(league_name) < 5:
+        return HttpResponseForbidden("invalid_league_name_length")
+
+    #First letter to uppercase
+    league_name = league_name[0].upper() + league_name[1:]
+
+    if not league_name or not re.fullmatch('^[\w\ ]+$', league_name):
         return HttpResponseForbidden("invalid_league_name")
 
     league_user = LeagueUser.objects.filter(user_id=user_id)

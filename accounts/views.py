@@ -14,6 +14,8 @@ def login(request):
         return HttpResponseRedirect(reverse('accounts:profile'))
     else:
         nextpage = request.GET.get('next')
+        if not nextpage:
+            nextpage = reverse('index')
         context = dict(nextpage = nextpage)
         return render(request, 'accounts/login.html', context)
 

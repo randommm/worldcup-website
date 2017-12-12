@@ -57,12 +57,12 @@ def league(request):
                    league.asked = False
 
             try:
-                league_join = int(request.GET['league_join'])
+                league_join = int(request.GET.get('league_join'))
                 league_join = League.objects.get(id=league_join,
                                                  user_count__lt=11)
                 if league_join.leagueasked_set.filter(user_id=user_id):
                     league_join = False
-            except (KeyError, ValueError, League.DoesNotExist):
+            except (TypeError, ValueError, League.DoesNotExist):
                 league_join = False
 
 

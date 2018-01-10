@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}Rules{% endblock %}
 
@@ -9,54 +10,54 @@
 
 {% block content %}
 
-  <h1>Rules: how to play our forecast contest</h1>
+  <h1>{% trans "Rules: how to play our forecast contest" %}</h1>
 
-  <p>During the WC, teams play (almost) every day for roughly one month. Therefore, during this month you can input your own forecasts using our interactive website. After each game finishes, you’ll either gain or lose points based on your forcast, meaning that your forecast will be scored. This score will tell how ``good'' your forecast was, basically showing how close your forecast was from the observed result of the game (victory of team A, victory of team B or draw).</p>
+  <p>{% trans "During the WC, teams play (almost) every day for roughly one month. Therefore, during this month you can input your own forecasts using our interactive website. After each game finishes, you’ll either gain or lose points based on your forcast, meaning that your forecast will be scored. This score will tell how ``good'' your forecast was, basically showing how close your forecast was from the observed result of the game (victory of team A, victory of team B or draw)." %}</p>
 
-  <p>We will keep track of your point total throughout the WC. Just be sure to sign in with either Facebook or your Google account to save your forecasts. As the WC develops, you’ll be able to see how your forecasts compare with the other three mathematical models' forecasts and how your forecasts score compare to everybody else's scores.</p>
+  <p>{% trans "We will keep track of your point total throughout the WC. Just be sure to sign in with either Facebook or your Google account to save your forecasts. As the WC develops, you’ll be able to see how your forecasts compare with the other three mathematical models' forecasts and how your forecasts score compare to everybody else's scores." %}</p>
 
-  <p>In Brazil, especially during WC's, contests where people try to predict the final score of each match are very popular. Here, we do not want that. We want you to think probabilistically. Thins about your probability as some amount like 100 Kg of something or $100 of some currency. You must decide on how to divide this amount in three baskets: in one basket you'll put the amount corresponding to your confidence on the victory of team A; in the following basket the amount corresponding to your confidence on the victory of B; and in the third basket ... Notice that you have a fixed amount, so your probabilities should add up to 100.</p>
+  <p>{% trans "In Brazil, especially during WC's, contests where people try to predict the final score of each match are very popular. Here, we do not want that. We want you to think probabilistically. Thins about your probability as some amount like 100 Kg of something or $100 of some currency. You must decide on how to divide this amount in three baskets: in one basket you'll put the amount corresponding to your confidence on the victory of team A; in the following basket the amount corresponding to your confidence on the victory of B; and in the third basket ... Notice that you have a fixed amount, so your probabilities should add up to 100" %}.</p>
 
-  <h2>Examples</h2>
+  <h2>{% trans "Examples" %}</h2>
 
-  <p>As examples, consider a match of the 2014 WC. Assume that your probabilities are the ones displayed below.</p>
+  <p>{% trans "As examples, consider a match of the 2014 WC. Assume that your probabilities are the ones displayed below" %}.</p>
 
-  <p>Spain x Netherlands: 46% 24% 30%</p>
+  <p>{% trans "Spain x Netherlands: 46% 24% 30%" %}</p>
 
-  <p>The game ended 5x1 to Netherlands. To score this forecast, we will use the following equation:</p>
+  <p>{% trans "The game ended 5x1 to Netherlands. To score this forecast, we will use the following equation" %}:</p>
 
   <p>$$25-0.75\times\left[\frac{(p_1^2+p_2^2+p_1\times p_2)}{100}\right],$$</p>
 
-  <p>where \(p_1\) and \(p_2\) represent the probabilities of the possibilities that DID NOT happen. For this match, ``draw'' and ``Spain wins'' did not happen, meaning that, \(p_1=24\) and \(p_2=46\), implying that</p>
+  <p>{% trans "where \(p_1\) and \(p_2\) represent the probabilities of the possibilities that DID NOT happen. For this match, ``draw'' and ``Spain wins'' did not happen, meaning that, \(p_1=24\) and \(p_2=46\), implying that" %}</p>
 
   <p>$$25-0.75\times\left[\frac{(24^2+46^2+24\times 46)}{100}\right]=-3.5$$</p>
 
-  <p>is the score of your forecast.</p>
+  <p>{% trans "is the score of your forecast" %}.</p>
 
-  <p>Regarding the same match, a friend of yours attached 20% do Spain, 12% to draw and the remaining 68% to Netherlands. His score will be</p>
+  <p>{% trans "Regarding the same match, a friend of yours attached 20% do Spain, 12% to draw and the remaining 68% to Netherlands. His score will be" %}</p>
 
   <p>$$25-0.75\times\left[\frac{(24^2+46^2+24\times 46)}{100}\right]=19.1,$$</p>
 
-  <p>a lot better than -3.47 because his prevision was closer to the observed result, &ldquo;Netherlands win&rdquo; (he gave 68% to Netherlands and just 32% to the other two). This scoring system is based on Brier scores, which evaluate the accuracy of probabilistic forecasts and rewards good forecasts while punishing those that overshoot. (We’ve adapted the system for our game essentially by rescaling the scores; the result is that players in our game can earn between -50 and +25 points). In the example above, if Spain had won, you'd score 8.5 and your friend, -16.9 because in this case your forecast would be closer to the &ldquo;Spain wins&rdquo; event than your friend's forecast.</p>
+  <p>{% trans "a lot better than -3.47 because his prevision was closer to the observed result, &ldquo;Netherlands win&rdquo; (he gave 68% to Netherlands and just 32% to the other two). This scoring system is based on Brier scores, which evaluate the accuracy of probabilistic forecasts and rewards good forecasts while punishing those that overshoot. (We’ve adapted the system for our game essentially by rescaling the scores; the result is that players in our game can earn between -50 and +25 points). In the example above, if Spain had won, you'd score 8.5 and your friend, -16.9 because in this case your forecast would be closer to the &ldquo;Spain wins&rdquo; event than your friend's forecast" %}.</p>
 
-  <p>More important details are the following:</p>
+  <p>{% trans "More important details are the following" %}:</p>
 
   <ul>
-  	<li>You can submit or change your forecast up until a game starts.</li>
-  	<li>After the group stage, games are playoffs. If they ended tied after 90 minutes, they will be considered a draw (?).</li>
-  	<li>The round of 16 and the quarter-finals will count double twice the score to your point total. Semifinals and finals will count three times the score.</li>
-  	<li>Forecasts can't be more precise than whole percentages, and points gained/lost for each game are rounded to one decimal place.</li>
+  	<li>{% trans "You can submit or change your forecast up until a game starts" %}.</li>
+  	<li>{% trans "After the group stage, games are playoffs. If they ended tied after 90 minutes, they will be considered a draw (?)" %}.</li>
+  	<li>{% trans "The round of 16 and the quarter-finals will count double twice the score to your point total. Semifinals and finals will count three times the score" %}.</li>
+  	<li>{% trans "Forecasts can't be more precise than whole percentages, and points gained/lost for each game are rounded to one decimal place" %}.</li>
   </ul>
 
-  <p>Because of this last rule, since 100/3 is not a whole number, the most undecided forecast is 33% for two possibilities and 34% for the remaining one. Depending on the final result of the game, this forecast will receive a score of 0.5 or -0.25, so that, on average, forecasts like that will have a score around zero points. Initially all the games will have a 33% percent for team A (the team to the left of the slider), 34% for draw and 33% for team B (the team to the right of the slider).</p>
-  <p> So, if you forget to submit a forecast to one game or two your score won't change much as to put you out of the race, but if you want to stay close to the best, you have to submit your forecasts (of course, if you think that the teams are really close competitors and feels that the 33/34/33 forecast translates your degree of belief in the final result, you should submit this forecast.) You can also view the zero score as a benchmark: if your total score is negative that means you're doing worst than the undecided forecast.</p>
+  <p>{% trans "Because of this last rule, since 100/3 is not a whole number, the most undecided forecast is 33% for two possibilities and 34% for the remaining one. Depending on the final result of the game, this forecast will receive a score of 0.5 or -0.25, so that, on average, forecasts like that will have a score around zero points. Initially all the games will have a 33% percent for team A (the team to the left of the slider), 34% for draw and 33% for team B (the team to the right of the slider)" %}.</p>
+  <p> {% trans "So, if you forget to submit a forecast to one game or two your score won't change much as to put you out of the race, but if you want to stay close to the best, you have to submit your forecasts (of course, if you think that the teams are really close competitors and feels that the 33/34/33 forecast translates your degree of belief in the final result, you should submit this forecast.) You can also view the zero score as a benchmark: if your total score is negative that means you're doing worst than the undecided forecast" %}.</p>
 
-  <p>Considering all this, you can approach the contest in different ways.</p>
+  <p>{% trans "Considering all this, you can approach the contest in different ways" %}.</p>
 
-  <p>You can, for instance, just pick the results you think will happen and select it with 100 percent for every game. You probably won’t do very well, though. One of the properties of the Brier score is that it forces you to be honest, that is, to really inform your beliefs about the game, and not act as a gambler, just to win the contest. The gambler behavior would be a good option if the contest had just a few matches, but with 64 it is quite unlikely that someone will get rightly all the results.</p>
+  <p>{% trans "You can, for instance, just pick the results you think will happen and select it with 100 percent for every game. You probably won’t do very well, though. One of the properties of the Brier score is that it forces you to be honest, that is, to really inform your beliefs about the game, and not act as a gambler, just to win the contest. The gambler behavior would be a good option if the contest had just a few matches, but with 64 it is quite unlikely that someone will get rightly all the results" %}.</p>
 
-  <p>You can also look at other models, betting odds, build your own model or just think carefully about each match to submit your forecast.</p>
+  <p>{% trans "You can also look at other models, betting odds, build your own model or just think carefully about each match to submit your forecast" %}.</p>
 
-  <p>However, no matter what you do, enjoy the game and have fun.</p>
+  <p>{% trans "However, no matter what you do, enjoy the game and have fun" %}.</p>
 
 {% endblock %}

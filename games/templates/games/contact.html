@@ -1,32 +1,33 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}{% trans "Contact" %}{% endblock %}
 
 {% block content %}
-  	<h1>People & contact</h1>
+  	<h1>{% trans "People & contact" %}</h1>
 
-    <p>The following researchers and students are voluntarily developing this website. They are all members of the Department of Statistics from the Federal University of S. Carlos, Brazil.</p>
+    <p>{% trans "The following researchers and students are voluntarily developing this website. They are all members of the Department of Statistics from the Federal University of S. Carlos, Brazil." %}</p>
 
     <ul>
-      <li>Faculty members</li>
+      <li>{% trans "Faculty members" %}</li>
         <ul>
           <li>Danilo Lourenço Lopes</li>
           <li>Luis Ernesto Bueno Salasar</li>
           <li>Marcio Alves Diniz</li>
           <li>Rafael Izbicki</li>
         </ul>
-      <li>PhD students</li>
+      <li>{% trans "PhD students" %}</li>
         <ul>
           <li>Afonso Fernandes Vaz</li>
           <li>Marco Inácio</li>
         </ul>
-      <li>Master students</li>
+      <li>{% trans "Master students" %}</li>
         <ul>
           <li>João Carlos Poloniato Ferreira</li>
         </ul>
     </ul>
 
-    <h2>Contact</h2>
-    Questions or suggestions should be sent to marciodiniz@ufscar.br.
+    <h2>{% trans "Contact" %}</h2>
+    {% trans "Questions or suggestions should be sent to marciodiniz@ufscar.br." %}
 
 {% endblock %}

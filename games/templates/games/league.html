@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <style>
 #leaguecontent a {
  color: blue
@@ -6,35 +8,35 @@
 <div id=leaguecontent>
 
 {% if must_signin %}
-   Please <a href="{% url 'accounts:login' %}">sign in</a> first
+   {% trans "Please" %} <a href="{% url 'accounts:login' %}">{% trans "sign in" %}</a> {% trans "first" %}
 {% elif must_have_league %}
 
 
    {% if league_join %}
-      Do you want to join {{ league_join.name }}? <a href="#" onclick="return post_fa(this)" data_page="ask_join" data_post="{{league_join.id}}">Yes, ask to join</a>
+      {% trans "Do you want to join" %} {{ league_join.name }}? <a href="#" onclick="return post_fa(this)" data_page="ask_join" data_post="{{league_join.id}}">{% trans "Yes, ask to join" %}</a>
    {% else %}
-   You are not member of a league right now.
-   You can join a league or create one.
+   {% trans "You are not member of a league right now" %}.
+   {% trans "You can join a league or create one" %}.
    {% endif %}
 
 
   {% if available_leagues %}
      <hr />
-     Leagues available to join:
+     {% trans "Leagues available to join" %}:
      <ul>
      {% for league in available_leagues %}
        <li>{{ league.name }}
        {% if league.asked %}
-         <strong>Asked to join</strong> (waiting for moderator approval)
+         <strong>{% trans "Asked to join" %}</strong> ({% trans "waiting for moderator approval" %})
        {% else %}
-         <a href="#" onclick="return post_fa(this)" data_page="ask_join" data_post="{{league.id}}">ask to join</a>
+         <a href="#" onclick="return post_fa(this)" data_page="ask_join" data_post="{{league.id}}">{% trans "ask to join" %}</a>
        {% endif %}
        </li>
      {% endfor %}
      </ul>
   {% endif %}
   <hr />
-  Create new league:
+  {% trans "Create new league" %}:
   <form href="#" onsubmit="return post_ff(this)" data_page="create">
       Name: <input type="text" class="data_holder" name="name" /><input type="submit" value="create" /><strong class="result_holder"></strong>
   </form>
@@ -47,14 +49,14 @@
 
 
    {% if league_user.moderator or league_user.admin %}
-   Users who asked to join the league:
+   {% trans "Users who asked to join the league" %}:
    <ul>
      {% if users_invited %}
        {% for user in users_invited %}
-          <li>User {{ user.user.first_name }} {{ user.user.last_name }} <a href="#" onclick="return post_fa(this)" data_page="add_user" data_post="{{ user.user.id }}">add user</a></li>
+          <li>{% trans "User" %} {{ user.user.first_name }} {{ user.user.last_name }} <a href="#" onclick="return post_fa(this)" data_page="add_user" data_post="{{ user.user.id }}">{% trans "add user" %}</a></li>
        {% endfor %}
      {% else %}
-     <li>No user pending acceptance.</li>
+     <li>{% trans "No user pending acceptance" %}.</li>
      {% endif %}
      <!-- <li>Share the league URL to invite new users:
      </li> -->
@@ -64,36 +66,36 @@
    {% endif %}
 
 
-   Leaderboard:
+   {% trans "Leaderboard" %}:
 
    <ul>
    {% for user in users %}
      <li>
-     Name: {{ user.first_name }} {{ user.last_name }}
+     {% trans "Name" %}: {{ user.first_name }} {{ user.last_name }}
      <br />
-     Points: {{user.points}}
+     {% trans "Points" %}: {{user.points}}
      <br />
      {% if user.admin %}
-       Is admin
+       {% trans "Is admin" %}
        <br />
      {% elif user.moderator %}
-       Is moderator
+       {% trans "Is moderator" %}
        {% if league_user.admin %}
-         | <a href="#" onclick="return post_fa(this)" data_page="remove_moderator" data_post="{{user.user_id}}">Remove moderator tools</a>
+         | <a href="#" onclick="return post_fa(this)" data_page="remove_moderator" data_post="{{user.user_id}}">{% trans "Remove moderator tools" %}</a>
        {% endif %}
        <br />
      {% elif league_user.admin %}
-       <a href="#" onclick="return post_fa(this)" data_page="add_moderator" data_post="{{user.user_id}}">Set as moderator</a>
+       <a href="#" onclick="return post_fa(this)" data_page="add_moderator" data_post="{{user.user_id}}">{% trans "Set as moderator" %}</a>
        <br />
      {% endif %}
 
      {% if league_user.admin and not user.admin %}
-       <a href="#" onclick="return post_fa(this)" data_page="transfer_admin" data_post="{{user.user_id}}" class="admin_transfer">Transfer admin powers to this user<br /></a>
+       <a href="#" onclick="return post_fa(this)" data_page="transfer_admin" data_post="{{user.user_id}}" class="admin_transfer">{% trans "Transfer admin powers to this user" %}<br /></a>
      {% endif %}
 
      {% if not user.admin and not user.moderator and league_user.moderator or league_user.admin %}
        {% if user.user_id != league_user.user_id %}
-         <a href="#" onclick="return post_fa(this)" data_page="remove_user" data_post="{{user.user_id}}">Remove from league</a>
+         <a href="#" onclick="return post_fa(this)" data_page="remove_user" data_post="{{user.user_id}}">{% trans "Remove from league" %}</a>
          <br />
        {% endif %}
      {% endif %}
@@ -106,7 +108,7 @@
    <br />
    <ul>
    {% if league_user.moderator and not league_user.admin %}
-      <li><a href="#" onclick="return post_fa(this)" data_page="remove_moderator" data_post="{{league_user.user_id}}">Abdicate moderating powers</a></li>
+      <li><a href="#" onclick="return post_fa(this)" data_page="remove_moderator" data_post="{{league_user.user_id}}">{% trans "Abdicate moderating powers" %}</a></li>
    {% endif %}
 
    {% if league_user.admin %}
@@ -126,10 +128,10 @@
         }
       </script>
 
-      <li><span id="admin_transf"><a href="#" onclick="return transfer_admin()">Transfer league admin powers</a></span></li>
+      <li><span id="admin_transf"><a href="#" onclick="return transfer_admin()">{% trans "Transfer league admin powers" %}</a></span></li>
    {% endif %}
 
-   <li><a href="#" onclick="return post_fa(this)" data_page="leave" data_post="pass">Leave league</a></li>
+   <li><a href="#" onclick="return post_fa(this)" data_page="leave" data_post="pass">{% trans "Leave league" %}</a></li>
    </ul>
 
 {% endif %}
@@ -192,43 +194,43 @@ function post_ready(elem, page, post) {
     rt = res.responseText
     switch (rt) {
     case "name_taken":
-        text = "this name has already been taken";
+        text = "{% trans "this name has already been taken" %}";
         break;
     case "invalid_league_name":
-        text = "invalid name. Must only cointain letters, numbers and spaces";
+        text = "{% trans "invalid name. Must only cointain letters, numbers and spaces" %}";
         break;
     case "invalid_league_name_length":
-        text = "league name must have between 5 and 50 characters.";
+        text = "{% trans "league name must have between 5 and 50 characters" %}";
         break;
     case "league_full":
-        text = "league is full";
+        text = "{% trans "league is full" %}";
         break;
     case "user_already_has_league":
-        text = "the user already has a league";
+        text = "{% trans "the user already has a league" %}";
         break;
     case "cannot_remove_adm_nor_mod":
-        text = "only the admin can remove moderators";
+        text = "{% trans "only the admin can remove moderators" %}";
         break;
     case "not_admin_nor_mod":
-        text = "you are not the admin nor a moderator";
+        text = "{% trans "you are not the admin nor a moderator" %}";
         break;
     case "not_admin":
-        text = "you are not the admin";
+        text = "{% trans "you are not the admin" %}";
         break;
     case "must_use_post":
-        text = "you must use http POST";
+        text = "{% trans "you must use http POST" %}";
         break;
     case "must_empty_or_transfer_group":
-        text = "you must remove everyone or transfer admin powers before leaving";
+        text = "{% trans "you must remove everyone or transfer admin powers before leaving" %}";
         break;
     case "cannot_autoremove":
-        text = "you cannot remove yourself, use leave instead";
+        text = "{% trans "you cannot remove yourself, use leave instead" %}";
         break;
     case "user_did_not_asked_to_join":
-        text = "this user did not asked to join league";
+        text = "{% trans "this user did not asked to join league" %}";
         break;
     default:
-        text = "unknown error";
+        text = "{% trans "unknown error" %}";
         if (rt.length <= 50) {
           text = " " + rt;
         }

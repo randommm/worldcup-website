@@ -1,3 +1,5 @@
+{% load i18n %}
+
 {% if games %}
     <script>
     activate_slider = function(objid, team0, team1, def_val0, def_val1) {
@@ -36,7 +38,7 @@
         type: "POST",
         url: "{% url 'games:update_bet' %}",
         data: $('#sliderform_'+formid).serialize(),
-        success: function(res){$("#success_area_" + formid).html("Updated!")},
+        success: function(res){$("#success_area_" + formid).html("{% trans "Updated!" %}")},
         dataType: "html"
       });
     }
@@ -46,27 +48,27 @@
     </script>
     {% for game in games %}
     <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Change bet for this game</a></div>
-        <li>Game: {{ game.team0 }} vs {{ game.team1 }}.</li>
+        <li>{% trans "Game" %}: {{ game.team0 }} vs {{ game.team1 }}.</li>
 
-        <li>Time: {{ game.date }}</li>
+        <li>{% trans "Time" %}: {{ game.date }}</li>
 
-        <li>Our forecast:
+        <li>{% trans "Our forecast" %}:
             {% if game.site_forecast %}
-            {{ game.site_forecast.prob0 }}% win {{ game.team0 }} ||
-            {{ game.site_forecast.prob_tie }}% tie ||
-            {{ game.site_forecast.prob1 }}% win {{ game.team1 }}.
+            {{ game.site_forecast.prob0 }}% {% trans "win" %} {{ game.team0 }} ||
+            {{ game.site_forecast.prob_tie }}% {% trans "tie" %} ||
+            {{ game.site_forecast.prob1 }}% {% trans "win" %} {{ game.team1 }}.
             {% else %}
-            not available.
+            {% trans "not available" %}.
             {% endif %}
         </li>
 
-        <li>Your forecast:<span id="yforecast_{{ forloop.counter }}">
+        <li>{% trans "Your forecast" %}:<span id="yforecast_{{ forloop.counter }}">
             {% if game.bet %}
-            {{ game.bet.prob0 }}% win {{ game.team0 }} ||
-            {{ game.bet.prob_tie }}% tie ||
-            {{ game.bet.prob1 }}% win {{ game.team1 }}.
+            {{ game.bet.prob0 }}% {% trans "win" %} {{ game.team0 }} ||
+            {{ game.bet.prob_tie }}% {% trans "tie" %} ||
+            {{ game.bet.prob1 }}% {% trans "win" %} {{ game.team1 }}.
             {% else %}
-            Not made yet.
+            {% trans "Not made yet" %}.
             {% endif %}</span>
 
 
@@ -90,18 +92,18 @@
 
           <ul style="margin-top: 10px">
             <li>
-              If {{ game.team0 }} wins, you will get:
-              <span id="gain_team0_{{ forloop.counter }}"></span> points.
+              {% trans "If" %} {{ game.team0 }} {% trans "wins, you will get" %}:
+              <span id="gain_team0_{{ forloop.counter }}"></span> {% trans "points" %}.
             </li>
 
             <li>
-              If {{ game.team1 }} wins, you will get:
-              <span id="gain_team1_{{ forloop.counter }}"></span> points.
+              {% trans "If" %} {{ game.team1 }} {% trans "wins, you will get" %}:
+              <span id="gain_team1_{{ forloop.counter }}"></span> {% trans "points" %}.
             </li>
 
             <li>
-              If tie, you will get:
-              <span id="gain_tie_{{ forloop.counter }}"></span> points.
+              {% trans "If tie, you will get" %}:
+              <span id="gain_tie_{{ forloop.counter }}"></span> {% trans "points" %}.
             </li>
           </ul>
 
@@ -109,9 +111,9 @@
           <input type="submit" value="Submit Changes" class="button" style="margin-top: 20px">
           {% else %}
           <p style="color: red; font-weight:bold; margin: 10px auto 10px auto; text-align: center">
-          Attention: you are not logged in, therefore your changes will not be saved.
+          {% trans "Attention: you are not logged in, therefore your changes will not be saved." %}
           <br />
-          <a style="color: blue" href="{% url 'accounts:login' %}">Login or sign-up</a> to have your forecasts stored.</p>
+          <a style="color: blue" href="{% url 'accounts:login' %}">{% trans "Login or sign-up" %}</a> {% trans "to have your forecasts stored" %}.</p>
           {% endif %}
           <div id="success_area_{{ forloop.counter }}" style="margin-top: 20px; color: green; font-weight: bold"></div>
           </form>
@@ -131,5 +133,5 @@
     {% endfor %}
 
 {% else %}
-    <p>No game available.</p>
+    <p>{% trans "No game available" %}.</p>
 {% endif %}

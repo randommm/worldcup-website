@@ -9,9 +9,9 @@
             "os_name": "posix",
             "platform_machine": "x86_64",
             "platform_python_implementation": "CPython",
-            "platform_release": "4.13.0-17-generic",
+            "platform_release": "4.13.0-24-generic",
             "platform_system": "Linux",
-            "platform_version": "#20-Ubuntu SMP Mon Nov 6 10:04:08 UTC 2017",
+            "platform_version": "#28-Ubuntu SMP Sun Jan 7 14:11:35 UTC 2018",
             "python_full_version": "3.6.3",
             "python_version": "3.6",
             "sys_platform": "linux"
@@ -59,10 +59,10 @@
         },
         "django": {
             "hashes": [
-                "sha256:af18618ce3291be5092893d8522fe3919661bf3a1fb60e3858ae74865a4f07c2",
-                "sha256:9614851d4a7ff8cbd32b73c6076441f377c45a5bbff7e771798fb02c43c31f47"
+                "sha256:52475f607c92035d4ac8fee284f56213065a4a6b25ed43f7e39df0e576e69e9f",
+                "sha256:d96b804be412a5125a594023ec524a2010a6ffa4d408e5482ab6ff3cb97ec12f"
             ],
-            "version": "==2.0"
+            "version": "==2.0.1"
         },
         "gunicorn": {
             "hashes": [
@@ -171,19 +171,19 @@
         },
         "social-auth-app-django": {
             "hashes": [
-                "sha256:22976fae902d5ccb333f9ac0db23a2a0b97ab4d9367655c17a740f89c044b3b1",
-                "sha256:1c16b994ccaf1574835ec1e2d53916d885952b795d52df094fa434cd2f3227c8",
-                "sha256:15a33f7cd663a2624fdd5deafa7992044b777225da57ae1f81d790196d8d43d1"
+                "sha256:25295c94375d28062f65d0b3cd4b7e304c7e2fb7bac1ec51b40650a654c352f4",
+                "sha256:4e34d86709bfa51fd2938307e00f12f4e1dfef8a8ed6bfbfe9aeb4e69d57148f",
+                "sha256:b7c28bef8fbd11ff357ddd885cb219cdb55565e01109c709dd28569e0bfb0dea"
             ],
-            "version": "==2.0.0"
+            "version": "==2.1.0"
         },
         "social-auth-core": {
             "hashes": [
-                "sha256:ab184b279addd029364bbe175d1a8bb21754287d7048a3b860ead6c6b3a85643",
-                "sha256:42bb40aef25c462cd02eba9a8e6c30251cc26fc58c1e8c6f1ebd94055c3b8e93",
-                "sha256:49054c01619f6b1a9bc4c68b010a4b223f86a0aeda376bc1f2d0fa53f56c26dc"
+                "sha256:d67808c160859a3657230f8439fa53142189fe4a060da695ebc563fba02466a3",
+                "sha256:e4dc9efe81fa52bc0484ce313651e9be91d64dc04a794dfa6e8cdf7c673c33f6",
+                "sha256:8d371924a78d54391db194b4b077915713378cbe6e91e05a824dac9b4cdb0a5d"
             ],
-            "version": "==1.5.0"
+            "version": "==1.6.0"
         },
         "urllib3": {
             "hashes": [

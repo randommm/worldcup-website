@@ -1,3 +1,5 @@
+{% load i18n %}
+
 {% if points %}
    <ul>
    {% for point in points %}
@@ -5,7 +7,7 @@
    {% endfor %}
    </ul>
 {% else %}
-    <p>The world cup has not started yet, so we have no scoreboard...</p>
+    <p>{% trans "The world cup has not started yet, so we have no scoreboard..." %}</p>
 {% endif %}
 
 

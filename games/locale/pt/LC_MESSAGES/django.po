@@ -1,0 +1,899 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-10 00:33-0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: games/templates/games/contact.html:4 games/templates/games/contact.html:30
+msgid "Contact"
+msgstr ""
+
+#: games/templates/games/contact.html:7
+msgid "People & contact"
+msgstr ""
+
+#: games/templates/games/contact.html:9
+msgid ""
+"The following researchers and students are voluntarily developing this "
+"website. They are all members of the Department of Statistics from the "
+"Federal University of S. Carlos, Brazil."
+msgstr ""
+
+#: games/templates/games/contact.html:12
+msgid "Faculty members"
+msgstr ""
+
+#: games/templates/games/contact.html:19
+msgid "PhD students"
+msgstr ""
+
+#: games/templates/games/contact.html:24
+msgid "Master students"
+msgstr ""
+
+#: games/templates/games/contact.html:31
+msgid "Questions or suggestions should be sent to marciodiniz@ufscar.br."
+msgstr ""
+
+#: games/templates/games/games.html:41
+msgid "Updated!"
+msgstr ""
+
+#: games/templates/games/games.html:51 games/templates/games/results.html:7
+msgid "Game"
+msgstr ""
+
+#: games/templates/games/games.html:53
+msgid "Time"
+msgstr ""
+
+#: games/templates/games/games.html:55
+#, fuzzy
+#| msgid "Here you are the forecaster"
+msgid "Our forecast"
+msgstr "Aqui é você quem faz a previsão"
+
+#: games/templates/games/games.html:57 games/templates/games/games.html:59
+#: games/templates/games/games.html:67 games/templates/games/games.html:69
+#: games/templates/games/results.html:10 games/templates/games/results.html:14
+msgid "win"
+msgstr ""
+
+#: games/templates/games/games.html:58 games/templates/games/games.html:68
+#: games/templates/games/results.html:12
+msgid "tie"
+msgstr ""
+
+#: games/templates/games/games.html:61
+msgid "not available"
+msgstr ""
+
+#: games/templates/games/games.html:65
+#, fuzzy
+#| msgid "Here you are the forecaster"
+msgid "Your forecast"
+msgstr "Aqui é você quem faz a previsão"
+
+#: games/templates/games/games.html:71
+msgid "Not made yet"
+msgstr ""
+
+#: games/templates/games/games.html:95 games/templates/games/games.html:100
+msgid "If"
+msgstr ""
+
+#: games/templates/games/games.html:95 games/templates/games/games.html:100
+msgid "wins, you will get"
+msgstr ""
+
+#: games/templates/games/games.html:96 games/templates/games/games.html:101
+#: games/templates/games/games.html:106
+msgid "points"
+msgstr ""
+
+#: games/templates/games/games.html:105
+msgid "If tie, you will get"
+msgstr ""
+
+#: games/templates/games/games.html:114
+msgid ""
+"Attention: you are not logged in, therefore your changes will not be saved."
+msgstr ""
+
+#: games/templates/games/games.html:116
+msgid "Login or sign-up"
+msgstr ""
+
+#: games/templates/games/games.html:116
+#, fuzzy
+#| msgid "Here you are the forecaster"
+msgid "to have your forecasts stored"
+msgstr "Aqui é você quem faz a previsão"
+
+#: games/templates/games/games.html:136
+msgid "No game available"
+msgstr ""
+
+#: games/templates/games/history.html:7
+msgid "History"
+msgstr ""
+
+#: games/templates/games/history.html:8
+msgid "Some words about football/soccer contest pools"
+msgstr ""
+
+#: games/templates/games/history.html:10
+msgid ""
+"Gambling and betting are probably as old as mankind. Once sports events "
+"became popular, betting on its results also brought a lot of attention to "
+"them. In Europe, specially in Great Britain, betting on sports events was "
+"already pretty popular in the late XIX century (ref), but it was only in the "
+"1920's that the first football pool"
+msgstr ""
+
+#: games/templates/games/history.html:10
+msgid "was created"
+msgstr ""
+
+#: games/templates/games/history.html:11
+msgid ""
+"These &ldquo;pools&rdquo; are private companies that sell the right to "
+"participate in the contest, in this case, related to results of upcpming "
+"football matches. In those days, everything was done in printed forms"
+msgstr ""
+
+#: games/templates/games/history.html:12
+msgid ""
+"Each week, when a collector called to pick-up the completed pools coupon "
+"along with the appropriate amount of money necessary to play, a fresh set of "
+"coupons for the following week’s series of games would be left.}. One could "
+"go to a betting post to fill these forms. They had a list of some of the "
+"week's matches. The filled form was then posted to the pools firm, with a "
+"postal order or cheque for the sum staked (or &ldquo;invested&rdquo;, as the "
+"firms used to say). At the end of the weekend the results of the matches "
+"were announced on radio, television and published in the news­papers so that "
+"the bettors could take out the copy of his coupon and check his forecasts"
+msgstr ""
+
+#: games/templates/games/history.html:13
+msgid ""
+"The first football pools company was Littlewoods, created by John Moores, "
+"Colin Askham and Bill Hughes in 1923. The concept of the classic pools was "
+"an instant hit with the public and it flourished until the start of the war "
+"in 1939. In 1946 normal service was resumed as the football league started "
+"up again. Fortunately for people wanting to try their luck (or skill), "
+"football pools were not outlawed or put out of business and they went from "
+"strength to strength. It did not take long before competing companies were "
+"formed. Vernons Pools came on the scene in 1925, and eight years later in "
+"1933, Zetters Pools became the third company to offer their services to "
+"players. In 1945, George Britten started his family football pool firm, "
+"Brittens Pools"
+msgstr ""
+
+#: games/templates/games/history.html:14
+msgid ""
+"Starting in 1935, the &ldquo;penny points&rdquo; bet was the most popular "
+"contest. For each match, the bettor would mark a 1, a 2 or an x to show that "
+"he thought the result of the match would be a home win, an away win or a "
+"draw, respectively. Home wins guessed correctly received 1 point, away wins "
+"received 2 points and draws received 3. The bet with highest scores won "
+"money prizes. After the war, the Treble chance became more popular. In this "
+"system, the bettor had to choose, from a list of more than 50 matches listed "
+"in the form, eight that he believed would end tied"
+msgstr ""
+
+#: games/templates/games/history.html:15
+msgid ""
+"Although football pools were immediately popular with the public, they did "
+"not sit well with the establishment. Ramsay MacDonald, the British prime "
+"minister in the 1930's, once said that the pools were a disease which spread "
+"downwards to the industrious poor from the idle rich"
+msgstr ""
+
+#: games/templates/games/history.html:16
+msgid ""
+"In Italy, the Totocalcio was born after the war. Its creator, the sports "
+"journalist Massimo Della Pergola, thought about the contest while in a "
+"concentration camp in Switzerland. His idea was similar to the british penny "
+"points system (he also used 1, 2 or x as symbols to denote the believed "
+"result), with the difference that each match guessed correctly would count "
+"for one point, being a draw, a home or away win"
+msgstr ""
+
+#: games/templates/games/history.html:17
+msgid ""
+"In September of 1945 he created, with Fabio Jegher and Geo Molo, also sports "
+"journalists, the Sisal (Sport Italia società a responsabilità limitata). A "
+"few months later, in May 5th, 1946, 34000 italians participated on the first "
+"Sisal contest, with 14 matches to forecast. The great popularity of the "
+"contest led the government to take its control, renaming it to Totocalcio. "
+"In the 1950's and 1960's the popularity of the contest only increased. A "
+"nice documentary (in Italian) about it can be seen here. In the 1980's and "
+"1990's scandals showed the relation of players, referees and others to fix "
+"results. The most known case was the one involving the Italian international "
+"Paolo Rossi"
+msgstr ""
+
+#: games/templates/games/history.html:18
+msgid ""
+"Contests similar to Totocalcio were created in other countries. In Spain, La "
+"Quiniela also started after the War<sup><a href="
+msgstr ""
+
+#: games/templates/games/history.html:19
+msgid ""
+"In Brazil, the Loteria Esportiva or Loteca, started in 1970. Also run by the "
+"state, the system is the same of Totocalcio and Quiniela, but with 13 "
+"matches per contest.<sup><a href="
+msgstr ""
+
+#: games/templates/games/history.html:21
+msgid "Bruno de Finetti"
+msgstr ""
+
+#: games/templates/games/history.html:23
+msgid ""
+"The popularity of Totocalcio and the relationship of forecasting and "
+"subjective probabilities led Bruno de Finetti to idealize a contest where "
+"constestants should submit their probabilities of each result, i.e. victory, "
+"draw or defeat of the home team. This is exactly the contest we are "
+"promoting for the World Cup"
+msgstr ""
+
+#: games/templates/games/history.html:24
+msgid "In unpublished notes<sup><a href="
+msgstr ""
+
+#: games/templates/games/history.html:25
+msgid ""
+"De Finetti immediataly understood that those triples were the probabilities "
+"of a group of experts named &ldquo;picchetto&rdquo;<sup><a href="
+msgstr ""
+
+#: games/templates/games/history.html:26
+msgid ""
+"In the early 1960's, de Finetti implemented such a contest experimentally "
+"with students and university staff as contestants (himself included). He "
+"believed that such contest would teach the most important aspects of "
+"probability theory and in a much better way than the textbooks examples used "
+"in most of undergraduate courses on the subject"
+msgstr ""
+
+#: games/templates/games/history.html:27
+msgid ""
+"His idea was to implement a national contest, with participation of experts "
+"(like sports journalists) and eventually announcements of the results on TV. "
+"His last writings about the subject are dated 1983, two years before his "
+"passing"
+msgstr ""
+
+#: games/templates/games/history.html:28
+msgid "Last year (2017), <a href = "
+msgstr ""
+
+#: games/templates/games/history.html:34
+msgid ""
+"1. [The word &ldquo;pool&rdquo; is connected with the picture of streams of "
+"money pouring into a com­mon fund, or &ldquo;pool&rdquo; from which the "
+"winners are paid after the firm has taken its expenses and profit.]"
+msgstr ""
+
+#: games/templates/games/history.html:34
+#: games/templates/games/objectives.html:73
+msgid "Jump back to footnote 1 in the text"
+msgstr ""
+
+#: games/templates/games/history.html:40
+msgid ""
+"2. [Playing the football pools before the Internet involved completing by "
+"hand special coupons provided by each of the companies. Initially coupons "
+"were readily available from newsagents and tobacconists, places most "
+"frequented by the working man. The main football pool companies also "
+"provided a service where coupons were hand-delivered directly to players by "
+"various networks of collectors across the UK. These collectors acted as "
+"middlemen between the punters and the pools companies.]"
+msgstr ""
+
+#: games/templates/games/history.html:40
+msgid "Jump back to footnote 2 in the text."
+msgstr ""
+
+#: games/templates/games/index.html:28
+msgid "Here you are the forecaster"
+msgstr "Aqui é você quem faz a previsão"
+
+#: games/templates/games/index.html:30
+msgid ""
+"Are you a football/soccer expert? Can you forecast the results of the 2018 "
+"World Cup matches better than a mathematical model? Here's your chance to "
+"prove it!"
+msgstr "Você é um expert em football/soccer? Você pode prever os resultados da"
+
+#: games/templates/games/index.html:31
+msgid ""
+"Use the sliders below to select YOUR probabilities of each possible result "
+"(victory of each team or draw). You'll be competing against three models"
+msgstr ""
+
+#: games/templates/games/index.html:31
+msgid "Nate Silver's FiveThirtyEight"
+msgstr ""
+
+#: games/templates/games/index.html:31
+msgid "Chance de Gol"
+msgstr ""
+
+#: games/templates/games/index.html:31
+msgid "and"
+msgstr ""
+
+#: games/templates/games/index.html:31
+msgid "Previsão Esportiva"
+msgstr ""
+
+#: games/templates/games/index.html:31
+msgid ""
+"but also against all the other competitors. After each matchday the "
+"forecasts will be scored according to the rules"
+msgstr ""
+
+#: games/templates/games/index.html:31
+msgid "described"
+msgstr ""
+
+#: games/templates/games/index.html:31 games/templates/games/results.html:17
+msgid "here"
+msgstr ""
+
+#: games/templates/games/index.html:31
+msgid ""
+"and the best forecaster will be the one with higher score after the 64 "
+"matches of this WC. Just beware that we're asking probabilistic forecasts "
+"for each match and that the scoring rules punishes overconfidence."
+msgstr ""
+
+#: games/templates/games/index.html:33
+msgid "Don't forget to"
+msgstr ""
+
+#: games/templates/games/index.html:33
+msgid "sign in using Google or Facebook"
+msgstr ""
+
+#: games/templates/games/index.html:33
+msgid ""
+"to save your selections. After each matchday you'll be able to check how "
+"well you did against the models and everybody else playing the game."
+msgstr ""
+
+#: games/templates/games/index.html:38
+#, fuzzy
+#| msgid "Here you are the forecaster"
+msgid "Make your forecasts"
+msgstr "Aqui é você quem faz a previsão"
+
+#: games/templates/games/index.html:39
+msgid "Check your results"
+msgstr ""
+
+#: games/templates/games/index.html:40
+msgid "Scoreboard"
+msgstr ""
+
+#: games/templates/games/index.html:41
+msgid "Your league"
+msgstr ""
+
+#: games/templates/games/league.html:11
+msgid "Please"
+msgstr ""
+
+#: games/templates/games/league.html:11
+msgid "sign in"
+msgstr ""
+
+#: games/templates/games/league.html:11
+msgid "first"
+msgstr ""
+
+#: games/templates/games/league.html:16
+msgid "Do you want to join"
+msgstr ""
+
+#: games/templates/games/league.html:16
+msgid "Yes, ask to join"
+msgstr ""
+
+#: games/templates/games/league.html:18
+msgid "You are not member of a league right now"
+msgstr ""
+
+#: games/templates/games/league.html:19
+msgid "You can join a league or create one"
+msgstr ""
+
+#: games/templates/games/league.html:25
+msgid "Leagues available to join"
+msgstr ""
+
+#: games/templates/games/league.html:30
+msgid "Asked to join"
+msgstr ""
+
+#: games/templates/games/league.html:30
+msgid "waiting for moderator approval"
+msgstr ""
+
+#: games/templates/games/league.html:32
+msgid "ask to join"
+msgstr ""
+
+#: games/templates/games/league.html:39
+msgid "Create new league"
+msgstr ""
+
+#: games/templates/games/league.html:52
+msgid "Users who asked to join the league"
+msgstr ""
+
+#: games/templates/games/league.html:56
+msgid "User"
+msgstr ""
+
+#: games/templates/games/league.html:56
+msgid "add user"
+msgstr ""
+
+#: games/templates/games/league.html:59
+msgid "No user pending acceptance"
+msgstr ""
+
+#: games/templates/games/league.html:69
+msgid "Leaderboard"
+msgstr ""
+
+#: games/templates/games/league.html:74
+msgid "Name"
+msgstr ""
+
+#: games/templates/games/league.html:76
+msgid "Points"
+msgstr ""
+
+#: games/templates/games/league.html:79
+msgid "Is admin"
+msgstr ""
+
+#: games/templates/games/league.html:82
+msgid "Is moderator"
+msgstr ""
+
+#: games/templates/games/league.html:84
+msgid "Remove moderator tools"
+msgstr ""
+
+#: games/templates/games/league.html:88
+msgid "Set as moderator"
+msgstr ""
+
+#: games/templates/games/league.html:93
+msgid "Transfer admin powers to this user"
+msgstr ""
+
+#: games/templates/games/league.html:98
+msgid "Remove from league"
+msgstr ""
+
+#: games/templates/games/league.html:111
+msgid "Abdicate moderating powers"
+msgstr ""
+
+#: games/templates/games/league.html:131
+msgid "Transfer league admin powers"
+msgstr ""
+
+#: games/templates/games/league.html:134
+msgid "Leave league"
+msgstr ""
+
+#: games/templates/games/league.html:197
+msgid "this name has already been taken"
+msgstr ""
+
+#: games/templates/games/league.html:200
+msgid "invalid name. Must only cointain letters, numbers and spaces"
+msgstr ""
+
+#: games/templates/games/league.html:203
+msgid "league name must have between 5 and 50 characters"
+msgstr ""
+
+#: games/templates/games/league.html:206
+msgid "league is full"
+msgstr ""
+
+#: games/templates/games/league.html:209
+msgid "the user already has a league"
+msgstr ""
+
+#: games/templates/games/league.html:212
+msgid "only the admin can remove moderators"
+msgstr ""
+
+#: games/templates/games/league.html:215
+msgid "you are not the admin nor a moderator"
+msgstr ""
+
+#: games/templates/games/league.html:218
+msgid "you are not the admin"
+msgstr ""
+
+#: games/templates/games/league.html:221
+msgid "you must use http POST"
+msgstr ""
+
+#: games/templates/games/league.html:224
+msgid "you must remove everyone or transfer admin powers before leaving"
+msgstr ""
+
+#: games/templates/games/league.html:227
+msgid "you cannot remove yourself, use leave instead"
+msgstr ""
+
+#: games/templates/games/league.html:230
+msgid "this user did not asked to join league"
+msgstr ""
+
+#: games/templates/games/league.html:233
+msgid "unknown error"
+msgstr ""
+
+#: games/templates/games/objectives.html:4
+#: games/templates/games/objectives.html:7
+msgid "Objectives"
+msgstr ""
+
+#: games/templates/games/objectives.html:9
+msgid ""
+"Before we state our goals, it is important to mention that the team working "
+"in this project is not sponsored or related, by any means, to betting "
+"websites or organizations"
+msgstr ""
+
+#: games/templates/games/objectives.html:11
+msgid ""
+"Our objectives implementing a football/soccer prevision contest are strictly "
+"pedagogical and academic, being"
+msgstr ""
+
+#: games/templates/games/objectives.html:15
+msgid ""
+"Use a popular sport event to motivate young students and math teachers, "
+"especially at pre-university level, to learn and discuss the main aspects of "
+"probability theory"
+msgstr ""
+
+#: games/templates/games/objectives.html:19
+msgid ""
+"Introductory probability textbooks usually present the subject exploring "
+"random devices based on dice, extraction of marbles from urns and tossing of "
+"coins. These examples have a pedagogical value but the questions related to "
+"them naturally point to more or less complex combinatoric calculus "
+"exercises, and the most important conceptual aspects of probability theory "
+"are avoided or poorly treated. As consequence, several students have the "
+"impression that probability theory is only about that kind of numeric "
+"exercise"
+msgstr ""
+
+#: games/templates/games/objectives.html:21
+msgid ""
+"In football, like in every specific case of interest, the evaluation of "
+"probabilities require (and this is the essential point) immagination, "
+"inteligence, subconcious practice, self-criticism and ability to avoid "
+"inconsistencies when evaluating several events at the same time"
+msgstr ""
+
+#: games/templates/games/objectives.html:25
+msgid ""
+"Collect a dataset that will help the members of our group to develop "
+"academic research related to different kinds of probabilistic prevision"
+msgstr ""
+
+#: games/templates/games/objectives.html:29
+msgid ""
+"Our research group is interested in different aspects of probabilistic "
+"prevision, not only related to football or sports events. By showing how "
+"people face uncertain or random events, the data provided by the contest "
+"promoted in this website will help us to answer several questions involving "
+"probabilistic prevision. Some of these questions are summarized below"
+msgstr ""
+
+#: games/templates/games/objectives.html:33
+msgid ""
+"How does the practice of probability evaluation based on a contest like the "
+"one we are promoting improve our aptitude to express differences in beliefs "
+"as differences in numbers"
+msgstr ""
+
+#: games/templates/games/objectives.html:37
+msgid ""
+"How does such a practice improve &ldquo;competence&rdquo; or the capability "
+"of making &ldquo;reasonable&rdquo; probability evaluations"
+msgstr ""
+
+#: games/templates/games/objectives.html:41
+msgid ""
+"How the &ldquo;competence&rdquo; of a given person vary from field to field "
+"of events (for example, from football of different championships, or to "
+"meteorological, political, economical, or medical forecasting)"
+msgstr ""
+
+#: games/templates/games/objectives.html:45
+msgid ""
+"How &ldquo;competence&rdquo; might be influenced by other factors such as "
+"short or long reflection before writing down the figures, reading news or "
+"opinions of columnists about the subject, conditions of health or of spirit, "
+"etc"
+msgstr ""
+
+#: games/templates/games/objectives.html:47
+msgid ""
+"How one's evaluations change if repeated after some delay in time (when one "
+"does, or does not, remember one's former evaluations); and how it is "
+"possible to explain agreements or systematic differences between independent "
+"evaluations by different people"
+msgstr ""
+
+#: games/templates/games/objectives.html:51
+msgid ""
+"Considering the best forecasters as a group, what about their &ldquo;average "
+"opinion&rdquo;, that is, the evaluation in which each probability is "
+"calculated as the arithmetic mean of the corresponding evaluations of the "
+"individual members? Would such an average opinion be more successful than "
+"any single one? And what about the average of the few most successful members"
+msgstr ""
+
+#: games/templates/games/objectives.html:53
+msgid ""
+"Analysing the best forecasters, might it be possible to infer some (probably "
+"unconscious) rule by which he/she takes into account the pertinent facts "
+"(for football, the outcomes of recent matches and present relative rank of "
+"each pair of teams)"
+msgstr ""
+
+#: games/templates/games/objectives.html:57
+msgid ""
+"Analysing such rules, might some be discovered that would have been more "
+"successful than most or all of the contestants"
+msgstr ""
+
+#: games/templates/games/objectives.html:59
+msgid ""
+"Are there sufficient grounds to accept such a rule as &ldquo;significantly "
+"good&rdquo; in the sense that we believe it will probably continue to work "
+"in the future in other circumstances, and how far, say, for football in "
+"other countries or for other sports like basketball and rugby"
+msgstr ""
+
+#: games/templates/games/objectives.html:66
+msgid ""
+"The importance of questions of this kind is not restricted to psychology and "
+"philosophy of probability and human behaviour but greatly concerns several "
+"practical fields."
+msgstr ""
+
+#: games/templates/games/objectives.html:67
+msgid ""
+"Often, important economic and medical decisions depend on the answer of an "
+"expert, and the opinion he/she is asked to reveal is, explicitly or "
+"implicitly, his evaluation of certain probabilities"
+msgstr ""
+
+#: games/templates/games/objectives.html:73
+msgid ""
+"1. [These questions were first posed by Bruno de Finetti. See chapter 3 "
+"(Does it Make Sense to Speak of &ldquo;Good Probability Appraisers&rdquo;) "
+"of <i>Probability, Induction and Statistics</i>, Wiley, 1972.]"
+msgstr ""
+
+#: games/templates/games/results.html:9
+msgid "Your probabilities"
+msgstr ""
+
+#: games/templates/games/results.html:17
+msgid "You got"
+msgstr ""
+
+#: games/templates/games/results.html:19
+msgid "This game has not finished yet"
+msgstr ""
+
+#: games/templates/games/results.html:25
+msgid "Make your bets to check your results"
+msgstr ""
+
+#: games/templates/games/rules.html:13
+msgid "Rules: how to play our forecast contest"
+msgstr ""
+
+#: games/templates/games/rules.html:15
+msgid ""
+"During the WC, teams play (almost) every day for roughly one month. "
+"Therefore, during this month you can input your own forecasts using our "
+"interactive website. After each game finishes, you’ll either gain or lose "
+"points based on your forcast, meaning that your forecast will be scored. "
+"This score will tell how ``good'' your forecast was, basically showing how "
+"close your forecast was from the observed result of the game (victory of "
+"team A, victory of team B or draw)."
+msgstr ""
+
+#: games/templates/games/rules.html:17
+msgid ""
+"We will keep track of your point total throughout the WC. Just be sure to "
+"sign in with either Facebook or your Google account to save your forecasts. "
+"As the WC develops, you’ll be able to see how your forecasts compare with "
+"the other three mathematical models' forecasts and how your forecasts score "
+"compare to everybody else's scores."
+msgstr ""
+
+#: games/templates/games/rules.html:19
+msgid ""
+"In Brazil, especially during WC's, contests where people try to predict the "
+"final score of each match are very popular. Here, we do not want that. We "
+"want you to think probabilistically. Thins about your probability as some "
+"amount like 100 Kg of something or $100 of some currency. You must decide on "
+"how to divide this amount in three baskets: in one basket you'll put the "
+"amount corresponding to your confidence on the victory of team A; in the "
+"following basket the amount corresponding to your confidence on the victory "
+"of B; and in the third basket ... Notice that you have a fixed amount, so "
+"your probabilities should add up to 100"
+msgstr ""
+
+#: games/templates/games/rules.html:21
+msgid "Examples"
+msgstr ""
+
+#: games/templates/games/rules.html:23
+msgid ""
+"As examples, consider a match of the 2014 WC. Assume that your probabilities "
+"are the ones displayed below"
+msgstr ""
+
+#: games/templates/games/rules.html:25
+#, python-format
+msgid "Spain x Netherlands: 46%% 24%% 30%%"
+msgstr ""
+
+#: games/templates/games/rules.html:27
+msgid ""
+"The game ended 5x1 to Netherlands. To score this forecast, we will use the "
+"following equation"
+msgstr ""
+
+#: games/templates/games/rules.html:31
+msgid ""
+"where \\(p_1\\) and \\(p_2\\) represent the probabilities of the "
+"possibilities that DID NOT happen. For this match, ``draw'' and ``Spain "
+"wins'' did not happen, meaning that, \\(p_1=24\\) and \\(p_2=46\\), implying "
+"that"
+msgstr ""
+
+#: games/templates/games/rules.html:35
+#, fuzzy
+#| msgid "Here you are the forecaster"
+msgid "is the score of your forecast"
+msgstr "Aqui é você quem faz a previsão"
+
+#: games/templates/games/rules.html:37
+#, python-format
+msgid ""
+"Regarding the same match, a friend of yours attached 20%% do Spain, 12%% to "
+"draw and the remaining 68%% to Netherlands. His score will be"
+msgstr ""
+
+#: games/templates/games/rules.html:41
+#, python-format
+msgid ""
+"a lot better than -3.47 because his prevision was closer to the observed "
+"result, &ldquo;Netherlands win&rdquo; (he gave 68%% to Netherlands and just "
+"32%% to the other two). This scoring system is based on Brier scores, which "
+"evaluate the accuracy of probabilistic forecasts and rewards good forecasts "
+"while punishing those that overshoot. (We’ve adapted the system for our game "
+"essentially by rescaling the scores; the result is that players in our game "
+"can earn between -50 and +25 points). In the example above, if Spain had "
+"won, you'd score 8.5 and your friend, -16.9 because in this case your "
+"forecast would be closer to the &ldquo;Spain wins&rdquo; event than your "
+"friend's forecast"
+msgstr ""
+
+#: games/templates/games/rules.html:43
+msgid "More important details are the following"
+msgstr ""
+
+#: games/templates/games/rules.html:46
+msgid "You can submit or change your forecast up until a game starts"
+msgstr ""
+
+#: games/templates/games/rules.html:47
+msgid ""
+"After the group stage, games are playoffs. If they ended tied after 90 "
+"minutes, they will be considered a draw (?)"
+msgstr ""
+
+#: games/templates/games/rules.html:48
+msgid ""
+"The round of 16 and the quarter-finals will count double twice the score to "
+"your point total. Semifinals and finals will count three times the score"
+msgstr ""
+
+#: games/templates/games/rules.html:49
+msgid ""
+"Forecasts can't be more precise than whole percentages, and points gained/"
+"lost for each game are rounded to one decimal place"
+msgstr ""
+
+#: games/templates/games/rules.html:52
+#, python-format
+msgid ""
+"Because of this last rule, since 100/3 is not a whole number, the most "
+"undecided forecast is 33%% for two possibilities and 34%% for the remaining "
+"one. Depending on the final result of the game, this forecast will receive a "
+"score of 0.5 or -0.25, so that, on average, forecasts like that will have a "
+"score around zero points. Initially all the games will have a 33%% percent "
+"for team A (the team to the left of the slider), 34%% for draw and 33%% for "
+"team B (the team to the right of the slider)"
+msgstr ""
+
+#: games/templates/games/rules.html:53
+msgid ""
+"So, if you forget to submit a forecast to one game or two your score won't "
+"change much as to put you out of the race, but if you want to stay close to "
+"the best, you have to submit your forecasts (of course, if you think that "
+"the teams are really close competitors and feels that the 33/34/33 forecast "
+"translates your degree of belief in the final result, you should submit this "
+"forecast.) You can also view the zero score as a benchmark: if your total "
+"score is negative that means you're doing worst than the undecided forecast"
+msgstr ""
+
+#: games/templates/games/rules.html:55
+msgid "Considering all this, you can approach the contest in different ways"
+msgstr ""
+
+#: games/templates/games/rules.html:57
+msgid ""
+"You can, for instance, just pick the results you think will happen and "
+"select it with 100 percent for every game. You probably won’t do very well, "
+"though. One of the properties of the Brier score is that it forces you to be "
+"honest, that is, to really inform your beliefs about the game, and not act "
+"as a gambler, just to win the contest. The gambler behavior would be a good "
+"option if the contest had just a few matches, but with 64 it is quite "
+"unlikely that someone will get rightly all the results"
+msgstr ""
+
+#: games/templates/games/rules.html:59
+msgid ""
+"You can also look at other models, betting odds, build your own model or "
+"just think carefully about each match to submit your forecast"
+msgstr ""
+
+#: games/templates/games/rules.html:61
+msgid "However, no matter what you do, enjoy the game and have fun"
+msgstr ""
+
+#: games/templates/games/scoreboard.html:10
+msgid "The world cup has not started yet, so we have no scoreboard..."
+msgstr ""

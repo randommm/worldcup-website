@@ -1,24 +1,26 @@
+{% load i18n %}
+
 {% if bets %}
    <ul>
    {% for bet in bets %}
      <li>
-     Game: {{ bet.game.team0 }} vs {{ bet.game.team1 }}
+     {% trans "Game" %}: {{ bet.game.team0 }} vs {{ bet.game.team1 }}
      <br />
-     Your probabilities:
-     {{ bet.prob0 }}% win {{ bet.game.team0 }}
+     {% trans "Your probabilities" %}:
+     {{ bet.prob0 }}% {% trans "win" %} {{ bet.game.team0 }}
      ||
-     {{ bet.ptie }}% tie
+     {{ bet.ptie }}% {% trans "tie" %}
      ||
-     {{ bet.prob1 }}% win {{ bet.game.team1 }}
+     {{ bet.prob1 }}% {% trans "win" %} {{ bet.game.team1 }}
      <br />
      {% if bet.pontuated %}
-        You got {{ bet.points }} P here.
+        {% trans "You got" %} {{ bet.points }} P {% trans "here" %}.
      {% else %}
-        This game has not finished yet.
+        {% trans "This game has not finished yet" %}.
      {% endif %}
      </li>
    {% endfor %}
    </ul>
 {% else %}
-    <p>Make your bets to check your results</p>
+    <p>{% trans "Make your bets to check your results" %}</p>
 {% endif %}

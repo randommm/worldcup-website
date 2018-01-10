@@ -1,10 +1,9 @@
-
-
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
 <style>
   #login_area {display:none}
 </style>
-<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ nextpage }}">Login or create an account using Google</a>
+<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ nextpage }}">{% trans "Login or create an account using Google" %}</a>
 {% endblock %}

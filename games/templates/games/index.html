@@ -28,14 +28,15 @@ $( function() {
   	<h2>{% trans "Here you are the forecaster" %}</h2>
 
     <p>{% trans "Are you a football/soccer expert? Can you forecast the results of the 2018 World Cup matches better than a mathematical model? Here's your chance to prove it!" %}</p>
-    <p>{% trans "Use the sliders below to select YOUR probabilities of each possible result (victory of each team or draw). You'll be competing against three models" %}---<a href = "https://projects.fivethirtyeight.com/soccer-predictions/?ex_cid=irpromo">{% trans "Nate Silver's FiveThirtyEight" %}</a>, <a href = "http://chancedegol.uol.com.br">{% trans "Chance de Gol" %}</a> {% trans "and" %} <a href = "http://www.previsaoesportiva.com.br">{% trans "Previsão Esportiva" %}</a>---{% trans "but also against all the other competitors. After each matchday the forecasts will be scored according to the rules" %}---{% trans "described" %}<a href = "{% url 'games:rules' %}">{% trans "here" %}</a>---{% trans "and the best forecaster will be the one with higher score after the 64 matches of this WC. Just beware that we're asking probabilistic forecasts for each match and that the scoring rules punishes overconfidence." %}</p>
+    <p>{% trans "Use the sliders below to select YOUR probabilities of each possible result (victory of each team or draw). You'll be competing against two models" %}---<a href = "http://chancedegol.uol.com.br">{% trans "Chance de Gol" %}</a> {% trans "and" %} <a href = "http://www.previsaoesportiva.com.br">{% trans "Previsão Esportiva" %}</a>---{% trans "but also against all the other competitors. After each match the forecasts will be scored according to the rules (described" %}<a href = "{% url 'games:rules' %}"> {% trans "here)" %}</a>{% trans " and the best forecaster will be the one with higher score after the 64 matches of this WC. Beware that we are not asking you to predict the final score of each match. You must provide your probabilistic forecasts for each match, noticing that the scoring rules punishes overconfidence." %}</p> 
+    <p>{% trans "Use the sliders below to select your probabilities. The left part (dark blue) of the bar displays your probability that the team on the left will win. The middle of the bar (light grey) represents your probability that the match will end tied, and the right part (dark grey) of the bar shows your probability that the team on the right side will win." %}</p>
     {% if not request.user.is_authenticated %}
-    <p>{% trans "Don't forget to" %} <a href="{% url 'accounts:login' %}">{% trans "sign in using Google or Facebook" %}</a> {% trans "to save your selections. After each matchday you'll be able to check how well you did against the models and everybody else playing the game." %}</p>
+    <p>{% trans "Don't forget to" %} <a href="{% url 'accounts:login' %}">{% trans "sign in using Google or Facebook" %}</a> {% trans "to save your selections. You can also create leagues to compete against your friends." %}</p>
     {% endif %}
 
 <div id="tabs">
   <ul>
-    <li><a href="{% url 'games:games' %}">{% trans "Make your forecasts" %}</a></li>
+    <li><a href="{% url 'games:games' %}">{% trans "Submit your forecasts" %}</a></li>
     <li><a href="{% url 'games:results' %}">{% trans "Check your results" %}</a></li>
     <li><a href="{% url 'games:scoreboard' %}">{% trans "Scoreboard" %}</a></li>
     <li id="your_league"><a href="{% url 'games:league' %}">{% trans "Your league" %}</a></li>

@@ -20,7 +20,7 @@ msgstr ""
 
 #: accounts/templates/accounts/login.html:8
 msgid "Login or create an account using Google"
-msgstr ""
+msgstr "Entre ou crie uma conta usando o Google"
 
 #: accounts/templates/accounts/profile.html:5
 msgid "Your profile"
@@ -28,12 +28,12 @@ msgstr "Seu perfil"
 
 #: accounts/templates/accounts/profile.html:8
 msgid "First name"
-msgstr ""
+msgstr "Primeiro nome"
 
 #: accounts/templates/accounts/profile.html:9
 msgid "Last name"
-msgstr ""
+msgstr "Último sobrenome"
 
 #: accounts/templates/accounts/profile.html:10
 msgid "Email"
-msgstr ""
+msgstr "Email"

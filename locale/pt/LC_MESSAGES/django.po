@@ -24,54 +24,54 @@ msgstr "Por favor, corrija o erro abaixo."
 
 #: mysite/templates/admin/login.html:21
 msgid "Please correct the errors below."
-msgstr ""
+msgstr "Por favor corrija os erros abaixo."
 
 #: mysite/templates/admin/login.html:37
 msgid ""
 "Your account is not authorized to access this page. Would you like to login "
 "to a different account?"
-msgstr ""
+msgstr "Sua conta não está autorizada a acessar esta página. Gostaria de entrar usando uma outra conta?"
 
 #: mysite/templates/admin/login.html:57
 msgid "Forgotten your password or username?"
-msgstr ""
+msgstr "Esqueceu sua senha ou nome de usuário?"
 
 #: mysite/templates/admin/login.html:61
 msgid "Log in"
-msgstr ""
+msgstr "Entrar"
 
 #: mysite/templates/base.html:23 mysite/templates/base.html:43
 msgid "Fifa Experts"
-msgstr ""
+msgstr "Fifa Experts"
 
 #: mysite/templates/base.html:46
 msgid "User"
-msgstr ""
+msgstr "Usuário"
 
 #: mysite/templates/base.html:47
 msgid "View my profile"
-msgstr ""
+msgstr "Ver minha conta"
 
 #: mysite/templates/base.html:48 mysite/templates/base.html:78
 msgid "Log Out"
-msgstr ""
+msgstr "Sair"
 
 #: mysite/templates/base.html:50 mysite/templates/base.html:80
 msgid "Join or sign-in"
-msgstr ""
+msgstr "Registre-se ou entre"
 
 #: mysite/templates/base.html:73
 msgid "Objectives"
-msgstr ""
+msgstr "Objetivos"
 
 #: mysite/templates/base.html:74
 msgid "History"
-msgstr ""
+msgstr "História"
 
 #: mysite/templates/base.html:75
 msgid "People & contact"
-msgstr ""
+msgstr "Pessoas & contato"
 
 #: mysite/templates/base.html:76
 msgid "Rules"
-msgstr ""
+msgstr "Regras"

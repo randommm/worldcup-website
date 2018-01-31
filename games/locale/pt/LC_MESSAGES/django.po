@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-10 00:33-0200\n"
+"POT-Creation-Date: 2018-01-31 12:29-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: games/templates/games/contact.html:4 games/templates/games/contact.html:30
+#: games/templates/games/contact.html:4 games/templates/games/contact.html:21
 msgid "Contact"
 msgstr ""
 
@@ -29,23 +29,11 @@ msgstr ""
 #: games/templates/games/contact.html:9
 msgid ""
 "The following researchers and students are voluntarily developing this "
-"website. They are all members of the Department of Statistics from the "
-"Federal University of S. Carlos, Brazil."
+"website. They are all  members (faculty or graduate students) of the "
+"Department of Statistics from the Federal University of S. Carlos, Brazil."
 msgstr ""
 
-#: games/templates/games/contact.html:12
-msgid "Faculty members"
-msgstr ""
-
-#: games/templates/games/contact.html:19
-msgid "PhD students"
-msgstr ""
-
-#: games/templates/games/contact.html:24
-msgid "Master students"
-msgstr ""
-
-#: games/templates/games/contact.html:31
+#: games/templates/games/contact.html:22
 msgid "Questions or suggestions should be sent to marciodiniz@ufscar.br."
 msgstr ""
 
@@ -141,130 +129,161 @@ msgid ""
 "Gambling and betting are probably as old as mankind. Once sports events "
 "became popular, betting on its results also brought a lot of attention to "
 "them. In Europe, specially in Great Britain, betting on sports events was "
-"already pretty popular in the late XIX century (ref), but it was only in the "
+"already pretty popular in the late XIX century, but it was only in the "
 "1920's that the first football pool"
 msgstr ""
 
 #: games/templates/games/history.html:10
-msgid "was created"
+msgid ""
+"was created. These &ldquo;pools&rdquo; are private companies that sell the "
+"right to participate in a contest, in this case, related to results of "
+"upcoming football matches. In those days, everything was done in printed "
+"forms"
 msgstr ""
 
 #: games/templates/games/history.html:11
 msgid ""
-"These &ldquo;pools&rdquo; are private companies that sell the right to "
-"participate in the contest, in this case, related to results of upcpming "
-"football matches. In those days, everything was done in printed forms"
-msgstr ""
-
-#: games/templates/games/history.html:12
-msgid ""
-"Each week, when a collector called to pick-up the completed pools coupon "
+"Each week, when a collector called to pick-up the completed pools coupons "
 "along with the appropriate amount of money necessary to play, a fresh set of "
-"coupons for the following week’s series of games would be left.}. One could "
+"coupons for the following week series of games would be left. One could also "
 "go to a betting post to fill these forms. They had a list of some of the "
-"week's matches. The filled form was then posted to the pools firm, with a "
+"week matches. The filled form was then posted to the pools firm, with a "
 "postal order or cheque for the sum staked (or &ldquo;invested&rdquo;, as the "
 "firms used to say). At the end of the weekend the results of the matches "
 "were announced on radio, television and published in the news­papers so that "
-"the bettors could take out the copy of his coupon and check his forecasts"
+"the bettors could take out the copy of his coupon and check their forecasts"
 msgstr ""
 
-#: games/templates/games/history.html:13
+#: games/templates/games/history.html:12
 msgid ""
 "The first football pools company was Littlewoods, created by John Moores, "
 "Colin Askham and Bill Hughes in 1923. The concept of the classic pools was "
 "an instant hit with the public and it flourished until the start of the war "
 "in 1939. In 1946 normal service was resumed as the football league started "
 "up again. Fortunately for people wanting to try their luck (or skill), "
-"football pools were not outlawed or put out of business and they went from "
-"strength to strength. It did not take long before competing companies were "
-"formed. Vernons Pools came on the scene in 1925, and eight years later in "
-"1933, Zetters Pools became the third company to offer their services to "
-"players. In 1945, George Britten started his family football pool firm, "
-"Brittens Pools"
+"football pools were not outlawed or put out of business and they kept "
+"growing. It did not take long before competing companies were formed. "
+"Vernons Pools came on the scene in 1925, and in 1933, Zetters Pools became "
+"the third company to offer their services to players. In 1945, George "
+"Britten started his family football pool firm, Brittens Pools"
+msgstr ""
+
+#: games/templates/games/history.html:13
+msgid ""
+"Starting in 1935, the &ldquo;penny points&rdquo; bet was the most popular "
+"contest. For each match, the bettor should mark a &ldquo;1&rdquo;, a "
+"&ldquo;2&rdquo; or an &ldquo;x&rdquo; to show that he thought the result of "
+"the match would be a home win, a visitor win or a draw, respectively. Home "
+"wins guessed correctly received 1 point, visitors wins received 2 points and "
+"draws received 3. The bet with highest scores won money prizes. After the "
+"war, the Treble chance became more popular. In this system, the bettor had "
+"to choose, from a list of more than 50 matches listed in the form, eight "
+"that he believed would end tied"
 msgstr ""
 
 #: games/templates/games/history.html:14
 msgid ""
-"Starting in 1935, the &ldquo;penny points&rdquo; bet was the most popular "
-"contest. For each match, the bettor would mark a 1, a 2 or an x to show that "
-"he thought the result of the match would be a home win, an away win or a "
-"draw, respectively. Home wins guessed correctly received 1 point, away wins "
-"received 2 points and draws received 3. The bet with highest scores won "
-"money prizes. After the war, the Treble chance became more popular. In this "
-"system, the bettor had to choose, from a list of more than 50 matches listed "
-"in the form, eight that he believed would end tied"
+"In Italy, the Totocalcio was born after the war. Its creator, the sports "
+"journalist Massimo Della Pergola, thought about the contest while in a "
+"concentration camp in Switzerland during the war. His idea was similar to "
+"the british penny points system (he also used &ldquo;1&rdquo;, "
+"&ldquo;2&rdquo; or &ldquo;x&rdquo; as symbols to denote the believed "
+"result), with the difference that each match guessed correctly would count "
+"for one point, being a draw, a home or a visitor win"
 msgstr ""
 
 #: games/templates/games/history.html:15
 msgid ""
-"Although football pools were immediately popular with the public, they did "
-"not sit well with the establishment. Ramsay MacDonald, the British prime "
-"minister in the 1930's, once said that the pools were a disease which spread "
-"downwards to the industrious poor from the idle rich"
-msgstr ""
-
-#: games/templates/games/history.html:16
-msgid ""
-"In Italy, the Totocalcio was born after the war. Its creator, the sports "
-"journalist Massimo Della Pergola, thought about the contest while in a "
-"concentration camp in Switzerland. His idea was similar to the british penny "
-"points system (he also used 1, 2 or x as symbols to denote the believed "
-"result), with the difference that each match guessed correctly would count "
-"for one point, being a draw, a home or away win"
-msgstr ""
-
-#: games/templates/games/history.html:17
-msgid ""
-"In September of 1945 he created, with Fabio Jegher and Geo Molo, also sports "
+"In September of 1945 he founded, with Fabio Jegher and Geo Molo, also sports "
 "journalists, the Sisal (Sport Italia società a responsabilità limitata). A "
 "few months later, in May 5th, 1946, 34000 italians participated on the first "
 "Sisal contest, with 14 matches to forecast. The great popularity of the "
 "contest led the government to take its control, renaming it to Totocalcio. "
 "In the 1950's and 1960's the popularity of the contest only increased. A "
-"nice documentary (in Italian) about it can be seen here. In the 1980's and "
-"1990's scandals showed the relation of players, referees and others to fix "
-"results. The most known case was the one involving the Italian international "
-"Paolo Rossi"
+"nice documentary made in the 1960's (in Italian) about Totocalcio can be seen"
 msgstr ""
 
-#: games/templates/games/history.html:18
+#: games/templates/games/history.html:15
+msgid " here"
+msgstr ""
+
+#: games/templates/games/history.html:15
+msgid ""
+"In the 1980's and 1990's scandals showed the action of bettors and "
+"footballers to fix results. The most famous case was the one involving the "
+"Italian international Paolo Rossi"
+msgstr ""
+
+#: games/templates/games/history.html:16
 msgid ""
 "Contests similar to Totocalcio were created in other countries. In Spain, La "
-"Quiniela also started after the War<sup><a href="
+"Quiniela also started after the War"
+msgstr ""
+
+#: games/templates/games/history.html:16
+msgid ""
+"but its first system was different. The bettor should forecast the winner "
+"and the number of goals scored by each team. A scoring rule determined the "
+"winner of different prizes. In 1948 the &ldquo;1&rdquo;, &ldquo;2&rdquo;, or "
+"&ldquo;x&rdquo; system was adopted, also with 14 matches per contest"
+msgstr ""
+
+#: games/templates/games/history.html:17
+msgid ""
+"In Brazil, the Loteria Esportiva or Loteca, started in 1970. Also run by the "
+"state, the system is the same of Totocalcio and La Quiniela, but with 13 "
+"matches per contest"
+msgstr ""
+
+#: games/templates/games/history.html:17
+msgid ""
+"The popularity of the contest only increased in the 1970's, until a scandal "
+"was revealed showing how several bettors manipulated results buying "
+"referees, footballers and coaches. The contest never recovered its "
+"credibility, but exists to this day. The creation of other federal lotteries "
+"and contests related to football clubs, and the beggining of online betting "
+"in Brazil also contributed to diminish its popularity"
 msgstr ""
 
 #: games/templates/games/history.html:19
-msgid ""
-"In Brazil, the Loteria Esportiva or Loteca, started in 1970. Also run by the "
-"state, the system is the same of Totocalcio and Quiniela, but with 13 "
-"matches per contest.<sup><a href="
+msgid "Bruno de Finetti"
 msgstr ""
 
 #: games/templates/games/history.html:21
-msgid "Bruno de Finetti"
+msgid ""
+"The popularity of Totocalcio and the relationship of forecasting with "
+"subjective probabilities led Bruno de Finetti to idealize a contest where "
+"constestants should submit their probabilities of each result, i.e. victory, "
+"draw or defeat of the home team. This is exactly the contest we are "
+"promoting for the 2018 World Cup"
+msgstr ""
+
+#: games/templates/games/history.html:22
+msgid "In unpublished notes"
+msgstr ""
+
+#: games/templates/games/history.html:22
+msgid ""
+"he reminds an anecdote happened around 1950. He noticed, on the display "
+"window of a bar in Rome, a table where triples of positive numbers of sum "
+"100 were shown for each match of the upcoming Sunday, under the title &ldquo;"
+"Quote del picchetto&rdquo;"
 msgstr ""
 
 #: games/templates/games/history.html:23
 msgid ""
-"The popularity of Totocalcio and the relationship of forecasting and "
-"subjective probabilities led Bruno de Finetti to idealize a contest where "
-"constestants should submit their probabilities of each result, i.e. victory, "
-"draw or defeat of the home team. This is exactly the contest we are "
-"promoting for the World Cup"
+"De Finetti immediataly understood that those triples were the probabilities "
+"of a group of experts named &ldquo;picchetto&rdquo;"
+msgstr ""
+
+#: games/templates/games/history.html:23
+msgid ""
+"Not being familiar with the expression &ldquo;quote del picchetto&rdquo;, he "
+"asked the meaning of it to the owner of the bar, who answered surprised "
+"&ldquo;but, ... those are the probabilities&rdquo;"
 msgstr ""
 
 #: games/templates/games/history.html:24
-msgid "In unpublished notes<sup><a href="
-msgstr ""
-
-#: games/templates/games/history.html:25
-msgid ""
-"De Finetti immediataly understood that those triples were the probabilities "
-"of a group of experts named &ldquo;picchetto&rdquo;<sup><a href="
-msgstr ""
-
-#: games/templates/games/history.html:26
 msgid ""
 "In the early 1960's, de Finetti implemented such a contest experimentally "
 "with students and university staff as contestants (himself included). He "
@@ -273,7 +292,7 @@ msgid ""
 "in most of undergraduate courses on the subject"
 msgstr ""
 
-#: games/templates/games/history.html:27
+#: games/templates/games/history.html:25
 msgid ""
 "His idea was to implement a national contest, with participation of experts "
 "(like sports journalists) and eventually announcements of the results on TV. "
@@ -281,23 +300,37 @@ msgid ""
 "passing"
 msgstr ""
 
-#: games/templates/games/history.html:28
-msgid "Last year (2017), <a href = "
+#: games/templates/games/history.html:26
+msgid "Similar contests were conducted in the 1960's"
 msgstr ""
 
-#: games/templates/games/history.html:34
+#: games/templates/games/history.html:26
+msgid "for american football, and during the 1982 WC"
+msgstr ""
+
+#: games/templates/games/history.html:26
+msgid "Last year (2017)"
+msgstr ""
+
+#: games/templates/games/history.html:26
+msgid ""
+"Nate Silver's FiveThirtyEight</a> promoted a probabilistic contest for "
+"american football"
+msgstr ""
+
+#: games/templates/games/history.html:33
 msgid ""
 "1. [The word &ldquo;pool&rdquo; is connected with the picture of streams of "
 "money pouring into a com­mon fund, or &ldquo;pool&rdquo; from which the "
 "winners are paid after the firm has taken its expenses and profit.]"
 msgstr ""
 
-#: games/templates/games/history.html:34
+#: games/templates/games/history.html:33
 #: games/templates/games/objectives.html:73
 msgid "Jump back to footnote 1 in the text"
 msgstr ""
 
-#: games/templates/games/history.html:40
+#: games/templates/games/history.html:39
 msgid ""
 "2. [Playing the football pools before the Internet involved completing by "
 "hand special coupons provided by each of the companies. Initially coupons "
@@ -308,7 +341,7 @@ msgid ""
 "middlemen between the punters and the pools companies.]"
 msgstr ""
 
-#: games/templates/games/history.html:40
+#: games/templates/games/history.html:39
 msgid "Jump back to footnote 2 in the text."
 msgstr ""
 
@@ -324,13 +357,7 @@ msgid ""
 msgstr "Você é um expert em football/soccer? Você pode prever os resultados da"
 
 #: games/templates/games/index.html:31
-msgid ""
-"Use the sliders below to select YOUR probabilities of each possible result "
-"(victory of each team or draw). You'll be competing against three models"
-msgstr ""
-
-#: games/templates/games/index.html:31
-msgid "Nate Silver's FiveThirtyEight"
+msgid "You'll be competing against two models"
 msgstr ""
 
 #: games/templates/games/index.html:31
@@ -347,54 +374,61 @@ msgstr ""
 
 #: games/templates/games/index.html:31
 msgid ""
-"but also against all the other competitors. After each matchday the "
-"forecasts will be scored according to the rules"
+"but also against all the other competitors. After each match the forecasts "
+"will be scored according to the rules (described"
 msgstr ""
 
 #: games/templates/games/index.html:31
-msgid "described"
-msgstr ""
-
-#: games/templates/games/index.html:31 games/templates/games/results.html:17
-msgid "here"
+msgid "here)"
 msgstr ""
 
 #: games/templates/games/index.html:31
 msgid ""
-"and the best forecaster will be the one with higher score after the 64 "
-"matches of this WC. Just beware that we're asking probabilistic forecasts "
-"for each match and that the scoring rules punishes overconfidence."
+" and the best forecaster will be the one with higher score after the 64 "
+"matches of this WC. Beware that we are not asking you to predict the final "
+"score of each match. You must provide your probabilistic forecasts for each "
+"match, noticing that the scoring rules punishes overconfidence."
 msgstr ""
 
-#: games/templates/games/index.html:33
+#: games/templates/games/index.html:32
+msgid ""
+"Use the sliders below to select YOUR probabilities of each possible result "
+"(victory of each team or draw). The left part (dark blue) of the bar "
+"displays your probability that the team on the left will win. The middle of "
+"the bar (light grey) represents your probability that the match will end "
+"tied, and the right part (dark grey) of the bar shows your probability that "
+"the team on the right side will win."
+msgstr ""
+
+#: games/templates/games/index.html:34
 msgid "Don't forget to"
 msgstr ""
 
-#: games/templates/games/index.html:33
+#: games/templates/games/index.html:34
 msgid "sign in using Google or Facebook"
 msgstr ""
 
-#: games/templates/games/index.html:33
+#: games/templates/games/index.html:34
 msgid ""
-"to save your selections. After each matchday you'll be able to check how "
-"well you did against the models and everybody else playing the game."
+"to save your selections. You can also create leagues to compete against your "
+"friends."
 msgstr ""
 
-#: games/templates/games/index.html:38
+#: games/templates/games/index.html:39
 #, fuzzy
 #| msgid "Here you are the forecaster"
-msgid "Make your forecasts"
+msgid "Submit your forecasts"
 msgstr "Aqui é você quem faz a previsão"
 
-#: games/templates/games/index.html:39
+#: games/templates/games/index.html:40
 msgid "Check your results"
 msgstr ""
 
-#: games/templates/games/index.html:40
+#: games/templates/games/index.html:41
 msgid "Scoreboard"
 msgstr ""
 
-#: games/templates/games/index.html:41
+#: games/templates/games/index.html:42
 msgid "Your league"
 msgstr ""
 
@@ -590,13 +624,12 @@ msgstr ""
 #: games/templates/games/objectives.html:19
 msgid ""
 "Introductory probability textbooks usually present the subject exploring "
-"random devices based on dice, extraction of marbles from urns and tossing of "
-"coins. These examples have a pedagogical value but the questions related to "
-"them naturally point to more or less complex combinatoric calculus "
-"exercises, and the most important conceptual aspects of probability theory "
-"are avoided or poorly treated. As consequence, several students have the "
-"impression that probability theory is only about that kind of numeric "
-"exercise"
+"random devices such as dice, extraction of marbles from urns and coin "
+"tossing. These devices have a pedagogical value but the questions related to "
+"them usually lead to exercises involving combinatoric calculus, avoiding or "
+"poorly treating the most important conceptual aspects of probability theory. "
+"As consequence, several students have the impression that probability theory "
+"is only about that kind of numeric exercise"
 msgstr ""
 
 #: games/templates/games/objectives.html:21
@@ -669,7 +702,7 @@ msgstr ""
 
 #: games/templates/games/objectives.html:53
 msgid ""
-"Analysing the best forecasters, might it be possible to infer some (probably "
+"Analysing the best forecasters, would it be possible to infer some (probably "
 "unconscious) rule by which he/she takes into account the pertinent facts "
 "(for football, the outcomes of recent matches and present relative rank of "
 "each pair of teams)"
@@ -691,8 +724,8 @@ msgstr ""
 
 #: games/templates/games/objectives.html:66
 msgid ""
-"The importance of questions of this kind is not restricted to psychology and "
-"philosophy of probability and human behaviour but greatly concerns several "
+"The importance of questions of this kind is not restricted to psychology, "
+"philosophy of probability and human behaviour, but greatly concerns several "
 "practical fields."
 msgstr ""
 
@@ -718,6 +751,10 @@ msgstr ""
 msgid "You got"
 msgstr ""
 
+#: games/templates/games/results.html:17
+msgid "here"
+msgstr ""
+
 #: games/templates/games/results.html:19
 msgid "This game has not finished yet"
 msgstr ""
@@ -732,35 +769,37 @@ msgstr ""
 
 #: games/templates/games/rules.html:15
 msgid ""
-"During the WC, teams play (almost) every day for roughly one month. "
+"During the World Cup, teams play (almost) every day for roughly one month. "
 "Therefore, during this month you can input your own forecasts using our "
-"interactive website. After each game finishes, you’ll either gain or lose "
-"points based on your forcast, meaning that your forecast will be scored. "
+"interactive website. After each match finishes, you’ll either gain or lose "
+"points based on your prevision, meaning that your prevision will be scored. "
 "This score will tell how ``good'' your forecast was, basically showing how "
-"close your forecast was from the observed result of the game (victory of "
-"team A, victory of team B or draw)."
+"close it was from the observed result of the game (victory of team A, "
+"victory of team B or draw)."
 msgstr ""
 
 #: games/templates/games/rules.html:17
 msgid ""
-"We will keep track of your point total throughout the WC. Just be sure to "
-"sign in with either Facebook or your Google account to save your forecasts. "
-"As the WC develops, you’ll be able to see how your forecasts compare with "
-"the other three mathematical models' forecasts and how your forecasts score "
-"compare to everybody else's scores."
+"We will keep track of your point total throughout the World Cup. Just be "
+"sure to sign in with either Facebook or your Google account to save your "
+"forecasts. As the WC develops, you'll be able to see how your forecasts "
+"compare with the forecasts provided by two mathematical models and to "
+"everybody else's scores."
 msgstr ""
 
 #: games/templates/games/rules.html:19
 msgid ""
 "In Brazil, especially during WC's, contests where people try to predict the "
-"final score of each match are very popular. Here, we do not want that. We "
-"want you to think probabilistically. Thins about your probability as some "
-"amount like 100 Kg of something or $100 of some currency. You must decide on "
-"how to divide this amount in three baskets: in one basket you'll put the "
-"amount corresponding to your confidence on the victory of team A; in the "
-"following basket the amount corresponding to your confidence on the victory "
-"of B; and in the third basket ... Notice that you have a fixed amount, so "
-"your probabilities should add up to 100"
+"final score of each match (i.e. the number of goals scored by each team) are "
+"very popular. Here, we do not want that. We want you to think "
+"probabilistically. Think about your probability as some amount, like 100 kg "
+"or pounds of something or $100 of some currency. You must decide on how to "
+"divide this amount in three baskets: in one basket you'll put the amount "
+"corresponding to your confidence on the victory of team A; in the following "
+"basket the amount corresponding to your confidence on a draw; and in the "
+"third basket the amount corresponding to your confidence on the victory of "
+"team B. Notice that you have a fixed amount, so your probabilities should "
+"add up to 100."
 msgstr ""
 
 #: games/templates/games/rules.html:21
@@ -825,7 +864,7 @@ msgid "More important details are the following"
 msgstr ""
 
 #: games/templates/games/rules.html:46
-msgid "You can submit or change your forecast up until a game starts"
+msgid "You can submit or change your forecast up until a match starts"
 msgstr ""
 
 #: games/templates/games/rules.html:47
@@ -876,9 +915,9 @@ msgstr ""
 #: games/templates/games/rules.html:57
 msgid ""
 "You can, for instance, just pick the results you think will happen and "
-"select it with 100 percent for every game. You probably won’t do very well, "
+"select it with 100 percent for every game. You probably won't do very well, "
 "though. One of the properties of the Brier score is that it forces you to be "
-"honest, that is, to really inform your beliefs about the game, and not act "
+"honest, that is, to really inform your beliefs about the match, and not act "
 "as a gambler, just to win the contest. The gambler behavior would be a good "
 "option if the contest had just a few matches, but with 64 it is quite "
 "unlikely that someone will get rightly all the results"
@@ -891,7 +930,9 @@ msgid ""
 msgstr ""
 
 #: games/templates/games/rules.html:61
-msgid "However, no matter what you do, enjoy the game and have fun"
+msgid ""
+"You can also create a league and agree with the participants to just submit "
+"forecasts to the matches of one team or of a set of teams"
 msgstr ""
 
 #: games/templates/games/scoreboard.html:10

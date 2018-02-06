@@ -56,7 +56,7 @@ msgstr "Hora"
 #| msgid "Here you are the forecaster"
 msgid "Our forecast"
 msgstr "Aqui é você quem faz a previsão"
-msgstr "Nossa previsão"
+"Nossa Previsão"
 
 #: games/templates/games/games.html:57 games/templates/games/games.html:59
 #: games/templates/games/games.html:67 games/templates/games/games.html:69
@@ -78,7 +78,7 @@ msgstr "não disponível"
 #| msgid "Here you are the forecaster"
 msgid "Your forecast"
 msgstr "Aqui é você quem faz a previsão"
-msgstr "Sua previsão"
+"Sua previsão"
 
 #: games/templates/games/games.html:71
 msgid "Not made yet"
@@ -116,7 +116,7 @@ msgstr "Entre ou registre-se"
 #| msgid "Here you are the forecaster"
 msgid "to have your forecasts stored"
 msgstr "Aqui é você quem faz a previsão"
-msgstr "para ter suas previsões registradas"
+"para ter suas previsões registradas"
 
 #: games/templates/games/games.html:136
 msgid "No game available"
@@ -220,7 +220,7 @@ msgstr ""
 "jogo seria uma vitória do time da casa, do time visitante ou um empate, respectivamente. Vitórias "
 "de times mandantes prognosticadas corretamente recebiam 1 ponto, vitórias de visitantes, 2 pontos e "
 "empates recebiam 3 pontos. As apostas com maiores pontuações ganhavam prêmios em dinheiro. Depois da "
-"guerra, o sistema &ldquo;Treble chance&rdquo;" se tornou o mais popular. Nele, o apostador tinha "
+"guerra, o sistema &ldquo;Treble chance&rdquo; se tornou o mais popular. Nele, o apostador tinha "
 "que escolher, de uma lista de mais de 50 jogos listados no boleto, oito "
 "que ele acreditava que terminariam empatados"
 
@@ -370,7 +370,7 @@ msgid ""
 msgstr ""
 "Como a expressão &ldquo;quote del picchetto&rdquo; não lhe era familiar, ele "
 "perguntou seu significado ao dono do bar, que respondeu surpreso "
-"&ldquo;mas, ... são as probabilidades&rdquo;""
+"&ldquo;mas, ... são as probabilidades&rdquo;"
 
 #: games/templates/games/history.html:24
 msgid ""
@@ -546,7 +546,7 @@ msgstr "para salvar suas escolhas. Você também pode criar ligas para competir 
 #| msgid "Here you are the forecaster"
 msgid "Submit your forecasts"
 msgstr "Aqui é você quem faz a previsão"
-msgstr "Informe suas previsões"
+"Informe suas previsões"
 
 #: games/templates/games/index.html:40
 msgid "Check your results"
@@ -1050,14 +1050,14 @@ msgstr ""
 "onde \\(p_1\\) e \\(p_2\\) representam as probabilidades das "
 "possibilidades que NÃO aconteceram. Para esse jogo, &ldquo;empate&rdquo; e &ldquo;Espanha "
 "vence&rdquo; não aconteceram, o que significa que \\(p_1=24\\) e \\(p_2=46\\), implicando "
-que "
+"que "
 
 #: games/templates/games/rules.html:35
 #, fuzzy
 #| msgid "Here you are the forecaster"
 msgid "is the score of your forecast"
 msgstr "Aqui é você quem faz a previsão"
-msgstr "é a pontuação da sua previsão"
+"é a pontuação da sua previsão"
 
 #: games/templates/games/rules.html:37
 #, python-format

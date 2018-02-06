@@ -20,109 +20,115 @@ msgstr ""
 
 #: games/templates/games/contact.html:4 games/templates/games/contact.html:21
 msgid "Contact"
-msgstr ""
+msgstr "Contato"
 
 #: games/templates/games/contact.html:7
 msgid "People & contact"
-msgstr ""
+msgstr "Equipe & contato"
 
 #: games/templates/games/contact.html:9
 msgid ""
 "The following researchers and students are voluntarily developing this "
 "website. They are all  members (faculty or graduate students) of the "
 "Department of Statistics from the Federal University of S. Carlos, Brazil."
-msgstr ""
+msgstr "Os pesquisadores e alunos abaixo relacionados estão volutariamente desenvolvendo este"
+"website. Todos eles são membros (do corpo docente ou discente) do"
+"Departamento de Estatística da Universidade Federal de São Carlos."
 
 #: games/templates/games/contact.html:22
 msgid "Questions or suggestions should be sent to marciodiniz@ufscar.br."
-msgstr ""
+msgstr "Dúvidas ou sugestões devem ser enviadas para marciodiniz@ufscar.br."
 
 #: games/templates/games/games.html:41
 msgid "Updated!"
-msgstr ""
+msgstr "Atualizado!"
 
 #: games/templates/games/games.html:51 games/templates/games/results.html:7
 msgid "Game"
-msgstr ""
+msgstr "Jogo"
 
 #: games/templates/games/games.html:53
 msgid "Time"
-msgstr ""
+msgstr "Hora"
 
 #: games/templates/games/games.html:55
 #, fuzzy
 #| msgid "Here you are the forecaster"
 msgid "Our forecast"
 msgstr "Aqui é você quem faz a previsão"
+msgstr "Nossa previsão"
 
 #: games/templates/games/games.html:57 games/templates/games/games.html:59
 #: games/templates/games/games.html:67 games/templates/games/games.html:69
 #: games/templates/games/results.html:10 games/templates/games/results.html:14
 msgid "win"
-msgstr ""
+msgstr "vitória"
 
 #: games/templates/games/games.html:58 games/templates/games/games.html:68
 #: games/templates/games/results.html:12
 msgid "tie"
-msgstr ""
+msgstr "empate"
 
 #: games/templates/games/games.html:61
 msgid "not available"
-msgstr ""
+msgstr "não disponível"
 
 #: games/templates/games/games.html:65
 #, fuzzy
 #| msgid "Here you are the forecaster"
 msgid "Your forecast"
 msgstr "Aqui é você quem faz a previsão"
+msgstr "Sua previsão"
 
 #: games/templates/games/games.html:71
 msgid "Not made yet"
-msgstr ""
+msgstr "Indisponível"
 
 #: games/templates/games/games.html:95 games/templates/games/games.html:100
 msgid "If"
-msgstr ""
+msgstr "Se"
 
 #: games/templates/games/games.html:95 games/templates/games/games.html:100
 msgid "wins, you will get"
-msgstr ""
+msgstr "ganhar, você marca"
 
 #: games/templates/games/games.html:96 games/templates/games/games.html:101
 #: games/templates/games/games.html:106
 msgid "points"
-msgstr ""
+msgstr "pontos"
 
 #: games/templates/games/games.html:105
 msgid "If tie, you will get"
-msgstr ""
+msgstr "Se empatar, você marca"
 
 #: games/templates/games/games.html:114
 msgid ""
 "Attention: you are not logged in, therefore your changes will not be saved."
 msgstr ""
+"Atenção: você não está conectado, e portanto suas alterações não serão salvas."
 
 #: games/templates/games/games.html:116
 msgid "Login or sign-up"
-msgstr ""
+msgstr "Entre ou registre-se"
 
 #: games/templates/games/games.html:116
 #, fuzzy
 #| msgid "Here you are the forecaster"
 msgid "to have your forecasts stored"
 msgstr "Aqui é você quem faz a previsão"
+msgstr "para ter suas previsões registradas"
 
 #: games/templates/games/games.html:136
 msgid "No game available"
-msgstr ""
+msgstr "Nenhum jogo disponível"
 
 #: games/templates/games/history.html:7
 msgid "History"
-msgstr ""
+msgstr "História"
 
 #: games/templates/games/history.html:8
 msgid "Some words about football/soccer contest pools"
-msgstr ""
+msgstr "Algumas palavras sobre competições de prognósticos de futebol"
 
 #: games/templates/games/history.html:10
 msgid ""
@@ -132,6 +138,11 @@ msgid ""
 "already pretty popular in the late XIX century, but it was only in the "
 "1920's that the first football pool"
 msgstr ""
+"Jogos de azar e apostas são provavelmente tão antigos quanto a humanidade. Quando eventos esportivos"
+"se tornaram populares, a possibilidade de apostar em seus resultados trouxe mais atenção para "
+"eles. Na Europa, especialmente na Grã-Bretanha, apostar em eventos esportivos já era "
+"bastante popular em fins do século XIX, mas foi apenas na dédada de "
+"1920 que a primeira agência de apostas para futebol (football pools)"
 
 #: games/templates/games/history.html:10
 msgid ""
@@ -140,6 +151,10 @@ msgid ""
 "upcoming football matches. In those days, everything was done in printed "
 "forms"
 msgstr ""
+"foi criada. Essas &ldquo;pools&rdquo; são companhias privadas que vendem o "
+"direito de participar em um concurso, nesse caso, relacionado aos resultados dos "
+"jogos de futebol a serem disputados no futuro. Naquela época, tudo era feito em formulários ou boletos "
+"impressos"
 
 #: games/templates/games/history.html:11
 msgid ""
@@ -153,6 +168,15 @@ msgid ""
 "were announced on radio, television and published in the news­papers so that "
 "the bettors could take out the copy of his coupon and check their forecasts"
 msgstr ""
+"Toda semana, quando um coletor telefonava para buscar os boletos preenchidos "
+"juntamente com o montante de dinheiro necessário para pagar as apostas, uma quantidade do boleto "
+"com os jogos da semana seguinte eram entregues. Também era possível "
+"ir a um ponto de apostas para preencher os boletos. Eles continham uma lista com alguns dos "
+"jogos da semana. O boleto preenchido era então enviado pelo correio para a companhia de apostas, com uma "
+"ordem postal de pagamento ou cheque equivalente à quantia apostada (ou &ldquo;investida&rdquo; como as "
+"companhias diziam). Ao final do final de semana os resultados dos jogos "
+"eram anunciados no rádio, televisão e publicados no jornais para que "
+"os apostadores pudessem verificar a cópia do seu boleto e checar seus palpites "
 
 #: games/templates/games/history.html:12
 msgid ""
@@ -167,6 +191,16 @@ msgid ""
 "the third company to offer their services to players. In 1945, George "
 "Britten started his family football pool firm, Brittens Pools"
 msgstr ""
+"A primeira firma de apostas de futebol foi a Littlewoods, fundada por John Moores, "
+"Colin Askham and Bill Hughes em 1923. O conceito clássico de &ldquo;bolão&rdquo; foi "
+"um sucesso instantâneo com o público e floresceu até o início da guerra "
+"em 1939. Em 1946 o funcionamento voltou ao normal com os times de futebol voltando "
+"a jogar. Felizmente para as pessoas que queriam tentar a sorte (ou capacidade), "
+"as companhias não foram banidas por leis nem faliram, mas continuaram "
+"crescendo. Não demorou muito tempo até que firmas concorrentes surgissem. "
+"A Vernon Pools apareceu em 1925, e em 1933, Zetter Pools se tornou "
+"a terceira firma a oferecer seus serviços aos apostadores. Em 1945, George "
+"Britten fundou a firma de sua família, a Brittens Pools"
 
 #: games/templates/games/history.html:13
 msgid ""
@@ -180,6 +214,15 @@ msgid ""
 "to choose, from a list of more than 50 matches listed in the form, eight "
 "that he believed would end tied"
 msgstr ""
+"Surgindo em 1935, o &ldquo;penny points&rdquo; era o sistema de apostas "
+"mais popular. Para cada jogo, o apostador tinha que marcar &ldquo;1&rdquo;, "
+"&ldquo;2&rdquo; ou &ldquo;x&rdquo; para indicar que ele acreditava que o resultado do "
+"jogo seria uma vitória do time da casa, do time visitante ou um empate, respectivamente. Vitórias "
+"de times mandantes prognosticadas corretamente recebiam 1 ponto, vitórias de visitantes, 2 pontos e "
+"empates recebiam 3 pontos. As apostas com maiores pontuações ganhavam prêmios em dinheiro. Depois da "
+"guerra, o sistema &ldquo;Treble chance&rdquo;" se tornou o mais popular. Nele, o apostador tinha "
+"que escolher, de uma lista de mais de 50 jogos listados no boleto, oito "
+"que ele acreditava que terminariam empatados"
 
 #: games/templates/games/history.html:14
 msgid ""
@@ -191,6 +234,13 @@ msgid ""
 "result), with the difference that each match guessed correctly would count "
 "for one point, being a draw, a home or a visitor win"
 msgstr ""
+"Na Itália, o Totocalcio nasceu depois da guerra. Seu criador, o jornalista "
+"esportivo Massimo Della Pergola, imaginou inicialmente o concurso enquanto estava "
+"em um campo de concentração na Suíça, durante a guerra. Sua ideia era similar ao "
+"sistema britânico do penny points (ele também propos o uso de &ldquo;1&rdquo;, "
+"&ldquo;2&rdquo;; ou &ldquo;x&rdquo; como símboloso para denotar o suposto " 
+"resultado), com a diferença de que cada jogo prognosticado corretamente contaria "
+"um ponto, fosse um empate, uma vitória do time da casa ou do visitante"
 
 #: games/templates/games/history.html:15
 msgid ""
@@ -202,10 +252,18 @@ msgid ""
 "In the 1950's and 1960's the popularity of the contest only increased. A "
 "nice documentary made in the 1960's (in Italian) about Totocalcio can be seen"
 msgstr ""
+"Em setembro de 1945 ele fundou, com Fabio Jegher e Geo Molo, também jornalistas "
+"esportivos, a Sisal (Sport Italia società a responsabilità limitata). Poucos "
+"meses depois, em 5 de maio de 1946, 34000 italianos participaram do primeiro "
+"concurso Sisal, com 14 jogos a serem preditos. A grande popularidade do "
+"concurso levou o governo a assumir seu controle, renomeando-o para Totocalcio. "
+"Nas décadas de 1950 e 1960 a popularidade do concurso só aumentou. Um "
+"bom documentário feito na década de 1960 (em italiano) sobre o Totocalcio pode ser visto "
+
 
 #: games/templates/games/history.html:15
 msgid " here"
-msgstr ""
+msgstr " aqui"
 
 #: games/templates/games/history.html:15
 msgid ""
@@ -213,12 +271,17 @@ msgid ""
 "footballers to fix results. The most famous case was the one involving the "
 "Italian international Paolo Rossi"
 msgstr ""
+"Nas décadas de 1980 e 1990 escândalos revelaram a ação de apostadores e "
+"jogadores de futebol para combinar resultados. O caso mais famoso foi o que envolveu o "
+"atacante da seleção italiana Paolo Rossi"
 
 #: games/templates/games/history.html:16
 msgid ""
 "Contests similar to Totocalcio were created in other countries. In Spain, La "
 "Quiniela also started after the War"
 msgstr ""
+"Concursos similares ao Totocalcio foram criado em outros países. Na Espanha, La "
+"Quiniela também começou após a guerra"
 
 #: games/templates/games/history.html:16
 msgid ""
@@ -227,6 +290,10 @@ msgid ""
 "winner of different prizes. In 1948 the &ldquo;1&rdquo;, &ldquo;2&rdquo;, or "
 "&ldquo;x&rdquo; system was adopted, also with 14 matches per contest"
 msgstr ""
+"mas seu sistema inicial era diferente. O apostador tinha que predizer o time vencedor "
+"e o número de gols marcados por cada equipe. Uma regra de pontuação determinava os "
+"vencedores de diferentes prêmios. Em 1948 o sitema &ldquo;1&rdquo;, &ldquo;2&rdquo;, ou "
+"&ldquo;3&rdquo; foi adotado, também com 14 jogos por concurso"
 
 #: games/templates/games/history.html:17
 msgid ""
@@ -234,6 +301,9 @@ msgid ""
 "state, the system is the same of Totocalcio and La Quiniela, but with 13 "
 "matches per contest"
 msgstr ""
+"No Brasil, a Loteria Esportiva ou Loteca começou em 1970. Também administrada pelo "
+"Estado, o sistema é mesmo do Totocalcio e La Quiniela, mas com 13 "
+"jogos por concurso"
 
 #: games/templates/games/history.html:17
 msgid ""
@@ -244,10 +314,16 @@ msgid ""
 "and contests related to football clubs, and the beggining of online betting "
 "in Brazil also contributed to diminish its popularity"
 msgstr ""
+"A popularidade do concurso só cresceu na década de 1970, até que um escândalo "
+"foi revelado mostrando como vários apostadores manipulavam resultados comprando "
+"árbitros, jogadores de futebol e técnicos. O concurso nunca recuperou sua "
+"credibilidade, mas existe até hoje. A criação de outras loterias federais "
+"e concursos relacionados aos clubes de futebol, e o início das apostas via internet "
+"no Brasil também contribuíram para diminuir sua popularidade"
 
 #: games/templates/games/history.html:19
 msgid "Bruno de Finetti"
-msgstr ""
+msgstr "Bruno de Finetti"
 
 #: games/templates/games/history.html:21
 msgid ""
@@ -256,11 +332,15 @@ msgid ""
 "constestants should submit their probabilities of each result, i.e. victory, "
 "draw or defeat of the home team. This is exactly the contest we are "
 "promoting for the 2018 World Cup"
-msgstr ""
+msgstr "A popularidade do Totocalcio e a relação entre previsões com "
+"probabilidades subjetivas levaram Bruno de Finetti a idealizar um concurso em que "
+"os participantes deveriam suas probabilidades de cada resultado, ou seja vitória, "
+"empate ou derrota do time da casa. Este é exatamente o concurso que estamos "
+"promovendo para a Copa do Mundo de 2018"
 
 #: games/templates/games/history.html:22
 msgid "In unpublished notes"
-msgstr ""
+msgstr "Em notas não publicadas"
 
 #: games/templates/games/history.html:22
 msgid ""
@@ -269,12 +349,18 @@ msgid ""
 "100 were shown for each match of the upcoming Sunday, under the title &ldquo;"
 "Quote del picchetto&rdquo;"
 msgstr ""
+"ele relata uma anedota acontecida por volta de 1950. Ele notou, em um "
+"bar em Roma, um cartaz com triplas de números positivos que somavam "
+"100 para cada jogo do domingo seguinte, sob o título &ldquo;"
+"Quote del picchetto&rdquo;"
 
 #: games/templates/games/history.html:23
 msgid ""
 "De Finetti immediataly understood that those triples were the probabilities "
 "of a group of experts named &ldquo;picchetto&rdquo;"
 msgstr ""
+"De Finetti prontamente entendeu que aquelas triplas eram as probabilidades "
+"de um grupo de experts chamados &ldquo;picchetto&rdquo;"
 
 #: games/templates/games/history.html:23
 msgid ""
@@ -282,6 +368,9 @@ msgid ""
 "asked the meaning of it to the owner of the bar, who answered surprised "
 "&ldquo;but, ... those are the probabilities&rdquo;"
 msgstr ""
+"Como a expressão &ldquo;quote del picchetto&rdquo; não lhe era familiar, ele "
+"perguntou seu significado ao dono do bar, que respondeu surpreso "
+"&ldquo;mas, ... são as probabilidades&rdquo;""
 
 #: games/templates/games/history.html:24
 msgid ""
@@ -291,6 +380,11 @@ msgid ""
 "probability theory and in a much better way than the textbooks examples used "
 "in most of undergraduate courses on the subject"
 msgstr ""
+"No início da década de 1960 de Finetti implementou experimentalmente o referido concurso "
+"com alunos e funcionários da universidade como participantes (ele mesmo participou). Ele "
+"acreditava que esse concurso ensinaria os aspectos mais importantes da "
+"teoria das probabilidades e de uma maneira muito melhor que os exemplos dos livros-texto usados "
+"na maioria dos cursos de graduação sobre o assunto"
 
 #: games/templates/games/history.html:25
 msgid ""
@@ -299,24 +393,32 @@ msgid ""
 "His last writings about the subject are dated 1983, two years before his "
 "passing"
 msgstr ""
+"Sua ideia era implementar um concurso nacional, com a participação de experts "
+"(como jornalistas esportivos) e eventualmente até com anúncios dos resultados na TV. "
+"Suas últimas anotações sobre o assunto datam de 1983, dois anos antes de sua "
+"morte"
 
 #: games/templates/games/history.html:26
 msgid "Similar contests were conducted in the 1960's"
 msgstr ""
+"Concursos similares foram realizados na década de 1960"
 
 #: games/templates/games/history.html:26
 msgid "for american football, and during the 1982 WC"
 msgstr ""
+"para jogos de futebol americano, e na Copa do Mundo de 1982"
 
 #: games/templates/games/history.html:26
 msgid "Last year (2017)"
-msgstr ""
+msgstr "No ano passado (2017)"
 
 #: games/templates/games/history.html:26
 msgid ""
 "Nate Silver's FiveThirtyEight</a> promoted a probabilistic contest for "
 "american football"
 msgstr ""
+"o site FiveThirtyEight de Nate Silver</a> promoveu um concurso probabilístico para "
+"a liga de futebol americano"
 
 #: games/templates/games/history.html:33
 msgid ""
@@ -324,11 +426,14 @@ msgid ""
 "money pouring into a com­mon fund, or &ldquo;pool&rdquo; from which the "
 "winners are paid after the firm has taken its expenses and profit.]"
 msgstr ""
+"1. [A palavra &ldquo;pool&rdquo;, que pode ser traduzida como &ldquo;fundo comunitário&rdquo;, está "
+"relacionada com a imagem de fluxos monetário que desaguam em um fundo comum do qual os "
+"vencedores são pagos depois que a companhia subtrai seus custos e lucro.]"
 
 #: games/templates/games/history.html:33
 #: games/templates/games/objectives.html:73
 msgid "Jump back to footnote 1 in the text"
-msgstr ""
+msgstr "Voltar para a nota 1 no texto"
 
 #: games/templates/games/history.html:39
 msgid ""
@@ -340,10 +445,17 @@ msgid ""
 "various networks of collectors across the UK. These collectors acted as "
 "middlemen between the punters and the pools companies.]"
 msgstr ""
+"2. [Apostar em jogos de futebol antes da Internet exigia que se preenchesse a "
+"mão coupons especias fornecidos por cada uma das firmas. Inicialmente os cupons "
+"ficavam prontamente disponíveis em bancas de jornal e vendedores de cigarro, lugares majoritariamente "
+"frequentados por homens trabalhadores. As principais firmas de apostas também "
+"ofereciam um serviço em que cupons eram diretamente entregues aos apostadores por meio "
+"de diversas redes de coletores de apostas em toda a Grã-Bretanha. Esses coletores agiam como "
+"intermediários entre os apostadores e as firmas de apostas.]"
 
 #: games/templates/games/history.html:39
 msgid "Jump back to footnote 2 in the text."
-msgstr ""
+msgstr "Voltar para a nota 2 no texto."
 
 #: games/templates/games/index.html:28
 msgid "Here you are the forecaster"
@@ -354,33 +466,37 @@ msgid ""
 "Are you a football/soccer expert? Can you forecast the results of the 2018 "
 "World Cup matches better than a mathematical model? Here's your chance to "
 "prove it!"
-msgstr "Você é um expert em football/soccer? Você pode prever os resultados da"
+msgstr "Você é um especialista em futebol? Você consegue prever os resultados dos jogos "
+"da Copa do Mundo 2018 melhor do que um modelo matemático? Aqui está sua chance de "
+"provar isso!"
 
 #: games/templates/games/index.html:31
 msgid "You'll be competing against two models"
-msgstr ""
+msgstr "Você vai competir contra dois modelos"
 
 #: games/templates/games/index.html:31
 msgid "Chance de Gol"
-msgstr ""
+msgstr "Chance de Gol"
 
 #: games/templates/games/index.html:31
 msgid "and"
-msgstr ""
+msgstr "e"
 
 #: games/templates/games/index.html:31
 msgid "Previsão Esportiva"
-msgstr ""
+msgstr "Previsão Esportiva"
 
 #: games/templates/games/index.html:31
 msgid ""
 "but also against all the other competitors. After each match the forecasts "
 "will be scored according to the rules (described"
 msgstr ""
+"mas também contra todos os outros participantes. Depois de cada jogo as previsões "
+"receberão uma pontuação de acordo com as regras (descritas"
 
 #: games/templates/games/index.html:31
 msgid "here)"
-msgstr ""
+msgstr "aqui"
 
 #: games/templates/games/index.html:31
 msgid ""
@@ -389,6 +505,10 @@ msgid ""
 "score of each match. You must provide your probabilistic forecasts for each "
 "match, noticing that the scoring rules punishes overconfidence."
 msgstr ""
+" e o melhor previsor será aquele com a maior pontuação depois dos 64 "
+"jogos desta Copa. Fique atento para o fato que não estamos pedindo para você prever o placar "
+"final de cada jogo. Você deve fornecer sua previsão probabilística para cada "
+"jogo, notando que as regras de pontuação punem quem exagera na confiança de um resultado."
 
 #: games/templates/games/index.html:32
 msgid ""
@@ -399,220 +519,232 @@ msgid ""
 "tied, and the right part (dark grey) of the bar shows your probability that "
 "the team on the right side will win."
 msgstr ""
+"Use os botões nas barras abaixo para selecionar as SUAS probabilidades de cada resultado possível "
+"(vitória de cada time ou empate). A parte à esquerda (em azul escuro) da barra "
+"mostra sua probabilidade de qu o time à esquerda vencerá. O meio da "
+"barra (cinza claro) representa sua probabilidade de que o jogo terminará "
+"empatado, e a parte à direita (cinza escuro) da barra mostra sua probabilidade que "
+"o time à direita vencerá."
 
 #: games/templates/games/index.html:34
 msgid "Don't forget to"
-msgstr ""
+msgstr "Não se esqueça de"
 
 #: games/templates/games/index.html:34
 msgid "sign in using Google or Facebook"
-msgstr ""
+msgstr "acessar usando o Google ou Facebook"
 
 #: games/templates/games/index.html:34
 msgid ""
 "to save your selections. You can also create leagues to compete against your "
 "friends."
-msgstr ""
+msgstr "para salvar suas escolhas. Você também pode criar ligas para competir contra seus "
+"amigos."
 
 #: games/templates/games/index.html:39
 #, fuzzy
 #| msgid "Here you are the forecaster"
 msgid "Submit your forecasts"
 msgstr "Aqui é você quem faz a previsão"
+msgstr "Informe suas previsões"
 
 #: games/templates/games/index.html:40
 msgid "Check your results"
-msgstr ""
+msgstr "Confira seus resultados"
 
 #: games/templates/games/index.html:41
 msgid "Scoreboard"
-msgstr ""
+msgstr "Classificação"
 
 #: games/templates/games/index.html:42
 msgid "Your league"
-msgstr ""
+msgstr "Sua liga"
 
 #: games/templates/games/league.html:11
 msgid "Please"
-msgstr ""
+msgstr "Por favor"
 
 #: games/templates/games/league.html:11
 msgid "sign in"
-msgstr ""
+msgstr "acesse"
 
 #: games/templates/games/league.html:11
 msgid "first"
-msgstr ""
+msgstr "primeiro"
 
 #: games/templates/games/league.html:16
 msgid "Do you want to join"
-msgstr ""
+msgstr "Você deseja entrar"
 
 #: games/templates/games/league.html:16
 msgid "Yes, ask to join"
-msgstr ""
+msgstr "Sim, peça para entrar"
 
 #: games/templates/games/league.html:18
 msgid "You are not member of a league right now"
-msgstr ""
+msgstr "Você não é membro de uma liga até agora"
 
 #: games/templates/games/league.html:19
 msgid "You can join a league or create one"
-msgstr ""
+msgstr "Você pode entrar em uma liga ou criar uma"
 
 #: games/templates/games/league.html:25
 msgid "Leagues available to join"
-msgstr ""
+msgstr "Ligas disponíveis para acesso"
 
 #: games/templates/games/league.html:30
 msgid "Asked to join"
-msgstr ""
+msgstr "Permissão para entrar"
 
 #: games/templates/games/league.html:30
 msgid "waiting for moderator approval"
-msgstr ""
+msgstr "aguardando pela aprovação do moderador"
 
 #: games/templates/games/league.html:32
 msgid "ask to join"
-msgstr ""
+msgstr "peça para entrar"
 
 #: games/templates/games/league.html:39
 msgid "Create new league"
-msgstr ""
+msgstr "Criar nova liga"
 
 #: games/templates/games/league.html:52
 msgid "Users who asked to join the league"
-msgstr ""
+msgstr "Usuários que pediram para entrar na liga"
 
 #: games/templates/games/league.html:56
 msgid "User"
-msgstr ""
+msgstr "Usuário"
 
 #: games/templates/games/league.html:56
 msgid "add user"
-msgstr ""
+msgstr "adicionar usuário"
 
 #: games/templates/games/league.html:59
 msgid "No user pending acceptance"
-msgstr ""
+msgstr "Nenhum usuário com aceitação pendente"
 
 #: games/templates/games/league.html:69
 msgid "Leaderboard"
-msgstr ""
+msgstr "Classificação"
 
 #: games/templates/games/league.html:74
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: games/templates/games/league.html:76
 msgid "Points"
-msgstr ""
+msgstr "Pontuação"
 
 #: games/templates/games/league.html:79
 msgid "Is admin"
-msgstr ""
+msgstr "É administrador"
 
 #: games/templates/games/league.html:82
 msgid "Is moderator"
-msgstr ""
+msgstr "É moderador"
 
 #: games/templates/games/league.html:84
 msgid "Remove moderator tools"
-msgstr ""
+msgstr "Remover ferramentas de moderador"
 
 #: games/templates/games/league.html:88
 msgid "Set as moderator"
-msgstr ""
+msgstr "Acionar como moderador"
 
 #: games/templates/games/league.html:93
 msgid "Transfer admin powers to this user"
-msgstr ""
+msgstr "Transferir poderes de administrador para este usuário"
 
 #: games/templates/games/league.html:98
 msgid "Remove from league"
-msgstr ""
+msgstr "Retirar da liga"
 
 #: games/templates/games/league.html:111
 msgid "Abdicate moderating powers"
-msgstr ""
+msgstr "Abrir mão de poderes de moderador"
 
 #: games/templates/games/league.html:131
 msgid "Transfer league admin powers"
-msgstr ""
+msgstr "Transferir poderes de administrador da liga"
 
 #: games/templates/games/league.html:134
 msgid "Leave league"
-msgstr ""
+msgstr "Sair da liga"
 
 #: games/templates/games/league.html:197
 msgid "this name has already been taken"
-msgstr ""
+msgstr "esse nome já foi escohido por alguém"
 
 #: games/templates/games/league.html:200
 msgid "invalid name. Must only cointain letters, numbers and spaces"
-msgstr ""
+msgstr "nome inválido. Ele deve conter letras, números e espaços"
 
 #: games/templates/games/league.html:203
 msgid "league name must have between 5 and 50 characters"
-msgstr ""
+msgstr "nome da liga deve ter entre 5 e 50 caracteres"
 
 #: games/templates/games/league.html:206
 msgid "league is full"
-msgstr ""
+msgstr "a liga está lotada"
 
 #: games/templates/games/league.html:209
 msgid "the user already has a league"
-msgstr ""
+msgstr "o usuário já tem uma liga"
 
 #: games/templates/games/league.html:212
 msgid "only the admin can remove moderators"
-msgstr ""
+msgstr "apenas o administrador pode remover moderadores"
 
 #: games/templates/games/league.html:215
 msgid "you are not the admin nor a moderator"
-msgstr ""
+msgstr "você não é administrador nem moderador"
 
 #: games/templates/games/league.html:218
 msgid "you are not the admin"
-msgstr ""
+msgstr "você não é o administrador"
 
 #: games/templates/games/league.html:221
 msgid "you must use http POST"
-msgstr ""
+msgstr "você deve usar http POST"
 
 #: games/templates/games/league.html:224
 msgid "you must remove everyone or transfer admin powers before leaving"
-msgstr ""
+msgstr "você deve remover todos ou transferir poderes de administrador antes de sair"
 
 #: games/templates/games/league.html:227
 msgid "you cannot remove yourself, use leave instead"
-msgstr ""
+msgstr "você não pode remover a si próprio, em vez disso saia"
 
 #: games/templates/games/league.html:230
 msgid "this user did not asked to join league"
-msgstr ""
+msgstr "este usuário não pediu para participar da liga"
 
 #: games/templates/games/league.html:233
 msgid "unknown error"
-msgstr ""
+msgstr "erro indefinido"
 
 #: games/templates/games/objectives.html:4
 #: games/templates/games/objectives.html:7
 msgid "Objectives"
-msgstr ""
+msgstr "Objetivos"
 
 #: games/templates/games/objectives.html:9
 msgid ""
 "Before we state our goals, it is important to mention that the team working "
 "in this project is not sponsored or related, by any means, to betting "
 "websites or organizations"
-msgstr ""
+msgstr "Antes de enunciar nossos objetivos é importante mencionar que a equipe trabalhando "
+"neste projeto não é patrocinada ou mantém qualquer relação com sites "
+"ou organizações que promovem apostas."
 
 #: games/templates/games/objectives.html:11
 msgid ""
 "Our objectives implementing a football/soccer prevision contest are strictly "
 "pedagogical and academic, being"
 msgstr ""
+"Nossos objetivos ao implementar um concurso sobre prognóstico de jogos de futebol são estritamente "
+"pedagógicos e acadêmicos, sendo"
 
 #: games/templates/games/objectives.html:15
 msgid ""
@@ -620,6 +752,9 @@ msgid ""
 "especially at pre-university level, to learn and discuss the main aspects of "
 "probability theory"
 msgstr ""
+"Aproveitar um evento esportivo popular para motivar estudantes e professores de matemática, "
+"especialmente do ensino médio, para aprender e discutir os principais aspectos da "
+"teoria de probabilidades"
 
 #: games/templates/games/objectives.html:19
 msgid ""
@@ -631,6 +766,13 @@ msgid ""
 "As consequence, several students have the impression that probability theory "
 "is only about that kind of numeric exercise"
 msgstr ""
+"Livros texto introdutórios sobre probabilidade geralmente apresentam o assunto explorando "
+"mecanismos aleatórios como dados, extração de bolas de urnas e arremesso de "
+"moedas. Esses mecanismos têm um valor pedagógico mas as questões relacionadas a "
+"eles normalmente levam a exercícios envolvendo cálculo combinatório, assim evitando ou "
+"tratando insuficientemente os aspectos conceituais mair importantes da teoria de probabilidades. "
+"Como consequência, muitos estudantes têm a impressão de que a teoria de probabilidades "
+"diz respeito apenas a exercícios numéricos daquele tipo"
 
 #: games/templates/games/objectives.html:21
 msgid ""
@@ -639,12 +781,18 @@ msgid ""
 "inteligence, subconcious practice, self-criticism and ability to avoid "
 "inconsistencies when evaluating several events at the same time"
 msgstr ""
+"No futebol, como em todo caso específico de interesse, a avaliação de "
+"probabilidades requer (e esse é o ponto essencial) imaginação, "
+"inteligência, treinamento subconsciente, auto-crítica e capacidade de evitar "
+"inconsistências quando se avaliam vários eventos ao mesmo tempo"
 
 #: games/templates/games/objectives.html:25
 msgid ""
 "Collect a dataset that will help the members of our group to develop "
 "academic research related to different kinds of probabilistic prevision"
 msgstr ""
+"Coletar um conjunto de dados que auxiliará os membros de nosso grupo a desenvolver "
+"pesquisa acadêmica relacionada aos diferentes tipos de previsão probabilística"
 
 #: games/templates/games/objectives.html:29
 msgid ""
@@ -654,19 +802,27 @@ msgid ""
 "promoted in this website will help us to answer several questions involving "
 "probabilistic prevision. Some of these questions are summarized below"
 msgstr ""
+"Nosso grupo de pesquisa se interessa por diferentes aspectos das previsões "
+"probabilísticas, não apenas os relacionados a futebol ou eventos esportivos. Ao revelar como "
+"as pessoas lidam com a incerteza ou eventos aleatórios, os dados fornecidos pelo concurso "
+"promovido neste website nos ajudará a responder várias questões envolvendo "
+"previsões probabilísticas. Algumas dessas questões são brevemente discutidas abaixo"
 
 #: games/templates/games/objectives.html:33
 msgid ""
 "How does the practice of probability evaluation based on a contest like the "
 "one we are promoting improve our aptitude to express differences in beliefs "
 "as differences in numbers"
-msgstr ""
+msgstr "Como a prática de avaliar probabilidades, baseando-se em um concurso como o "
+"que estamos promovendo, melhora nossa capacidade de expressar diferenças de opinião "
+"em diferenças numéricas"
 
 #: games/templates/games/objectives.html:37
 msgid ""
 "How does such a practice improve &ldquo;competence&rdquo; or the capability "
 "of making &ldquo;reasonable&rdquo; probability evaluations"
-msgstr ""
+msgstr "Como essa prática melhora a &ldquo;competência&rdquo; ou a capacidade "
+"de fazer avaliações probabilísticas &ldquo;razoáveis&rdquo; "
 
 #: games/templates/games/objectives.html:41
 msgid ""
@@ -674,6 +830,9 @@ msgid ""
 "of events (for example, from football of different championships, or to "
 "meteorological, political, economical, or medical forecasting)"
 msgstr ""
+"Como a &ldquo;competência&rdquo; de uma dada pessoa varia de uma área para outra "
+"de eventos (por exemplo, entre o futebol de diferentes campeonatos, ou para "
+"previsões meteorológicas, políticas, econômicas ou médicas)"
 
 #: games/templates/games/objectives.html:45
 msgid ""
@@ -682,6 +841,10 @@ msgid ""
 "opinions of columnists about the subject, conditions of health or of spirit, "
 "etc"
 msgstr ""
+"Como a &ldquo;competência&rdquo; pode ser influenciada por outros fatores como "
+"reflexões mais demoradas ou mais rápidas antes de escrever os números, a leitura de notícias ou "
+"opiniões de colunistas sobre o assunto, condições de saúde ou de espírito, "
+"etc"
 
 #: games/templates/games/objectives.html:47
 msgid ""
@@ -690,6 +853,10 @@ msgid ""
 "possible to explain agreements or systematic differences between independent "
 "evaluations by different people"
 msgstr ""
+"Como as avaliações de alguém mudam se repetidas depois de algum tempo (quando se "
+"lembra, ou não, das próprias avaliações feitas anteriormente); e como é "
+"possível explicar concordâncias ou diferenças sistemáticas entre avaliações independentes "
+"feitas por pessoas diferentes"
 
 #: games/templates/games/objectives.html:51
 msgid ""
@@ -699,6 +866,11 @@ msgid ""
 "individual members? Would such an average opinion be more successful than "
 "any single one? And what about the average of the few most successful members"
 msgstr ""
+"Considerando os melhores previsores como um grupo, o que se pode dizer da sua "
+"&ldquo;opinião média&rdquo;, ou seja, da avaliação em que cada probabilidade é "
+"calculada como a média aritmética das avaliações correspondentes dos "
+"membros individuais? Essa opinião média seria melhor do que "
+"qualquer uma das individuais? E a média dos melhores entre os melhores membros"
 
 #: games/templates/games/objectives.html:53
 msgid ""
@@ -707,12 +879,18 @@ msgid ""
 "(for football, the outcomes of recent matches and present relative rank of "
 "each pair of teams)"
 msgstr ""
+"Analisando os melhores previsores, seria possível inferir alguma regra "
+"(provavelmente inconsciente) pela qual ele/ela considera os fatos pertinentes "
+"(no que diz respeito a futebol, os resultadps de jogos recentes e posição relativa de "
+"cada par de times que jogam entre si)"
 
 #: games/templates/games/objectives.html:57
 msgid ""
 "Analysing such rules, might some be discovered that would have been more "
 "successful than most or all of the contestants"
 msgstr ""
+"Analisando estas regras, seria possível descobrir alguma que teria melhor "
+"desempenho que a maioria ou que todos os participantes"
 
 #: games/templates/games/objectives.html:59
 msgid ""
@@ -721,6 +899,10 @@ msgid ""
 "in the future in other circumstances, and how far, say, for football in "
 "other countries or for other sports like basketball and rugby"
 msgstr ""
+"Há base sufuciente para aceitar tal regra como &ldquo;significativamente "
+"boa&rdquo; no sentido de que acreditamos que ela provavelmente vai continuar a funcionar "
+"no futuro em outras circunstâncias, e quanto ela funcionaria, digamos, para o futebol de "
+"outros países ou para outros esportes como basquete e rugby"
 
 #: games/templates/games/objectives.html:66
 msgid ""
@@ -728,6 +910,9 @@ msgid ""
 "philosophy of probability and human behaviour, but greatly concerns several "
 "practical fields."
 msgstr ""
+"A importância de questões desse tipo não se restringe a psicologia, "
+"filosofia da probabilidade e comportamento humano, mas diz respeito a questões importantes"
+"de várias áreas práticas."
 
 #: games/templates/games/objectives.html:67
 msgid ""
@@ -735,6 +920,9 @@ msgid ""
 "expert, and the opinion he/she is asked to reveal is, explicitly or "
 "implicitly, his evaluation of certain probabilities"
 msgstr ""
+"Geralmente, importantes decisões econômicas e médicas dependem da resposta de um "
+"especialista, e a opinião que se requer que ele/ela revele é, explicitamente ou "
+"implicitamente, sua avaliação de certas probabilidades"
 
 #: games/templates/games/objectives.html:73
 msgid ""
@@ -742,30 +930,33 @@ msgid ""
 "(Does it Make Sense to Speak of &ldquo;Good Probability Appraisers&rdquo;) "
 "of <i>Probability, Induction and Statistics</i>, Wiley, 1972.]"
 msgstr ""
+"1. [Estas questões foram inicialmente formuladas por Bruno de Finetti. Veja o capítulo 3 "
+"(Does it Make Sense to Speak of &ldquo;Good Probability Appraisers&rdquo;) "
+"de <i>Probability, Induction and Statistics</i>, Wiley, 1972.]"
 
 #: games/templates/games/results.html:9
 msgid "Your probabilities"
-msgstr ""
+msgstr "Suas probabilidades"
 
 #: games/templates/games/results.html:17
 msgid "You got"
-msgstr ""
+msgstr "Você tem"
 
 #: games/templates/games/results.html:17
 msgid "here"
-msgstr ""
+msgstr "aqui"
 
 #: games/templates/games/results.html:19
 msgid "This game has not finished yet"
-msgstr ""
+msgstr "Este jogo ainda não acabou"
 
 #: games/templates/games/results.html:25
 msgid "Make your bets to check your results"
-msgstr ""
+msgstr "Faça sua previsão para checar seus resultados"
 
 #: games/templates/games/rules.html:13
 msgid "Rules: how to play our forecast contest"
-msgstr ""
+msgstr "Regras: como jogar nosso concurso de previsões"
 
 #: games/templates/games/rules.html:15
 msgid ""
@@ -777,6 +968,13 @@ msgid ""
 "close it was from the observed result of the game (victory of team A, "
 "victory of team B or draw)."
 msgstr ""
+"Durante a Copa, os times jogam (quase) todos os dias por aproximadamente um mês. "
+"Portanto, durante esse mês você pode informar suas previsões usando nosso "
+"website interativo. Depois do término de cada jogo você ganhará ou perderá "
+"pontos dependendo de sua previsão, o que significa que sua previsão será pontuada. "
+"Essa pontuação dirá o quão &ldquo;boa&rdquo; foi sua previsão, basicamente mostrando o quão "
+"próxima ela estava do resultado observado do jogo (vitória do time A, "
+"vitória do time B ou empate)."
 
 #: games/templates/games/rules.html:17
 msgid ""
@@ -786,6 +984,11 @@ msgid ""
 "compare with the forecasts provided by two mathematical models and to "
 "everybody else's scores."
 msgstr ""
+"Nós manteremos o registro do seu total de pontos ao longo da Copa. Apenas "
+"tenha certeza de que acessou o sistema via Facebook ou conta Google para salvar suas "
+"previsões. Conforme a copa acontece, você vai ser capaz de ver como suas previsões "
+"se comparam com as previsões dadas pelos dois modelos matemáticos e com "
+"as pontuações dos demais participantes."
 
 #: games/templates/games/rules.html:19
 msgid ""
@@ -801,27 +1004,41 @@ msgid ""
 "team B. Notice that you have a fixed amount, so your probabilities should "
 "add up to 100."
 msgstr ""
+"No Brasil, especialmente durante as Copas, concursos em que as pessoas tentam predizer o "
+"placar final de cada jogo (ou seja, o número de gols marcados por cada time) são "
+"bastante populares. Aqui nós não queremos isso. Nós queremos que você pense "
+"probabilisticamente. Pense sobre sua probabilidade como uma quantidade, como 100 kg"
+"ou libras de algo ou $100 de alguma moeda. Você deve decidir como "
+"dividir esse montante em três cestos: em um cesto você colocará o montante "
+"correspondente a sua confiança na vitória do time A; no cesto "
+"seguinte o montante correspondente à sua confiança em um empate; e no "
+"terceiro cesto o montante correspondente à sua confiança na vitória do "
+"time B. Note que você uma quantidade fixa, então suas probabilidades dvem "
+"somar 100."
 
 #: games/templates/games/rules.html:21
 msgid "Examples"
-msgstr ""
+msgstr "Exemplos"
 
 #: games/templates/games/rules.html:23
 msgid ""
 "As examples, consider a match of the 2014 WC. Assume that your probabilities "
 "are the ones displayed below"
-msgstr ""
+msgstr "Como exemplos, considere um jogo da Copa de 2014. Suponha que suas probabilidades "
+"são as mostradas abaixo"
 
 #: games/templates/games/rules.html:25
 #, python-format
 msgid "Spain x Netherlands: 46%% 24%% 30%%"
-msgstr ""
+msgstr "Espanha x Holanda: 46%% 24%% 30%%"
 
 #: games/templates/games/rules.html:27
 msgid ""
 "The game ended 5x1 to Netherlands. To score this forecast, we will use the "
 "following equation"
 msgstr ""
+"O jogo terminou 5x1 para a Holanda. Para pontuar essa previsão, usaremos a"
+"seguinte equação"
 
 #: games/templates/games/rules.html:31
 msgid ""
@@ -830,12 +1047,17 @@ msgid ""
 "wins'' did not happen, meaning that, \\(p_1=24\\) and \\(p_2=46\\), implying "
 "that"
 msgstr ""
+"onde \\(p_1\\) e \\(p_2\\) representam as probabilidades das "
+"possibilidades que NÃO aconteceram. Para esse jogo, &ldquo;empate&rdquo; e &ldquo;Espanha "
+"vence&rdquo; não aconteceram, o que significa que \\(p_1=24\\) e \\(p_2=46\\), implicando "
+que "
 
 #: games/templates/games/rules.html:35
 #, fuzzy
 #| msgid "Here you are the forecaster"
 msgid "is the score of your forecast"
 msgstr "Aqui é você quem faz a previsão"
+msgstr "é a pontuação da sua previsão"
 
 #: games/templates/games/rules.html:37
 #, python-format
@@ -843,6 +1065,8 @@ msgid ""
 "Regarding the same match, a friend of yours attached 20%% do Spain, 12%% to "
 "draw and the remaining 68%% to Netherlands. His score will be"
 msgstr ""
+"Referindo-se ao mesmo jogo, um amigo seu atribui 20%% para Espanha, 12%% para "
+"o empate e os restantes 68%% para a Holanda. Sua pontuação será"
 
 #: games/templates/games/rules.html:41
 #, python-format
@@ -858,32 +1082,48 @@ msgid ""
 "forecast would be closer to the &ldquo;Spain wins&rdquo; event than your "
 "friend's forecast"
 msgstr ""
+"bem melhor que -3,47 porque a previsão dele estava mais próxima do resultado "
+"observado, &ldquo;Holanda vence&rdquo; (ele atribuiu 68%% para a Holanda e apenas "
+"32%% para as outras duas possibilidades). Esse sistema de pontuação se baseia em scores de Brier, que "
+"avaliam a precisão de previsões probabilísticas e recompensa boas previsões "
+"punindo aquelas que exageram. (Nós adaptamos o sistema para nosso concurso "
+"basicamente re-escalonando a pontuação; o resultado é que participantes do nosso concurso "
+"podem receber entre -50 e +25 pontos). No exemplo acima, se a Espanha tivesse "
+"ganhado, você marcaria 8,5 e seu amigo, -16,9 porque nesse caso sua "
+"previsão estaria mais próxima do evento &ldquo;Espanha vence&rdquo; do que "
+"a previsão do seu amigo"
 
 #: games/templates/games/rules.html:43
 msgid "More important details are the following"
-msgstr ""
+msgstr "Mais detalhes importantes são os seguintes"
 
 #: games/templates/games/rules.html:46
 msgid "You can submit or change your forecast up until a match starts"
-msgstr ""
+msgstr "Você pode enviar ou mudar sua previsão de um jogo até o início do mesmo"
 
 #: games/templates/games/rules.html:47
 msgid ""
 "After the group stage, games are playoffs. If they ended tied after 90 "
 "minutes, they will be considered a draw (?)"
 msgstr ""
+"Depois da fase de grupos, os jogos são eliminatórios. Se eles terminarem empatados após 90 "
+"minutos, serão considerados como empate"
 
 #: games/templates/games/rules.html:48
 msgid ""
 "The round of 16 and the quarter-finals will count double twice the score to "
 "your point total. Semifinals and finals will count three times the score"
 msgstr ""
+"As oitavas e quartas de final contarão o dobro dos pontos para "
+"sua pontuação total. Semi-finais e finais contarão o triplo da pontuação "
 
 #: games/templates/games/rules.html:49
 msgid ""
 "Forecasts can't be more precise than whole percentages, and points gained/"
 "lost for each game are rounded to one decimal place"
 msgstr ""
+"Previsões não podem ser mais precisas do que porcentagens em números inteiros, e pontos obtidos"
+"ou perdidos em cada jogo serão arredondados em uma casa decimal"
 
 #: games/templates/games/rules.html:52
 #, python-format
@@ -896,6 +1136,13 @@ msgid ""
 "for team A (the team to the left of the slider), 34%% for draw and 33%% for "
 "team B (the team to the right of the slider)"
 msgstr ""
+"Devido a essa última regra, como 100/3 não é um número inteiro, a previsão "
+"mais vaga é 33%% para duas possibilidades e 34%% para a restante. "
+"Dependendo do resultado final do jogo, essa previsão receberá uma "
+"pontuação de 0,5 ou -0,25, tal que, na média, as previsões como aquela receberão "
+"uma pontuação próxima de zero. Inicialmente todos os jogos mostrarão 33%% "
+"para o time A (o time à esquerda da barra), 34%% para empate e 33%% para "
+"o time B (o time à direita da barra)"
 
 #: games/templates/games/rules.html:53
 msgid ""
@@ -907,10 +1154,16 @@ msgid ""
 "forecast.) You can also view the zero score as a benchmark: if your total "
 "score is negative that means you're doing worst than the undecided forecast"
 msgstr ""
+"Então, caso você esqueça de enviar sua previsão para um jogo ou dois sua pontuação não "
+"mudará a ponto de colocá-lo fora da disputa (é claro que, se você acha que "
+"os times são realmente parelhos e sente que a previsão 33/34/33 "
+"traduz seu grau de confiança no resultado final, você deve enviar essa "
+"previsão.) Você também pode enxergar a pontuação zero como um padrão: se sua pontuação "
+"total é negativa isso significa que você está indo pior que a previsão vaga"
 
 #: games/templates/games/rules.html:55
 msgid "Considering all this, you can approach the contest in different ways"
-msgstr ""
+msgstr "Considerando tudo isso, você pode participar do concurso de diferentes maneiras"
 
 #: games/templates/games/rules.html:57
 msgid ""
@@ -922,19 +1175,30 @@ msgid ""
 "option if the contest had just a few matches, but with 64 it is quite "
 "unlikely that someone will get rightly all the results"
 msgstr ""
+"Você pode, por exemplo, escolher apenas os resultados que acha que acontecerão e "
+"selecioná-los com 100%% para cada jogo. No entanto, você provavelmente "
+"não se sairá bem. Uma das propriedades da regra de Brier e que ela te força a ser "
+"honesto, ou seja, a realmente informar sua crença sobre o jogo, e a não agir "
+"como apostador, apenas para ganhar o concurso. O comportamento apostador seria uma boa "
+"opção se o concurso tivesse apenas uns poucos jogos, mas com 64 é bem "
+"improvável que alguém acerte todos os resultados"
 
 #: games/templates/games/rules.html:59
 msgid ""
 "You can also look at other models, betting odds, build your own model or "
 "just think carefully about each match to submit your forecast"
 msgstr ""
+"Você também pode consultar outros modelos, cotações de apostas, construir seu próprio modelo ou "
+"apenas pensar cuidadosamente sobre cada jogo para enviar sua previsão"
 
 #: games/templates/games/rules.html:61
 msgid ""
 "You can also create a league and agree with the participants to just submit "
 "forecasts to the matches of one team or of a set of teams"
 msgstr ""
+"Você também pode criar uma liga e acordar com os participantes para enviar "
+"previsões apenas para os jogos de um time ou de um conjunto de times"
 
 #: games/templates/games/scoreboard.html:10
 msgid "The world cup has not started yet, so we have no scoreboard..."
-msgstr ""
+msgstr "A copa ainda não começou, então ainda não temos classificação..."

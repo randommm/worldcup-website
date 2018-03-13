@@ -26,12 +26,13 @@ def committer():
     for result in results:
         bets = Bet.objects.filter(game_id = result.game_id)
         for bet in bets:
+            prob_tie = 100 - bet.prob0 - bet.prob1
             if result.result == 0:
-                bet.points = (10000 - (100 - bet.prob0)**2)
+                bet.points = round(100 - (bet.prob1**2 + prob_tie**2 + bet.prob1 * prob_tie) / 100)
             elif result.result == 1:
-                bet.points = (10000 - (100 - bet.prob1)**2)
+                bet.points = round(100 - (bet.prob0**2 + prob_tie**2 + bet.prob0 * prob_tie) / 100)
             else:
-                bet.points = (10000 - (bet.prob0 + bet.prob1)**2)
+                bet.points = round(100 - (bet.prob1**2 + bet.prob0**2 + bet.prob1 * bet.prob0) / 100)
             bet.save()
             user_id = bet.user_id
             if user_id not in points_by_user:
@@ -152,12 +153,7 @@ def scoreboard(request):
 
     for point in points:
        pointunf = point.points
-       if pointunf <= 1000:
-           point.pointf = str(pointunf) + " P"
-       elif pointunf <= 1000000:
-           point.pointf = str(pointunf / 1000) + " KP"
-       else:
-           point.pointf = str(pointunf / 1000000) + " MP"
+       point.pointf = str(pointunf) + " P"
 
     context = {'points': points}
     return render(request, 'games/scoreboard.html', context)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-09 11:49-0200\n"
+"POT-Creation-Date: 2018-03-14 11:27-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,10 +54,8 @@ msgid "Time"
 msgstr "Hora"
 
 #: games/templates/games/games.html:55
-#, fuzzy
-#| msgid "Here you are the forecaster"
 msgid "Our forecast"
-msgstr "Aqui é você quem faz a previsãoNossa Previsão"
+msgstr "Nossa previsão"
 
 #: games/templates/games/games.html:57 games/templates/games/games.html:59
 #: games/templates/games/games.html:67 games/templates/games/games.html:69
@@ -75,11 +73,8 @@ msgid "not available"
 msgstr "não disponível"
 
 #: games/templates/games/games.html:65
-#, fuzzy
-#| msgid "Here you are the forecaster"
 msgid "Your forecast"
-msgstr "Aqui é você quem faz a previsão"
-"Sua previsão"
+msgstr "Sua previsão"
 
 #: games/templates/games/games.html:71
 msgid "Not made yet"
@@ -106,18 +101,16 @@ msgstr "Se empatar, você marca"
 msgid ""
 "Attention: you are not logged in, therefore your changes will not be saved."
 msgstr ""
-"Atenção: você não está conectado, e portanto suas alterações não serão salvas."
+"Atenção: você não está conectado, e portanto suas alterações não serão "
+"salvas."
 
 #: games/templates/games/games.html:116
 msgid "Login or sign-up"
 msgstr "Entre ou registre-se"
 
 #: games/templates/games/games.html:116
-#, fuzzy
-#| msgid "Here you are the forecaster"
 msgid "to have your forecasts stored"
-msgstr "Aqui é você quem faz a previsão"
-"para ter suas previsões registradas"
+msgstr "para ter suas previsões registradas"
 
 #: games/templates/games/games.html:136
 msgid "No game available"
@@ -141,10 +134,10 @@ msgid ""
 msgstr ""
 "Jogos de azar e apostas são provavelmente tão antigos quanto a humanidade. "
 "Quando eventos esportivos se tornaram populares, a possibilidade de apostar "
-"em seus resultados trouxe ainda mais atenção para eles. Na Europa, especialmente "
-"na Grã-Bretanha, apostar em eventos esportivos já era bastante popular em "
-"fins do século XIX, mas foi apenas na dédada de 1920 que a primeira agência "
-"de apostas para futebol (football pools)"
+"em seus resultados trouxe ainda mais atenção para eles. Na Europa, "
+"especialmente na Grã-Bretanha, apostar em eventos esportivos já era bastante "
+"popular em fins do século XIX, mas foi apenas na dédada de 1920 que a "
+"primeira agência de apostas para futebol (football pools)"
 
 #: games/templates/games/history.html:10
 msgid ""
@@ -171,17 +164,17 @@ msgid ""
 "the news­papers so that the bettors could take out the copy of his coupon and "
 "check their forecasts"
 msgstr ""
-"Toda semana, um grupo de apostadores chamava um coletor para buscar os boletos preenchidos "
-"juntamente com o montante de dinheiro necessário para pagar as apostas. Então, uma certa "
-"quantidade de boletos com os jogos da semana seguinte eram entregues. Também "
-"era possível ir a um ponto de apostas para preencher os boletos. Eles "
-"continham uma lista com alguns dos jogos da semana. O boleto preenchido era "
-"então enviado pelo correio para a companhia de apostas, com uma ordem postal "
-"de pagamento ou cheque equivalente à quantia apostada (ou &ldquo;"
-"investida&rdquo; como as companhias diziam). Ao final do final de semana os "
-"resultados dos jogos eram anunciados no rádio, televisão e publicados no "
-"jornais para que os apostadores pudessem verificar a cópia do seu boleto e "
-"checar seus palpites "
+"Toda semana, um grupo de apostadores chamava um coletor para buscar os "
+"boletos preenchidos juntamente com o montante de dinheiro necessário para "
+"pagar as apostas. Então, uma certa quantidade de boletos com os jogos da "
+"semana seguinte eram entregues. Também era possível ir a um ponto de apostas "
+"para preencher os boletos. Eles continham uma lista com alguns dos jogos da "
+"semana. O boleto preenchido era então enviado pelo correio para a companhia "
+"de apostas, com uma ordem postal de pagamento ou cheque equivalente à "
+"quantia apostada (ou &ldquo;investida&rdquo; como as companhias diziam). Ao "
+"final do final de semana os resultados dos jogos eram anunciados no rádio, "
+"televisão e publicados no jornais para que os apostadores pudessem verificar "
+"a cópia do seu boleto e checar seus palpites "
 
 #: games/templates/games/history.html:12
 msgid ""
@@ -345,9 +338,9 @@ msgid ""
 msgstr ""
 "A popularidade do Totocalcio e a relação entre previsões com probabilidades "
 "subjetivas levaram Bruno de Finetti a idealizar um concurso em que os "
-"participantes deveriam informar suas probabilidades de cada resultado, ou seja "
-"vitória, empate ou derrota do time da casa, ou seja, exatamente o concurso que "
-"estamos promovendo para a Copa do Mundo 2018"
+"participantes deveriam informar suas probabilidades de cada resultado, ou "
+"seja vitória, empate ou derrota do time da casa, ou seja, exatamente o "
+"concurso que estamos promovendo para a Copa do Mundo 2018"
 
 #: games/templates/games/history.html:22
 msgid "In unpublished notes"
@@ -457,8 +450,8 @@ msgid ""
 msgstr ""
 "2. [Apostar em jogos de futebol antes da Internet exigia que se preenchesse "
 "a mão coupons especias fornecidos por cada uma das firmas. Inicialmente os "
-"cupons ficavam prontamente disponíveis em bancas de jornal e com vendedores de "
-"cigarro, lugares majoritariamente frequentados pela classe operária. As "
+"cupons ficavam prontamente disponíveis em bancas de jornal e com vendedores "
+"de cigarro, lugares majoritariamente frequentados pela classe operária. As "
 "principais firmas de apostas também ofereciam um serviço em que cupons eram "
 "diretamente entregues aos apostadores por meio de diversas redes de "
 "coletores de apostas em toda a Grã-Bretanha. Esses coletores agiam como "
@@ -467,6 +460,42 @@ msgstr ""
 #: games/templates/games/history.html:39
 msgid "Jump back to footnote 2 in the text."
 msgstr "Voltar para a nota 2 no texto."
+
+#: games/templates/games/history.html:45
+msgid ""
+"3. [Even though there are controversies about its start, it is accepted that "
+"the "
+msgstr "3. [Embora haja controvérsias sobre seu início, aceita-se que o "
+
+#: games/templates/games/history.html:45
+msgid "first contest"
+msgstr "primeiro concurso"
+
+#: games/templates/games/history.html:45
+msgid " happened in September, 22nd, 1946, with a ticket for 7 matches.]"
+msgstr " aconteceu em 22 de setembro de 1946, com um boleto para 7 jogos.]"
+
+#: games/templates/games/history.html:51
+msgid "4. [The number of matches per contest varied since then and nowadays is"
+msgstr "4. [O número de jogos por concurso variou desde então e atualmente é "
+
+#: games/templates/games/history.html:63
+msgid ""
+"6. [A free translation for &ldquo;picchetto&rdquo; is stake or jackpot.]"
+msgstr ""
+"6. [Uma tradução livre de &ldquo;picchetto&rdquo; é bolão, bolada ou prêmio.]"
+
+#: games/templates/games/history.html:69
+msgid "7. [See"
+msgstr "7. [Veja"
+
+#: games/templates/games/history.html:74
+msgid "8. [See Peter Walley"
+msgstr "8. [Veja Peter Walley"
+
+#: games/templates/games/index.html:27
+msgid "Forecasting the FIFA WC"
+msgstr "Previsões da Copa 2018"
 
 #: games/templates/games/index.html:28
 msgid "Here you are the forecaster"
@@ -556,11 +585,8 @@ msgstr ""
 "seus amigos."
 
 #: games/templates/games/index.html:39
-#, fuzzy
-#| msgid "Here you are the forecaster"
 msgid "Submit your forecasts"
-msgstr "Aqui é você quem faz a previsão"
-"Informe suas previsões"
+msgstr "Envie suas previsões"
 
 #: games/templates/games/index.html:40
 msgid "Check your results"
@@ -971,8 +997,6 @@ msgid "This game has not finished yet"
 msgstr "Este jogo ainda não acabou"
 
 #: games/templates/games/results.html:25
-#, fuzzy
-#| msgid "Make your bets to check your results"
 msgid "Submit your probilities to check your results"
 msgstr "Enive suas probabilidades para checar seus resultados"
 
@@ -1060,8 +1084,8 @@ msgid ""
 "The match ended 5x1 to Netherlands. To score your forecast, we will use the "
 "following equation"
 msgstr ""
-"O jogo terminou 5x1 para a Holanda. Para pontuar essa previsão, usaremos "
-"a seguinte equação"
+"O jogo terminou 5x1 para a Holanda. Para pontuar essa previsão, usaremos a "
+"seguinte equação"
 
 #: games/templates/games/rules.html:29
 msgid ""
@@ -1077,8 +1101,7 @@ msgstr ""
 
 #: games/templates/games/rules.html:33
 msgid "is the score of your forecast"
-msgstr "Aqui é você quem faz a previsão"
-"é a pontuação da sua previsão"
+msgstr "é a pontuação da sua previsão"
 
 #: games/templates/games/rules.html:35
 #, python-format
@@ -1090,38 +1113,35 @@ msgstr ""
 "para o empate e os restantes 68%% para a Holanda. Sua pontuação será"
 
 #: games/templates/games/rules.html:39
+#, python-format
 msgid ""
-"a lot better than -3.5 because his prevision was closer to the observed "
+"a lot better than 62.04 because his prevision was closer to the observed "
 "result, &ldquo;Netherlands win&rdquo; (he gave 68%% to Netherlands and just "
 "32%% to the other two). This scoring system is based on Brier scores, which "
 "evaluate the accuracy of probabilistic forecasts and rewards good forecasts "
-"while punishing those that overshoot. (We've adapted the system for our game "
-"essentially by rescaling the scores; the result is that players in our game "
-"can earn between -50 and +25 points). In the example above, if Spain had "
-"won, you'd score 8.5 and your friend, -16.9 because in this case your "
+"while punishing those that overshoot. In the example above, if Spain had "
+"won, you'd score 78.04 and your friend, 44.16 because in this case your "
 "forecast would be closer to the event &ldquo;Spain wins&rdquo; than your "
-"friend's forecast"
+"friend's forecast."
 msgstr ""
-"bem melhor que -3,5 porque a previsão dele estava mais próxima do resultado "
+"bem melhor que 62,04 porque a previsão dele estava mais próxima do resultado "
 "observado, &ldquo;Holanda vence&rdquo; (ele atribuiu 68%% para a Holanda e "
 "apenas 32%% para as outras duas possibilidades). Esse sistema de pontuação "
 "se baseia em scores de Brier, que avaliam a precisão de previsões "
-"probabilísticas e recompensa boas previsões punindo aquelas que exageram. "
-"(Nós adaptamos o sistema para nosso concurso basicamente re-escalonando a "
-"pontuação; o resultado é que participantes do nosso concurso podem receber "
-"entre -50 e +25 pontos). No exemplo acima, se a Espanha tivesse ganhado, "
-"você marcaria 8,5 e seu amigo, -16,9 porque nesse caso sua previsão estaria "
-"mais próxima do evento &ldquo;Espanha vence&rdquo; do que a previsão do seu "
-"amigo"
+"probabilísticas e recompensa boas previsões punindo aquelas que exageram. No "
+"exemplo acima, se a Espanha tivesse ganhado, você marcaria 78,04 pontos, e "
+"seu amigo 44,16 porque nesse caso sua previsão estaria mais próxima do "
+"evento &ldquo;Espanha vence&rdquo; do que a previsão do seu amigo"
 
 #: games/templates/games/rules.html:41
 msgid "More important details are the following"
 msgstr "Mais detalhes importantes são os seguintes"
 
 #: games/templates/games/rules.html:44
-msgid "You can submit or change your forecast up until a match starts"
+msgid "You can submit or change your forecast 30 minutes before a match starts"
 msgstr ""
-"Você pode enviar ou mudar sua previsão de um jogo até o início do mesmo"
+"Você pode enviar ou mudar sua previsão para um jogo até 30 minutos antes do "
+"início do mesmo"
 
 #: games/templates/games/rules.html:45
 msgid ""
@@ -1133,56 +1153,59 @@ msgstr ""
 
 #: games/templates/games/rules.html:46
 msgid ""
-"The round of 16 and the quarter-finals will count double twice the score to "
-"your point total. Semifinals and finals will count three times the score"
+"If you do not submit a forecast to a match, your score for that match will "
+"be zero"
 msgstr ""
-"As oitavas e quartas de final contarão o dobro dos pontos para sua pontuação "
-"total. Semi-finais e finais contarão o triplo da pontuação "
+"Se você não submeter uma previsão para um jogo, sua pontuação para esse jogo "
+"será zero"
 
 #: games/templates/games/rules.html:47
 msgid ""
 "Forecasts can't be more precise than whole percentages, and points gained/"
-"lost for each game are rounded to one decimal place"
+"lost for each game are rounded to the nearest integer"
 msgstr ""
 "Previsões não podem ser mais precisas do que porcentagens em números "
-"inteiros, e pontos obtidosou perdidos em cada jogo serão arredondados em uma "
-"casa decimal"
+"inteiros, e pontos obtidos ou perdidos em cada jogo serão arredondados para "
+"o número inteiro mais próximo"
 
 #: games/templates/games/rules.html:50
+#, python-format
 msgid ""
 "Because of this last rule, since 100/3 is not a whole number, the most "
 "undecided forecast is 33%% for two possibilities and 34%% for the remaining "
 "one. Depending on the final result of the game, this forecast will receive a "
-"score of 0.5 or -0.25, so that, on average, forecasts like that will have a "
-"score around zero. Initially all the games will have a 33%% percent for team "
+"score of 66 or 67. Initially all the forecasts attach 33%% percent for team "
 "A (the team to the left of the slider), 34%% for draw and 33%% for team B "
-"(the team to the right of the slider)"
+"(the team to the right of the slider), but if you do not press the button "
+"&ldquo;Submit you forecast&rdquo;, we will understand that you do not want "
+"to submit a forecast to that match and your score, for that match, will be "
+"zero"
 msgstr ""
 "Devido a essa última regra, como 100/3 não é um número inteiro, a previsão "
 "mais vaga é 33%% para duas possibilidades e 34%% para a restante. Dependendo "
-"do resultado final do jogo, essa previsão receberá uma pontuação de 0,5 ou "
-"-0,25, tal que, na média, as previsões como aquela receberão uma pontuação "
-"próxima de zero. Inicialmente todos os jogos mostrarão 33%% para o time A (o "
-"time à esquerda da barra), 34%% para empate e 33%% para o time B (o time à "
-"direita da barra)"
+"do resultado final do jogo, essa previsão receberá uma pontuação de 66 ou "
+"67. Inicialmente todos as previsões atribuem 33%% para o time A (o time à "
+"esquerda da barra), 34%% para empate e 33%% para o time B (o time à direita "
+"da barra), mas se você não apertar o botão &ldquo;Envie sua previsão&rdquo, "
+"nós entenderemos que você não quer enviar uma previsão para esse jogo e sua "
+"pontuação, para o jogo em questão, será zero "
 
 #: games/templates/games/rules.html:51
 msgid ""
 "So, if you forget to submit a forecast to one game or two your score won't "
-"change much as to put you out of the race, but if you want to stay close to "
-"the best, you have to submit your forecasts (of course, if you think that "
-"the teams are really close competitors and feels that the 33/34/33 forecast "
+"change as to put you out of the race, but if you want to stay close to the "
+"best, you have to submit your forecasts (of course, if you think that the "
+"teams are really close competitors and feels that the 33/34/33 forecast "
 "translates your degree of belief in the final result, you should submit this "
-"forecast) You can also view the zero score as a benchmark: if your total "
-"score is negative that means you're doing worst than the undecided forecast"
+"forecast). You can also view the score 67 as a benchmark: if your score is "
+"smaller than 67, you're doing worst than the undecided forecast"
 msgstr ""
 "Então, caso você esqueça de enviar sua previsão para um jogo ou dois sua "
 "pontuação não mudará a ponto de colocá-lo fora da disputa (é claro que, se "
 "você acha que os times são realmente parelhos e sente que a previsão "
 "33/34/33 traduz seu grau de confiança no resultado final, você deve enviar "
-"essa previsão.) Você também pode enxergar a pontuação zero como um padrão: "
-"se sua pontuação total é negativa isso significa que você está indo pior que "
-"a previsão vaga"
+"essa previsão). Você também pode enxergar a pontuação 67 como um padrão: se "
+"sua pontuação total é menor que 67, você está indo pior que a previsão vaga"
 
 #: games/templates/games/rules.html:53
 msgid "Considering all this, you can approach the contest in different ways"
@@ -1229,16 +1252,3 @@ msgstr ""
 #: games/templates/games/scoreboard.html:10
 msgid "The World Cup has not started yet, so we have no scoreboard..."
 msgstr "A Copa ainda não começou, então ainda não temos classificação..."
-
-#~ msgid "here)"
-#~ msgstr "aqui)"
-
-#~ msgid ""
-#~ "As examples, consider a match of the 2014 WC. Assume that your "
-#~ "probabilities are the ones displayed below"
-#~ msgstr ""
-#~ "Como exemplos, considere um jogo da Copa de 2014. Suponha que suas "
-#~ "probabilidades são as mostradas abaixo"
-
-#~ msgid "Spain x Netherlands: 46%% 24%% 30%%"
-#~ msgstr "Espanha x Holanda: 46%% 24%% 30%%"

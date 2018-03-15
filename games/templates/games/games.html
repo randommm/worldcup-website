@@ -1,4 +1,5 @@
 {% load i18n %}
+{% load tz %}
 
 {% if games %}
     <script>
@@ -55,9 +56,13 @@
     <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Submit your forecast</a></div>
         <li>{% trans "Game" %}: {{ game.team0 }} vs {{ game.team1 }}.</li>
 
-        <li>{% trans "Time (Brazil)" %}: {{ game.date }}</li>
+        {% timezone user_tz %}
+        <li>{% trans "Your local time" %}: {{ game.date }}</li>
+        {% endtimezone %}
 
-        <li>{% trans "Time (Russia)" %}: {{ game.date }}</li>
+        {% timezone 'Europe/Moscow' %}
+        <li>{% trans "Russia time" %}: {{ game.date }}</li>
+        {% endtimezone %}
 
         <li>{% trans "Your forecast" %}:<span id="yforecast_{{ forloop.counter }}">
             {% if game.bet %}

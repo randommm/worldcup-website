@@ -5,8 +5,10 @@ from .models import User, Team, Game, Bet, Result, Point, League
 from .models import LeagueUser
 from django.contrib.auth.decorators import login_required
 from django.db import transaction, DatabaseError
+from django.utils.timezone import get_current_timezone
 import datetime
 from .leagues import *
+
 
 @transaction.atomic
 def committer():
@@ -127,7 +129,9 @@ def games(request):
             except (KeyError, Bet.DoesNotExist):
                 pass
 
-    context = {'games': games}
+    user_tz = get_current_timezone()
+
+    context = {'games': games, 'user_tz': user_tz}
     return render(request, 'games/games.html', context)
 
 def update_bet(request):

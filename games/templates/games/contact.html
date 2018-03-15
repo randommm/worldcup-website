@@ -6,19 +6,35 @@
 {% block content %}
   	<h1>{% trans "People & contact" %}</h1>
 
-    <p>{% trans "The following researchers and students are voluntarily developing this website. They are all  members (faculty or graduate students) of the Department of Statistics of the Federal University of S. Carlos, Brazil." %}</p>
+    <p>{% trans "The following researchers are voluntarily developing this website." %}</p>
 
-    <ul>
+    <ul style="columns: 2;-webkit-columns: 2; -moz-columns: 2;">
+         <li>Marcio Alves Diniz <br />
+         <ul>
+           <li>{% trans "project original idea" %}</li>
+           <li>{% trans "website content and translation" %}</li>
+           <li>{% trans "project and website management" %}</li>
+         </ul>
+         <li>Marco Inacio
+                  <ul>
+           <li>{% trans "website creation and development" %}</li>
+           <li>{% trans "website content" %}</li>
+           <li>{% trans "website and server management" %}</li>
+         </ul>
+    </ul>
+
+    {% trans "Beside the ones mentioned above, the following are also members of the advisory and research board. They are all members (faculty or graduate students) of the Department of Statistics of the Federal University of S. Carlos, Brazil." %}
+    <ul style="columns: 2;-webkit-columns: 2; -moz-columns: 2;">
          <li>Danilo Lourenço Lopes</li>
          <li>Luis Ernesto Bueno Salasar</li>
-         <li>Marcio Alves Diniz</li>
          <li>Rafael Izbicki</li>
          <li>Afonso Fernandes Vaz</li>
-         <li>Marco Inácio</li>
          <li>João Carlos Poloniato Ferreira</li>
     </ul>
 
+
     <h2>{% trans "Contact" %}</h2>
     {% trans "Questions or suggestions should be sent to marciodiniz@ufscar.br." %}
+    {% trans "Technical problems should be sent to m@marcoinacio.com." %}
 
 {% endblock %}

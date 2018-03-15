@@ -16,9 +16,14 @@
             $( "#prob0_" + objid ).val(pwin0);
             $( "#prob1_" + objid ).val(pwin1);
 
-            $( "#gain_team0_" + objid ).html((10000 - Math.pow(100 - pwin0, 2)));
-            $( "#gain_team1_" + objid ).html((10000 - Math.pow(100 - pwin1, 2)));
-            $( "#gain_tie_" + objid ).html((10000 - Math.pow(100 - ptie, 2)));
+            var gain0 = Math.round(100 - (Math.pow(pwin1, 2) + Math.pow(ptie, 2) + pwin1 * ptie) / 100)
+            var gain1 = Math.round(100 - (Math.pow(pwin0, 2) + Math.pow(ptie, 2) + pwin0 * ptie) / 100)
+            var gaintie = Math.round(100 - (Math.pow(pwin0, 2) + Math.pow(pwin1, 2) + pwin0 * pwin1) / 100)
+
+            $( "#gain_team0_" + objid ).html(gain0);
+            $( "#gain_team1_" + objid ).html(gain1);
+            $( "#gain_tie_" + objid ).html(gaintie);
+
         }
         $( "#slider-range_" + objid ).slider({
           range: true,
@@ -47,20 +52,12 @@
     });
     </script>
     {% for game in games %}
-    <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Change bet for this game</a></div>
+    <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">Submit your forecast</a></div>
         <li>{% trans "Game" %}: {{ game.team0 }} vs {{ game.team1 }}.</li>
 
-        <li>{% trans "Time" %}: {{ game.date }}</li>
+        <li>{% trans "Time (Brazil)" %}: {{ game.date }}</li>
 
-        <li>{% trans "Our forecast" %}:
-            {% if game.site_forecast %}
-            {{ game.site_forecast.prob0 }}% {% trans "win" %} {{ game.team0 }} ||
-            {{ game.site_forecast.prob_tie }}% {% trans "tie" %} ||
-            {{ game.site_forecast.prob1 }}% {% trans "win" %} {{ game.team1 }}.
-            {% else %}
-            {% trans "not available" %}.
-            {% endif %}
-        </li>
+        <li>{% trans "Time (Russia)" %}: {{ game.date }}</li>
 
         <li>{% trans "Your forecast" %}:<span id="yforecast_{{ forloop.counter }}">
             {% if game.bet %}
@@ -70,7 +67,6 @@
             {% else %}
             {% trans "Not made yet" %}.
             {% endif %}</span>
-
 
 
           <form id="sliderform_{{ forloop.counter }}" style="display: none" onsubmit="updatebet('{{ forloop.counter }}'); return false;">

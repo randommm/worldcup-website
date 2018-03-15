@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 11:27-0300\n"
+"POT-Creation-Date: 2018-03-15 12:07-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: games/templates/games/contact.html:4 games/templates/games/contact.html:21
+#: games/templates/games/contact.html:4 games/templates/games/contact.html:26
 msgid "Contact"
 msgstr "Contato"
 
@@ -37,7 +37,7 @@ msgstr ""
 "discente) do Departamento de Estatística da Universidade Federal de São "
 "Carlos."
 
-#: games/templates/games/contact.html:22
+#: games/templates/games/contact.html:27
 msgid "Questions or suggestions should be sent to marciodiniz@ufscar.br."
 msgstr "Perguntas ou sugestões devem ser enviadas para marciodiniz@ufscar.br."
 
@@ -50,69 +50,63 @@ msgid "Game"
 msgstr "Jogo"
 
 #: games/templates/games/games.html:53
-msgid "Time"
-msgstr "Hora"
+msgid "Time (Brazil)"
+msgstr ""
 
 #: games/templates/games/games.html:55
-msgid "Our forecast"
-msgstr "Nossa previsão"
+msgid "Time (Russia)"
+msgstr ""
 
-#: games/templates/games/games.html:57 games/templates/games/games.html:59
-#: games/templates/games/games.html:67 games/templates/games/games.html:69
+#: games/templates/games/games.html:57
+msgid "Your forecast"
+msgstr "Sua previsão"
+
+#: games/templates/games/games.html:59 games/templates/games/games.html:61
 #: games/templates/games/results.html:10 games/templates/games/results.html:14
 msgid "win"
 msgstr "vitória"
 
-#: games/templates/games/games.html:58 games/templates/games/games.html:68
-#: games/templates/games/results.html:12
+#: games/templates/games/games.html:60 games/templates/games/results.html:12
 msgid "tie"
 msgstr "empate"
 
-#: games/templates/games/games.html:61
-msgid "not available"
-msgstr "não disponível"
-
-#: games/templates/games/games.html:65
-msgid "Your forecast"
-msgstr "Sua previsão"
-
-#: games/templates/games/games.html:71
+#: games/templates/games/games.html:63
 msgid "Not made yet"
 msgstr "Indisponível no momento"
 
-#: games/templates/games/games.html:95 games/templates/games/games.html:100
+#: games/templates/games/games.html:86 games/templates/games/games.html:91
 msgid "If"
 msgstr "Se"
 
-#: games/templates/games/games.html:95 games/templates/games/games.html:100
+#: games/templates/games/games.html:86 games/templates/games/games.html:91
 msgid "wins, you will get"
 msgstr "ganhar, você marca"
 
-#: games/templates/games/games.html:96 games/templates/games/games.html:101
-#: games/templates/games/games.html:106
+#: games/templates/games/games.html:87 games/templates/games/games.html:92
+#: games/templates/games/games.html:97
 msgid "points"
 msgstr "pontos"
 
-#: games/templates/games/games.html:105
+#: games/templates/games/games.html:96
 msgid "If tie, you will get"
 msgstr "Se empatar, você marca"
 
-#: games/templates/games/games.html:114
+#: games/templates/games/games.html:105
 msgid ""
 "Attention: you are not logged in, therefore your changes will not be saved."
 msgstr ""
 "Atenção: você não está conectado, e portanto suas alterações não serão "
 "salvas."
 
-#: games/templates/games/games.html:116
+#: games/templates/games/games.html:107
 msgid "Login or sign-up"
 msgstr "Entre ou registre-se"
 
-#: games/templates/games/games.html:116
+#: games/templates/games/games.html:107
 msgid "to have your forecasts stored"
 msgstr "para ter suas previsões registradas"
 
-#: games/templates/games/games.html:136
+#: games/templates/games/games.html:127
 msgid "No game available"
 msgstr "Nenhum jogo disponível"
 
@@ -1252,3 +1246,13 @@ msgstr ""
 #: games/templates/games/scoreboard.html:10
 msgid "The World Cup has not started yet, so we have no scoreboard..."
 msgstr "A Copa ainda não começou, então ainda não temos classificação..."
+
+#: games/templates/games/terms.html:7
+msgid "Terms of Service"
+msgstr ""
+
+#~ msgid "Time"
+#~ msgstr "Hora"
+
+#~ msgid "not available"
+#~ msgstr "não disponível"

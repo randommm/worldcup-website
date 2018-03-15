@@ -96,6 +96,9 @@ def contact(request):
 def forecasts(request):
     return render(request, 'games/forecasts.html')
 
+def terms(request):
+    return render(request, 'games/terms.html')
+
 def games(request):
     cutdate = datetime.datetime.now().timestamp()
     cutdate += 60*30

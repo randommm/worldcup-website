@@ -6,4 +6,6 @@
   #login_area {display:none}
 </style>
 <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ nextpage }}">{% trans "Login or create an account using Google" %}</a>
+<br />
+{% trans "By joining or login, you are agreeing with our " %}<a href="{% url 'games:terms' %}">{% trans "Terms of Service" %}</a>
 {% endblock %}

@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'^history/$', views.history, name='history'),
     url(r'^objectives/$', views.objectives, name='objectives'),
     url(r'^contact/$', views.contact, name='contact'),
+    url(r'^terms/$', views.terms, name='terms'),
 
     url(r'^recreate/$', views.recreate, name='recreate'),
 ]

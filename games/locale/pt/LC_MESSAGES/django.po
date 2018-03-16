@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-15 12:07-0300\n"
+"POT-Creation-Date: 2018-03-16 17:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: games/templates/games/contact.html:4 games/templates/games/contact.html:26
+#: games/templates/games/contact.html:4 games/templates/games/contact.html:36
 msgid "Contact"
 msgstr "Contato"
 
@@ -27,86 +27,130 @@ msgid "People & contact"
 msgstr "Equipe & contato"
 
 #: games/templates/games/contact.html:9
-msgid ""
-"The following researchers and students are voluntarily developing this "
-"website. They are all  members (faculty or graduate students) of the "
-"Department of Statistics of the Federal University of S. Carlos, Brazil."
+msgid "The following researchers are voluntarily developing this website."
 msgstr ""
-"Os pesquisadores e alunos abaixo relacionados estão volutariamente "
-"desenvolvendo este website. Todos eles são membros (do corpo docente ou "
-"discente) do Departamento de Estatística da Universidade Federal de São "
-"Carlos."
+"Os seguintes pesquisadores estão voluntariamente desenvolvendo este website."
 
-#: games/templates/games/contact.html:27
-msgid "Questions or suggestions should be sent to marciodiniz@ufscar.br."
-msgstr "Perguntas ou sugestões devem ser enviadas para marciodiniz@ufscar.br."
+#: games/templates/games/contact.html:14
+msgid "project original idea"
+msgstr "ideia original do projeto"
 
-#: games/templates/games/games.html:41
+#: games/templates/games/contact.html:15
+msgid "website content and translation"
+msgstr "conteúdo do website e tradução"
+
+#: games/templates/games/contact.html:16
+msgid "project and website management"
+msgstr "administração do projeto e do website"
+
+#: games/templates/games/contact.html:20
+msgid "website creation and development"
+msgstr "criação e desenvolvimento do website"
+
+#: games/templates/games/contact.html:21
+msgid "website content"
+msgstr "conteúdo do website"
+
+#: games/templates/games/contact.html:22
+msgid "website and server management"
+msgstr "administração do website e do servidor"
+
+#: games/templates/games/contact.html:26
+msgid ""
+"The following are also part of the advisory and research team. They are all "
+"members (faculty or graduate students) of the Department of Statistics of "
+"the Federal University of S. Carlos, Brazil."
+msgstr ""
+"Os seguintes também fazem parte da equipe de consultoria e pesquisa. Todos "
+"são membros (do corpo docente ou discente) do Departamento de Estatística da "
+"Universidade Federal de São Carlos."
+
+#: games/templates/games/contact.html:37
+msgid ""
+"If you have questions or suggestions please send them to marciodiniz@ufscar."
+"br."
+msgstr ""
+"Caso tenha alguma pergunta ou sugestão, favor encaminhá-las para "
+"marciodiniz@ufscar.br."
+
+#: games/templates/games/contact.html:39
+msgid ""
+"If you have technical problems accessing the site, please report them to "
+"m@marcoinacio.com."
+msgstr ""
+"Caso tenha algum problema técnico ao acessar o site, por favor relate os "
+"mesmos para m@marcoinacio.com."
+
+#: games/templates/games/games.html:46
 msgid "Updated!"
 msgstr "Atualizado!"
 
-#: games/templates/games/games.html:51 games/templates/games/results.html:7
+#: games/templates/games/games.html:55
+msgid "Submit your forecast"
+msgstr "Envie suas previsão"
+
+#: games/templates/games/games.html:56 games/templates/games/results.html:7
 msgid "Game"
 msgstr "Jogo"
 
-#: games/templates/games/games.html:53
+#: games/templates/games/games.html:58
 msgid "Time (Brazil)"
-msgstr ""
+msgstr "Hora (Brasília)"
 
-#: games/templates/games/games.html:55
+#: games/templates/games/games.html:60
 msgid "Time (Russia)"
-msgstr ""
+msgstr "Hora local (Rússia)"
 
-#: games/templates/games/games.html:57
+#: games/templates/games/games.html:62
 msgid "Your forecast"
 msgstr "Sua previsão"
 
-#: games/templates/games/games.html:59 games/templates/games/games.html:61
+#: games/templates/games/games.html:64 games/templates/games/games.html:66
 #: games/templates/games/results.html:10 games/templates/games/results.html:14
 msgid "win"
 msgstr "vitória"
 
-#: games/templates/games/games.html:60 games/templates/games/results.html:12
+#: games/templates/games/games.html:65 games/templates/games/results.html:12
 msgid "tie"
 msgstr "empate"
 
-#: games/templates/games/games.html:63
+#: games/templates/games/games.html:68
 msgid "Not made yet"
 msgstr "Indisponível no momento"
 
-#: games/templates/games/games.html:86 games/templates/games/games.html:91
+#: games/templates/games/games.html:91 games/templates/games/games.html:96
 msgid "If"
 msgstr "Se"
 
-#: games/templates/games/games.html:86 games/templates/games/games.html:91
+#: games/templates/games/games.html:91 games/templates/games/games.html:96
 msgid "wins, you will get"
 msgstr "ganhar, você marca"
 
-#: games/templates/games/games.html:87 games/templates/games/games.html:92
-#: games/templates/games/games.html:97
+#: games/templates/games/games.html:92 games/templates/games/games.html:97
+#: games/templates/games/games.html:102
 msgid "points"
 msgstr "pontos"
 
-#: games/templates/games/games.html:96
-msgid "If tie, you will get"
-msgstr "Se empatar, você marca"
+#: games/templates/games/games.html:101
+msgid "If the game ends tied, you will get"
+msgstr "Se o jogo terminar empatado, você marca"
 
-#: games/templates/games/games.html:105
+#: games/templates/games/games.html:110
 msgid ""
 "Attention: you are not logged in, therefore your changes will not be saved."
 msgstr ""
 "Atenção: você não está conectado, e portanto suas alterações não serão "
 "salvas."
 
-#: games/templates/games/games.html:107
+#: games/templates/games/games.html:112
 msgid "Login or sign-up"
 msgstr "Entre ou registre-se"
 
-#: games/templates/games/games.html:107
+#: games/templates/games/games.html:112
 msgid "to have your forecasts stored"
 msgstr "para ter suas previsões registradas"
 
-#: games/templates/games/games.html:127
+#: games/templates/games/games.html:132
 msgid "No game available"
 msgstr "Nenhum jogo disponível"
 
@@ -1248,11 +1292,134 @@ msgid "The World Cup has not started yet, so we have no scoreboard..."
 msgstr "A Copa ainda não começou, então ainda não temos classificação..."
 
 #: games/templates/games/terms.html:7
-msgid "Terms of Service"
+msgid "Terms of use and privacy"
+msgstr "Termos de uso e privacidade"
+
+#: games/templates/games/terms.html:9
+msgid ""
+"We are committed to keep your privacy. The objective of this text is to "
+"clarify which informations are collected from the users of our website and "
+"in which way these data are used"
 msgstr ""
+"Nós nos comprometemos a manter sua privacidade. O objetivo deste texto é "
+"esclarecer que informações serão coletadas dos usuários de nosso site e de "
+"que forma esses dados serão utilizados"
 
-#~ msgid "Time"
-#~ msgstr "Hora"
+#: games/templates/games/terms.html:10
+msgid ""
+"We must warn that if you do not agree with the content of these terms, you "
+"should not register as user of our website. However, if your register, this "
+"means you agree with the following terms"
+msgstr ""
+"Alertamos que, se você não concorda com o conteúdo destes termos, não se "
+"registre como usuário de nosso site. Entretanto, caso você se registre, isso "
+"significa que concorda com os termos a seguir"
 
-#~ msgid "not available"
-#~ msgstr "não disponível"
+#: games/templates/games/terms.html:12
+msgid "Privacy policy"
+msgstr "Política de privacidade"
+
+#: games/templates/games/terms.html:14
+msgid "Provided information"
+msgstr "Informações fornecidas"
+
+#: games/templates/games/terms.html:16
+msgid ""
+"Once you register, you will give us access to the following information "
+"about you:"
+msgstr "Uma vez registrado, você nos dará acesso às seguintes informações:"
+
+#: games/templates/games/terms.html:20
+msgid "your name"
+msgstr "seu nome"
+
+#: games/templates/games/terms.html:21
+msgid "email"
+msgstr "email"
+
+#: games/templates/games/terms.html:22
+msgid "gender"
+msgstr "sexo"
+
+#: games/templates/games/terms.html:23
+msgid "language"
+msgstr "idioma"
+
+#: games/templates/games/terms.html:24
+msgid "age range"
+msgstr "faixa etária"
+
+#: games/templates/games/terms.html:25
+msgid "photo or user image (when available)"
+msgstr "foto ou imagem de usuário (quando disponível)"
+
+#: games/templates/games/terms.html:26
+msgid "Google Plus url (when registering with Google account)"
+msgstr "url do Google Plus (quando se registrar com a conta do Google)"
+
+#: games/templates/games/terms.html:30
+msgid "How do we use the information provided by you?"
+msgstr "Como utilizamos a informação fornecida por você?"
+
+#: games/templates/games/terms.html:32
+msgid ""
+"We can use the information provided when you register, edit your profile and "
+"use this website to"
+msgstr ""
+"Podemos usar a informação fornecida quando você se registrar, editar seu "
+"perfil e usar este website para"
+
+#: games/templates/games/terms.html:36
+msgid "improve the usability of the website"
+msgstr "melhorar a usabilidade do site"
+
+#: games/templates/games/terms.html:37
+msgid "send periodic emails about subjects we judge is of your interest"
+msgstr ""
+"enviar emails periódicos sobre assuntos que julgamos ser de seu interesse"
+
+#: games/templates/games/terms.html:38
+msgid ""
+"write and publish academic research articles. Since the objectives of this "
+"website are strictly academic, the information provided by the users will be "
+"used only for academic research of non-profit character based on these data. "
+"We also commit to not reveal the identity or any information about a single "
+"user or group of users"
+msgstr ""
+"escrever e publicar artigos de pesquisa acadêmica. Como os objetivos deste "
+"website são estritamente acadêmicos, as informações fornecidas pelos "
+"usuários serão usadas apenas para a elaboração de pesquisa acadêmica de "
+"caráter não lucrativo baseada nesses dados. Também nos comprometemos a não "
+"revelar a identidade ou qualquer informação sobre um usuário específico ou "
+"grupo de usuários"
+
+#: games/templates/games/terms.html:42
+msgid "Provision of information to third party"
+msgstr "Fornecimento de informações a terceiros"
+
+#: games/templates/games/terms.html:44
+msgid ""
+"We do not sell, exchange or trade personal or group information by any "
+"means. Any product generated in the future that use these informations will "
+"not cite nominally, under any circumstance, the user that provided them"
+msgstr ""
+"Nós não vendemos, trocamos ou negociamos informações pessoais ou de grupos "
+"em qualquer circunstância. Qualquer produto gerado no futuro que use essas "
+"informações não citarão nominalmente, em qualquer circunstância, o usuário "
+"que as forneceu"
+
+#: games/templates/games/terms.html:46
+msgid "Future changes in this privacy policy"
+msgstr "Alterações futuras nesta política de privacidade"
+
+#: games/templates/games/terms.html:48
+msgid ""
+"This privacy policy may be reviewed without previous warning but, if they "
+"are changed, all the changes will be duly communicated. Therefore we "
+"strongly recommend you to regularly consult our privacy policy to keep "
+"yourself updated"
+msgstr ""
+"Esta política de privacidade pode ser revista sem aviso prévio mas, caso "
+"elas sejam alteradas, todas as alterações serão devidamente comunicadas. "
+"Portanto, nós recomendamos fortemente que você consulte nossa política de "
+"privacidade regularmente para se manter atualizado"

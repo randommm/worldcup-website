@@ -4,9 +4,49 @@
 {% block title %}Terms of Service{% endblock %}
 
 {% block content %}
-  	<h1>{% trans "Terms of Service" %}</h1>
+  	<h1>{% trans "Terms of use and privacy" %}</h1>
 
-    Conteudo aqui
+  	<p>{% trans "We are committed to keep your privacy. The objective of this text is to clarify which informations are collected from the users of our website and in which way these data are used" %}.</p>
+  	<p>{% trans "We must warn that if you do not agree with the content of these terms, you should not register as user of our website. However, if your register, this means you agree with the following terms" %}.</p>
+
+	<h1>{% trans "Privacy policy" %}</h1>
+
+	<h2>{% trans "Provided information" %}</h2>
+
+	<p>{% trans "Once you register, you will give us access to the following information about you:" %}</p>
+
+	<ol type="a">
+
+		<li> {% trans "your name" %};</li>
+		<li> {% trans "email" %};</li>
+		<li> {% trans "gender" %};</li>
+		<li> {% trans "language" %};</li>
+		<li> {% trans "age range" %};</li>
+		<li> {% trans "photo or user image (when available)" %};</li>
+		<li> {% trans "Google Plus url (when registering with Google account)" %}.</li>
+
+	</ol>
+
+	<h2>{% trans "How do we use the information provided by you?" %}</h2>
+
+	<p>{% trans "We can use the information provided when you register, edit your profile and use this website to" %}:</p>
+
+	<ol type="a">
+
+		<li> {% trans "improve the usability of the website" %};</li>
+		<li> {% trans "send periodic emails about subjects we judge is of your interest" %};</li>
+		<li> {% trans "write and publish academic research articles. Since the objectives of this website are strictly academic, the information provided by the users will be used only for academic research of non-profit character based on these data. We also commit to not reveal the identity or any information about a single user or group of users" %}.</li>
+
+	</ol>
+
+	<h2>{% trans "Provision of information to third party" %}</h2>
+
+	<p>{% trans "We do not sell, exchange or trade personal or group information by any means. Any product generated in the future that use these informations will not cite nominally, under any circumstance, the user that provided them" %}.</p>
+
+	<h2>{% trans "Future changes in this privacy policy" %}</h2>
+
+	<p>{% trans "This privacy policy may be reviewed without previous warning but, if they are changed, all the changes will be duly communicated. Therefore we strongly recommend you to regularly consult our privacy policy to keep yourself updated" %}.</p>
+
 <br>
 {% endblock %}
 

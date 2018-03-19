@@ -8,11 +8,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2018-03-16 17:26-0300\n"
-=======
-"POT-Creation-Date: 2018-03-15 18:47-0300\n"
->>>>>>> d783602bd37be5975bfecceac5f92d7ae6f1822e
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,9 +27,7 @@ msgstr "Equipe & contato"
 
 #: games/templates/games/contact.html:9
 msgid "The following researchers are voluntarily developing this website."
-msgstr ""
-<<<<<<< HEAD
-"Os seguintes pesquisadores estão voluntariamente desenvolvendo este website."
+msgstr "Os seguintes pesquisadores estão voluntariamente desenvolvendo este website."
 
 #: games/templates/games/contact.html:14
 msgid "project original idea"
@@ -110,94 +103,18 @@ msgstr "Hora local (Rússia)"
 msgid "Your forecast"
 msgstr "Sua previsão"
 
-#: games/templates/games/games.html:64 games/templates/games/games.html:66
-=======
-
-#: games/templates/games/contact.html:14
-msgid "project original idea"
-msgstr ""
-
-#: games/templates/games/contact.html:15
-msgid "website content and translation"
-msgstr ""
-
-#: games/templates/games/contact.html:16
-msgid "project and website management"
-msgstr ""
-
-#: games/templates/games/contact.html:20
-msgid "website creation and development"
-msgstr ""
-
-#: games/templates/games/contact.html:21
-#, fuzzy
-#| msgid "first contest"
-msgid "website content"
-msgstr "primeiro concurso"
-
-#: games/templates/games/contact.html:22
-msgid "website and server management"
-msgstr ""
-
-#: games/templates/games/contact.html:26
-msgid ""
-"Beside the ones mentioned above, the following are also members of the "
-"advisory and research board. They are all members (faculty or graduate "
-"students) of the Department of Statistics of the Federal University of S. "
-"Carlos, Brazil."
-msgstr ""
-
-#: games/templates/games/contact.html:37
-msgid "Questions or suggestions should be sent to marciodiniz@ufscar.br."
-msgstr "Perguntas ou sugestões devem ser enviadas para marciodiniz@ufscar.br."
-
-#: games/templates/games/contact.html:38
-msgid "Technical problems should be sent to m@marcoinacio.com."
-msgstr ""
-
-#: games/templates/games/games.html:47
-msgid "Updated!"
-msgstr "Atualizado!"
-
-#: games/templates/games/games.html:57 games/templates/games/results.html:7
-msgid "Game"
-msgstr "Jogo"
-
-#: games/templates/games/games.html:60
-msgid "Your local time"
-msgstr "Sua hora local"
-
-#: games/templates/games/games.html:64
-msgid "Russia time"
-msgstr "Hora de Moscou"
-
-#: games/templates/games/games.html:67
-msgid "Your forecast"
-msgstr "Sua previsão"
-
-#: games/templates/games/games.html:69 games/templates/games/games.html:71
->>>>>>> d783602bd37be5975bfecceac5f92d7ae6f1822e
 #: games/templates/games/results.html:10 games/templates/games/results.html:14
 msgid "win"
 msgstr "vitória"
 
-<<<<<<< HEAD
 #: games/templates/games/games.html:65 games/templates/games/results.html:12
 msgid "tie"
 msgstr "empate"
 
 #: games/templates/games/games.html:68
-=======
-#: games/templates/games/games.html:70 games/templates/games/results.html:12
-msgid "tie"
-msgstr "empate"
-
-#: games/templates/games/games.html:73
->>>>>>> d783602bd37be5975bfecceac5f92d7ae6f1822e
 msgid "Not made yet"
 msgstr "Ainda não realizada"
 
-<<<<<<< HEAD
 #: games/templates/games/games.html:91 games/templates/games/games.html:96
 msgid "If"
 msgstr "Se"
@@ -216,33 +133,12 @@ msgid "If the game ends tied, you will get"
 msgstr "Se o jogo terminar empatado, você marca"
 
 #: games/templates/games/games.html:110
-=======
-#: games/templates/games/games.html:96 games/templates/games/games.html:101
-msgid "If"
-msgstr "Se"
-
-#: games/templates/games/games.html:96 games/templates/games/games.html:101
-msgid "wins, you will get"
-msgstr "ganhar, você marca"
-
-#: games/templates/games/games.html:97 games/templates/games/games.html:102
-#: games/templates/games/games.html:107
-msgid "points"
-msgstr "pontos"
-
-#: games/templates/games/games.html:106
-msgid "If tie, you will get"
-msgstr "Se empatar, você marca"
-
-#: games/templates/games/games.html:115
->>>>>>> d783602bd37be5975bfecceac5f92d7ae6f1822e
 msgid ""
 "Attention: you are not logged in, therefore your changes will not be saved."
 msgstr ""
 "Atenção: você não está conectado, e portanto suas alterações não serão "
 "salvas."
 
-<<<<<<< HEAD
 #: games/templates/games/games.html:112
 msgid "Login or sign-up"
 msgstr "Entre ou registre-se"
@@ -252,17 +148,6 @@ msgid "to have your forecasts stored"
 msgstr "para ter suas previsões registradas"
 
 #: games/templates/games/games.html:132
-=======
-#: games/templates/games/games.html:117
-msgid "Login or sign-up"
-msgstr "Entre ou registre-se"
-
-#: games/templates/games/games.html:117
-msgid "to have your forecasts stored"
-msgstr "para ter suas previsões registradas"
-
-#: games/templates/games/games.html:137
->>>>>>> d783602bd37be5975bfecceac5f92d7ae6f1822e
 msgid "No game available"
 msgstr "Nenhum jogo disponível"
 
@@ -1478,7 +1363,6 @@ msgid ""
 "We can use the information provided when you register, edit your profile and "
 "use this website to"
 msgstr ""
-<<<<<<< HEAD
 "Podemos usar a informação fornecida quando você se registrar, editar seu "
 "perfil e usar este website para"
 
@@ -1536,5 +1420,3 @@ msgstr ""
 "elas sejam alteradas, todas as alterações serão devidamente comunicadas. "
 "Portanto, nós recomendamos fortemente que você consulte nossa política de "
 "privacidade regularmente para se manter atualizado"
-=======
->>>>>>> d783602bd37be5975bfecceac5f92d7ae6f1822e

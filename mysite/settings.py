@@ -132,7 +132,9 @@ AUTHENTICATION_BACKENDS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-ALLOWED_HOSTS = ['site-copa.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['site-copa.herokuapp.com', '127.0.0.1',
+                 '104.198.234.11', 'fifaexperts.com',
+                 'www.fifaexperts.com']
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

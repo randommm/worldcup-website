@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
+from .models import UserData
 import requests
 
 def index(request):
@@ -21,6 +22,15 @@ def login(request):
 
 @login_required
 def profile(request):
+    return render(request, 'accounts/profile.html')
+
+@login_required
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('accounts:login'))
+
+@login_required
+def rpass(request, urlnext):
     user = User.objects.get(id=request.user.id)
     social = user.social_auth.get(provider='google-oauth2')
     response = requests.get(
@@ -28,10 +38,11 @@ def profile(request):
         params={'access_token': social.extra_data['access_token']}
     )
     extrainfo = response.json()
-    context = dict(extrainfo = extrainfo)
-    return render(request, 'accounts/profile.html', context)
 
-@login_required
-def logout_view(request):
-    logout(request)
-    return HttpResponseRedirect(reverse('accounts:login'))
+    user_data = UserData.objects.get_or_create(user=user)[0]
+    user_data.data = extrainfo
+    user_data.save()
+
+    path = "/" + urlnext
+    return HttpResponseRedirect(path)
+

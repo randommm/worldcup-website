@@ -8,6 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-19 13:35-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +28,8 @@ msgstr "Equipe & contato"
 
 #: games/templates/games/contact.html:9
 msgid "The following researchers are voluntarily developing this website."
-msgstr "Os seguintes pesquisadores estão voluntariamente desenvolvendo este website."
+msgstr ""
+"Os seguintes pesquisadores estão voluntariamente desenvolvendo este website."
 
 #: games/templates/games/contact.html:14
 msgid "project original idea"
@@ -79,75 +81,78 @@ msgstr ""
 "Caso tenha algum problema técnico ao acessar o site, por favor relate os "
 "mesmos para m@marcoinacio.com."
 
-#: games/templates/games/games.html:46
+#: games/templates/games/games.html:47
 msgid "Updated!"
 msgstr "Atualizado!"
 
-#: games/templates/games/games.html:55
+#: games/templates/games/games.html:56
 msgid "Submit your forecast"
 msgstr "Envie suas previsão"
 
-#: games/templates/games/games.html:56 games/templates/games/results.html:7
+#: games/templates/games/games.html:57 games/templates/games/results.html:7
 msgid "Game"
 msgstr "Jogo"
 
-#: games/templates/games/games.html:58
-msgid "Time (Brazil)"
-msgstr "Hora (Brasília)"
-
 #: games/templates/games/games.html:60
-msgid "Time (Russia)"
-msgstr "Hora local (Rússia)"
+#, fuzzy
+#| msgid "Your probabilities"
+msgid "Your local time"
+msgstr "Suas probabilidades"
 
-#: games/templates/games/games.html:62
+#: games/templates/games/games.html:64
+msgid "Russia time"
+msgstr ""
+
+#: games/templates/games/games.html:67
 msgid "Your forecast"
 msgstr "Sua previsão"
 
+#: games/templates/games/games.html:69 games/templates/games/games.html:71
 #: games/templates/games/results.html:10 games/templates/games/results.html:14
 msgid "win"
 msgstr "vitória"
 
-#: games/templates/games/games.html:65 games/templates/games/results.html:12
+#: games/templates/games/games.html:70 games/templates/games/results.html:12
 msgid "tie"
 msgstr "empate"
 
-#: games/templates/games/games.html:68
+#: games/templates/games/games.html:73
 msgid "Not made yet"
 msgstr "Ainda não realizada"
 
-#: games/templates/games/games.html:91 games/templates/games/games.html:96
+#: games/templates/games/games.html:96 games/templates/games/games.html:101
 msgid "If"
 msgstr "Se"
 
-#: games/templates/games/games.html:91 games/templates/games/games.html:96
+#: games/templates/games/games.html:96 games/templates/games/games.html:101
 msgid "wins, you will get"
 msgstr "ganhar, você marca"
 
-#: games/templates/games/games.html:92 games/templates/games/games.html:97
-#: games/templates/games/games.html:102
+#: games/templates/games/games.html:97 games/templates/games/games.html:102
+#: games/templates/games/games.html:107
 msgid "points"
 msgstr "pontos"
 
-#: games/templates/games/games.html:101
+#: games/templates/games/games.html:106
 msgid "If the game ends tied, you will get"
 msgstr "Se o jogo terminar empatado, você marca"
 
-#: games/templates/games/games.html:110
+#: games/templates/games/games.html:115
 msgid ""
 "Attention: you are not logged in, therefore your changes will not be saved."
 msgstr ""
 "Atenção: você não está conectado, e portanto suas alterações não serão "
 "salvas."
 
-#: games/templates/games/games.html:112
+#: games/templates/games/games.html:117
 msgid "Login or sign-up"
 msgstr "Entre ou registre-se"
 
-#: games/templates/games/games.html:112
+#: games/templates/games/games.html:117
 msgid "to have your forecasts stored"
 msgstr "para ter suas previsões registradas"
 
-#: games/templates/games/games.html:132
+#: games/templates/games/games.html:137
 msgid "No game available"
 msgstr "Nenhum jogo disponível"
 
@@ -1420,3 +1425,9 @@ msgstr ""
 "elas sejam alteradas, todas as alterações serão devidamente comunicadas. "
 "Portanto, nós recomendamos fortemente que você consulte nossa política de "
 "privacidade regularmente para se manter atualizado"
+
+#~ msgid "Time (Brazil)"
+#~ msgstr "Hora (Brasília)"
+
+#~ msgid "Time (Russia)"
+#~ msgstr "Hora local (Rússia)"

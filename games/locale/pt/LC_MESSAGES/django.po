@@ -1429,19 +1429,3 @@ msgstr ""
 "elas sejam modificadas, todas as alterações serão devidamente comunicadas. "
 "Portanto, nós recomendamos fortemente que você consulte nossa política de "
 "privacidade regularmente para se manter atualizado"
-
-#~ msgid "Time (Brazil)"
-#~ msgstr "Hora (Brasília)"
-
-#~ msgid "Time (Russia)"
-#~ msgstr "Hora local (Rússia)"
-<<<<<<< HEAD
-
-#~ msgid "Questions or suggestions should be sent to marciodiniz@ufscar.br."
-#~ msgstr ""
-#~ "Perguntas ou sugestões devem ser enviadas para marciodiniz@ufscar.br."
-
-#~ msgid "If tie, you will get"
-#~ msgstr "Se empatar, você marca"
-=======
->>>>>>> 4c6f03ed14a0d220ab1c0027542ba9ced2721482

@@ -68,7 +68,7 @@
 
    {% trans "Leaderboard" %}:
 
-   <ul>
+   <ol>
    {% for user in users %}
      <li>
      {% trans "Name" %}: {{ user.first_name }} {{ user.last_name }}
@@ -101,7 +101,7 @@
      {% endif %}
      </li>
    {% endfor %}
-   </ul>
+   </ol>
 
 
    <hr />

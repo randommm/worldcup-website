@@ -1338,7 +1338,7 @@ msgid "email"
 msgstr "email"
 
 #: games/templates/games/terms.html:22
-msgid "gender"
+msgid "sex"
 msgstr "sexo"
 
 #: games/templates/games/terms.html:23

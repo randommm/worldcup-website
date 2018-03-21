@@ -1,11 +1,11 @@
 {% load i18n %}
 
 {% if points %}
-   <ul>
+   <ol>
    {% for point in points %}
       <li>{{ point.user.first_name }} {{ point.user.last_name }}: {{ point.pointf }}</li>
    {% endfor %}
-   </ul>
+   </ol>
 {% else %}
     <p>{% trans "The World Cup has not started yet, so we have no scoreboard..." %}</p>
 {% endif %}

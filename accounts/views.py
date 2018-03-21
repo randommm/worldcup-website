@@ -41,8 +41,9 @@ def rpass(request):
     else:
         social = user.social_auth.filter(provider='facebook')
         response = requests.get(
-            'https://www.googleapis.com/plus/v1/people/me',
-            params={'access_token': social[0].extra_data['access_token']}
+            'https://graph.facebook.com/' + str(social[0].uid),
+            params={'fields': 'id,name,locale,age_range,gender',
+            'access_token': social[0].extra_data['access_token']}
         )
 
     extrainfo = response.json()

@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^profile/', views.profile, name='profile'),
     url(r'^login/', views.login, name='login'),
     url(r'^logout/$', views.logout_view, name='logout'),
-    url(r'^rpass/(?P<urlnext>.*)$', views.rpass, name='rpass'),
+    url(r'^rpass/$', views.rpass, name='rpass'),
 ]

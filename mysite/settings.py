@@ -185,3 +185,5 @@ LANGUAGE_CODE = 'en'
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL="/accounts/rpass"

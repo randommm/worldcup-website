@@ -30,19 +30,26 @@ def logout_view(request):
     return HttpResponseRedirect(reverse('accounts:login'))
 
 @login_required
-def rpass(request, urlnext):
+def rpass(request):
     user = User.objects.get(id=request.user.id)
-    social = user.social_auth.get(provider='google-oauth2')
-    response = requests.get(
-        'https://www.googleapis.com/plus/v1/people/me',
-        params={'access_token': social.extra_data['access_token']}
-    )
+    social = user.social_auth.filter(provider='google-oauth2')
+    if len(social) > 0:
+        response = requests.get(
+            'https://www.googleapis.com/plus/v1/people/me',
+            params={'access_token': social[0].extra_data['access_token']}
+        )
+    else:
+        social = user.social_auth.filter(provider='facebook')
+        response = requests.get(
+            'https://www.googleapis.com/plus/v1/people/me',
+            params={'access_token': social[0].extra_data['access_token']}
+        )
+
     extrainfo = response.json()
 
     user_data = UserData.objects.get_or_create(user=user)[0]
     user_data.data = extrainfo
     user_data.save()
 
-    path = "/" + urlnext
-    return HttpResponseRedirect(path)
+    return HttpResponseRedirect("/")
 

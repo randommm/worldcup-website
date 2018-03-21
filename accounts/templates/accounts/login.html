@@ -5,9 +5,11 @@
 <style>
   #login_area {display:none}
 </style>
-<a href="{% url 'social:begin' 'google-oauth2' %}?next=/accounts/rpass{{ nextpage }}">{% trans "Login or create an account using Google" %}</a>
+<a href="{% url 'social:begin' 'google-oauth2' %}">{% trans "Login or create an account using Google" %}</a>
 <br />
-<a href="{% url 'social:begin' 'facebook' %}?next=/accounts/rpass{{ nextpage }}">{% trans "Login or create an account using Facebook" %}</a>
+<br />
+<a href="{% url 'social:begin' 'facebook' %}">{% trans "Login or create an account using Facebook" %}</a>
+<br />
 <br />
 {% trans "By joining you are agreeing with our " %}<a href="{% url 'games:terms' %}">{% trans "Terms of Privacy" %}</a>
 {% endblock %}

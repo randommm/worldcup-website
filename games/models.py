@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class Team(models.Model):
     name = models.CharField(max_length=200, unique=True)
+    name_pt = models.CharField(max_length=200, default="xx")
     flag = models.CharField(max_length=200, default="xx")
 
     def __str__(self):

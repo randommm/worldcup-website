@@ -8,6 +8,7 @@ from django.db import transaction, DatabaseError
 from django.utils.timezone import get_current_timezone
 import datetime
 from .leagues import *
+from django.utils.translation import get_language
 
 
 @transaction.atomic
@@ -128,6 +129,11 @@ def games(request):
                 game.bet.prob_tie = 100 - game.bet.prob0 - game.bet.prob1
             except (KeyError, Bet.DoesNotExist):
                 pass
+
+    if get_language() == "pt-br" or get_language() == "pt":
+        for game in games:
+            game.team0.name = game.team0.name_pt
+            game.team1.name = game.team1.name_pt
 
     user_tz = get_current_timezone()
 

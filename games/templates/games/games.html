@@ -54,7 +54,7 @@
     </script>
     {% for game in games %}
     <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">{% trans "Submit your forecast" %}</a></div>
-        <li>{% trans "Game" %}: {{ game.team0 }} vs {{ game.team1 }}.</li>
+        <li>{% trans "Game" %}: {{ game.team0.name }} vs {{ game.team1.name }}.</li>
 
         {% timezone user_tz %}
         <li>{% trans "Your local time" %}: {{ game.date }}</li>
@@ -66,9 +66,9 @@
 
         <li>{% trans "Your forecast" %}:<span id="yforecast_{{ forloop.counter }}">
             {% if game.bet %}
-            {{ game.bet.prob0 }}% {% trans "win" %} {{ game.team0 }} ||
+            {{ game.bet.prob0 }}% {% trans "win" %} {{ game.team0.name }} ||
             {{ game.bet.prob_tie }}% {% trans "tie" %} ||
-            {{ game.bet.prob1 }}% {% trans "win" %} {{ game.team1 }}.
+            {{ game.bet.prob1 }}% {% trans "win" %} {{ game.team1.name }}.
             {% else %}
             {% trans "Not made yet" %}.
             {% endif %}</span>
@@ -93,12 +93,12 @@
 
           <ul style="margin-top: 10px">
             <li>
-              {% trans "If" %} {{ game.team0 }} {% trans "wins, you will get" %}:
+              {% trans "If" %} {{ game.team0.name }} {% trans "wins, you will get" %}:
               <span id="gain_team0_{{ forloop.counter }}"></span> {% trans "points" %}.
             </li>
 
             <li>
-              {% trans "If" %} {{ game.team1 }} {% trans "wins, you will get" %}:
+              {% trans "If" %} {{ game.team1.name }} {% trans "wins, you will get" %}:
               <span id="gain_team1_{{ forloop.counter }}"></span> {% trans "points" %}.
             </li>
 
@@ -127,7 +127,7 @@
     {% endif %}
     <script>
     activate_slider({{ forloop.counter }},
-                    "{{ game.team0 }}", "{{ game.team1 }}",
+                    "{{ game.team0.name }}", "{{ game.team1.name }}",
                     {{ game.bet.prob0|default:33 }},
                     {{ game.bet.prob1|default:33 }})
     </script>

@@ -127,8 +127,17 @@ APPEND_SLASH = True
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
 )
+
+SOCIAL_AUTH_FACEBOOK_KEY = 'secrethere'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'secrethere'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  'locale': 'en_US',
+  'fields': 'id, name, email, age_range'
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/

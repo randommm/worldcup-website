@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-20 16:26-0300\n"
+"POT-Creation-Date: 2018-03-21 14:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1354,14 +1354,21 @@ msgid "photo or user image (when available)"
 msgstr "foto ou imagem de usuário (quando disponível)"
 
 #: games/templates/games/terms.html:26
-msgid "Google Plus url (when registering with Google account)"
-msgstr "url do Google Plus (quando se registrar com a conta do Google)"
+#, fuzzy
+#| msgid "Google Plus url (when registering with Google account)"
+msgid "Google Plus url/id (when registering with a Google account)"
+msgstr "url/id do Google Plus (quando se registrar com uma conta do Google)"
 
-#: games/templates/games/terms.html:30
+#: games/templates/games/terms.html:27
+#| msgid "Google Plus url (when registering with Google account)"
+msgid "Facebook url/id (when registering with a Facebook account)"
+msgstr "url/id do Facebook (quando se registrar com uma conta do Facebook)"
+
+#: games/templates/games/terms.html:31
 msgid "How do we use the information provided by you?"
 msgstr "Como utilizamos a informação fornecida por você?"
 
-#: games/templates/games/terms.html:32
+#: games/templates/games/terms.html:33
 msgid ""
 "We can use the information provided when you register, edit your profile and "
 "use this website to"
@@ -1369,16 +1376,16 @@ msgstr ""
 "Podemos usar a informação fornecida quando você se registrar, editar seu "
 "perfil e usar este website para"
 
-#: games/templates/games/terms.html:36
+#: games/templates/games/terms.html:37
 msgid "improve the usability of the website"
 msgstr "melhorar a usabilidade do site"
 
-#: games/templates/games/terms.html:37
+#: games/templates/games/terms.html:38
 msgid "send periodic emails about subjects we judge is of your interest"
 msgstr ""
 "enviar emails periódicos sobre assuntos que julgamos ser de seu interesse"
 
-#: games/templates/games/terms.html:38
+#: games/templates/games/terms.html:39
 msgid ""
 "write and publish academic research articles. Since the objectives of this "
 "website are strictly academic, the information provided by the users will be "
@@ -1393,11 +1400,11 @@ msgstr ""
 "revelar a identidade ou qualquer informação sobre um usuário específico ou "
 "grupo de usuários"
 
-#: games/templates/games/terms.html:42
+#: games/templates/games/terms.html:43
 msgid "Provision of information to third party"
 msgstr "Fornecimento de informações a terceiros"
 
-#: games/templates/games/terms.html:44
+#: games/templates/games/terms.html:45
 msgid ""
 "We do not sell, exchange or trade personal or group information by any "
 "means. Any product generated in the future that use these informations will "
@@ -1408,11 +1415,11 @@ msgstr ""
 "informações não citarão nominalmente, em qualquer circunstância, o usuário "
 "que as forneceu"
 
-#: games/templates/games/terms.html:46
+#: games/templates/games/terms.html:47
 msgid "Future changes in this privacy policy"
 msgstr "Futuras modificações nesta política de privacidade"
 
-#: games/templates/games/terms.html:48
+#: games/templates/games/terms.html:49
 msgid ""
 "This privacy policy may be reviewed without previous warning but, if they "
 "are changed, all the changes will be duly communicated. Therefore we "

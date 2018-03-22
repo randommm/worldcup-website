@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-21 14:59-0300\n"
+"POT-Creation-Date: 2018-03-22 17:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgstr "Atualizado!"
 
 #: games/templates/games/games.html:56
 msgid "Submit your forecast"
-msgstr "Envie suas previsões"
+msgstr "Envie sua previsão"
 
 #: games/templates/games/games.html:57 games/templates/games/results.html:7
 msgid "Game"
@@ -1040,7 +1040,7 @@ msgstr "Envie suas probabilidades para checar seus resultados"
 
 #: games/templates/games/rules.html:13
 msgid "Rules: how to play our forecast contest"
-msgstr "Regras: como jogar nosso concurso de previsões"
+msgstr "Regras: como participar de nosso concurso de previsões"
 
 #: games/templates/games/rules.html:15
 msgid ""
@@ -1360,7 +1360,6 @@ msgid "Google Plus url/id (when registering with a Google account)"
 msgstr "url/id do Google Plus (quando se registrar com uma conta do Google)"
 
 #: games/templates/games/terms.html:27
-#| msgid "Google Plus url (when registering with Google account)"
 msgid "Facebook url/id (when registering with a Facebook account)"
 msgstr "url/id do Facebook (quando se registrar com uma conta do Facebook)"
 

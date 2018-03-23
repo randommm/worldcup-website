@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-22 17:49-0300\n"
+"POT-Creation-Date: 2018-03-23 12:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,6 +65,15 @@ msgstr "Sair"
 #: mysite/templates/base.html:50 mysite/templates/base.html:80
 msgid "Join or sign-in"
 msgstr "Registre-se ou entre"
+
+#: mysite/templates/base.html:55 mysite/templates/base.html:56
+msgid ""
+"Submit your World Cup forecasts to fifaexperts.com and show your know more "
+"about football than your friends (and two mathematical models)."
+msgstr ""
+"Informe suas previsões para os jogos da Copa 2018 em fifaexperts.com e "
+"mostre que sabe mais sobre futebol que seus amigos (e dois modelos "
+"matemáticos)."
 
 #: mysite/templates/base.html:73
 msgid "Objectives"

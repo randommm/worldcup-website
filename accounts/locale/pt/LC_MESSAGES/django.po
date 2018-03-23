@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-22 17:49-0300\n"
+"POT-Creation-Date: 2018-03-23 12:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,10 +23,8 @@ msgid "Login or create an account using Google"
 msgstr "Entre ou crie uma conta usando o Google"
 
 #: accounts/templates/accounts/login.html:11
-#, fuzzy
-#| msgid "Login or create an account using Google"
 msgid "Login or create an account using Facebook"
-msgstr "Entre ou crie uma conta usando o Google"
+msgstr "Entre ou crie uma conta usando o Facebook"
 
 #: accounts/templates/accounts/login.html:14
 msgid "By joining you are agreeing with our "

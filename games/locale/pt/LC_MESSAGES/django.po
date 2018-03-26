@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-23 12:10-0300\n"
+"POT-Creation-Date: 2018-03-26 11:29-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,8 +82,8 @@ msgstr ""
 "mesmos para m@marcoinacio.com."
 
 #: games/templates/games/games.html:14 games/templates/games/games.html:16
-msgid "wins"
-msgstr "vencer"
+msgid " wins"
+msgstr " vencer"
 
 #: games/templates/games/games.html:15
 msgid "Draw"
@@ -128,7 +128,7 @@ msgstr "Ainda não realizada"
 
 #: games/templates/games/games.html:83
 msgid "Probabilities"
-msgstr "Probabilidades"
+msgstr "Probabilidades de"
 
 #: games/templates/games/games.html:96 games/templates/games/games.html:101
 msgid "If"
@@ -136,7 +136,7 @@ msgstr "Se"
 
 #: games/templates/games/games.html:96 games/templates/games/games.html:101
 msgid "wins, you will get"
-msgstr "ganhar, você marca"
+msgstr "vencer, você marca"
 
 #: games/templates/games/games.html:97 games/templates/games/games.html:102
 #: games/templates/games/games.html:107

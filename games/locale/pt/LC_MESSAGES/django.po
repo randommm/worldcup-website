@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-26 15:36-0300\n"
+"POT-Creation-Date: 2018-03-26 15:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -698,19 +698,21 @@ msgstr "peça para entrar"
 msgid "Create new league"
 msgstr "Criar nova liga"
 
+#: games/templates/games/league.html:41 games/templates/games/league.html:74
+msgid "Name"
+msgstr "Nome"
+
 #: games/templates/games/league.html:41
 msgid "submit"
-msgstr ""
+msgstr "enviar"
 
 #: games/templates/games/league.html:41
 msgid "create"
-msgstr ""
+msgstr "criar"
 
 #: games/templates/games/league.html:47
-#, fuzzy
-#| msgid "Leave league"
 msgid "League"
-msgstr "Sair da liga"
+msgstr "Liga"
 
 #: games/templates/games/league.html:52
 msgid "Users who asked to join the league"
@@ -731,10 +733,6 @@ msgstr "Nenhum usuário com aceitação pendente"
 #: games/templates/games/league.html:69
 msgid "Leaderboard"
 msgstr "Classificação"
-
-#: games/templates/games/league.html:74
-msgid "Name"
-msgstr "Nome"
 
 #: games/templates/games/league.html:76
 msgid "Points"

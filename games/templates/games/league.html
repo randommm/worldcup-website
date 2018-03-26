@@ -38,13 +38,13 @@
   <hr />
   {% trans "Create new league" %}:
   <form href="#" onsubmit="return post_ff(this)" data_page="create">
-      Name: <input type="text" class="data_holder" name="name" /><input type="submit" value="create" /><strong class="result_holder"></strong>
+      Name: <input type="text" class="data_holder" name="name" /><input type="{% trans "submit" %}" value="{% trans "create" %}" /><strong class="result_holder"></strong>
   </form>
 
 
 {% else %}
    <div style="text-align: center; margin-bottom: 10px; font-size: 20px">
-     League <strong>{{league.name}}</strong>
+     {% trans "League" %}<strong>{{league.name}}</strong>
    </div>
 
 
@@ -163,8 +163,8 @@ function post_fa(elem_main) {
       elem_main = elem_main.wrap("<span></span>");
       elem_main.attr("confirmed", 1);
       elem_main.html("Yes, confirm!");
-      elem_main.parent().html("<strong>Are you sure of this? |</strong> " +
-        ' <a href="#" onclick="return post_fa_cancel(this)">No, cancel!</a> <strong>|</strong> ' +
+      elem_main.parent().html("<strong>{% trans "Are you sure of this" %}? |</strong> " +
+        ' <a href="#" onclick="return post_fa_cancel(this)">{% trans "No, cancel" %}!</a> <strong>|</strong> ' +
         elem_main.parent().html());
       return false;
   }

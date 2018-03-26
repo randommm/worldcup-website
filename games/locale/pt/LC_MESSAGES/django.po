@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-26 11:29-0300\n"
+"POT-Creation-Date: 2018-03-26 15:36-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -698,6 +698,20 @@ msgstr "peça para entrar"
 msgid "Create new league"
 msgstr "Criar nova liga"
 
+#: games/templates/games/league.html:41
+msgid "submit"
+msgstr ""
+
+#: games/templates/games/league.html:41
+msgid "create"
+msgstr ""
+
+#: games/templates/games/league.html:47
+#, fuzzy
+#| msgid "Leave league"
+msgid "League"
+msgstr "Sair da liga"
+
 #: games/templates/games/league.html:52
 msgid "Users who asked to join the league"
 msgstr "Usuários que pediram para entrar na liga"
@@ -761,6 +775,14 @@ msgstr "Transferir poderes de administrador da liga"
 #: games/templates/games/league.html:134
 msgid "Leave league"
 msgstr "Sair da liga"
+
+#: games/templates/games/league.html:166
+msgid "Are you sure of this"
+msgstr "Tem certeza"
+
+#: games/templates/games/league.html:167
+msgid "No, cancel"
+msgstr "Não, cancele"
 
 #: games/templates/games/league.html:197
 msgid "this name has already been taken"

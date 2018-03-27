@@ -792,7 +792,7 @@ msgstr "Não, cancele"
 
 #: games/templates/games/league.html:178
 msgid "Processing"
-msgstr ""
+msgstr "Processando"
 
 #: games/templates/games/league.html:197
 msgid "this name has already been taken"

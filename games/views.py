@@ -180,7 +180,11 @@ def results(request):
           bet.pontuated = False
        else:
           bet.pontuated = True
-       bet.ptie = 100 - bet.prob1 - bet.prob0;
+       bet.ptie = 100 - bet.prob1 - bet.prob0
+
+       if get_language() == "pt-br" or get_language() == "pt":
+          bet.game.team0.name = bet.game.team0.name_pt
+          bet.game.team1.name = bet.game.team1.name_pt
 
     context = {'bets': bets}
     return render(request, 'games/results.html', context)

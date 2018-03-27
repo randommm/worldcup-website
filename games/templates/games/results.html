@@ -4,14 +4,14 @@
    <ul>
    {% for bet in bets %}
      <li>
-     {% trans "Game" %}: {{ bet.game.team0 }} vs {{ bet.game.team1 }}
+     {% trans "Game" %}: {{ bet.game.team0.name }} vs {{ bet.game.team1.name }}
      <br />
      {% trans "Your probabilities" %}:
-     {{ bet.prob0 }}% {% trans "win" %} {{ bet.game.team0 }}
+     {{ bet.prob0 }}% {% trans "win" %} {{ bet.game.team0.name }}
      ||
      {{ bet.ptie }}% {% trans "tie" %}
      ||
-     {{ bet.prob1 }}% {% trans "win" %} {{ bet.game.team1 }}
+     {{ bet.prob1 }}% {% trans "win" %} {{ bet.game.team1.name }}
      <br />
      {% if bet.pontuated %}
         {% trans "You got" %} {{ bet.points }} P {% trans "here" %}.

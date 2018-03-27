@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 11:01-0300\n"
+"POT-Creation-Date: 2018-03-27 11:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -775,7 +775,7 @@ msgid "Leave league"
 msgstr "Sair da liga"
 
 #: games/templates/games/league.html:166
-msgid "Are you sure of this"
+msgid "Are you sure"
 msgstr "Tem certeza"
 
 #: games/templates/games/league.html:167

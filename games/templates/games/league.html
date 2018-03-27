@@ -161,7 +161,7 @@ function post_fa(elem_main) {
   }
   else {
       elem_main = elem_main.wrap("<span></span>");
-      elem_main.attr('{% trans "confirmed" %}', 1);
+      elem_main.attr('confirmed', 1);
       elem_main.html('{% trans "Yes, confirm" %}!');
       elem_main.parent().html("<strong>{% trans "Are you sure" %}? |</strong> " +
         ' <a href="#" onclick="return post_fa_cancel(this)">{% trans "No, cancel" %}!</a> <strong>|</strong> ' +

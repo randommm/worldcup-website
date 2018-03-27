@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 11:47-0300\n"
+"POT-Creation-Date: 2018-03-27 12:29-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -789,6 +789,10 @@ msgstr "Tem certeza"
 #: games/templates/games/league.html:167
 msgid "No, cancel"
 msgstr "Não, cancele"
+
+#: games/templates/games/league.html:178
+msgid "Processing"
+msgstr ""
 
 #: games/templates/games/league.html:197
 msgid "this name has already been taken"

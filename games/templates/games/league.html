@@ -175,7 +175,7 @@ function post_fa_cancel(elem) {
 }
 function post_ready(elem, page, post) {
   elem.wrap("<strong></strong>");
-  elem.html("{% trans"Processing" %}");
+  elem.html('{% trans "Processing" %}');
   $.ajax({
     type: "POST",
     url: "{% url 'games:league' %}" + page,
@@ -194,43 +194,43 @@ function post_ready(elem, page, post) {
     rt = res.responseText
     switch (rt) {
     case "name_taken":
-        text = "{% trans "this name has already been taken" %}";
+        text = '{% trans "this name has already been taken" %}';
         break;
     case "invalid_league_name":
-        text = "{% trans "invalid name. Must only cointain letters, numbers and spaces" %}";
+        text = '{% trans "invalid name. Must only cointain letters, numbers and spaces" %}';
         break;
     case "invalid_league_name_length":
-        text = "{% trans "league name must have between 5 and 50 characters" %}";
+        text = '{% trans "league name must have between 5 and 50 characters" %}';
         break;
     case "league_full":
-        text = "{% trans "league is full" %}";
+        text = '{% trans "league is full" %}';
         break;
     case "user_already_has_league":
-        text = "{% trans "the user already has a league" %}";
+        text = '{% trans "the user already has a league" %}';
         break;
     case "cannot_remove_adm_nor_mod":
-        text = "{% trans "only the admin can remove moderators" %}";
+        text = '{% trans "only the admin can remove moderators" %}';
         break;
     case "not_admin_nor_mod":
-        text = "{% trans "you are not the admin nor a moderator" %}";
+        text = '{% trans "you are not the admin nor a moderator" %}';
         break;
     case "not_admin":
-        text = "{% trans "you are not the admin" %}";
+        text = '{% trans "you are not the admin" %}';
         break;
     case "must_use_post":
-        text = "{% trans "you must use http POST" %}";
+        text = '{% trans "you must use http POST" %}';
         break;
     case "must_empty_or_transfer_group":
-        text = "{% trans "you must remove everyone or transfer admin powers before leaving" %}";
+        text = '{% trans "you must remove everyone or transfer admin powers before leaving" %}';
         break;
     case "cannot_autoremove":
-        text = "{% trans "you cannot remove yourself, use leave instead" %}";
+        text = '{% trans "you cannot remove yourself, use leave instead" %}';
         break;
     case "user_did_not_asked_to_join":
-        text = "{% trans "this user did not asked to join league" %}";
+        text = '{% trans "this user did not asked to join league" %}';
         break;
     default:
-        text = "{% trans "unknown error" %}";
+        text = '{% trans "unknown error" %}';
         if (rt.length <= 50) {
           text = " " + rt;
         }

@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'mysite.middleware.superuser.UserBasedExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -188,3 +189,5 @@ LOCALE_PATHS = (
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL="/accounts/rpass"
 SOCIAL_AUTH_NEW_USER_REDIRECT_URL="/accounts/rpass"
+
+REMOTE_ADDR=['201.95.150.127']

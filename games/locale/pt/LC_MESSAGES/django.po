@@ -826,7 +826,7 @@ msgstr "você deve usar http POST"
 #: games/templates/games/league.html:224
 msgid "you must remove everyone or transfer admin powers before leaving"
 msgstr ""
-"você deve remover todos ou transferir poderes de administrador antes de sair"
+"você deve remover todos os membros da liga ou transferir poderes de administrador antes de sair"
 
 #: games/templates/games/league.html:227
 msgid "you cannot remove yourself, use leave instead"

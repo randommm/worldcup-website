@@ -34,6 +34,8 @@ def league(request):
                 except (KeyError, Point.DoesNotExist):
                     user.points = 0
 
+            users = sorted(users, key=lambda x: getattr(x, "points"))
+
             users_invited = (LeagueAsked.objects
                                         .select_related('user')
                                         .filter(league_id=league.id))

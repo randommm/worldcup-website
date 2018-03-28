@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 16:18-0300\n"
+"POT-Creation-Date: 2018-03-28 16:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,7 +139,8 @@ msgid "wins, you will get"
 msgstr "vencer, você marca"
 
 #: games/templates/games/games.html:97 games/templates/games/games.html:102
-#: games/templates/games/games.html:107 games/templates/games/scoreboard.html:6
+#: games/templates/games/games.html:107 games/templates/games/league.html:76
+#: games/templates/games/scoreboard.html:6
 msgid "points"
 msgstr "pontos"
 

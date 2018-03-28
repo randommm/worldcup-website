@@ -3,7 +3,7 @@
 {% if points %}
    <ol>
    {% for point in points %}
-      <li>{{ point.user.first_name }} {{ point.user.last_name }}: {{ point.pointf }}</li>
+      <li>{{ point.user.first_name }} {{ point.user.last_name }}: {{ point.points }} {% trans "points" %}</li>
    {% endfor %}
    </ol>
 {% else %}

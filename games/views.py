@@ -164,10 +164,6 @@ def scoreboard(request):
     committer()
     points = Point.objects.all().order_by('-points')
 
-    for point in points:
-       pointunf = point.points
-       point.pointf = str(pointunf) + " P"
-
     context = {'points': points}
     return render(request, 'games/scoreboard.html', context)
 

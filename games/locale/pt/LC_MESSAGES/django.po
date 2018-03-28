@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 12:29-0300\n"
+"POT-Creation-Date: 2018-03-28 16:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,7 +139,7 @@ msgid "wins, you will get"
 msgstr "vencer, você marca"
 
 #: games/templates/games/games.html:97 games/templates/games/games.html:102
-#: games/templates/games/games.html:107
+#: games/templates/games/games.html:107 games/templates/games/scoreboard.html:6
 msgid "points"
 msgstr "pontos"
 
@@ -703,10 +703,6 @@ msgid "Name"
 msgstr "Nome"
 
 #: games/templates/games/league.html:41
-msgid "submit"
-msgstr "enviar"
-
-#: games/templates/games/league.html:41
 msgid "create"
 msgstr "criar"
 
@@ -773,10 +769,6 @@ msgstr "Transferir poderes de administrador da liga"
 #: games/templates/games/league.html:134
 msgid "Leave league"
 msgstr "Sair da liga"
-
-#: games/templates/games/league.html:164
-msgid "confirmed"
-msgstr "confirmado"
 
 #: games/templates/games/league.html:165
 msgid "Yes, confirm"
@@ -1473,3 +1465,9 @@ msgstr ""
 "elas sejam modificadas, todas as alterações serão devidamente comunicadas. "
 "Portanto, nós recomendamos fortemente que você consulte nossa política de "
 "privacidade regularmente para se manter atualizado"
+
+#~ msgid "submit"
+#~ msgstr "enviar"
+
+#~ msgid "confirmed"
+#~ msgstr "confirmado"

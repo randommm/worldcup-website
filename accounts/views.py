@@ -31,26 +31,29 @@ def logout_view(request):
 
 @login_required
 def rpass(request):
-    user = User.objects.get(id=request.user.id)
-    social = user.social_auth.filter(provider='google-oauth2')
-    if len(social) > 0:
-        response = requests.get(
-            'https://www.googleapis.com/plus/v1/people/me',
-            params={'access_token': social[0].extra_data['access_token']}
-        )
-    else:
-        social = user.social_auth.filter(provider='facebook')
-        response = requests.get(
-            'https://graph.facebook.com/' + str(social[0].uid),
-            params={'fields': 'id,name,locale,age_range,gender',
-            'access_token': social[0].extra_data['access_token']}
-        )
+    try:
+        user = User.objects.get(id=request.user.id)
+        social = user.social_auth.filter(provider='google-oauth2')
+        if len(social) > 0:
+            response = requests.get(
+                'https://www.googleapis.com/plus/v1/people/me',
+                params={'access_token': social[0].extra_data['access_token']}
+            )
+        else:
+            social = user.social_auth.filter(provider='facebook')
+            response = requests.get(
+                'https://graph.facebook.com/' + str(social[0].uid),
+                params={'fields': 'id,name,locale,age_range,gender',
+                'access_token': social[0].extra_data['access_token']}
+            )
 
-    extrainfo = response.json()
+        extrainfo = response.json()
 
-    user_data = UserData.objects.get_or_create(user=user)[0]
-    user_data.data = extrainfo
-    user_data.save()
+        user_data = UserData.objects.get_or_create(user=user)[0]
+        user_data.data = extrainfo
+        user_data.save()
+    except Exception:
+        pass
 
     return HttpResponseRedirect("/")
 

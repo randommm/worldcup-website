@@ -75,10 +75,12 @@ class LeagueUser(models.Model):
         return str(self.user)
 
 class LeagueAsked(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE,
-                                primary_key=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     league = models.ForeignKey(League, on_delete=models.CASCADE)
     rejected = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = ("user", "league")
 
     def __str__(self):
         return str(self.user) + str(self.league)

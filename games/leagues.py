@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 from django.db import transaction, DatabaseError
 import re
 
+max_league_members = 11
+
 def league(request):
     from .views import committer
     committer()
@@ -37,9 +39,13 @@ def league(request):
             users = sorted(users, key=lambda x: getattr(x, "points"),
                            reverse=True)
 
-            users_invited = (LeagueAsked.objects
-                                        .select_related('user')
-                                        .filter(league_id=league.id))
+
+            if len(users) < max_league_members:
+                users_invited = (LeagueAsked.objects
+                                          .select_related('user')
+                                          .filter(league_id=league.id))
+            else:
+                users_invited = None
 
             context = {'league_user': league_user,
                        'league': league,
@@ -47,7 +53,7 @@ def league(request):
                        'users_invited': users_invited}
         except (KeyError, LeagueUser.DoesNotExist):
             asked_leagues = LeagueAsked.objects.filter(user_id=user_id)
-            available_leagues = League.objects.filter(user_count__lt=11)
+            available_leagues = League.objects.filter(user_count__lt=max_league_members)
 
             asked_leagues_ids = list()
             for aleague in asked_leagues:
@@ -62,7 +68,7 @@ def league(request):
             try:
                 league_join = int(request.GET.get('league_join'))
                 league_join = League.objects.get(id=league_join,
-                                                 user_count__lt=11)
+                                                 user_count__lt=max_league_members)
                 if league_join.leagueasked_set.filter(user_id=user_id):
                     league_join = False
             except (TypeError, ValueError, League.DoesNotExist):
@@ -256,7 +262,7 @@ def league_add_user(request):
         return HttpResponseForbidden("user_already_has_league")
 
     check_league = League.objects.filter(id=league_id)
-    if check_league.count() >= 11:
+    if check_league.count() >= max_league_members:
         return HttpResponseForbidden("league_full")
 
     check_asked = LeagueAsked.objects.filter(user_id=p_user_id,
@@ -284,7 +290,7 @@ def league_ask_join(request):
         return HttpResponseForbidden("user_already_has_league")
 
     check_league = League.objects.filter(id=league_id)
-    if check_league.count() >= 11:
+    if check_league.count() >= max_league_members:
         return HttpResponseForbidden("league_full")
 
     LeagueAsked.objects.update_or_create(user_id=user_id,

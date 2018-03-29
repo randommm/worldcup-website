@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 16:44-0300\n"
+"POT-Creation-Date: 2018-03-29 10:21-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -167,7 +167,7 @@ msgstr "para ter suas previsões registradas"
 msgid "No game available"
 msgstr "Nenhum jogo disponível"
 
-#: games/templates/games/history.html:7
+#: games/templates/games/history.html:4 games/templates/games/history.html:7
 msgid "History"
 msgstr "História"
 
@@ -544,6 +544,10 @@ msgstr "7. [Veja"
 msgid "8. [See Peter Walley"
 msgstr "8. [Veja Peter Walley"
 
+#: games/templates/games/index.html:4
+msgid "Home"
+msgstr "Página inicial"
+
 #: games/templates/games/index.html:27
 msgid "Forecasting the FIFA WC"
 msgstr "Previsões da Copa 2018"
@@ -826,7 +830,8 @@ msgstr "você deve usar http POST"
 #: games/templates/games/league.html:224
 msgid "you must remove everyone or transfer admin powers before leaving"
 msgstr ""
-"você deve remover todos os membros da liga ou transferir os poderes de administrador antes de sair"
+"você deve remover todos os membros da liga ou transferir os poderes de "
+"administrador antes de sair"
 
 #: games/templates/games/league.html:227
 msgid "you cannot remove yourself, use leave instead"
@@ -1074,6 +1079,10 @@ msgstr "Este jogo ainda não acabou"
 #: games/templates/games/results.html:25
 msgid "Submit your probilities to check your results"
 msgstr "Envie suas probabilidades para checar seus resultados"
+
+#: games/templates/games/rules.html:4
+msgid "Rules"
+msgstr "Regras"
 
 #: games/templates/games/rules.html:13
 msgid "Rules: how to play our forecast contest"
@@ -1328,6 +1337,12 @@ msgstr ""
 msgid "The World Cup has not started yet, so we have no scoreboard..."
 msgstr "A Copa ainda não começou, então ainda não temos classificação..."
 
+#: games/templates/games/terms.html:4
+#, fuzzy
+#| msgid "Terms of use and privacy"
+msgid "Terms of Service"
+msgstr "Termos de uso e privacidade"
+
 #: games/templates/games/terms.html:7
 msgid "Terms of use and privacy"
 msgstr "Termos de uso e privacidade"
@@ -1466,9 +1481,3 @@ msgstr ""
 "elas sejam modificadas, todas as alterações serão devidamente comunicadas. "
 "Portanto, nós recomendamos fortemente que você consulte nossa política de "
 "privacidade regularmente para se manter atualizado"
-
-#~ msgid "submit"
-#~ msgstr "enviar"
-
-#~ msgid "confirmed"
-#~ msgstr "confirmado"

@@ -6,6 +6,10 @@
      <li>
      {% trans "Game" %}: {{ bet.game.team0.name }} vs {{ bet.game.team1.name }}
      <br />
+     {% if bet.game.resultn %}
+        {% trans "Game result" %}: {{ bet.game.resultn }}.
+        <br />
+     {% endif %}
      {% trans "Your probabilities" %}:
      {{ bet.prob0 }}% {% trans "win" %} {{ bet.game.team0.name }}
      ||

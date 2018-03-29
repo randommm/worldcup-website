@@ -169,18 +169,36 @@ def scoreboard(request):
 
 def results(request):
     committer()
-    bets = (Bet.objects.select_related("user")
+    bets = (Bet.objects.select_related("game")
             .filter(user=request.user.id))
     for bet in bets:
-       if bet.points == -1:
-          bet.pontuated = False
-       else:
-          bet.pontuated = True
-       bet.ptie = 100 - bet.prob1 - bet.prob0
+        if bet.points == -1:
+            bet.pontuated = False
+        else:
+            bet.pontuated = True
+            bet.ptie = 100 - bet.prob1 - bet.prob0
 
-       if get_language() == "pt-br" or get_language() == "pt":
-          bet.game.team0.name = bet.game.team0.name_pt
-          bet.game.team1.name = bet.game.team1.name_pt
+        if get_language() == "pt-br" or get_language() == "pt":
+            bet.game.team0.name = bet.game.team0.name_pt
+            bet.game.team1.name = bet.game.team1.name_pt
+
+        if get_language() == "pt-br" or get_language() == "pt":
+            victory = " venceu"
+            draw = "empate"
+        else:
+            victory = " won"
+            draw = "draw"
+
+        try:
+            result_code = bet.game.result.result
+            if result_code == 0:
+                bet.game.resultn = bet.game.team0.name + victory
+            elif result_code == 1:
+                bet.game.resultn = bet.game.team1.name + victory
+            elif result_code == 2:
+                bet.game.resultn = draw
+        except (KeyError, Result.DoesNotExist):
+            bet.game.resultn = None
 
     context = {'bets': bets}
     return render(request, 'games/results.html', context)

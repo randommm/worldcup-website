@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:21-0300\n"
+"POT-Creation-Date: 2018-03-29 12:46-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,27 +46,27 @@ msgstr "Esqueceu sua senha ou nome de usuário?"
 msgid "Log in"
 msgstr "Entrar"
 
-#: mysite/templates/base.html:23 mysite/templates/base.html:43
+#: mysite/templates/base.html:23 mysite/templates/base.html:28
 msgid "Fifa Experts"
 msgstr "Fifa Experts"
 
-#: mysite/templates/base.html:46
+#: mysite/templates/base.html:31
 msgid "User"
 msgstr "Usuário"
 
-#: mysite/templates/base.html:47
+#: mysite/templates/base.html:32
 msgid "View my profile"
 msgstr "Ver minha conta"
 
-#: mysite/templates/base.html:48 mysite/templates/base.html:78
+#: mysite/templates/base.html:33 mysite/templates/base.html:63
 msgid "Log Out"
 msgstr "Sair"
 
-#: mysite/templates/base.html:50 mysite/templates/base.html:80
+#: mysite/templates/base.html:35 mysite/templates/base.html:65
 msgid "Join or sign-in"
 msgstr "Registre-se ou entre"
 
-#: mysite/templates/base.html:55 mysite/templates/base.html:56
+#: mysite/templates/base.html:40 mysite/templates/base.html:41
 msgid ""
 "Submit your World Cup forecasts to fifaexperts.com and show your know more "
 "about football than your friends (and two mathematical models)."
@@ -75,18 +75,18 @@ msgstr ""
 "mostre que sabe mais sobre futebol que seus amigos (e dois modelos "
 "matemáticos)."
 
-#: mysite/templates/base.html:73
+#: mysite/templates/base.html:58
 msgid "Objectives"
 msgstr "Objetivos"
 
-#: mysite/templates/base.html:74
+#: mysite/templates/base.html:59
 msgid "History"
 msgstr "História"
 
-#: mysite/templates/base.html:75
+#: mysite/templates/base.html:60
 msgid "People & contact"
 msgstr "Pessoas & contato"
 
-#: mysite/templates/base.html:76
+#: mysite/templates/base.html:61
 msgid "Rules"
 msgstr "Regras"

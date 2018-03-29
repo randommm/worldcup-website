@@ -34,26 +34,35 @@
           slide: function( event, ui ) {
             updater(ui.values[0], ui.values[1]);
             $('#slider_extra_div_' + objid ).css('width', 100 - ui.values[1] + "%");
-          }
+          },
+          change: function(){ clearsucess(objid) }
         }).append('<div id="slider_extra_div_'+objid+'" style="width: 50%"></div>');
         updater(def_val0, def_val1);
       });
     }
     updatebet = function(formid) {
+      $("#success_area_" + formid).html('<span style="color: black">{% trans "Processing" %}</span>');
+      $("#slidersub_" + formid).css("display", "none");
       $.ajax({
         type: "POST",
         url: "{% url 'games:update_bet' %}",
         data: $('#sliderform_'+formid).serialize(),
-        success: function(res){$("#success_area_" + formid).html("{% trans "Updated!" %}")},
+        success: function(res){
+          $("#success_area_" + formid).html("{% trans "Updated!" %}");
+        },
         dataType: "html"
       });
+    }
+    clearsucess = function(formid) {
+      $("#success_area_" + formid).html("");
+      $("#slidersub_" + formid).css("display", "inline");
     }
     $( function() {
       $( ".button" ).button();
     });
     </script>
     {% for game in games %}
-    <ul style="margin-top: 0px"> <div style="float: right"><a href="#" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">{% trans "Submit your forecast" %}</a></div>
+    <ul style="margin-top: 0px"> <div style="float: right"><a href="#" id="submityfb_{{ forloop.counter }}" onclick="$('#sliderform_{{ forloop.counter }}').css('display', 'inline'); $('#submityfb_{{ forloop.counter }}').css('display', 'none'); $('#yforecast_{{ forloop.counter }}').css('display', 'None'); return false;" class="button">{% trans "Submit your forecast" %}</a></div>
         <li>{% trans "Game" %}: {{ game.team0.name }} vs {{ game.team1.name }}.</li>
 
         {% timezone user_tz %}
@@ -109,7 +118,7 @@
           </ul>
 
           {% if request.user.is_authenticated %}
-          <input type="submit" value="Submit Changes" class="button" style="margin-top: 20px">
+          <input type="submit" value="Submit Changes" class="button" style="margin-top: 20px; display: none" id="slidersub_{{ forloop.counter }}">
           {% else %}
           <p style="color: red; font-weight:bold; margin: 10px auto 10px auto; text-align: center">
           {% trans "Attention: you are not logged in, therefore your changes will not be saved." %}
@@ -118,7 +127,6 @@
           {% endif %}
           <div id="success_area_{{ forloop.counter }}" style="margin-top: 20px; color: green; font-weight: bold"></div>
           </form>
-
         </li>
 
     </ul>

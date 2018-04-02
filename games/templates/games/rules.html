@@ -12,21 +12,21 @@
 
   <h1>{% trans "Rules: how to play our forecast contest" %}</h1>
 
-  <p>{% trans "During the World Cup, teams play (almost) every day for roughly one month. Therefore, during this month you can input your own forecasts using our interactive website. After each match finishes, you'll either gain or lose points based on your prevision, meaning that your prevision will be scored. This score will tell how &ldquo;good&rdquo; your forecast was, basically showing how close it was from the observed result of the game (victory of team A, victory of team B or draw)." %}</p>
+  <p>{% trans "During the World Cup, teams play (almost) every day for roughly one month. Therefore, during this month you can input your own forecasts using our interactive website. After each match finishes, you'll gain points based on your prevision, that is, your prevision will be scored. This score will tell how &ldquo;good&rdquo; your forecast was, basically showing how close it was from the observed result of the game (victory of team A, victory of team B or draw)." %}</p>
 
-  <p>{% trans "We will keep track of your point total throughout the World Cup. Just be sure to sign in with either Facebook or your Google account to save your forecasts. As the WC develops, you'll be able to see how your forecasts compare with the forecasts provided by two mathematical models and to everybody else's scores." %}</p>
+  <p>{% trans "We will keep track of your point total throughout the World Cup. Just be sure to sign in with either Facebook or your Google account to save your forecasts. As the WC develops, you will be able to see how your forecasts compare with the forecasts provided by two mathematical models and to everybody else's scores." %}</p>
 
-  <p>{% trans "In Brazil, especially during WC's, contests where people try to predict the final score of each match (i.e. the number of goals scored by each team) are very popular. Here, we do not want that. We want you to think probabilistically. Think about your probability as some amount, like 100 kg or pounds of something or $100 of some currency. You must decide on how to divide this amount in three baskets: in one basket you'll put the amount corresponding to your confidence on the victory of team A; in the following basket the amount corresponding to your confidence on a draw; and in the third basket the amount corresponding to your confidence on the victory of team B. Notice that you have a fixed amount, so your probabilities should add up to 100." %}.</p>
+  <p>{% trans "In Brazil, especially during WC's, contests where people try to predict the final score of each match (i.e. the number of goals scored by each team) are very popular. Here, we do not want that. We want you to think probabilistically. Think about your probability as some amount, like 100 kg or pounds of something or $100 of some currency. You must decide on how to divide this amount in three baskets: in one basket you'll put the amount corresponding to your confidence on the victory of team A; in the following basket the amount corresponding to your confidence on a draw; and in the third basket the amount corresponding to your confidence on the victory of team B. Notice that you have a fixed amount, so your probabilities should add up to 100" %}.</p>
 
   <h2>{% trans "Example" %}</h2>
 
-  <p>{% trans "As illustrative example, consider a match of the 2014 WC. Assume that your probabilities for the match Spain against Netherlands were the following: &ldquo;Spain wins&rdquo;, 46%%; &ldquo;Draw&rdquo;, 24%%, and &ldquo;Netherlands win&rdquo;, 30%%" %}.</p>
+  <p>{% trans "As illustrative example, consider a match of the 2014 WC. Assume that your probabilities for the match Spain against Netherlands were the following: &ldquo;Spain wins&rdquo;, 46%; &ldquo;Draw&rdquo;, 24%, and &ldquo;Netherlands win&rdquo;, 30%" %}.</p>
 
   <p>{% trans "The match ended 5x1 to Netherlands. To score your forecast, we will use the following equation" %}:</p>
 
   <p>$$100-\left[\frac{(p_1^2+p_2^2+p_1\times p_2)}{100}\right],$$</p>
 
-  <p>{% trans "where \(p_1\) and \(p_2\) represent the probabilities of the possibilities that DID NOT happen. For this match, ``draw'' and ``Spain wins'' did not happen, meaning that, \(p_1=24\) and \(p_2=46\), implying that" %}</p>
+  <p>{% trans "where \(p_1\) and \(p_2\) represent the probabilities of the possibilities that DID NOT happen. For this match, &ldquo;draw&rdquo; and &ldquo;Spain wins&rdquo; did not happen, so we can write, \(p_1=24\) and \(p_2=46\), which implies that" %}</p>
 
   <p>$$100-\left[\frac{(24^2+46^2+24\times 46)}{100}\right]=62.04$$</p>
 
@@ -36,18 +36,18 @@
 
   <p>$$100-\left[\frac{(12^2+20^2+12\times 20)}{100}\right]=92.16,$$</p>
 
-  <p>{% trans "a lot better than 62.04 because his prevision was closer to the observed result, &ldquo;Netherlands win&rdquo; (he gave 68% to Netherlands and just 32% to the other two). This scoring system is based on Brier scores, which evaluate the accuracy of probabilistic forecasts and rewards good forecasts while punishing those that overshoot. In the example above, if Spain had won, you'd score 78.04 and your friend, 44.16 because in this case your forecast would be closer to the event &ldquo;Spain wins&rdquo; than your friend's forecast." %}.</p>
+  <p>{% trans "a lot better than 62.04 because his prevision was closer to the observed result, &ldquo;Netherlands wins&rdquo; (he attached 68% to Netherlands and just 32% to the other two). This scoring system is based on Brier scores, which evaluate the accuracy of probabilistic forecasts and rewards good forecasts while punishing those that overshoot. In the example above, if Spain had won, you'd score 78.04 and your friend, 44.16 because in this case your forecast would be closer to the event &ldquo;Spain wins&rdquo; than your friend's forecast" %}.</p>
 
   <p>{% trans "More important details are the following" %}:</p>
 
   <ul>
   	<li>{% trans "You can submit or change your forecast 30 minutes before a match starts" %}.</li>
-  	<li>{% trans "After the group stage, games are playoffs. If they ended tied after 90 minutes, they will be considered a draw" %}.</li>
+  	<li>{% trans "After the group stage, the matches are playoffs. If they ended tied after 90 minutes, they will be considered a draw" %}.</li>
     <li>{% trans "If you do not submit a forecast to a match, your score for that match will be zero" %}.</li>
-  	<li>{% trans "Forecasts can't be more precise than whole percentages, and points gained/lost for each game are rounded to the nearest integer" %}.</li>
+  	<li>{% trans "Forecasts can't be more precise than whole percentages, and points gained for each game are rounded to the nearest integer" %}.</li>
   </ul>
 
-  <p>{% trans "Because of this last rule, since 100/3 is not a whole number, the most undecided forecast is 33% for two possibilities and 34% for the remaining one. Depending on the final result of the game, this forecast will receive a score of 66 or 67. Initially all the forecasts attach 33% percent for team A (the team to the left of the slider), 34% for draw and 33% for team B (the team to the right of the slider), but if you do not press the button &ldquo;Submit you forecast&rdquo;, we will understand that you do not want to submit a forecast to that match and your score, for that match, will be zero" %}.</p>
+  <p>{% trans "Therefore, since 100/3 is not an integer, the most undecided forecast is 33% for two possibilities and 34% for the remaining one. Depending on the final result of the game, this forecast will receive a score of 66 or 67. Initially all the forecasts attach 33% percent for team A (the team to the left of the bar), 34% for draw and 33% for team B (the team to the right of the bar), but if you do not press the button &ldquo;Submit you forecast&rdquo;, we will understand that you do not want to submit a forecast to that match and your score, for that specific match, will be zero" %}.</p>
   <p> {% trans "So, if you forget to submit a forecast to one game or two your score won't change as to put you out of the race, but if you want to stay close to the best, you have to submit your forecasts (of course, if you think that the teams are really close competitors and feels that the 33/34/33 forecast translates your degree of belief in the final result, you should submit this forecast). You can also view the score 67 as a benchmark: if your score is smaller than 67, you're doing worst than the undecided forecast" %}.</p>
 
   <p>{% trans "Considering all this, you can approach the contest in different ways" %}.</p>
@@ -56,6 +56,6 @@
 
   <p>{% trans "You can also look at other models, betting odds, build your own model or just think carefully about each match to submit your forecast" %}.</p>
 
-  <p>{% trans "You can also create a league and agree with the participants to just submit forecasts to the matches of one team or of a set of teams" %}.</p>
+  <p>{% trans "You can also create a league and agree with the participants to just submit forecasts to the matches of one or a set of teams" %}.</p>
 
 {% endblock %}

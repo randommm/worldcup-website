@@ -18,9 +18,9 @@
      {{ bet.prob1 }}% {% trans "win" %} {{ bet.game.team1.name }}
      <br />
      {% if bet.pontuated %}
-        {% trans "You got" %} {{ bet.points }} P {% trans "here" %}.
+        {% trans "You got" %} {{ bet.points }} {% trans "points from this match" %}.
      {% else %}
-        {% trans "This game has not finished yet" %}.
+        {% trans "This match has not finished yet" %}.
      {% endif %}
      </li>
    {% endfor %}

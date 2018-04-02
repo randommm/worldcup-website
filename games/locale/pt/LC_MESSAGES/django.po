@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-02 14:58-0300\n"
+"POT-Creation-Date: 2018-04-02 15:25-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -594,7 +594,7 @@ msgstr ""
 "mas também contra todos os outros participantes. Depois de cada jogo as "
 "previsões receberão uma pontuação de acordo com as regras (descritas"
 
-#: games/templates/games/index.html:31 games/templates/games/results.html:21
+#: games/templates/games/index.html:31
 msgid "here"
 msgstr "aqui"
 
@@ -606,10 +606,10 @@ msgid ""
 "match, noticing that the scoring rules punishes overconfidence."
 msgstr ""
 ") e o melhor previsor será aquele com a maior pontuação depois dos 64 jogos "
-"da Copa. Fique atento para o fato que não estamos pedindo para você "
-"prever o placar final de cada jogo. Você deve fornecer sua previsão "
-"probabilística para cada jogo, notando que as regras de pontuação punem quem "
-"exagera na confiança de um resultado."
+"da Copa. Fique atento para o fato que não estamos pedindo para você prever o "
+"placar final de cada jogo. Você deve fornecer sua previsão probabilística "
+"para cada jogo, notando que as regras de pontuação punem quem exagera na "
+"confiança de um resultado."
 
 #: games/templates/games/index.html:32
 msgid ""
@@ -744,7 +744,7 @@ msgid "Points"
 msgstr "Pontuação"
 
 #: games/templates/games/league.html:79
-msgid "Is admin"
+msgid "Admin"
 msgstr "É administrador"
 
 #: games/templates/games/league.html:82
@@ -1074,10 +1074,14 @@ msgstr "Suas probabilidades"
 
 #: games/templates/games/results.html:21
 msgid "You got"
-msgstr "Você tem"
+msgstr "Você marcou"
+
+#: games/templates/games/results.html:21
+msgid "points from this match"
+msgstr "pontos nesse jogo"
 
 #: games/templates/games/results.html:23
-msgid "This game has not finished yet"
+msgid "This match has not finished yet"
 msgstr "Este jogo ainda não acabou"
 
 #: games/templates/games/results.html:29
@@ -1104,11 +1108,11 @@ msgid ""
 msgstr ""
 "Durante a Copa, os times jogam (quase) todos os dias por aproximadamente um "
 "mês. Portanto, durante esse mês você pode informar suas previsões usando "
-"nosso website interativo. Depois do término de cada jogo você ganhará "
-"pontos dependendo de sua previsão, o que significa que sua previsão "
-"será pontuada. Essa pontuação dirá o quão &ldquo;boa&rdquo; foi sua "
-"previsão, basicamente mostrando o quão próxima ela estava do resultado "
-"observado do jogo (vitória do time A, vitória do time B ou empate)."
+"nosso website interativo. Depois do término de cada jogo você ganhará pontos "
+"dependendo de sua previsão, o que significa que sua previsão será pontuada. "
+"Essa pontuação dirá o quão &ldquo;boa&rdquo; foi sua previsão, basicamente "
+"mostrando o quão próxima ela estava do resultado observado do jogo (vitória "
+"do time A, vitória do time B ou empate)."
 
 #: games/templates/games/rules.html:17
 msgid ""

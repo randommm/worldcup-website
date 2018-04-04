@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.db import transaction, DatabaseError
 import re
 
-max_league_members = 11
+max_league_members = 30
 
 def league(request):
     from .views import committer

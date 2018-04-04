@@ -118,7 +118,7 @@
           </ul>
 
           {% if request.user.is_authenticated %}
-          <input type="submit" value="Submit Changes" class="button" style="margin-top: 20px; display: none" id="slidersub_{{ forloop.counter }}">
+          <input type="submit" value="{% trans "Submit changes" %}" class="button" style="margin-top: 20px; display: none" id="slidersub_{{ forloop.counter }}">
           {% else %}
           <p style="color: red; font-weight:bold; margin: 10px auto 10px auto; text-align: center">
           {% trans "Attention: you are not logged in, therefore your changes will not be saved." %}

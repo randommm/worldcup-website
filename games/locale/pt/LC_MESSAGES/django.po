@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-02 15:25-0300\n"
+"POT-Creation-Date: 2018-04-04 10:27-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,6 +151,10 @@ msgstr "pontos"
 #: games/templates/games/games.html:115
 msgid "If the game ends tied, you will get"
 msgstr "Se o jogo terminar empatado, você marca"
+
+#: games/templates/games/games.html:121
+msgid "Submit changes"
+msgstr "Envie suas alterações"
 
 #: games/templates/games/games.html:124
 msgid ""

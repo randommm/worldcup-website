@@ -8,19 +8,6 @@ html, body {
     font-family: 'Playfair Display', serif;
     margin-bottom: 20%;
 }
-
-@media only screen and (max-device-width: 800px) {
-html, body {
-    width: 500px;
-}
-}
-
-@media only screen and (max-device-width: 800px) and (orientation: landscape) {
-html, body {
-    width: 700px;
-}
-}
-
 html, body {
     height: 80%;
 }
@@ -31,21 +18,6 @@ html, body {
     /* same height as footer */
     margin-bottom: -120px;
 }
-
-@media only screen and (max-device-width: 800px) {
-#wrapper {
-    width: 470px;
-}
-}
-
-
-@media only screen and (max-device-width: 800px) and (orientation: landscape) {
-#wrapper {
-    width: 650px;
-}
-}
-
-
 #wrapper:after {
     content:"";
     display: block;

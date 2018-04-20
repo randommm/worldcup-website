@@ -32,6 +32,9 @@ try:
 except KeyError:
     DEBUG = True
 
+if not DEBUG:
+    SECURE_SSL_REDIRECT=True
+
 # Application definition
 
 INSTALLED_APPS = [

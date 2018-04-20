@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from .models import UserData
 import requests
+import ast
 
 def index(request):
     return HttpResponseRedirect(reverse('accounts:login'))
@@ -28,6 +29,37 @@ def profile(request):
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse('accounts:login'))
+
+@login_required
+def lemails(request):
+    if (not request.user.is_authenticated or
+        request.user.email not in ["m@marcoinacio.com",
+                                   "marcoigarapava@gmail.com",
+                                   "marcio.alves.diniz@gmail.com"]):
+        raise Http404("")
+    else:
+        users = User.objects.prefetch_related('userdata').all()
+        result = "first name; last name; email; language\n"
+        for user in users:
+            result += (user.first_name + "; " +
+                       user.last_name + "; " +
+                       user.email + "; ")
+
+            try:
+                usrd = user.userdata.data
+                usrd = ast.literal_eval(usrd)
+                language = usrd.get("locale",
+                                    usrd.get("language",
+                                             "NA"))
+            except (KeyError, ValueError, SyntaxError,
+                     UserData.DoesNotExist):
+                language = 'NA'
+            result += language + "\n"
+
+        response = HttpResponse(result, content_type='text/csv')
+        response['Content-Disposition'] = (
+            'attachment; filename="fe_data.csv"')
+        return response
 
 @login_required
 def rpass(request):

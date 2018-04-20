@@ -36,7 +36,9 @@
             $('#slider_extra_div_' + objid ).css('width', 100 - ui.values[1] + "%");
           },
           change: function(){ clearsucess(objid) }
-        }).append('<div id="slider_extra_div_'+objid+'" style="width: 50%"></div>');
+        }).append('<div id="slider_extra_div_' + objid +
+                  '" style="width: ' + (100 - def_val1) +
+                  '%"></div>');
         updater(def_val0, def_val1);
       });
     }

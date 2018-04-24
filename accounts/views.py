@@ -2,11 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
-from django.contrib.auth import logout
+from django.contrib.auth import logout, login
 from django.contrib.auth.models import User
 from .models import UserData
 import requests
 import ast
+
+from social_django.utils import psa
+
 
 def index(request):
     return HttpResponseRedirect(reverse('accounts:login'))
@@ -89,3 +92,15 @@ def rpass(request):
 
     return HttpResponseRedirect("/")
 
+@psa('social:complete')
+def register_by_access_token(request, backend):
+    # This view expects an access_token GET parameter, if it's needed,
+    # request.backend and request.strategy will be loaded with the current
+    # backend and strategy.
+    token = request.GET.get('access_token')
+    user = request.backend.do_auth(token)
+    if user:
+        login(request, user)
+        return 'OK'
+    else:
+        return 'ERROR'

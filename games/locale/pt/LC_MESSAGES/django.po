@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-04 10:27-0300\n"
+"POT-Creation-Date: 2018-05-08 11:19-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,89 +89,89 @@ msgstr " vencer"
 msgid "Draw"
 msgstr "Empate"
 
-#: games/templates/games/games.html:44 games/templates/games/league.html:178
+#: games/templates/games/games.html:46 games/templates/games/league.html:178
 msgid "Processing"
 msgstr "Processando"
 
-#: games/templates/games/games.html:51
+#: games/templates/games/games.html:53
 msgid "Updated!"
 msgstr "Atualizado!"
 
-#: games/templates/games/games.html:65
+#: games/templates/games/games.html:67
 msgid "Submit your forecast"
 msgstr "Envie sua previsão"
 
-#: games/templates/games/games.html:66 games/templates/games/results.html:7
+#: games/templates/games/games.html:68 games/templates/games/results.html:7
 msgid "Game"
 msgstr "Jogo"
 
-#: games/templates/games/games.html:69
+#: games/templates/games/games.html:71
 msgid "Your local time"
 msgstr "Seu horário local"
 
-#: games/templates/games/games.html:73
+#: games/templates/games/games.html:75
 msgid "Russia time"
 msgstr "Horário da Rússia"
 
-#: games/templates/games/games.html:76
+#: games/templates/games/games.html:78
 msgid "Your forecast"
 msgstr "Sua previsão"
 
-#: games/templates/games/games.html:78 games/templates/games/games.html:80
+#: games/templates/games/games.html:80 games/templates/games/games.html:82
 #: games/templates/games/results.html:14 games/templates/games/results.html:18
 msgid "win"
 msgstr "vitória"
 
-#: games/templates/games/games.html:79 games/templates/games/results.html:16
+#: games/templates/games/games.html:81 games/templates/games/results.html:16
 msgid "tie"
 msgstr "empate"
 
-#: games/templates/games/games.html:82
+#: games/templates/games/games.html:84
 msgid "Not made yet"
 msgstr "Ainda não realizada"
 
-#: games/templates/games/games.html:92
+#: games/templates/games/games.html:94
 msgid "Probabilities"
 msgstr "Probabilidades de"
 
-#: games/templates/games/games.html:105 games/templates/games/games.html:110
+#: games/templates/games/games.html:107 games/templates/games/games.html:112
 msgid "If"
 msgstr "Se"
 
-#: games/templates/games/games.html:105 games/templates/games/games.html:110
+#: games/templates/games/games.html:107 games/templates/games/games.html:112
 msgid "wins, you will get"
 msgstr "vencer, você marca"
 
-#: games/templates/games/games.html:106 games/templates/games/games.html:111
-#: games/templates/games/games.html:116 games/templates/games/league.html:76
+#: games/templates/games/games.html:108 games/templates/games/games.html:113
+#: games/templates/games/games.html:118 games/templates/games/league.html:76
 #: games/templates/games/scoreboard.html:6
 msgid "points"
 msgstr "pontos"
 
-#: games/templates/games/games.html:115
+#: games/templates/games/games.html:117
 msgid "If the game ends tied, you will get"
 msgstr "Se o jogo terminar empatado, você marca"
 
-#: games/templates/games/games.html:121
+#: games/templates/games/games.html:123
 msgid "Submit changes"
 msgstr "Envie suas alterações"
 
-#: games/templates/games/games.html:124
+#: games/templates/games/games.html:126
 msgid ""
 "Attention: you are not logged in, therefore your changes will not be saved."
 msgstr ""
 "Atenção: você não está conectado, e portanto suas alterações não serão "
 "salvas."
 
-#: games/templates/games/games.html:126
+#: games/templates/games/games.html:128
 msgid "Login or sign-up"
 msgstr "Entre ou registre-se"
 
-#: games/templates/games/games.html:126
+#: games/templates/games/games.html:128
 msgid "to have your forecasts stored"
 msgstr "para ter suas previsões registradas"
 
-#: games/templates/games/games.html:145
+#: games/templates/games/games.html:147
 msgid "No game available"
 msgstr "Nenhum jogo disponível"
 
@@ -604,7 +604,7 @@ msgstr "aqui"
 
 #: games/templates/games/index.html:31
 msgid ""
-") and the best forecaster will be the one with higher score after the 64 "
+") and the best forecaster will be the one with highest score after the 64 "
 "matches of the WC. Beware that we are not asking you to predict the final "
 "score of each match. You must provide your probabilistic forecast of each "
 "match, noticing that the scoring rules punishes overconfidence."

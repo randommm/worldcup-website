@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-04 10:27-0300\n"
+"POT-Creation-Date: 2018-05-08 11:19-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,35 +58,34 @@ msgstr "Usuário"
 msgid "View my profile"
 msgstr "Ver minha conta"
 
-#: mysite/templates/base.html:33 mysite/templates/base.html:63
+#: mysite/templates/base.html:33 mysite/templates/base.html:59
 msgid "Log Out"
 msgstr "Sair"
 
-#: mysite/templates/base.html:35 mysite/templates/base.html:65
+#: mysite/templates/base.html:35 mysite/templates/base.html:61
 msgid "Join or sign-in"
 msgstr "Registre-se ou entre"
 
-#: mysite/templates/base.html:40 mysite/templates/base.html:41
-msgid ""
-"Submit your World Cup forecasts to fifaexperts.com and show you know more "
-"about football than your friends (and two mathematical models)."
-msgstr ""
-"Informe suas previsões para os jogos da Copa 2018 em fifaexperts.com e "
-"mostre que sabe mais sobre futebol que seus amigos (e dois modelos "
-"matemáticos)."
-
-#: mysite/templates/base.html:58
+#: mysite/templates/base.html:54
 msgid "Objectives"
 msgstr "Objetivos"
 
-#: mysite/templates/base.html:59
+#: mysite/templates/base.html:55
 msgid "History"
 msgstr "História"
 
-#: mysite/templates/base.html:60
+#: mysite/templates/base.html:56
 msgid "People & contact"
 msgstr "Pessoas & contato"
 
-#: mysite/templates/base.html:61
+#: mysite/templates/base.html:57
 msgid "Rules"
 msgstr "Regras"
+
+#~ msgid ""
+#~ "Submit your World Cup forecasts to fifaexperts.com and show you know more "
+#~ "about football than your friends (and two mathematical models)."
+#~ msgstr ""
+#~ "Informe suas previsões para os jogos da Copa 2018 em fifaexperts.com e "
+#~ "mostre que sabe mais sobre futebol que seus amigos (e dois modelos "
+#~ "matemáticos)."

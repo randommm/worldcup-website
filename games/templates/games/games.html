@@ -86,6 +86,9 @@
 
 
           <form id="sliderform_{{ forloop.counter }}" style="display: none" onsubmit="updatebet('{{ forloop.counter }}'); return false;">
+          <p style="color: red; font-weight:bold; margin: 10px auto 10px auto; text-align: center">
+          {% trans "Attention: if this match is decided after overtime or penalty kicks, it will be considered a DRAW." %}
+          </p>
           {% csrf_token %}
           <input type="hidden" id="prob0_{{ forloop.counter }}" name="prob0">
           <input type="hidden" id="prob1_{{ forloop.counter }}" name="prob1">

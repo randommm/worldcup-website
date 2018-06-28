@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-08 11:19-0300\n"
+"POT-Creation-Date: 2018-06-28 13:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,48 +130,54 @@ msgstr "empate"
 msgid "Not made yet"
 msgstr "Ainda não realizada"
 
-#: games/templates/games/games.html:94
+#: games/templates/games/games.html:90
+msgid ""
+"Attention: if this match is decided after overtime or penalty kicks, it will "
+"be considered a DRAW."
+msgstr "Atenção: se esse jogo for para prorrogação ou pênaltis, será considerado EMPATE."
+
+#: games/templates/games/games.html:97
 msgid "Probabilities"
 msgstr "Probabilidades de"
 
-#: games/templates/games/games.html:107 games/templates/games/games.html:112
+#: games/templates/games/games.html:110 games/templates/games/games.html:115
 msgid "If"
 msgstr "Se"
 
-#: games/templates/games/games.html:107 games/templates/games/games.html:112
+#: games/templates/games/games.html:110 games/templates/games/games.html:115
 msgid "wins, you will get"
 msgstr "vencer, você marca"
 
-#: games/templates/games/games.html:108 games/templates/games/games.html:113
-#: games/templates/games/games.html:118 games/templates/games/league.html:76
+#: games/templates/games/games.html:111 games/templates/games/games.html:116
+#: games/templates/games/games.html:121 games/templates/games/league.html:76
 #: games/templates/games/scoreboard.html:6
 msgid "points"
 msgstr "pontos"
 
-#: games/templates/games/games.html:117
+#: games/templates/games/games.html:120
 msgid "If the game ends tied, you will get"
 msgstr "Se o jogo terminar empatado, você marca"
 
-#: games/templates/games/games.html:123
+#: games/templates/games/games.html:126
 msgid "Submit changes"
 msgstr "Envie suas alterações"
 
-#: games/templates/games/games.html:126
+#: games/templates/games/games.html:129
 msgid ""
 "Attention: you are not logged in, therefore your changes will not be saved."
 msgstr ""
 "Atenção: você não está conectado, e portanto suas alterações não serão "
 "salvas."
 
-#: games/templates/games/games.html:128
+#: games/templates/games/games.html:131
 msgid "Login or sign-up"
 msgstr "Entre ou registre-se"
 
-#: games/templates/games/games.html:128
+#: games/templates/games/games.html:131
 msgid "to have your forecasts stored"
 msgstr "para ter suas previsões registradas"
 
-#: games/templates/games/games.html:147
+#: games/templates/games/games.html:150
 msgid "No game available"
 msgstr "Nenhum jogo disponível"
 

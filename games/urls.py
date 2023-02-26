@@ -1,41 +1,41 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 from . import views
 
 app_name = "games"
 urlpatterns = [
-    url(r'^games/$', views.games, name='games'),
-    url(r'^scoreboard/$', views.scoreboard, name='scoreboard'),
-    url(r'^results/$', views.results, name='results'),
+    re_path(r'^games/$', views.games, name='games'),
+    re_path(r'^scoreboard/$', views.scoreboard, name='scoreboard'),
+    re_path(r'^results/$', views.results, name='results'),
 
-    url(r'^update_bet/$', views.update_bet, name='update_bet'),
+    re_path(r'^update_bet/$', views.update_bet, name='update_bet'),
 
 
-    url(r'^leagues/$', views.league, name='league'),
-    url(r'^leagues/create$', views.league_create, name='league_create'),
-    url(r'^leagues/leave$', views.league_leave, name='league_leave'),
-    url(r'^leagues/remove_user$', views.league_remove_user,
+    re_path(r'^leagues/$', views.league, name='league'),
+    re_path(r'^leagues/create$', views.league_create, name='league_create'),
+    re_path(r'^leagues/leave$', views.league_leave, name='league_leave'),
+    re_path(r'^leagues/remove_user$', views.league_remove_user,
         name='league_remove_user'),
 
-    url(r'^leagues/add_moderator$', views.league_add_moderator,
+    re_path(r'^leagues/add_moderator$', views.league_add_moderator,
         name='league_add_moderator'),
-    url(r'^leagues/remove_moderator$', views.league_remove_moderator,
+    re_path(r'^leagues/remove_moderator$', views.league_remove_moderator,
         name='league_remove_moderator'),
-    url(r'^leagues/transfer_admin$', views.league_transfer_admin,
+    re_path(r'^leagues/transfer_admin$', views.league_transfer_admin,
         name='league_transfer_admin'),
 
-    url(r'^leagues/ask_join$', views.league_ask_join,
+    re_path(r'^leagues/ask_join$', views.league_ask_join,
         name='league_ask_join'),
-    url(r'^leagues/add_user$', views.league_add_user,
+    re_path(r'^leagues/add_user$', views.league_add_user,
         name='league_add_user'),
 
 
-    url(r'^forecasts/$', views.forecasts, name='forecasts'),
-    url(r'^rules/$', views.rules, name='rules'),
-    url(r'^history/$', views.history, name='history'),
-    url(r'^objectives/$', views.objectives, name='objectives'),
-    url(r'^contact/$', views.contact, name='contact'),
-    url(r'^terms/$', views.terms, name='terms'),
+    re_path(r'^forecasts/$', views.forecasts, name='forecasts'),
+    re_path(r'^rules/$', views.rules, name='rules'),
+    re_path(r'^history/$', views.history, name='history'),
+    re_path(r'^objectives/$', views.objectives, name='objectives'),
+    re_path(r'^contact/$', views.contact, name='contact'),
+    re_path(r'^terms/$', views.terms, name='terms'),
 
-    url(r'^recreate/$', views.recreate, name='recreate'),
+    re_path(r'^recreate/$', views.recreate, name='recreate'),
 ]
